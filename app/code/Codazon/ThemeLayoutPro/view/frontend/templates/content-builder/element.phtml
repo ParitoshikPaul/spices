@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$data = $this->getData('item_data');
+$type = $data['type'];
+$settings = $data['settings'];
+$children = isset($data['children']) && (count($data['children']) > 0) ?$data['children']:false;
+$cssInline = $this->getElementCssInline($type, $settings);
+$htmlId = isset($settings['id']) ? $settings['id']: '';
+?>
+
+<?php if ($type == 'container') : ?>
+<?php
+$attchToSectionMenu = (bool)$settings['attach_to_section_menu'];
+$sectionIcon = $settings['section_menu_icon']? 'sec-icon fa ' . $settings['section_menu_icon']:'fa fa-info-circle';
+$title = $settings['title'];
+$dataSecMenuItem = json_encode(['icon' => $sectionIcon, 'title' => $title]);
+$bg = '';
+if (!empty($settings['background'])) {
+    $bg = ' data-lazysrc="' . $settings['background'] . '"';
+}
+?>
+<div<?= $bg ?> <?= $htmlId?'id="'.$htmlId.'"':'' ?> class="<?= $this->getElementCssClass($type, $settings) ?>" <?= $cssInline?'style="' . $cssInline . '"':'' ?><?= $attchToSectionMenu?" data-secmenuItem='{$dataSecMenuItem}'":'' ?>>
+<?php if ($children) :?>
+<?= $this->getElementHtml($children); ?>
+<?php endif ?>
+</div>
+<?php elseif ($type == 'row') :
+$bg = '';
+if (!empty($settings['background'])) {
+    $bg = ' data-lazysrc="' . $settings['background'] . '"';
+}
+?>
+<div<?= $bg ?> <?= $htmlId?'id="'.$htmlId.'"':'' ?> class="<?= $this->getElementCssClass($type, $settings) ?>" <?= $cssInline?'style="'.$cssInline.'"':'' ?>>
+<?php if ($children) :?>
+<?= $this->getElementHtml($children); ?>
+<?php endif ?>
+</div>
+<?php elseif ($type == 'col') :
+$bg = '';
+if (!empty($settings['background'])) {
+    $bg = ' data-lazysrc="' . $settings['background'] . '"';
+}
+?>
+<div<?= $bg ?> <?= $htmlId?'id="'.$htmlId.'"':'' ?> class="<?= $this->getElementCssClass($type, $settings) ?>" <?= $cssInline?'style="'.$cssInline.'"':'' ?>>
+<?php if ($children) :?>
+<?= $this->getElementHtml($children); ?>
+<?php endif ?>
+</div>
+<?php elseif ($type === 'html') : ?>
+<?= $settings['content'] ?>
+<?php elseif ($type === 'images_slider') : ?>
+<?= $this->getImagesSliderHtml($settings) ?>
+<?php elseif ($type === 'html_slider') : ?>
+<?= $this->getHtmlSliderHtml($settings) ?>
+<?php elseif ($type === 'slideshow') : ?>
+<?= $this->getHtmlSlideshowHtml($settings) ?>
+<?php elseif ($type === 'tabs') : ?>
+<?= $this->getTabsHtml($settings) ?>
+<?php elseif ($type === 'video') : ?>
+<?= $this->getVideoHtml($settings) ?>
+<?php elseif ($type === 'custom_script') : ?>
+<?= $this->getCustomScript($settings) ?>
+<?php elseif ($type === 'custom_tag') : $bg = '';
+if (!empty($settings['background'])) {
+    $bg = ' data-lazysrc="' . $settings['background'] . '"';
+}
+$tag = empty($settings['tag']) ? 'div' : $settings['tag'];
+?>
+<<?= $tag . ' ' . $bg ?> <?= $htmlId?'id="'.$htmlId.'"':'' ?> class="<?= $this->getElementCssClass($type, $settings) ?>" <?= $cssInline?'style="'.$cssInline.'"':'' ?>>
+<?php if ($children) :?>
+<?= $this->getElementHtml($children); ?>
+<?php endif ?>
+</<?= $tag ?>>
+<?php endif ?>
+<?php
+if (isset($settings['handle_class'])) {
+    if (class_exists($settings['handle_class'])) {
+        echo $this->getLayout()->createBlock($settings['handle_class'], uniqid(microtime()), ['data' => $settings])->toHtml();
+    }
+}
+?>

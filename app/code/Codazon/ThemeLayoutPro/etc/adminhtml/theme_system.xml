@@ -1,0 +1,773 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="codazon" translate="label" sortOrder="200">
+            <label>Theme Configuration</label>
+        </tab>
+        <section id="themelayoutpro" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>General</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable_rtl" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Right To Left Layout</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_body_class" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Body Class</label>
+                    <comment>Add a custom class to body tag.</comment>
+                </field>
+                <field id="newsletter_popup" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Newsletter Popup</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CMSBlocks</source_model>
+                    <comment>Don't select any block to disable popup</comment>
+                </field>
+                <field id="newsletter_popup_delay_time" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Delay Time for Displaying Popup after Page Loaded (miliseconds)</label>
+                </field>
+                <field id="newsletter_popup_frequency" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Frequency of Displaying Newsletter Popup (minutes)</label>
+                </field>
+                <field id="custom_css_file" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom CSS File</label>
+                    <comment><![CDATA[<strong>[file path]</strong>.<br />E.g.: You created a file with path "pub/media/my-project/custom-styles.css".<br />You have: <strong>[file path]</strong> = <strong>my-project/custom-styles.css</strong><br />Then enter "my-project/custom-styles.css" to this field.<br />Don't enter <span style="text-decoration: line-through">"pub/media/my-project/custom-styles.css"</span>!]]></comment>
+                </field>
+                <field id="head_script" translate="label comment" type="textarea" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom script in head tags</label>
+                </field>
+            </group>
+            <group id="header" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Header</label>
+                <field id="header" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Header</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\Headers</source_model>
+                </field>
+                <field id="enable_sticky_menu" translate="label comment" type="select" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Sticky Header</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_advanced_search" translate="label comment" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Advanced Search Link on Search Box</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="small_logo" translate="label comment" type="image" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Small Logo</label>
+                    <comment>Allowed file types: jpg, jpeg, gif, png</comment>
+                    <backend_model>Codazon\ThemeLayoutPro\Model\Config\Backend\SmallLogo</backend_model>
+                    <base_url type="media" scope_info="1">small_logo</base_url>
+                </field>
+                <field id="main_menu" translate="label comment" type="select" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Main Menu</label>
+                    <source_model>Codazon\MegaMenu\Model\Choosemenu</source_model>
+                    <comment>Horizontal Main Menu</comment>
+                </field>
+                <field id="mobile_menu" translate="label comment" type="select" sortOrder="17" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Mobile Menu</label>
+                    <source_model>Codazon\MegaMenu\Model\Choosemenu</source_model>
+                    <comment>Menu in Mobile View</comment>
+                </field>
+                <field id="main_menu_paging" translate="label comment" type="select" sortOrder="18" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Paging main menu</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="ajax_menu" translate="label" type="select" sortOrder="19" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use Ajax Menu</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set "Yes", the drop-downs of menu will be load by ajax instead of being loaded directly</comment>
+                </field>
+                <field id="vertical_menu" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Vertical Menu</label>
+                    <source_model>Codazon\MegaMenu\Model\Choosemenu</source_model>
+                    <comment>Vertical menu is used or not depending theme style (displayed beside top slideshow or displayed when hovering menu title).</comment>
+                </field>
+                <field id="vertical_menu_title" translate="label comment" type="text" sortOrder="21" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Vertical Menu Title</label>
+                </field>
+                <field id="vertical_menu_align_height" translate="label comment" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Align Vertical Menu Height</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display "More View" button when the vertical menu height is longer than the slideshow height.</comment>
+                </field>
+                <field id="vertical_menu_displayed_as_default" translate="label comment" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Vertical Menu as Default?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set "No", menu will be displayed if you click the title (this option is only applied for some special designs).</comment>
+                </field>
+                <field id="vertical_menu_behavior" translate="label comment" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Vertical Menu by Clicking Menu Title? (In Sticky Header or in Inner Pages)</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set "No", menu will be displayed if you hover the title.</comment>
+                </field>
+                <field id="vertical_menu_close_behavior" translate="label comment" type="select" sortOrder="22" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Hide Vertical Menu by Clicking The Area Arround?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set "No", menu will only be hide if you click the title again.</comment>
+                </field>
+                <field id="left_menu" translate="label comment" type="select" sortOrder="23" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Sidebar Menu</label>
+                    <source_model>Codazon\MegaMenu\Model\Choosemenu</source_model>
+                    <comment>Sidebar menu is used or not depending on theme style (displayed on toggle sidebar).</comment>
+                </field>
+                <field id="left_menu_hovering" translate="label comment" type="select" sortOrder="24" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use Hovering Behavior for Sidebar Menu.</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Hovering on menu item to view the sub items instead of clicking. Only apply for menu on left sidebar.</comment>
+                </field>
+                <field id="account_panel_style" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Account Panel Style</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\MenuStyles</source_model>
+                </field>
+                <field id="wishlist_style" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Wish List Style</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\MenuStyles</source_model>
+                </field>
+                <field id="mini_cart_style" translate="label comment" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Mini Cart Style</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\MenuStyles</source_model>
+                </field>
+                <field id="customer_greeting_format" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Customer Greeting format</label>
+                    <comment><![CDATA[Use for the greeting on account sidebar/dropdown/popup. Default: <strong>Hi {{firstname}}</strong>.<br />Note:<br /><strong>{{firstname}}</strong> will be replaced by customer first name.<br /><strong>{{fullname}}</strong> will be replaced by customer full name. Leave empty to use default.]]></comment>
+                </field>
+            </group>
+            <group id="main_content" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Main Content</label>
+                <field id="main_content" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Main Content</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\MainContents</source_model>
+                </field>
+            </group>
+            <group id="footer" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Footer</label>
+                <field id="footer" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Select Footer</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\Footers</source_model>
+                </field>
+            </group>
+            <group id="search_by_category" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Search by Category</label>
+                <field id="enable" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Search by Category</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="category_parent_id" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Only Display Categories under</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\Categories</source_model>
+                </field>
+                <field id="category_max_depth" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Category Max Depth</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CategoryMaxDepth</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="pages" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Pages</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="home" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Home page</label>
+                <field id="head_script" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom script in head tags</label>
+                </field>
+            </group>
+            <group id="product_view" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product View</label>
+                <field id="custom_layout_xml" translate="label comment" type="textarea" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Layout XML</label>
+                    <comment><![CDATA[Carefully: Only use for developer. Don't write anything here if you are not sure about the result.]]></comment>
+                </field>
+                <field id="moreview_style" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>More View Slider Style</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\SliderStyles</source_model>
+                </field>
+                <field id="moreview_margin" translate="label comment" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>More View Thumbnail Margin</label>
+                </field>
+                <field id="enable_zoom_lens" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Manifier</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="inner_zoom" translate="label comment" type="select" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Inner Zoom</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="inner_zoom_ratio" translate="label comment" type="text" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Inner Zoom Ratio</label>
+                    <comment><![CDATA[0 < value ≤ 1]]></comment>
+                </field>
+                <field id="show_caption" translate="label comment" type="select" sortOrder="32" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Show Caption at Bottom Side of Main Image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="lens_width" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Manifier Width</label>
+                </field>
+                <field id="lens_height" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Manifier Height</label>
+                </field>
+                <field id="fullscreenzoom" translate="label comment" type="text" sortOrder="51" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Full Screen Zoom</label>
+                    <comment>Zoom step in percents for the fullscreen view (integer value)</comment>
+                </field>
+                <field id="display_product_labels" translate="label comment" type="select" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Product Labels</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_labels_on_right" translate="label comment" type="select" sortOrder="55" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Product Labels on the Right Side of Product Image</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>If set "No", the labels will be displayed on left side of product image.</comment>
+                </field>
+                <field id="display_social_links" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Social Links</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="custom_text" translate="label comment" type="select" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Text</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CMSBlocks</source_model>
+                </field>
+                <field id="display_sale_timer" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Sale Countdown Timer</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display Sale Countdown Timer when product has special price and "Special To Date" is set</comment>
+                </field>
+                <field id="display_size_chart" translate="label comment" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Size Chart</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="size_chart_type" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Type</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\SizeChartTypes</source_model>
+                </field>
+                <field id="size_chart_link" translate="label comment" type="text" sortOrder="105" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Page Link</label>
+                    <depends>
+                        <field id="size_chart_type">cms_page</field>
+                    </depends>
+                </field>
+                <field id="size_chart_block" translate="label comment" type="select" sortOrder="105" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Popup</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CMSBlocks</source_model>
+                    <depends>
+                        <field id="size_chart_type">cms_block</field>
+                    </depends>
+                </field>
+                <field id="size_chart_attribute" translate="label comment" type="text" sortOrder="105" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Attribute</label>
+                    <comment>The code of product attribute used as size chart popup content. Note: Empty "Size Chart Link Label" field below to use the attribute name as link label.</comment>
+                    <depends>
+                        <field id="size_chart_type">product_attribute</field>
+                    </depends>
+                </field>
+                <field id="size_chart_attribute_set_mapping" translate="label comment" type="textarea" sortOrder="105" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Attribute Set Mappings</label>
+                    <comment><![CDATA[<p>Use syntax below: <br /> &lt;attribute set 1 name&gt;:&lt;CMS block 1 identifier&gt;<br /> &lt;attribute set 2 name&gt;:&lt;CMS block 2 identifier&gt;<br />(Break line to add new mapping).<br /> E.g.: </p><p style="border:1px solid #eb5202;padding: 5px;margin: 10px 0px;"><span style="color:#eb5202">Default</span>:codazon-sizechart-default<br /><span style="color:#eb5202">Women Clothing</span>:codazon-sizechart-women-clothing</p><p>Note: Empty "Size Chart Link Label" field below to use the cms block name as link label.</p>]]></comment>
+                    <depends>
+                        <field id="size_chart_type">product_attribute_set</field>
+                    </depends>
+                </field>
+                <field id="size_chart_label" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Size Chart Link Label</label>
+                </field>
+                <field id="display_buy_now_button" translate="label comment" type="select" sortOrder="125" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display "Buy Now" button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Depends on design theme.</comment>
+                </field>
+                <field id="custom_tab_block" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Static Tab (Use CMS Blocks)</label>
+                    <comment>Separate block identifier by comma (,).</comment>
+                </field>
+                <field id="custom_tab_attributes" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Flexibe Tab (Use Product Attributes)</label>
+                    <comment>To add more tabs, you can go to menu Stores > Attributes > Product. Add new attribute. Separate attribute codes by comma (,).</comment>
+                </field>
+                <field id="tabs_order" translate="label comment" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Tabs Order</label>
+                    <comment><![CDATA[The sort order of tabs in product view page (use layout block names range for sorting). You can use some block names below to input your custom order: product.info.description, product.attributes, reviews.tab, product-tab-codazon_custom_tab, product-tab-[product attribute code], product-tab-cms-[cms block identifier]. E.g.:<br />product.attributes,product.attributes,reviews.tab]]></comment>
+                </field>
+                <field id="removed_tabs" translate="label comment" type="text" sortOrder="151" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Removed Tabs</label>
+                     <comment><![CDATA[The tabs need to be removed. You can use some block names below to input your custom removed tabs: product.info.description, product.attributes, reviews.tab, product-tab-codazon_custom_tab, product-tab-[product attribute code], product-tab-cms-[cms block identifier]. E.g.:<br /> product.attributes,reviews.tab]]></comment>
+                </field>
+                <field id="desc_tab_max_height" translate="label comment" type="text" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Maximum Height of Details Tab</label>
+                    <comment>If the product description is too long, and the height of Details tab is larger than your defined value, a "More View" button will be displayed. Leave empty if you don't use "more view" feature.</comment>
+                </field>
+                <field id="enable_sticky_cartqty" translate="label comment" type="select" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Sticky "Add to Cart - Qty"</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display sticky "Add to cart - Qty" block when scrolling the product view page.</comment>
+                </field>
+                <field id="sticky_cartqty_pos" translate="label comment" type="select" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Sticku "Add to Cart - Qty" Position</label>
+                    <source_model>Codazon\Core\Model\Config\Source\PositionTopBottom</source_model>
+                </field>
+                <field id="custom_attribute" translate="label comment" type="textarea" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display custom attribute</label>
+                    <frontend_model>Codazon\ThemeLayoutPro\Block\Adminhtml\Config\Form\Field\CustomAttribute</frontend_model>
+                </field>
+            </group>
+            <group id="category_view" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category View</label>
+				<group id="design" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Product Listing Design</label>
+					<field id="show" translate="label comment" type="multiselect" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Display</label>
+						<source_model>Codazon\ThemeLayoutPro\Model\Config\Source\ProductListDisplay</source_model>
+					</field>
+					<field id="margin_right_desktop" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Right Margin on Desktop</label>
+						<comment>( ↔ ) Horizontal Space Between Two Product Items (px)</comment>
+					</field>
+					<field id="margin_bottom_desktop" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Bottom Margin on Desktop</label>
+						<comment>( ↕ ) Vertical Space Between Two Product Items (px)</comment>
+					</field>
+					<field id="margin_right_mobile" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Right Margin on Mobile</label>
+						<comment>( ↔ ) Horizontal Space Between Two Product Items (px)</comment>
+					</field>
+					<field id="margin_bottom_mobile" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Bottom Margin on Mobile</label>
+						<comment>( ↕ ) Vertical Space Between Two Product Items (px)</comment>
+					</field>
+                    <field id="name_substr_length" translate="label comment" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Name substring length</label>
+                        <comment><![CDATA[Only used for some templates.]]></comment>
+					</field>
+				</group>
+				<group id="items_per_row_1" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Items Per Row (One Column Layout)</label>
+					<field id="items_1900" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1900 view</label>
+						<comment><![CDATA[Screen width > 1900px]]></comment>
+					</field>
+					<field id="items_1600" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1600 view</label>
+						<comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+					</field>
+					<field id="items_1420" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1420 view</label>
+						<comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+					</field>
+					<field id="items_1280" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Desktop 1280 view</label>
+						<comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+					</field>
+					<field id="items_980" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop small view</label>
+						<comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+					</field>
+					<field id="items_768" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet lanscape view</label>
+						<comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+					</field>
+					<field id="items_480" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet portrait view</label>
+						<comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+					</field>
+					<field id="items_320" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Mobile lanscape view</label>
+						<comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+					</field>
+					<field id="items_0" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Mobile portrait view</label>
+						<comment><![CDATA[Screen width < 320px]]></comment>
+					</field>
+				</group>
+				<group id="items_per_row_2" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Items Per Row (Layout Two Columns)</label>
+					<field id="items_1900" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1900 view</label>
+						<comment><![CDATA[Screen width > 1900px]]></comment>
+					</field>
+					<field id="items_1600" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1600 view</label>
+						<comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+					</field>
+					<field id="items_1420" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1420 view</label>
+						<comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+					</field>
+					<field id="items_1280" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Desktop 1280 view</label>
+						<comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+					</field>
+					<field id="items_980" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop small view</label>
+						<comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+					</field>
+					<field id="items_768" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet lanscape view</label>
+						<comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+					</field>
+					<field id="items_480" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet portrait view</label>
+						<comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+					</field>
+					<field id="items_320" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Mobile lanscape view</label>
+						<comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+					</field>
+					<field id="items_0" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Mobile portrait view</label>
+						<comment><![CDATA[Screen width < 320px]]></comment>
+					</field>
+				</group>
+				<group id="items_per_row_3" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Items Per Row (Layout Three Columns)</label>
+					<field id="items_1900" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1900 view</label>
+						<comment><![CDATA[Screen width > 1900px]]></comment>
+					</field>
+					<field id="items_1600" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1600 view</label>
+						<comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+					</field>
+					<field id="items_1420" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1420 view</label>
+						<comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+					</field>
+					<field id="items_1280" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Desktop 1280 view</label>
+						<comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+					</field>
+					<field id="items_980" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop small view</label>
+						<comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+					</field>
+					<field id="items_768" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet lanscape view</label>
+						<comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+					</field>
+					<field id="items_480" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet portrait view</label>
+						<comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+					</field>
+					<field id="items_320" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Mobile lanscape view</label>
+						<comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+					</field>
+					<field id="items_0" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Mobile portrait view</label>
+						<comment><![CDATA[Screen width < 320px]]></comment>
+					</field>
+				</group>
+                <group id="subcategories" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+					<label>Subcategories Block</label>
+                    <field id="enable" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Enable to Display</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="title" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Block Title</label>
+                    </field>
+                    <field id="show_slider" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Anchor Category: Displayed as slider</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[If set "No", the subcategories will be displayed as grid.]]></comment>
+                    </field>
+                    <field id="show_slider_non_anchor" translate="label comment" type="select" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Non Anchor Category: Displayed as slider</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[If set "No", the subcategories will be displayed as grid.]]></comment>
+                    </field>
+                    <field id="thumbnail_width" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Thumbnail Width</label>
+					</field>
+                    <field id="thumbnail_height" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Thumbnail Width</label>
+					</field>
+					<field id="items_1900" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1900 view</label>
+						<comment><![CDATA[Screen width > 1900px]]></comment>
+					</field>
+					<field id="items_1600" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1600 view</label>
+						<comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+					</field>
+					<field id="items_1420" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop 1420 view</label>
+						<comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+					</field>
+					<field id="items_1280" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Desktop 1280 view</label>
+						<comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+					</field>
+					<field id="items_980" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Desktop small view</label>
+						<comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+					</field>
+					<field id="items_768" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet lanscape view</label>
+						<comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+					</field>
+					<field id="items_480" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Tablet portrait view</label>
+						<comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+					</field>
+					<field id="items_320" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Mobile lanscape view</label>
+						<comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+					</field>
+					<field id="items_0" translate="label comment" type="text" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+					    <label>Mobile portrait view</label>
+						<comment><![CDATA[Screen width < 320px]]></comment>
+					</field>
+                    <field id="slider_margin" translate="label comment" type="text" sortOrder="150" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Space between two items (px)</label>
+					</field>
+                    <field id="slider_autoplay" translate="label comment" type="select" sortOrder="160" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Slider Autoplay</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					</field>
+                    <field id="slider_autoplay_timeout" translate="label comment" type="text" sortOrder="170" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Autoplay Timeout (milliseconds)</label>
+					</field>
+                    <field id="slider_dots" translate="label comment" type="select" sortOrder="180" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Show Slider Dots</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					</field>
+                    <field id="slider_nav" translate="label comment" type="select" sortOrder="190" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Show Slider Arrows</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					</field>
+                    <field id="slider_loop" translate="label comment" type="select" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Slider Loop</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+					</field>
+                    <field id="style" translate="label comment" type="select" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Thumbnail Style</label>
+                        <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\SubcategoriesStyles</source_model>
+					</field>
+                    <field id="hovered_style" translate="label comment" type="select" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+						<label>Enable Hovered Title</label>
+                        <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                        <comment><![CDATA[If set "Yes", the category name is only displayed when hovering the category thumbnail.]]></comment>
+					</field>
+                    <field id="placeholder" translate="label comment" type="image" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Thumbnail Placeholder</label>
+                        <comment>Allowed file types: jpg, jpeg, gif, png, svg</comment>
+                        <backend_model>Codazon\ThemeLayoutPro\Model\Config\Backend\Image</backend_model>
+                        <base_url type="media" scope_info="1">codazon/subcategories/placeholder</base_url>
+                    </field>
+				</group>
+            </group>
+            <group id="blog" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Blog</label>
+                <field id="date_format" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Date Format</label>
+                </field>
+                <field id="use_ajax_blog" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use Ajax Blog on Home Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="contact" translate="label" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Contact</label>
+                <field id="display_google_map" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Google Map</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="google_api_key" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Google API key</label>
+                    <comment><![CDATA[Go to https://developers.google.com/maps/documentation/javascript/get-api-key to get key. If this field is empty, Google Map feature won't work]]></comment>
+                </field>
+                <field id="google_map_url" translate="label comment" type="text" sortOrder="11" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Google map url (No API needed)</label>
+                    <comment><![CDATA[<p>If you don't have api key. You can use the Google map url instead. However, the features can be limited.</p><p>Go <a target="_blank" href="https://www.embedgooglemap.net/">this page</a> to get map url.</p><p>Note: After get the HTML code, only copy the <strong>src</strong> attribute value of &lt;iframe&gt; tag and paste it to this field. E.g.:</p><p style="padding: 4px;border:1px solid #ccc;background: #f1f1f1;font-size: 13px;">https://maps.google.com/maps?q=6505%20boulevard%20Henri-Bourassa,%20Montr%C3%A9al,%20Quebec,%20H1G2V5&t=&z=13&ie=UTF8&iwloc=&output=embed</p>]]></comment>
+                </field>
+                <field id="replacement_static_block" translate="label comment" type="select" sortOrder="12" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Replacement Static Block</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CMSBlocks</source_model>
+                    <comment><![CDATA[If you don't have API key, you can use a CMS Block content instead of google map. Leave empty if you don't want to show anything.]]></comment>
+                </field>
+                <field id="map_ratio" translate="label comment" type="text" sortOrder="13" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Map Ratio</label>
+                    <comment><![CDATA[[Map Height]/[Map Width]]]></comment>
+                </field>
+                <field id="map_title" translate="label comment" type="text" sortOrder="14" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Marker Title</label>
+                </field>
+                <field id="map_address" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Marker Address</label>
+                </field>
+                <field id="map_latitude" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Marker Latitude</label>
+                </field>
+                <field id="map_longitude" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Marker Longitude</label>
+                </field>
+                <field id="map_zoom" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Zoom</label>
+                </field>
+                <field id="map_additional_markers" translate="label comment" type="multiline" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Additional Markers</label>
+                    <frontend_model>Codazon\ThemeLayoutPro\Block\Adminhtml\Config\Form\Field\Mapping</frontend_model>
+                    <backend_model>Codazon\ThemeLayoutPro\Model\Config\Backend\Mapping</backend_model>
+                </field>
+                <field id="contact_info" translate="label comment" type="select" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Contact Information</label>
+                    <source_model>Codazon\ThemeLayoutPro\Model\Config\Source\CMSBlocks</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="images" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Image Settings</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="lazyload_for_product_images" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enable Lazyload for product images</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="product" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Product</label>
+                <field id="product_base_image_width" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Base Image Width</label>
+                </field>
+                <field id="product_base_image_height" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Base Image Height</label>
+                </field>
+                <field id="product_base_image_width_mobile" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Base Image Width (Mobile View)</label>
+                </field>
+                <field id="product_base_image_height_mobile" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Base Image Height (Mobile View)</label>
+                </field>
+                <field id="product_moreview_image_width" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Moreview Image Width</label>
+                </field>
+                <field id="product_moreview_image_height" translate="label comment" type="text" sortOrder="25" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Moreview Image Height</label>
+                </field>
+                <field id="swatch_image_width" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Swatch Width</label>
+                </field>
+                <field id="swatch_image_height" translate="label comment" type="text" sortOrder="31" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Swatch Height</label>
+                </field>
+                <field id="swatch_thumb_width" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Swatch Thumbnail Width</label>
+                </field>
+                <field id="swatch_thumb_height" translate="label comment" type="text" sortOrder="41" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Swatch Thumbnail Height</label>
+                </field>
+                <field id="max_ratio" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Max Ratio of Product Gallery</label>
+                    <comment>Ratio = Height / Width (of gallery stage)</comment>
+                </field>
+            </group>
+            <group id="category" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category</label>
+                <field id="product_image_width" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Image Width</label>
+                </field>
+                <field id="product_image_height" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Product Image Height</label>
+                </field>
+            </group>
+            <group id="blog" translate="label" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Blog</label>
+                <field id="blog_base_image_width" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Base Image Width</label>
+                </field>
+                <field id="blog_base_image_height" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Base Image Height</label>
+                </field>
+                <field id="blog_thumbnail_image_width" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Thumbnail Image Width</label>
+                </field>
+                <field id="blog_thumbnail_image_height" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Thumbnail Image Height</label>
+                </field>
+            </group>
+        </section>
+        <section id="mobile" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Mobile</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="floating_shopby" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Floating "Shop By" Button</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Display floating "Shop By" button in category page or search page.</comment>
+                </field>
+                <field id="display_full_search" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Search Box under Header</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Show search box fully instead of showing only search icon (to open search box).</comment>
+                </field>
+                <field id="display_bottom_toolbar" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Bottom Toolbar</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_button_label" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Button Label</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="use_custom_bottom_toolbar" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Use Custom Bottom Toolbar</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[If set "No", the default toolbar will be displayed. If set "Yes", you can customize the toolbar with the field "Custom Bottom Toolbar" below.]]></comment>
+                </field>
+                <field id="disable_section_tabs" translate="label comment" type="select" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Disable Tabs Style for Mobile Menu</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="bottom_toolbar_json" translate="label comment" type="textarea" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Custom Bottom Toolbar</label>
+                    <frontend_model>Codazon\ThemeLayoutPro\Block\Adminhtml\Config\Form\Field\BottomToolbarCustom</frontend_model>
+                    <backend_model>Codazon\ThemeLayoutPro\Model\Config\Backend\BottomToolbarCustom</backend_model>
+                </field>
+            </group>
+        </section>
+        <section id="checkout" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Checkout Page</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="use_normal_layout" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Header and Footer in Checkout Page</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Use <span style="color:#eb5202">1column</span> layout instead of <span style="color:#eb5202">checkout</span> layout (Magento default layout for checkout page).]]></comment>
+                </field>
+                <field id="display_social_login_buttons" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Social Login Buttons</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+        <section id="social_network" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Social Network</label>
+            <tab>codazon</tab>
+            <resource>Codazon_ThemeLayoutPro::settings</resource>
+            <group id="instagram" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Instagram</label>
+                <field id="posts_json" translate="label comment" type="textarea" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Json of your Instagram posts</label>
+                    <frontend_model>Codazon\ThemeLayoutPro\Block\Adminhtml\Config\Form\Field\InstagramData</frontend_model>
+                    <backend_model>Codazon\ThemeLayoutPro\Model\Config\Backend\InstagramData</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

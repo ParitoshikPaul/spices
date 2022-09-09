@@ -1,0 +1,55 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Language switcher template
+ */
+?>
+<?php
+$websites = $this->helper(\Codazon\Core\Helper\Data::class)->getStoreManager()->getWebsites();
+$groups = $this->getGroups();
+?>
+
+<?php $id = uniqid(); ?>
+<div class="switcher language switcher-language" data-ui-id="language-switcher" id="switcher-language<?php /* @escapeNotVerified */ echo $id?>">
+    <div class="actions dropdown options switcher-options">
+        <div class="action toggle switcher-trigger" id="switcher-language-trigger<?php /* @escapeNotVerified */ echo $id?>">
+            <a href="javascipt:void(0)" class="view-<?php echo $block->escapeHtml($block->getCurrentStoreCode()) ?>">
+                <img alt="<?php echo $block->escapeHtml($block->getStoreName()) ?>" src="<?php echo $block->getViewFileUrl('images/flags/flag_' . $block->getCurrentStoreCode() . '.gif') ?>" />
+                <span><?php echo $block->escapeHtml($block->getStoreName()) ?></span>
+            </a>
+        </div>
+        <?php if (count($block->getStores())>1 || count($groups)>1 || count($websites) > 1): ?>
+        <ul class="dropdown switcher-dropdown"
+            data-mage-init='{"dropdownDialog":{
+                "appendTo":"#switcher-language<?php /* @escapeNotVerified */ echo $id ?> > .options",
+                "triggerTarget":"#switcher-language-trigger<?php /* @escapeNotVerified */ echo $id ?>",
+                "closeOnMouseLeave": false,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":null}}'>
+            <?php foreach ($websites as $website) : ?>
+            <?php foreach ($website->getGroups() as $group) : ?>
+            <?php foreach ($group->getStores() as $_lang): ?>
+                <?php if ($_lang->getId() != $block->getCurrentStoreId()): ?>
+                    <li class="view-<?php echo $block->escapeHtml($_lang->getCode()); ?> switcher-option">
+                        <a href="#" data-post='<?php /* @escapeNotVerified */ echo $block->getTargetStorePostData($_lang); ?>'> 
+                            <img class="lang-img" alt="<?php echo $block->escapeHtml($_lang->getName()) ?>" src="<?php echo $block->getViewFileUrl('images/flags/flag_' . $_lang->getCode() . '.gif') ?>" />
+                            <span class="lang-name"><?php echo $block->escapeHtml($_lang->getName()) ?></span>
+                        </a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <?php endforeach ?>
+            <?php endforeach ?>
+        </ul>
+        <?php endif; ?>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php /** @var $block \Magento\Swatches\Block\Product\Renderer\Configurable */ ?>
+<?php
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+$width = $this->getData('thumb_width');
+$height = $this->getData('thumb_height');
+$imgSize = $helper->getSwatchImageSizeData($block);
+$widget = ['Magento_Swatches/js/swatch-renderer' => [
+    'selectorProduct'           => '.product-item-details',
+    'onlySwatches'              => true,
+    'enableControlLabel'        => false,
+    'numberToShow'              => $block->getNumberSwatchesPerProduct(),
+    'jsonConfig'                => json_decode($block->getJsonConfig()),
+    'jsonSwatchConfig'          => json_decode($block->getJsonSwatchConfig()),
+    'jsonSwatchImageSizeConfig' => $imgSize,
+    'mediaCallback'             => $width ? $block->getMediaCallback() . "?cdz_custom_width={$width}&cdz_custom_height={$height}" : $block->getMediaCallback(),
+    'showTooltip'               => 1,
+]];
+?>
+<div class="swatch-opt-<?= $block->getProduct()->getId() ?> product-item-swatch" data-mage-init='<?= str_replace("'", '’', json_encode($widget)) ?>'></div>

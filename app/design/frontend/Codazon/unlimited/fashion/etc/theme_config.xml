@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/config.xsd">
+    <default>
+        <themelayoutpro>
+			<general>
+				<newsletter_popup>unlimited-fashion-newsleter-popup</newsletter_popup>
+			</general>
+			<header>
+				<header>header-style-06</header>
+				<main_menu>unlimited-fashion-main-menu</main_menu>
+			</header>
+            <main_content>
+                <main_content>main-content-style04</main_content>
+            </main_content>
+            <footer>
+                <footer>footer-style-02</footer>
+            </footer>
+		</themelayoutpro>
+        <pages>
+            <product_view>
+                 <layout>catalog_product_view_style03</layout>
+            </product_view>
+			<category_view>
+				<design>
+					<template>product/list/list-styles/list-style09.phtml</template>
+				</design>
+			</category_view>
+        </pages>
+		<images>
+			<product>
+                <base_image_width>499</base_image_width>
+                <base_image_height>430</base_image_height>
+                <moreview_image_width>80</moreview_image_width>
+                <moreview_image_height>80</moreview_image_height>
+			</product>
+            <category>
+                <product_image_width>320</product_image_width>
+                <product_image_height>320</product_image_height>
+            </category>
+        </images>
+	</default>
+</config>

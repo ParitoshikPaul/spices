@@ -1,0 +1,155 @@
+/*Grocery & Gourmet*/
+.cdz-menu i.menu-icon.img-icon img{
+	max-width: inherit;
+}
+/*Slide show*/
+@media @tablet_vertical{
+	.sstext-4x,
+	.sstext-5x{
+		font-size: 22px;
+	}
+}
+@media (min-width: @screen-md-max){
+	.sstext-4x{
+		font-size: 32px;
+	}
+	.sstext-5x{
+		font-size: 47px
+	}
+}
+@media @screen-xs-max{
+	.sstext-4x,
+	.sstext-5x{
+		font-size: 16px;
+	}
+}
+.cdz-slideshow {
+	img{
+		.abs-borderradius(5px)
+	}
+	.button-link{
+	    text-transform: capitalize;
+	    padding: 7px 45px;
+	    .abs-borderradius(@btn_radius);
+	    &:hover{
+	    	.abs-style(#ffffff, #000000 , #000000) !important;
+	    }
+	}	
+}
+
+/*Title*/
+.cdz-block-title {
+	margin-bottom: 10px;
+}
+.box-cate-style02{
+	.cdz-block-title {
+		margin-bottom: 10px;
+	}
+}
+.brand-style01{
+	.cdz-block-title {
+		margin-bottom: 10px;
+	}
+	.shop-by-brand-slider.style-default .brand-item{
+		margin-bottom: 0
+	}
+}
+
+
+/*Product tab*/
+.tab-content .products {
+    margin-top: 0px;
+}
+@media @tablet_strict{
+	.shop-by-brand-slider.style-default .owl-nav {
+	    display: none;
+	}
+}
+@media @phone{
+	.cdz-slideshow .button-link{
+		padding: 2px 20px;
+	}
+}
+
+/*Genneral*/
+
+.list.products-list{	
+	.cdz-product-labels{
+		.prolabels-style02();
+	}
+}
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style02();	
+}
+.toolbar{
+	.toolbar-option3();
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option3(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(1px);
+	}
+}
+/*Blog*/
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(1px); /*_blog*/
+}
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+	.main-inner,
+	.product.info.detailed .product.items{
+		.product-info-box(0px);
+	}
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px);
+		}
+	}
+}
+/*Product Detail*/
+.block.crosssell,
+.block.upsell,
+.block.related{
+	.product-list-style-17 .product-item-info{
+		padding: 10px;
+	}
+	.product-list-style-17 {
+		.product-image-container:before, 
+		.product-image-container:after{
+			display: none;
+		}
+	}
+}
+
+/*Header -------*/
+
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap{
+		.main-content-top-left {
+			.cms-index-index .sticky-menu:not(.active) &{
+				&:hover{
+					.menu-container{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>header-style-03</identifier>
+  <title>Header Style 03</title>
+  <variables>
+    <header_background>#ffffff</header_background>
+    <header_background_file/>
+    <header_background_image_option>0 0</header_background_image_option>
+    <header_border>#ffffff</header_border>
+    <header_cart_background>transparent</header_cart_background>
+    <header_cart_border/>
+    <header_cart_icon>#5c6ac3</header_cart_icon>
+    <header_cart_quality_background>#0d0d0d</header_cart_quality_background>
+    <header_cart_text>#ffffff</header_cart_text>
+    <header_drop_background>#ffffff</header_drop_background>
+    <header_drop_border_color>#dbdbdb</header_drop_border_color>
+    <header_drop_hover_text>#5C6AC3</header_drop_hover_text>
+    <header_drop_text>#282828</header_drop_text>
+    <header_hover_text>#5c6ac3</header_hover_text>
+    <header_mobile_background>#5c6ac3</header_mobile_background>
+    <header_mobile_icon>#ffffff</header_mobile_icon>
+    <header_mobile_search_border>#ffffff</header_mobile_search_border>
+    <header_mobile_search_input_background>#5c6ac3</header_mobile_search_input_background>
+    <header_mobile_search_input_border>#ffffff</header_mobile_search_input_border>
+    <header_mobile_search_input_text>#ffffff</header_mobile_search_input_text>
+    <header_mobile_search_text>#ffffff</header_mobile_search_text>
+    <header_mobile_sidebar_background>#ffffff</header_mobile_sidebar_background>
+    <header_mobile_sidebar_border>#d1d1d1</header_mobile_sidebar_border>
+    <header_mobile_sidebar_color>#444444</header_mobile_sidebar_color>
+    <header_search_background>#8389e1</header_search_background>
+    <header_search_button_background>transparent</header_search_button_background>
+    <header_search_button_text>#ffffff</header_search_button_text>
+    <header_search_text>#ffffff</header_search_text>
+    <header_shadow>0 -8px 10px #4f5eb0</header_shadow>
+    <header_text>#34343c</header_text>
+    <header_text_cart>#999999</header_text_cart>
+    <header_top_background>#ffffff</header_top_background>
+    <header_top_text>#34343c</header_top_text>
+    <menu_background>#5c6ac3</menu_background>
+    <menu_border>#525fb0</menu_border>
+    <menu_content_background>#ffffff</menu_content_background>
+    <menu_content_border>#d1d1d1</menu_content_border>
+    <menu_content_color>#444444</menu_content_color>
+    <menu_drop_background>#ffffff</menu_drop_background>
+    <menu_drop_border>#e1e1e1</menu_drop_border>
+    <menu_drop_font>400 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</menu_drop_font>
+    <menu_drop_hover_text>#fc7070</menu_drop_hover_text>
+    <menu_drop_shadow>0 3px 3px #e1e1e1</menu_drop_shadow>
+    <menu_drop_text>#999999</menu_drop_text>
+    <menu_drop_text_title>#282828</menu_drop_text_title>
+    <menu_font>600 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</menu_font>
+    <menu_hover_background>transparent</menu_hover_background>
+    <menu_hover_text>#ffb21e</menu_hover_text>
+    <menu_text>#ffffff</menu_text>
+    <menu_title_background>#e8e8e8</menu_title_background>
+    <menu_title_border>#dbdbdb</menu_title_border>
+    <menu_title_color>#333333</menu_title_color>
+    <vermenu_background>#ffffff</vermenu_background>
+    <vermenu_border>#eaeaea</vermenu_border>
+    <vermenu_font>400 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</vermenu_font>
+    <vermenu_hover_background>#eaeaea</vermenu_hover_background>
+    <vermenu_hover_text>#ff6a00</vermenu_hover_text>
+    <vermenu_text>#282828</vermenu_text>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceContainer name="header.container" htmlClass="page-header header-style-03" /&gt;&#xD;
+    &lt;referenceContainer name="header.panel"&gt;&#xD;
+        &lt;container name="header-panel-row" htmlTag="div" htmlClass="row" after="skip_to_content"&gt;&#xD;
+            &lt;container name="header-panel-left" htmlTag="div" htmlClass="col-sm-8 header-panel-left" /&gt;&#xD;
+            &lt;container name="header-panel-right" htmlTag="div" htmlClass="col-sm-16 header-panel-right" /&gt;&#xD;
+            &lt;container name="header-panel-bottom" htmlId="header-panel-bottom" htmlTag="div" htmlClass="col-sm-24 header-panel-bottom cdz-fix-left row"&gt;&#xD;
+                &lt;container name="header-menu-wrap" htmlTag="div" htmlClass="col-sm-14 col-md-18 header-menu-wrap" /&gt;&#xD;
+                &lt;container name="header-search-wrap" htmlTag="div" htmlClass="col-sm-10 col-md-6 header-search-wrap" /&gt;&#xD;
+            &lt;/container&gt;&#xD;
+        &lt;/container&gt;        &#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &#xD;
+    &lt;move element="logo" destination="header-panel-left" /&gt;&#xD;
+    &lt;move element="top.links.features" destination="header-panel-right" /&gt;&#xD;
+    &lt;move element="minicart" destination="links.features.cart" /&gt;&#xD;
+    &lt;move element="links.features.cart" destination="top.links.features" after="authorization-link-features" /&gt;&#xD;
+    &lt;move element="store-language-currency" destination="top.links.features" after="wish-list-link-features" /&gt;&#xD;
+    &lt;referenceBlock name="header-contact-link" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="wish-list-link-features"&gt;&#xD;
+        &lt;action method="setTemplate"&gt;&#xD;
+            &lt;argument name="template" xsi:type="string"&gt;Magento_Wishlist::link-style-02.phtml&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &#xD;
+&#xD;
+    &lt;referenceBlock name="top.links"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;css_class&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="string"&gt;header links visible-xs&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &#xD;
+    &lt;!--referenceBlock name="utilities.sidebar.left" remove="true" /--&gt;&#xD;
+    &lt;move element="catalog.topnav" destination="header-menu-wrap" before="-" /&gt;&#xD;
+    &lt;move element="mobi-cart-placeholder" destination="header-search-wrap" after="-" /&gt;&#xD;
+    &lt;move element="top.search" destination="header-search-wrap" after="-" /&gt;&#xD;
+    &lt;move element="store-menu-placeholder" destination="store.menu" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e4f161a</version>
+    <custom_variables/>
+    <custom_less_code/>
+    <custom_css_code/>
+  </custom_fields>
+  <parent/>
+  <content>{"content_1":"","content_2":""}</content>
+</config>

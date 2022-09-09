@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$availableSocials = $block->getAvailableSocials();
+$displayButtons = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class)->getConfig('checkout/general/display_social_login_buttons');
+$isLoggedIn = \Magento\Framework\App\ObjectManager::getInstance()->get(\Magento\Customer\Model\Session::class)->isLoggedIn();
+?>
+<?php if ($block->canShow() && sizeof($availableSocials) && $displayButtons && (!$isLoggedIn)) : ?>
+    <div class="block social-login-authentication-channel account-social-login">
+        <div class="block-content">
+            <?php foreach ($availableSocials as $key => $social) : ?>
+                <div class="actions-toolbar social-btn social-btn-actions-toolbar <?= $key ?>-login">
+                    <a class="btn btn-block btn-social btn-<?= $block->getBtnKey($key) ?>"
+                       data-mage-init='{"socialProvider": {"url": "<?= $social['login_url'] ?>", "label": "<?= __('Login By %1', $social['label']) ?>"}}'>
+                        <span class="fa fa-<?= $block->getBtnKey($key) ?>"></span>
+                        <?= __('Sign in with %1', $social['label']) ?>
+                    </a>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+<?php endif; ?>

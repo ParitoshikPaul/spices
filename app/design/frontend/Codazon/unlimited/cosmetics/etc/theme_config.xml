@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/config.xsd">
+    <default>
+        <themelayoutpro>
+			<general>
+				<newsletter_popup>unlimited-cosmetics-newsletter-popup</newsletter_popup>
+			</general>
+			<header>
+				<header>header-style-16</header>
+				<left_menu>codazon-links-list</left_menu>
+				<main_menu>unlimited-cosmetics-main-menu</main_menu>
+                <vertical_menu>unlimited-cosmetics-left-navigation</vertical_menu>
+                <vertical_menu_displayed_as_default>1</vertical_menu_displayed_as_default>
+                <display_advanced_search>0</display_advanced_search>
+			</header>
+            <main_content>
+                <main_content>main-content-style15</main_content>
+            </main_content>
+            <footer>
+                <footer>footer-style-17</footer>
+            </footer>
+		</themelayoutpro>
+		<pages>
+            <product_view>
+                <layout>catalog_product_view_style03</layout>
+                <moreview_margin>10</moreview_margin>
+                <custom_text>unlimited-product-view-custom-block-style-02</custom_text>
+            </product_view>
+			<category_view>
+				<design>
+					<template>product/list/list-styles/list-style28.phtml</template>
+				</design>
+			</category_view>
+		</pages>
+		<images>
+            <category>
+                <product_image_width>325</product_image_width>
+                <product_image_height>397</product_image_height>
+            </category>
+            <product>
+                <product_base_image_width>800</product_base_image_width>
+                <product_base_image_height>978</product_base_image_height>
+                <product_moreview_image_width>80</product_moreview_image_width>
+                <product_moreview_image_height>98</product_moreview_image_height>
+                <product_listing_image_width>320</product_listing_image_width>
+                <product_listing_image_height>392</product_listing_image_height>
+                <product_cart_image_width>165</product_cart_image_width>
+                <product_cart_image_height>202</product_cart_image_height>
+            </product>
+        </images>
+	</default>
+</config>

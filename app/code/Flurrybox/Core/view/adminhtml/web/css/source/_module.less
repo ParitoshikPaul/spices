@@ -1,0 +1,140 @@
+@up-to-date-dark: #95a970;
+@up-to-date-light: #dff5b8;
+@outdated-dark: #b9b57b;
+@outdated-light: #fffbbb;
+
+.adminhtml-system_config-edit,
+.adminhtml-system-config-edit {
+  .extension-list {
+    .extension {
+      border: 1px solid @up-to-date-dark;
+      background: @up-to-date-light;
+      margin-bottom: 10px;
+      padding: 15px;
+
+      &:after {
+        display: table;
+        content: '';
+        clear: both;
+      }
+
+      &.outdated {
+        border: 1px solid @outdated-dark;
+        background: @outdated-light;
+      }
+
+      .details {
+        width: 80%;
+        float: left;
+
+        .name {
+          font-weight: 700;
+          font-size: 16px;
+        }
+
+        .description {
+          margin-bottom: 10px;
+        }
+
+        .actions {
+          a {
+            margin-right: 10px;
+          }
+        }
+      }
+
+      .versions {
+        width: 20%;
+        float: left;
+
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .legends {
+    margin-bottom: 20px;
+    text-align: right;
+
+    div {
+      display: inline-block;
+
+      &:before {
+        margin-right: 10px;
+        display: block;
+        height: 20px;
+        content: '';
+        width: 20px;
+        float: left;
+      }
+
+      &.up-to-date {
+        margin-right: 20px;
+
+        &:before {
+          border: 1px solid @up-to-date-dark;
+          background: @up-to-date-light;
+        }
+      }
+
+      &.out-dated {
+        &:before {
+          border: 1px solid @outdated-dark;
+          background: @outdated-light;
+        }
+      }
+
+      span {
+        line-height: 23px;
+        display: block;
+        float: left;
+      }
+    }
+  }
+}
+
+
+.config-nav-block.flurrybox-tab {
+  .admin__page-nav-title strong {
+    line-height: 20px;
+
+    &:before {
+      background: url(../Flurrybox_Core/images/menu/flurrybox_dark.svg) no-repeat;
+      vertical-align: bottom;
+      display: inline-block;
+      margin-right: 10px;
+      height: 20px;
+      width: 15px;
+      content: '';
+    }
+  }
+}
+
+.admin__menu .level-0.item-flurrybox {
+  &._active {
+    a {
+      &:before {
+        background: url(../Flurrybox_Core/images/menu/flurrybox_hover.svg) no-repeat;
+      }
+    }
+  }
+
+  a {
+    &:before {
+      background: url(../Flurrybox_Core/images/menu/flurrybox_grey.svg) no-repeat;
+      vertical-align: top;
+      margin-right: auto;
+      margin-left: auto;
+      width: 20px;
+      content: '';
+    }
+
+    &:hover {
+      &:before {
+        background: url(../Flurrybox_Core/images/menu/flurrybox_hover.svg) no-repeat;
+      }
+    }
+  }
+}

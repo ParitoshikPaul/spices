@@ -1,0 +1,125 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var $block \Magento\Wishlist\Block\Link */
+?>
+<?php
+$label = $block->getData('label')?__($block->getData('label')):__($block->getLabel());
+$isLoggedIn = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Customer\Model\Session')->isLoggedIn();
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$displayStyle = $this->getData('display_style')?:($helper->getHeaderWishlistStyle()?:'dropdown');
+$uniqid = uniqid();
+?>
+<!-- link -->
+<?php if ($isLoggedIn) : ?>
+    <?php /* Logged in */ ?>
+    <?php if ($displayStyle == 'popup') : ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <a id="top-wishlist" class="cdz-top-link" href="javascript:;" data-cdzpopuptrigger="wishlist-popup">
+            <span class="label"><?php echo $block->escapeHtml($label) ?></span>
+            <!-- ko if: wishlist().counter -->
+            <span data-bind="text: wishlist().counter.replace(/\D/g,'')" class="counter qty"></span>
+            <!-- /ko -->
+        </a>
+        <div style="display: none">
+            <div class="md-dialog-container wishlist-popup" data-cdzpopup id="wishlist-popup">
+                <?php echo $this->getBlockHtml('wishlist.minilist'); ?>
+            </div>
+        </div>
+    </li>
+    <?php elseif ($displayStyle == 'simple_link') : ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <a class="cdz-top-link" <?php echo $block->getLinkAttributes() ?>><?php echo $block->escapeHtml($label) ?> 
+        <!-- ko if: wishlist().counter -->
+        (<span data-bind="text: wishlist().counter" class="counter qty"></span>)
+        <!-- /ko -->
+        </a>
+    </li>
+    <?php elseif ($displayStyle == 'sidebar') : ?>
+    <li class="link wishlist">
+        <a class="cdz-top-link" id="top-wishlist" data-bind="scope: 'wishlist'" href="javascript:;" data-sidebartrigger='{"side": "right", "section":"utilies-wishlist"}'>
+            <span class="label"><?php echo $block->escapeHtml($label) ?></span>
+            <!-- ko if: wishlist().counter -->
+            <span data-bind="text: wishlist().counter.replace(/\D/g,'')" class="counter qty"></span>
+            <!-- /ko -->
+        </a>
+    </li>
+    <?php else : /* dropdown */ ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <div class="cdz-dropdown" data-role="cdz-dropdown">
+            <a <?= $block->getLinkAttributes() ?> class="cdz-dd-trigger cdz-top-link" id="top-wishlist" data-role="cdz-dd-trigger">
+                <span class="label"><?php echo $block->escapeHtml($label) ?></span>
+                <!-- ko if: wishlist().counter -->
+                <span data-bind="text: wishlist().counter.replace(/\D/g,'')" class="counter qty"></span>
+                <!-- /ko -->
+            </a>
+            <div class="cdz-dd-content wl-drop-menu" data-role="cdz-dd-content">
+                <div class="cdz-dd-content-inner nice-scroll">
+                    <?php echo $this->getBlockHtml('wishlist.minilist'); ?>
+                </div>
+            </div>
+        </div>
+    </li>
+    <?php endif ?>
+<?php else : ?>
+    <?php /* No logged in */ ?>
+    <?php if ($displayStyle == 'popup') : ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <a id="top-wishlist" class="cdz-top-link" data-cdzpopuptrigger="<?php echo $block->getData('guest_template_id'); ?>" href="javascript:;"><span class="label"><?php echo $block->escapeHtml($label) ?></span></a>
+        <div style="display:none;">
+            <?php echo $this->getBlockHtml('wishlist-login-popup'); ?>
+        </div>
+    </li>
+    <?php elseif ($displayStyle == 'simple_link') : ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <a class="cdz-top-link" <?php echo $block->getLinkAttributes() ?>><?php echo $block->escapeHtml($label) ?> 
+        <!-- ko if: wishlist().counter -->
+        (<span data-bind="text: wishlist().counter" class="counter qty"></span>)
+        <!-- /ko -->
+        </a>
+    </li>
+    <?php elseif ($displayStyle == 'sidebar') : ?>
+    <li class="link wishlist">
+        <a id="top-wishlist" class="cdz-top-link" href="javascript:;" data-sidebartrigger='{"side": "right", "section":"utilies-wishlist"}'><span class="label"><?php echo $block->escapeHtml($label) ?></span></a>
+    </li>
+    <?php else : /* dropdown */ ?>
+    <li class="link wishlist" data-bind="scope: 'wishlist'">
+        <div class="cdz-dropdown" data-role="cdz-dropdown">
+            <a href="javascript:;" class="cdz-dd-trigger cdz-top-link" id="top-wishlist" data-role="cdz-dd-trigger"><span class="label"><?php echo $block->escapeHtml($label) ?></span></a>
+            <div class="cdz-dd-content wl-drop-menu" data-role="cdz-dd-content">
+                <div class="cdz-dd-content-inner nice-scroll">
+                    <div class="mini-list">
+                        <div class="block-top">
+                            <div class="block-title">
+                                <strong><?php echo __('Please login first'); ?></strong>
+                            </div>
+                        </div>
+                        <div class="block-content">
+                            <?php echo $this->getBlockHtml('wishlist-login-dropdown'); ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <?php endif ?>
+<?php endif ?>
+
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "wishlist": {
+                        "component": "Magento_Wishlist/js/view/wishlist"
+                    }
+                }
+            }
+        }
+    }
+</script>

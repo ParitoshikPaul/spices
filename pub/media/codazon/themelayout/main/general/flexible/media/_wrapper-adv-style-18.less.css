@@ -1,0 +1,25 @@
+.wrapper-adv-style-18 {
+    .owl-item {
+        > .item {
+            
+        }
+    }
+    .item-image {
+        border: 1px solid @main_border;
+        border-radius: 10px;
+        overflow: hidden;
+        display: inline-block;
+        width: 100%;
+    }
+    .item-title {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        color: @main_title_text;
+    }
+    .item:hover {
+        .item-title {
+            color: @main_hover_text;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+<?php
+/**
+ *
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<script>
+require(['jquery', 'Magento_Ui/js/lib/view/utils/async'], function($) {
+    $.each([
+        'textarea[name=layout_xml]',
+        'textarea[name="custom_fields[custom_variables]"]',
+        'textarea[name="custom_fields[custom_less_code]"]',
+        'textarea[name="custom_fields[custom_css_code]"]'
+    ], function(ie, selector) {
+        $.async(selector, function(input) {
+            var $input = $(input);
+            $input.keydown(function(e) {
+                if (e.keyCode === 9) {
+                    var start = this.selectionStart;
+                    var end = this.selectionEnd;
+                    var value = $input.val();
+                    $input.val(value.substring(0, start) + "\t" + value.substring(end));
+                    this.selectionStart = this.selectionEnd = start + 1;
+                    e.preventDefault();
+                }
+            });
+        });
+    });
+});
+</script>

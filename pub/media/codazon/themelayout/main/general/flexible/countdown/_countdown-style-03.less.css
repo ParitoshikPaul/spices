@@ -1,0 +1,65 @@
+.countdown-style-03 {
+    .deal-wrap[data-mage-init] {
+        display: none;
+    }
+    .product-deal {
+        min-height: 27px;
+        .deal-items {
+            display: inline-block;
+            padding: 3px;
+            white-space: nowrap;
+        }
+        .deal-item {
+            display: inline-block;
+            padding: 2px 5px;
+            text-align: center;
+            margin: 0 3px 0 0;
+            border-radius: 3px;
+            background: @btn_primary_background;
+            color: @btn_primary_text;
+            min-width: 40px;
+            .rtl-layout &{
+                margin: 0 0 0 3px;
+            }
+            &:last-child {
+                margin: 0;
+            }
+            .value, .label{
+                display: block;
+                width: 100%;
+            }
+            .label {
+                font-size: 11px;
+                border-top: 1px solid fade(@btn_primary_text, 30%);
+                margin-top: 1px;
+            }
+            .value {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    &.black-countdown {
+        .product-deal {
+            .deal-items {
+                background: #929292;
+            }
+            .deal-item {
+                background: #000;
+                color: #fff;
+            }
+        }
+    }
+    @media @phone{
+        .product-deal {
+            .deal-item {
+                min-width: 30px;
+                .value {
+                    font-size: 13px;
+                }
+                
+            }
+           
+        }
+    }
+} 

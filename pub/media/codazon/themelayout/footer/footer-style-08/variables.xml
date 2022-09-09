@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-08</identifier>
+  <title>Footer Style 08</title>
+  <variables>
+    <footer_background>#ffffff</footer_background>
+    <footer_background_file></footer_background_file>
+    <footer_background_image_option></footer_background_image_option>
+    <footer_background_normal>#5d666f</footer_background_normal>
+    <footer_border>#000000</footer_border>
+    <footer_bottom_background>#e1e1e1</footer_bottom_background>
+    <footer_font>14px</footer_font>
+    <footer_hover_text>#009688</footer_hover_text>
+    <footer_text>#000000</footer_text>
+    <footer_text_normal>#ffffff</footer_text_normal>
+    <footer_title_font>30px</footer_title_font>
+    <footer_title_text>#282828</footer_title_text>
+    <footer_top_background>#ffffff</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+&lt;referenceBlock name="footer_links" remove="true" /&gt;&#xD;
+&lt;referenceBlock name="copyright" remove="true" /&gt;&#xD;
+&lt;referenceBlock name="report.bugs" remove="true" /&gt;&#xD;
+&lt;referenceBlock name="form.subscribe" remove="true" /&gt;&#xD;
+&lt;move element="theme-layout-footer" destination="footer-container" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e9925aa</version>
+    <custom_variables></custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-08 text-center"&gt;&#xD;
+    &lt;div class="footer content"&gt;&#xD;
+        &lt;div class="footer-content-top"&gt;&#xD;
+            &lt;div class="footer-social"&gt;&#xD;
+                &lt;p class="social"&gt;&#xD;
+                    &lt;a href="#"&gt;&#xD;
+                        &lt;span class="fa fa-facebook"&gt;&#xD;
+                            &lt;!-- facebook--&gt;&#xD;
+                        &lt;/span&gt;&#xD;
+                    &lt;/a&gt;&#xD;
+                    &lt;a href="#"&gt;&#xD;
+                        &lt;span class="fa fa-twitter"&gt;&#xD;
+                            &lt;!-- twitter --&gt;&#xD;
+                        &lt;/span&gt;&#xD;
+                    &lt;/a&gt;&#xD;
+                    &lt;a href="#"&gt;&#xD;
+                        &lt;span class="fa fa-pinterest-p"&gt;&#xD;
+                            &lt;!-- pinterest --&gt;&#xD;
+                        &lt;/span&gt;&#xD;
+                    &lt;/a&gt;&#xD;
+                    &lt;a href="#"&gt;&#xD;
+                        &lt;span class="fa fa-instagram"&gt;&#xD;
+                            &lt;!-- instagram --&gt;&#xD;
+                        &lt;/span&gt;&#xD;
+                    &lt;/a&gt;&#xD;
+                    &lt;a href="#"&gt;&#xD;
+                        &lt;span class="fa fa-snapchat-ghost"&gt;&#xD;
+                            &lt;!-- snapchat --&gt;&#xD;
+                        &lt;/span&gt;&#xD;
+                    &lt;/a&gt;&#xD;
+                &lt;/p&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+        &lt;div class="container"&gt;&#xD;
+            &lt;div class="footer-content-middle"&gt;&#xD;
+                &lt;div class="row"&gt;&#xD;
+                    &lt;div class="col-xs-24 col-sm-16 col-sm-push-4 col-md-12 col-md-push-6"&gt;&#xD;
+                        &lt;div class="newsletter"&gt;&#xD;
+                            &lt;p class="newsletter-title"&gt;subscribe to our Newsletter&lt;/p&gt;&#xD;
+                            &lt;div class="newsletter-content"&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+                            &lt;p class="des text-uppercase"&gt;1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3. T&amp;amp;C's apply&lt;/p&gt;&#xD;
+                        &lt;/div&gt;&#xD;
+                    &lt;/div&gt;&#xD;
+                &lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+            &lt;div class="footer-content-bottom"&gt;&#xD;
+                &lt;div class="footer-address"&gt;&#xD;
+                    &lt;p&gt;&#xA9; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+                &lt;/div&gt;&#xD;
+                &lt;div class="footer-payment"&gt;Payment methods &lt;img class="img-responsive" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+            &lt;/div&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+    &lt;div class="footer-bottom"&gt;&#xD;
+        &lt;div class="container"&gt;&#xD;
+            &lt;ul class="bottom-links"&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;Shopping guide&lt;/a&gt;&lt;/li&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;Company&lt;/a&gt;&lt;/li&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;About us &lt;/a&gt;&lt;/li&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;Policies&lt;/a&gt;&lt;/li&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;Services Stores&lt;/a&gt;&lt;/li&gt;&#xD;
+                &lt;li&gt;&lt;a href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;&#xD;
+            &lt;/ul&gt;&#xD;
+        &lt;/div&gt;&#xD;
+    &lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

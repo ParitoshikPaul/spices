@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\HeaderPool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="varibales" xsi:type="array">
+                    <item name="class" xsi:type="string">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Header</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\FooterPool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="varibales" xsi:type="array">
+                    <item name="class" xsi:type="string">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Footer</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\MainContentPool" type="Magento\Ui\DataProvider\Modifier\Pool">
+        <arguments>
+            <argument name="modifiers" xsi:type="array">
+                <item name="varibales" xsi:type="array">
+                    <item name="class" xsi:type="string">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\MainContent</item>
+                    <item name="sortOrder" xsi:type="number">10</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\HeaderDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\HeaderPool</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\FooterDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\FooterPool</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\MainContentDataProvider">
+        <arguments>
+            <argument name="pool" xsi:type="object">Codazon\ThemeLayoutPro\Ui\DataProvider\Form\Modifier\MainContentPool</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Header">
+        <arguments>
+            <argument name="scopeName" xsi:type="string">themelayout_header_form.themelayout_header_form</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Footer">
+        <arguments>
+            <argument name="scopeName" xsi:type="string">themelayout_footer_form.themelayout_footer_form</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\MainContent">
+        <arguments>
+            <argument name="scopeName" xsi:type="string">themelayout_maincontent_form.themelayout_maincontent_form</argument>
+        </arguments>
+    </type>
+</config>

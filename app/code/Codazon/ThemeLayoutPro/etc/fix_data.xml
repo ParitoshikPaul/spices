@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2020 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<patch_list>
+    <item>
+        <collection>Codazon\ThemeLayoutPro\Model\ResourceModel\Header\Collection</collection>
+        <model>Codazon\ThemeLayoutPro\Model\Header</model>
+        <field_to_select>layout_xml</field_to_select>
+        <attribute_to_select></attribute_to_select>
+        <process>
+            <item>
+                <condition>
+                    <field>identifier</field>
+                    <value>header-style-01</value>
+                </condition>
+                <patch>
+                    <item>
+                        <field>layout_xml</field>
+                        <search>header-search-wrap</search>
+                        <not_exist>
+                            <search>htmlClass="col-sm-8 col-md-6 col-lg-9 header-panel-middle"</search>
+                            <replace>htmlClass="col-sm-8 col-md-6 col-lg-9 header-panel-middle header-search-wrap"</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>layout_xml</field>
+                        <search>header-search-container</search>
+                        <exist>
+                            <search>header-search-container</search>
+                            <replace>header-search-wrap</replace>
+                        </exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <condition>
+                    <field>identifier</field>
+                    <value>header-style-06</value>
+                </condition>
+                <patch>
+                    <item>
+                        <field>layout_xml</field>
+                        <search>header-search-wrap</search>
+                        <not_exist>
+                            <search>htmlClass="hp-right-bottom"</search>
+                            <replace>htmlClass="hp-right-bottom header-search-wrap"</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <condition>
+                    <field>identifier</field>
+                    <value>header-style-11</value>
+                </condition>
+                <patch>
+                    <item>
+                        <field>layout_xml</field>
+                        <search>header-search-wrap</search>
+                        <not_exist>
+                            <search>htmlClass="col-sm-14 col-md-9 col-lg-10 header-panel-center"</search>
+                            <replace>htmlClass="col-sm-14 col-md-9 col-lg-10 header-panel-center header-search-wrap"</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <condition>
+                    <field>identifier</field>
+                    <value>header-style-12</value>
+                </condition>
+                <patch>
+                    <item>
+                        <field>layout_xml</field>
+                        <search>header-search-wrap</search>
+                        <not_exist>
+                            <search>htmlClass="col-sm-6 header-panel-left"</search>
+                            <replace>htmlClass="col-sm-6 header-panel-left header-search-wrap"</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+        </process>
+    </item>
+    <item>
+        <collection>Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent\Collection</collection>
+        <model>Codazon\ThemeLayoutPro\Model\MainContent</model>
+        <field_to_select></field_to_select>
+        <attribute_to_select>themelayout_content</attribute_to_select>
+        <process>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>base-slider product-list-style</search>
+                        <not_exist>
+                            <search>product-list-style</search>
+                            <replace>base-slider product-list-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>base-slider post-list-style</search>
+                        <not_exist>
+                            <search>post-list-style</search>
+                            <replace>base-slider post-list-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>base-slider wrapper-adv-style</search>
+                        <not_exist>
+                            <search>wrapper-adv-style</search>
+                            <replace>base-slider wrapper-adv-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>base-slider brand-style</search>
+                        <not_exist>
+                            <search>brand-style</search>
+                            <replace>base-slider brand-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>base-slider instagram-style</search>
+                        <not_exist>
+                            <search>instagram-style</search>
+                            <replace>base-slider instagram-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>themelayout_content</field>
+                        <search>Magefan\\Blog\\Block\\Widget\\PostList</search>
+                        <exist>
+                            <search>Magefan\\Blog\\Block\\Widget\\PostList</search>
+                            <replace>Codazon\\ThemeLayoutPro\\Block\\Widget\\BlogPostList</replace>
+                        </exist>
+                    </item>
+                </patch>
+            </item>
+        </process>
+    </item>
+    <item>
+        <collection>Codazon\ThemeLayoutPro\Model\ResourceModel\Template\Collection</collection>
+        <model>Codazon\ThemeLayoutPro\Model\Template</model>
+        <field_to_select>content</field_to_select>
+        <attribute_to_select></attribute_to_select>
+        <process>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>base-slider product-list-style</search>
+                        <not_exist>
+                            <search>product-list-style</search>
+                            <replace>base-slider product-list-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>base-slider post-list-style</search>
+                        <not_exist>
+                            <search>post-list-style</search>
+                            <replace>base-slider post-list-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>base-slider wrapper-adv-style</search>
+                        <not_exist>
+                            <search>wrapper-adv-style</search>
+                            <replace>base-slider wrapper-adv-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>base-slider brand-style</search>
+                        <not_exist>
+                            <search>brand-style</search>
+                            <replace>base-slider brand-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>base-slider instagram-style</search>
+                        <not_exist>
+                            <search>instagram-style</search>
+                            <replace>base-slider instagram-style</replace>
+                        </not_exist>
+                    </item>
+                </patch>
+            </item>
+            <item>
+                <patch>
+                    <item>
+                        <field>content</field>
+                        <search>Magefan\Blog\Block\Widget\PostList</search>
+                        <exist>
+                            <search>Magefan\Blog\Block\Widget\PostList</search>
+                            <replace>Codazon\ThemeLayoutPro\Block\Widget\BlogPostList</replace>
+                        </exist>
+                    </item>
+                </patch>
+            </item>
+        </process>
+    </item>
+    
+    <product_list_style>
+        <list-style01>product-01.less.css</list-style01>
+        <list-style02>product-02.less.css</list-style02>
+        <list-style03>product-03.less.css</list-style03>
+        <list-style04>product-04.less.css</list-style04>
+        <list-style05>product-05.less.css</list-style05>
+        <list-style06>product-06.less.css</list-style06>
+        <list-style07>product-07.less.css</list-style07>
+        <list-style08>product-08.less.css</list-style08>
+        <list-style09>product-09.less.css</list-style09>
+        <list-style10>product-10.less.css</list-style10>
+        <list-style11>product-11.less.css</list-style11>
+        <list-style12>product-12.less.css</list-style12>
+        <list-style13>product-13.less.css</list-style13>
+        <list-style14>product-14.less.css</list-style14>
+        <list-style15>product-15.less.css</list-style15>
+        <list-style16>product-16.less.css</list-style16>
+        <list-style18>product-18.less.css</list-style18>
+        <list-style19>product-19.less.css</list-style19>
+        <list-style20>product-20.less.css</list-style20>
+        <list-style21>product-21.less.css</list-style21>
+        <list-style22>product-22.less.css</list-style22>
+        <list-style23>product-23.less.css</list-style23>
+        <list-style24>product-24.less.css</list-style24>
+        <list-style25>product-25.less.css</list-style25>
+        <list-style26>product-26.less.css</list-style26>
+        <list-style27>product-27.less.css</list-style27>	
+        <list-style28>product-28.less.css</list-style28>
+        <list-style29>product-29.less.css</list-style29>
+        <list-style30>product-30.less.css</list-style30>
+        <list-style31>product-31.less.css</list-style31>
+        <list-style32>product-32.less.css</list-style32>
+    </product_list_style>
+</patch_list>

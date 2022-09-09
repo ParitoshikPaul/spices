@@ -1,0 +1,32 @@
+/*Suppermarket Style 02*/
+.product-layout-style-02{
+	.product-col-left,
+	.product-col-right{
+		padding:0;
+		.item-group:last-child .small-col{
+			border-right:0;
+		}
+	}
+	@media @phone{
+		.product-list-style-10{
+			.product-item-top .product-hovered-section{display: none}
+			.product-item-info{padding: 5px;}
+			.cart-qty{
+				/*min-width: 140px;*/
+			}
+		}
+	}
+	@media @phonedown{
+		.product-list-style-10 {
+			.tocompare{
+				display: none;
+			}
+			.cart-qty {
+				min-width: inherit;
+				.field.qty{
+					.abs-calc-width(~'100% - 36px')
+				}
+			}
+		}
+	}
+}

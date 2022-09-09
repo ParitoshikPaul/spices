@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2020 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$wrap = $this->getLayout()->createBlock(\Magento\Catalog\Block\Widget\RecentlyViewed::class)->addData([
+    'uiComponent'   => 'widget_recently_viewed',
+    'page_size'     => $this->getData('products_count'),
+]);
+?>
+<?php
+echo $wrap->renderApp([
+    'widget_columns' => [
+        'displayMode'   => 'grid',
+        'additionalClasses' => 'recently-viewed-products',
+        'template'      => 'Codazon_ProductFilter/product/list/wrapper',
+        'component'     => 'Codazon_ProductFilter/js/recently-viewed',
+        'jsonData'      => $this->getFilterData(),
+        'ajaxUrl'       => $this->getUrl('productfilter/index/loadByIds'),
+        'currentUrl'    => $this->getUrl(),
+        'page_size'     => $this->getData('products_count'),
+        'noResultMsg'   => __('There is no product recently viewed.'),
+    ],
+    'image' => [
+        'imageCode' => 'recently_viewed_products_grid_content_widget'
+    ]
+]);
+?>

@@ -1,0 +1,256 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <remove src="Magefan_Blog::css/blog-new.css" />
+    </head>
+    <body>
+        <!-- Left Sidebar -->
+        <block name="utilities.sidebar.left" class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/utilities/utilities-sidebar.phtml" after="-">
+            <arguments>
+                <argument name="component_id" xsi:type="string">left</argument>
+                <argument name="css_class" xsi:type="string">md-sidenav-left</argument>
+                <!--argument name="required_blocks" xsi:type="array">
+                    <item name="getLeftMenuStyle" xsi:type="string">header-links-list</item>
+                </argument-->
+            </arguments>
+        </block>
+        
+                
+        <!-- Right Sidebar -->
+        <block name="utilities.sidebar.right" class="Magento\Framework\View\Element\Template" template="Magento_Theme::html/utilities/utilities-sidebar.phtml" after="-">
+            <arguments>
+                <argument name="component_id" xsi:type="string">right</argument>
+                <argument name="required_blocks" xsi:type="array">
+                    <item name="getAccountPanelStyle" xsi:type="string">utilities.content</item>
+                    <item name="getHeaderWishlistStyle" xsi:type="string">wishlist-sidebar</item>
+                    <item name="getMiniCartStyle" xsi:type="string">minicart-sidebar</item>
+                </argument>
+                <argument name="css_class" xsi:type="string">md-sidenav-right</argument>
+            </arguments>
+        </block>
+        
+        <block class="Magento\Framework\View\Element\Template" name="utilities.content" template="Magento_Theme::html/utilities/utilities-content.phtml">
+            <arguments>
+                <argument name="html_id" xsi:type="string">utilities-main</argument>
+                <argument name="css_class" xsi:type="string">main</argument>
+            </arguments>
+        </block>
+                
+        <block class="Magento\Framework\View\Element\Template" name="header-links-list" template="Magento_Theme::html/links-list.phtml">
+            <arguments>
+                <argument name="html_id" xsi:type="string">utilities-linkslist</argument>
+                <argument name="css_class" xsi:type="string">utilities-linkslist</argument>
+            </arguments>
+        </block>
+        
+        
+        <!-- Toggle Left Sidebar -->
+        <block class="Magento\Framework\View\Element\Template" name="utilities.toggle.linkslist" template="Magento_Theme::html/utilities/utilities-toggle.phtml">
+            <arguments>
+                <argument name="direction" xsi:type="string">left</argument>
+            </arguments>
+        </block>
+        
+        <!-- Top Links Features -->
+        <block class="Magento\Framework\View\Element\Html\Links" name="top.links.features">
+            <arguments>
+                <argument name="css_class" xsi:type="string">header features-links items hidden-xs</argument>
+            </arguments>
+            <block class="Magento\Framework\View\Element\Html\Link\Current" ifconfig="contact/contact/enabled" name="header-contact-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Need Help?</argument>
+                    <argument name="path" xsi:type="string">contact</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Framework\View\Element\Template" name="links.features.cart" template="Magento_Theme::html/custom-li.phtml">
+                <action method="setData">
+                    <argument name="name" xsi:type="string">html_class</argument>
+                    <argument name="value" xsi:type="string">cart-link</argument>
+                </action>
+            </block>
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link-features">
+                <arguments>
+                    <argument name="label" xsi:type="string">Wish List</argument>
+                    <argument name="guest_template_id" xsi:type="string">wl-login-popup</argument>
+                    <argument name="registered_template_id" xsi:type="string">wl-login-popup</argument>
+                    <argument name="template_id" xsi:type="string">wl-login-popup</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-features" template="account/link/authorization-style01.phtml" />
+        </block>
+        
+        <!-- Simple Login Form -->
+        <block class="Codazon\ThemeLayoutPro\Block\Customer\Form\Login" name="mini-login-form-simple" template="Magento_Customer::mini-form/login.phtml">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Please login first?</argument>
+                <argument name="description" xsi:type="string" translate="true">You must be logged in to manage your wishlist.</argument>
+                <argument name="css_class" xsi:type="string">wl-login-popup</argument>
+                <argument name="template_id" xsi:type="string">wl-login-popup</argument>
+            </arguments>
+        </block>
+        <!-- Account Short Info -->
+        <block class="Magento\Customer\Block\Account\Dashboard" name="account.info.summary" template="Magento_Customer::account/info-summary.phtml" />
+        
+        <!-- Account Menu -->
+        <container name="account.menu" htmlTag="div" htmlClass="acount-menu">
+            <block class="Magento\Framework\View\Element\Html\Links" name="account.menu.items">
+                <arguments>
+                    <argument name="css_class" xsi:type="string">account-menu-items items</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" template="Magento_Theme::html/custom-link.phtml" name="account.menu.myaccount" before="-">
+                    <arguments>
+                        <argument name="class" xsi:type="string">account</argument>
+                        <argument name="label" xsi:type="string" translate="true">My account</argument>
+                        <argument name="path" xsi:type="string">customer/account</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Wishlist\Block\Link" name="account.menu.wishlist.link">
+                    <arguments>
+                        <argument name="display_style" xsi:type="string">simple_link</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="account.menu.compare.link" template="Magento_Catalog::product/compare/link.phtml">
+                    <arguments>
+                        <argument name="jsLayout" xsi:type="array">
+                            <item name="components" xsi:type="array">
+                                <item name="compareProducts" xsi:type="array">
+                                    <item name="component" xsi:type="string">Magento_Catalog/js/view/compare-products</item>
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" template="Magento_Theme::html/custom-link.phtml" name="account.menu.order">
+                    <arguments>
+                        <argument name="class" xsi:type="string">order-link</argument>
+                        <argument name="label" xsi:type="string" translate="true">My Orders</argument>
+                        <argument name="path" xsi:type="string">sales/order/history</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Html\Link\Current" template="Magento_Theme::html/custom-link.phtml" ifconfig="contact/contact/enabled" name="account.menu.contact">
+                    <arguments>
+                        <argument name="class" xsi:type="string">contact-link</argument>
+                        <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
+                        <argument name="path" xsi:type="string">contact</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="account.menu.language" template="Magento_Theme::html/custom-li.phtml">
+                    <arguments>
+                        <argument name="html_class" xsi:type="string">language-link</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="account.menu.currency" template="Magento_Theme::html/custom-li.phtml">
+                    <arguments>
+                        <argument name="html_class" xsi:type="string">currency-link</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="account.menu.store" template="Magento_Theme::html/custom-li.phtml">
+                    <arguments>
+                        <argument name="html_class" xsi:type="string">store-link</argument>
+                    </arguments>
+                </block>
+            </block>
+        </container>
+        
+        <move element="store_language" destination="account.menu.language" />
+        <move element="currency" destination="account.menu.currency" />
+        <move element="store_switcher" destination="account.menu.store" />        
+
+        <!-- Wish List -->
+        <block class="Magento\Wishlist\Block\Customer\Wishlist\Items" name="wishlist.minilist" template="mini-list.phtml" />
+        <!-- Popup Style -->
+        <block class="Codazon\ThemeLayoutPro\Block\Customer\Form\Login" name="wishlist-login-popup" template="Magento_Customer::mini-form/login-popup-style01.phtml">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Please login first</argument>
+                <argument name="description" xsi:type="string" translate="true">You must be logged in to manage your wish list.</argument>
+                <argument name="css_class" xsi:type="string">wl-login-popup</argument>
+                <argument name="template_id" xsi:type="string">wl-login-popup</argument>
+            </arguments>
+        </block>
+        <!-- Dropdown Style -->
+        <block class="Codazon\ThemeLayoutPro\Block\Customer\Form\Login" name="wishlist-login-dropdown" template="Magento_Customer::mini-form/login-dropdown-style01.phtml">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Please login first</argument>
+                <argument name="description" xsi:type="string" translate="true">You must be logged in to manage your wish list.</argument>
+                <argument name="css_class" xsi:type="string">wl-login-popup</argument>
+                <argument name="template_id" xsi:type="string">wl-login-popup</argument>
+            </arguments>
+        </block>
+        <!-- Sidebar Style -->
+        <block class="Magento\Framework\View\Element\Template" name="wishlist-sidebar" template="Magento_Wishlist::wishlist-sidebar.phtml">
+            <arguments>
+                <argument name="css_class" xsi:type="string">utilies-wishlist</argument>
+                <argument name="html_id" xsi:type="string">utilies-wishlist</argument>
+            </arguments>
+        </block>
+        
+        
+        
+        <!-- Sidebar Style -->
+        <block class="Magento\Checkout\Block\Cart\Sidebar" name="minicart-sidebar" template="Magento_Checkout::cart/minicart-sidebar.phtml">
+            <arguments>
+                <argument name="css_class" xsi:type="string">utilies-minicart</argument>
+                <argument name="html_id" xsi:type="string">utilies-minicart</argument>
+            </arguments>
+        </block>
+        
+		<block class="Magento\Framework\View\Element\Template" name="mobi-cart-placeholder" template="Magento_Theme::html/mobi-cart-placeholder.phtml" />
+        <block class="Magento\Framework\View\Element\Template" name="store-menu-placeholder" template="Magento_Theme::html/store-menu-placeholder.phtml" />
+        <block class="Magento\Framework\View\Element\Template" name="store-vertical-menu" template="Magento_Theme::html/vertcial-menu.phtml" />
+        
+        
+        <move element="account.info.summary" destination="utilities.content"  before="-" />
+        <move element="account.menu" destination="utilities.content" />
+        
+        <referenceContainer name="before.body.end">
+            <block class="Magento\Framework\View\Element\Template" name="mobi-toolbar-bottom" template="Magento_Theme::html/mobi-toolbar-bottom.phtml" />
+            <block class="Magento\Framework\View\Element\Template" name="cdz-newsletter-popup" template="Magento_Theme::html/newsletter-popup.phtml" />
+        </referenceContainer>
+        <move element="utilities.sidebar.left" destination="before.body.end" />
+        <move element="utilities.sidebar.right" destination="before.body.end" />
+        
+        <block class="Magento\Store\Block\Switcher" name="store-language-currency" template="Magento_Theme::html/store-language-currency.phtml" />
+        
+        <referenceContainer name="header.container">
+            <container name="header-container-inner" htmlTag="div" htmlClass="container sticky-menu js-sticky-menu" before="mobi-search-container" />
+            <block class="Magento\Framework\View\Element\Template" name="mobi-search-container" before="-" template="Magento_Theme::html/mobi-search-container.phtml" after="header-container-inner" />
+        </referenceContainer>
+        <move element="header.panel.wrapper" destination="header-container-inner" />
+        <move element="header-wrapper" destination="header-container-inner" />
+        
+        <container name="header-store-info" htmlTag="div" htmlClass="header-store-info" label="Header Store Info" />
+        
+        <!-- mobile -->
+        <referenceBlock name="store.settings">
+            <block class="Magento\Store\Block\Switcher" name="store.settings.store" template="switch/stores.phtml">
+                <arguments>
+                    <argument name="id_modifier" xsi:type="string">nav</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="wish-list-link">
+            <action method="setData">
+                <argument name="name" xsi:type="string">display_style</argument>
+                <argument name="value" xsi:type="string">simple_link</argument>
+            </action>
+        </referenceBlock>
+        <!-- end mobile -->
+        
+        <move element="content.top" destination="main" before="-" />
+        <move element="sidebar.brand.search" destination="sidebar.additional" before="-" />
+        <move element="sidebar.brand.slider" destination="sidebar.additional" after="sidebar.brand.search" />
+        
+        <!-- vertical menu on mobile -->
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="mobi-vertcial-menu-container" before="-" template="Magento_Theme::html/mobi-vertcial-menu-container.phtml" />
+        </referenceContainer>
+        
+        <referenceBlock name="navigation.sections" template="Magento_Theme::html/mobi-sections.phtml" />
+    </body>
+</page>

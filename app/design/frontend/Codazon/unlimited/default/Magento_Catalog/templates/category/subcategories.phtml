@@ -1,0 +1,73 @@
+<?php
+/**
+ * Copyright © 2020 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+    $subcats = $block->getCurrentSubcategoriesData();
+?>
+<?php if ($block->canShowBlock() && count($subcats)) : ?>
+<?php
+$templId = uniqid('subcategories_');
+$configData = $block->getConfigData();
+if ($configData['show_slider']) {
+    $widget = ['themewidgets' => [
+        'codazon.slider'    => [
+            'sliderConfig'  => $this->getSliderData($configData)
+        ],
+    ]];
+} else {
+    $widget = ['themewidgets' => ['codazon.autowidth' => [
+            'itemsPerRow' => $block->getGridData($configData),
+            'margin'      => $configData['slider_margin'],
+            'item'        => '.item'    
+        ]
+    ]];
+}
+?>
+<div class="cdz-subcategories no-loaded" id="placeholder-<?= $templId ?>">
+<div class="brand-loader double-bounce-spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+</div>
+<script id="<?= $templId ?>" type="text/x-jquery-tmpl">
+<div class="cdz-subcategories base-slider no-loaded <%- config.style %><?= $configData['hovered_style'] ? ' hovered-style' : '' ?><%- config.title ? ' has-title':' no-title' %>">
+    <% if (config.title) { %><div class="cdz-subcat-title"><span><%- config.title %></span></div><% } %>
+    <div class="cdz-subcat-inner<?= $configData['show_slider'] ? ' owl-carousel' : '' ?> flex-grid" data-mage-init='<%= widgetJson %>' <% if (!config.show_slider) { %>style="margin-bottom:<%- config.margin %>px"<% } %>>
+        <% _.each(subcats, function(subcat, id) { %>
+        <div class="item">
+            <div class="item-top">
+                <a class="item-thumbnail" title="<%- subcat.name %>" href="<%- subcat.url %>" class="abs-img" style="padding-bottom: <%- config.imgRatio %>%;">
+                    <img class="zoom-eff" src="<%- subcat.thumbnail ? subcat.thumbnail : config.placeholder %>" />
+                </a>
+            </div>
+            <a class="item-title" title="<%- subcat.name %>" href="<%- subcat.url %>"><%= subcat.name %></a>
+        </div>
+        <% }); %>
+    </div>
+</div>
+</script>
+<script>
+var render_<?= $templId ?> = function() {
+    require(['jquery', 'mage/template'], function($, mageTmpl) {
+        var tmplId = '<?= $templId ?>', $placeholder = $('#placeholder-' + tmplId), tmpl = mageTmpl('#' + tmplId);
+        var subcats = <?= json_encode($subcats) ?>, widget = <?= json_encode($widget) ?>, config = <?= json_encode($configData) ?>;
+        config.imgRatio = 100*config.thumbnail_height/config.thumbnail_width;
+        if (subcats.length) {
+            var $list = $(tmpl({
+                subcats: subcats,
+                widgetJson: JSON.stringify(widget),
+                config: config
+            })).insertBefore($placeholder.hide());
+            $('body').trigger('contentUpdated');
+            setTimeout(function() { $list.removeClass('no-loaded'); }, 100);
+        }
+        $placeholder.remove();
+    });
+}
+if ((typeof windowLoaded == 'undefined') || windowLoaded) {
+    render_<?= $templId ?>();
+} else {
+    window.addEventListener('load', render_<?= $templId ?>, true);
+}
+</script>
+<?php endif ?>

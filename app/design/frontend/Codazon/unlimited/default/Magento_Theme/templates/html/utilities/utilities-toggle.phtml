@@ -1,0 +1,13 @@
+<?php
+	/**
+	 * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+	 * See COPYING.txt for license details.
+	 */
+?>
+<?php
+$direction = $this->getData('direction')?:'left';
+$section = $this->getData('section')?:'utilities-linkslist';
+?>
+<div class="utilies-toggle-wrap hidden-xs">
+    <button class="utilies-toggle-btn" data-sidebartrigger='{"side": "<?php echo $direction ?>", "section":"<?php echo $section ?>"}'></button>
+</div>

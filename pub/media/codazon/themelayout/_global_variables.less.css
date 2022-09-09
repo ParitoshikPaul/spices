@@ -1,0 +1,73 @@
+/* Service banner */
+/* + ---- style 1*/
+@service-banner-text-01: #000000;
+@service-banner-hover-text-01: #727171;
+
+/* + ---- style 3*/
+@service-banner-background: #06943f;
+@service-banner-title: #fff;
+@service-banner-hover-title: #2cc067;
+@service-banner-text: #fff;
+@service-banner-hover-text: #2cc067;
+@service-banner-icon: #06943f;
+@service-banner-hover-icon: #2cc067;
+@service-banner-icon-border: #2cc067;
+@service-banner-hover-icon-border: #2cc067;
+
+/* Product listing */
+@product_top_background: #ffffff;
+@product_info_background: #dfece5;
+@banner_title: #f59601;             //skin beauty - no background
+
+/* motorcycle */
+@product_bottom_background: #d6d6d6;
+@banner_title_background: #d6d6d6;      
+@banner_title_text: #282828;              
+@banner_title_hover_background: #d6d6d6;
+@banner_title_hover_text: #282828;
+@avsb_1_background: #222222;    //Advanced Searh Box
+@avsb_1_text: #fff;             //Advanced Searh Box
+/* end motorcycle */
+
+/* megamall */
+@tabs_09_color_02_tabs_background: #e91e63;
+@tabs_09_color_02_label_background: #a9033b;
+@tabs_09_color_02_label_text: #ffffff;
+/* end megamall */
+
+/* Slideshow Thumb Preview */
+@slideshow_nav_thumb_border: #fff;
+@slideshow_dots_thumb_border: #fff;
+@slideshow_dots_thumb_border_active: #fff;
+
+/* Mobile Search */
+@mobile_small_search_border: #ccc;
+@mobile_small_search_text: #282828;
+@mobile_small_search_font: ~'400 13px/1.35 Open Sans, Helvetica Neue, Verdana, Arial, sans-serif';
+@mobile_sticky_min_height: 47px;
+
+/* Form */
+@input_height: 35px;
+
+/* supermarket */
+@color-block-01:#5c6ac3;
+@color-block-02:#ff6a00;
+@color-block-03:#df1830;
+@color-block-04:#ed06cf;
+
+@container_full_max_width: 1720px;
+@container_full_side_padding: 30px;
+
+
+@box_style05_color01: #248fd5;
+@box_style05_color02: #603814;
+@box_style05_color03: #42b029;
+@box_style05_color04: #946031;
+@box_style05_color05: #f7cd3b;
+
+@service-style06-background: #125430;
+@service-style06-icon-background: #fc0;
+@service-style06-icon-text: #fff;
+@service-style06-text: #fff;
+@service-style06-icon-hover-background: #fc0;
+@service-style06-icon-hover-text: #121212;

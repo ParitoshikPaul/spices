@@ -1,0 +1,180 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ */
+?>
+<?php
+$_productCollection = $block->getProductCollection();
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+?>
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty"><div><?php /* @escapeNotVerified */ echo __('We can\'t find products matching the selection.') ?></div></div>
+<?php else: ?>
+    <?php
+    $viewMode = 'grid';
+    $image = 'category_page_grid';
+    $templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    
+    $showDescription = $this->isShow('description');
+    $showSku = $this->isShow('sku');
+    $showWishlist = $this->isShow('wishlist');
+    $showCompare = $this->isShow('compare');
+    $showCart = $this->isShow('addtocart');
+    $showQuickShop = $this->isShow('quickshop');
+    $showLabel = $this->isShow('label');
+    $showThumb = $this->isShow('thumb');
+    $showName = $this->isShow('name');
+    $showReview = $this->isShow('review');
+    $showPrice = $this->isShow('price');
+    
+    $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+    $wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
+    $showSlider = $this->getData('show_slider');
+    
+    $width = $block->getData('thumb_width')?:150;
+    $height = $block->getData('thumb_height')?:150;
+    $paddingBottom = $height*100/$width;
+    $imageHelper = $this->helper('Magento\Catalog\Helper\Image');
+    $quickShopHelper = $this->helper('Codazon\QuickShop\Helper\Data');
+    $labelHelper = $this->helper('Codazon\ProductLabel\Helper\Data');
+    
+    $totalRows = (int)$this->getData('total_rows')?:1;
+    $totalCols = (int)$this->getData('total_cols');
+    $cartWidget = $block->isRedirectToCartEnabled()?'':'data-mage-init=\'{"catalogAddToCart":{}}\'';
+    
+    $swatchesRender = $this->getSwatchesBlock();
+    $isFirstPage = (bool)!$this->getData('is_next_page');
+    $adapts = array('1900', '1600', '1420', '1280','980','768','480','320','0');
+    foreach ($adapts as $adapt) {
+        $itemPerRow[$adapt] = (float)$this->getData('items_' . $adapt);
+    }
+    $widget = [
+        'Codazon_ProductFilter/js/infinite-load' => [
+            'jsonData'  => array_merge($this->getFilterData(), ['action' => 'ajaxload']),
+            'ajaxUrl'   => $this->getUrl('productfilter/index/ajaxLoad')
+        ],
+        'themewidgets' => ['codazon.autowidth' => [
+                'itemsPerRow' => $itemPerRow,
+                'sameHeight'  => ['.product-item-name'],
+                'margin'      => $block->getData('slider_margin')
+            ] 
+        ]
+    ];
+    ?>
+<?php if ($isFirstPage): ?>
+<div class="grid-style-12 products wrapper <?= $viewMode; ?> products-<?= $viewMode; ?>" data-mage-init='<?= json_encode($widget) ?>'>
+    <div class="products list items product-items flex-grid">
+<?php endif ?>
+        <?php foreach ($_productCollection as $_product): ?>
+        <div class="item product product-item cdz-transparent" data-role="item">
+            <div class="product-item-info" data-container="product-grid">
+                <?php if ($showThumb) : ?>
+                <div class="product-item-top">
+                    <a href="<?= $_product->getProductUrl() ?>" class="product photo product-item-photo">
+                        <span class="product-image-container">
+                            <span class="product-image-wrapper" style="padding-bottom: <?= $paddingBottom ?>%;"><?= $block->getImageHtml($_product, $width, $height, $imageHelper) ?></span>
+                        </span>
+                    </a>
+                    <?= $showLabel?$labelHelper->showLabel($_product):''; ?>
+                    <?php if ($showWishlist || $showCompare || $showQuickShop) : ?>
+                        <div class="button-hover-wrap">
+                            <?= $showQuickShop?$quickShopHelper->getQuickShopButton($_product):''; ?>
+                            <?php if ($wishlistHelper->isAllow() && $showWishlist): ?>
+                                <a href="#"
+                                   data-post='<?= $block->getAddToWishlistParams($_product); ?>'
+                                   class="action towishlist" data-action="add-to-wishlist"
+                                   title="<?= __('Add to Wish List') ?>">
+                                    <span><?= __('Add to Wish List') ?></span>
+                                </a>
+                            <?php endif; ?>
+                            <?php if ($block->getAddToCompareUrl() && $showCompare): ?>
+                                <a href="#" class="action tocompare"
+                                   data-post='<?= $compareHelper->getPostDataParams($_product);?>'
+                                   title="<?= __('Add to Compare') ?>">
+                                    <span><?= __('Add to Compare') ?></span>
+                                </a>
+                            <?php endif; ?>
+                        </div>
+                        <?php endif; ?>
+                </div>
+                <?php endif ?>
+                
+                <div class="product details product-item-details">
+                    <?php
+                        $_productNameStripped = $block->stripTags($_product->getName(), null, true);
+                    ?>
+                    <?php if ($showName): ?>
+                    <strong class="product name product-item-name">
+                        <a class="product-item-link" href="<?= $_product->getProductUrl(); ?>">
+                            <?= $_helper->productAttribute($_product, $_product->getName(), 'name'); ?>
+                        </a>
+                    </strong>
+                    <?php endif ?>
+                    <?php if ($showSku) : ?>
+                    <div class="product-item-sku"><span class="label"><?= __('SKU: ') ?></span><span class="value"><?= $_product->getData('sku') ?></span></div>
+                    <?php endif ?>
+                    <?= $showReview?$block->getReviewsSummaryHtml($_product, $templateType):''; ?>
+                    <?= $showPrice?$block->getProductPrice($_product):''; ?>
+                    <?= ($_product->getTypeId() === 'configurable')?$swatchesRender->setProduct($_product)->toHtml():''; ?>
+                    <?php echo $block->getProductDetailsHtml($_product); ?>
+                    <?php if ($showDescription):?>
+                    <div class="product description product-item-description">
+                        <?= $this->subString($_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description'), 70) ?>
+                    </div>
+                    <?php endif; ?>
+                    <?php if ($showCart) : ?>
+                    <div class="product-item-inner">
+                        <div class="product actions product-item-actions">
+                            <div class="actions-primary">
+                                <?php if ($_product->isSaleable()): ?>
+                                    <?php $postParams = $block->getAddToCartPostParams($_product); ?>
+                                    <form <?= $cartWidget ?> data-role="tocart-form" action="<?= $postParams['action']; ?>" method="post">
+                                        <input type="hidden" name="product" value="<?= $postParams['data']['product']; ?>">
+                                        <input type="hidden" name="<?= Action::PARAM_NAME_URL_ENCODED; ?>" value="<?= $postParams['data'][Action::PARAM_NAME_URL_ENCODED]; ?>">
+                                        <?php echo $block->getBlockHtml('formkey')?>
+                                        <button type="submit"
+                                                title="<?php echo $block->escapeHtml(__('Add to Cart')); ?>"
+                                                class="action tocart primary">
+                                            <span><?= __('Add to Cart') ?></span>
+                                        </button>
+                                    </form>
+                                <?php else: ?>
+                                    <?php if ($_product->getIsSalable()): ?>
+                                        <button onclick="document.location.href = '<?= $_product->getProductUrl(); ?>'" class="action tocart primary stock available"><span><?= __('In stock') ?></span></button>
+                                    <?php else: ?>
+                                        <button class="action tocart primary disabled stock unavailable" disabled><span><?= __('Out of stock') ?></span></button>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+                        </div>
+                    </div>
+                    <?php endif ?>
+                </div>
+            </div>
+        </div>
+        <?php endforeach; ?>
+<?php if ($isFirstPage): ?>
+    </div>
+    <div class="listing-actions">
+		<div class="ajax-loader" data-role="ajax_loader" style="display:none;">
+            <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+        </div>
+        <div layout="row" layout-align="center center">
+            <button data-role="ajax_trigger" class="cdz-ajax-trigger mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"><span><?= __('Load more') ?></span></button>
+        </div>
+    </div>
+</div>
+<?php endif ?>
+<?php endif; ?>

@@ -1,0 +1,105 @@
+<?php
+/**
+ * Copyright © 2015 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post view template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View
+ */
+?>
+<?php
+    $_post = $this->getPost();
+    $_postUrl = $_post->getPostUrl();
+    $_postName = $block->escapeHtml($_post->getTitle(), null, true);
+    $_helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+    $dateFormat = $_helper->getConfig('pages/blog/date_format');
+    $infoBlock = $this->getInfoBlock();
+    $_author = $_post->getAuthor();
+    $width = $_helper->getConfig('images/blog/blog_base_image_width') ? : 1200;
+    $height = $_helper->getConfig('images/blog/blog_base_image_height') ? : 800;
+    $paddingBottom = $height*100/$width;
+    $imgHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Image');
+?>
+<div class="post-view">
+    <div class="post-holder post-holder-<?php echo $_post->getId() ?>">
+    
+        <?php if ($_post->getData('featured_img')) : ?>
+        <?php
+        $_postFeatured = $_post->getData('featured_img');
+        $_postImage = '';
+        if ($_postFeatured) {
+            $_postImage = (string)$imgHelper->init($_postFeatured)->setBaseDir('blog/cache/')->keepFrame(false)->resize($width, null);
+        }
+        ?>
+        <div class="post-top">
+            <div class="post-ftimg-hld">
+                <img src="<?php echo $_postImage ?>" alt="<?php echo $_postName ?>" />
+            </div>
+        </div>
+        <?php endif ?>
+        <div class="post-header clearfix">
+            <div class="addthis_toolbox addthis_default_style" addthis:url="<?php echo $_postUrl ?>">
+                <a class="addthis_button_facebook"></a>
+                <a class="addthis_button_twitter"></a>
+                <a class="addthis_button_email"></a>
+                <a class="addthis_button_compact"></a>
+            </div>
+            <?php //echo $this->getInfoHtml() ?>
+            
+            <div class="post-info">
+                <div class="item post-date"><?= $_post->getPublishDate($dateFormat) ?></div>
+                <?php if ($_author) : ?>
+                <div class="item post-author">
+                    <span class="label"><?php echo __('Posted by:') ?></span>
+                    <a title="<?php echo $infoBlock->escapeHtml($_author->getTitle()) ?>"
+                        <?php echo ($infoBlock->authorPageEnabled())?'href="'.$_author->getAuthorUrl().'"' : ''; ?>>
+                        <span><?= $_author->getTitle() ?></span>
+                    </a>
+                </div>
+                <?php endif ?>
+                <?php if ($_categoriesCount = $_post->getCategoriesCount()) : ?>
+                <div class="item post-categories">
+                    <span class="label"><?php echo __('Categories:') ?></span>
+                    <?php $n = 0; foreach($_post->getParentCategories() as $ct) : $n++; ?>
+                        <a title="<?php echo $block->escapeHtml($ct->getTitle()) ?>" href="<?php echo $ct->getCategoryUrl() ?>">
+                            <?php echo $block->escapeHtml($ct->getTitle()) ?>
+                        </a>
+                        <?php if ($n != $_categoriesCount) : ?>, <?php endif ?>
+                    <?php endforeach ?>
+                </div>
+                <?php endif ?>
+                <?php if ($_tagsCount = $_post->getTagsCount()) : ?>
+                <div class="item post-tags">
+                    <span class="label"><?php echo __('Tags:') ?></span>
+                    <?php $n = 0; foreach($_post->getRelatedTags() as $tag) : $n++; ?>
+                        <a class="post-tag" title="<?php echo $block->escapeHtml($tag->getTitle()) ?>" href="<?php echo $tag->getTagUrl() ?>">
+                            <?php echo $block->escapeHtml($tag->getTitle()) ?>
+                        </a>
+                        <?php if ($n != $_tagsCount) : ?>, <?php endif ?>
+                    <?php endforeach ?>
+                </div>
+                <?php endif ?>
+            </div>
+            
+        </div>
+
+        <div class="post-content">
+            <div class="post-description clearfix">
+                <div class="post-text-hld">
+                    <?php echo $block->getContent() ?>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="post-bottom">
+            <?php echo $this->getChildHtml('blog.post.bottom') ?>
+        </div>
+    </div>
+</div>

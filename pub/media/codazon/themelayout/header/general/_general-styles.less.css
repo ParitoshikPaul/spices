@@ -1,0 +1,141 @@
+// Fix Magento 2.4
+.page-header {
+    a.action.skip.contentarea {
+        display: none;
+    }
+}
+.page-header .switcher .options, .page-footer .switcher .options {
+    display: inline-block;
+    position: relative;
+    &:before {
+        content: '';
+        display: table;
+    }
+    .action.toggle {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0;
+        cursor: pointer;
+        &:after {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 22px;
+            line-height: 22px;
+            color: inherit;
+            content: '\e622';
+            font-family: 'icons-blank-theme';
+            margin: 0;
+            vertical-align: top;
+            display: inline-block;
+            font-weight: 400;
+            overflow: hidden;
+            speak: none;
+            text-align: center;
+        }
+        &.active:after {
+            content: '\e621';
+        }
+    }
+    ul.dropdown {
+        margin: 0;
+        padding: 0;
+        list-style: none none;
+        background: #fff;
+        border: 1px solid #bbb;
+        margin-top: 4px;
+        min-width: 160px;
+        z-index: 100;
+        box-sizing: border-box;
+        display: none;
+        position: absolute;
+        top: 100%;
+        box-shadow: 0 3px 3px rgba(0,0,0,.15);
+        li {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: block;
+            padding: 8px;
+        }
+        &:before {
+            content: '';
+            display: block;
+            height: 0;
+            position: absolute;
+            width: 0;
+            border: 6px solid;
+            border-color: transparent transparent #fff;
+            z-index: 99;
+            left: 10px;
+            top: -12px;
+        }
+    }
+}
+.page-header .panel.wrapper .switcher .options {
+    display: block;
+    .action.toggle, .action.toggle.active {
+        > span {
+            width: auto;
+            height: auto;
+            overflow: visible;
+            position: static;
+            margin: 0;
+        }
+    }
+}
+
+.page-footer .switcher .options {
+    .action.toggle {
+        &:after {
+            display: inline-block !important;
+            font-size: 22px;
+            top: auto;
+            left: auto;
+            right: auto;
+            width: auto;
+            height: auto;
+            position: static;
+        }
+        &.active:after {
+            .abs-transform(none);
+        }
+    }
+}
+.nav-sections {
+    .switcher {
+        a img {
+            margin: 0 5px 0 0;
+            display: inline-block;
+            .rtl-layout &{
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}
+.nav-before-open .rtl-layout .page-wrapper {
+    transition: right 0.3s;
+}
+.nav-before-open .rtl-layout .page-wrapper {
+    right: 0;
+    left: auto;
+}
+.nav-open .rtl-layout .page-wrapper {
+    left: auto;
+}
+/* Fix Magento 3.3.x */
+.page-header .switcher .options .action.toggle > span,
+.page-footer .switcher .options .action.toggle > span,
+.page-header .switcher .options .action.toggle.active > span,
+.page-footer .switcher .options .action.toggle.active > span {
+    position: relative;
+    height: auto;
+    width: auto;
+    margin: 0;
+    clip: unset;
+}
+#cookie-status {display:none;}
+.logo {
+    max-width: none;
+}

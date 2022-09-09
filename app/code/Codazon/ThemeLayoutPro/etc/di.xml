@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<virtualType name="ThemeLayoutHeaderGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+		<arguments>
+			<argument name="appliers" xsi:type="array">
+				<item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+				<item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+			</argument>
+		</arguments>
+	</virtualType>
+    <virtualType name="ThemeLayoutFooterGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+		<arguments>
+			<argument name="appliers" xsi:type="array">
+				<item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+				<item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+			</argument>
+		</arguments>
+	</virtualType>
+    <virtualType name="ThemeLayoutMainContentGirdFilterPool" type="Magento\Framework\View\Element\UiComponent\DataProvider\FilterPool">
+		<arguments>
+			<argument name="appliers" xsi:type="array">
+				<item name="regular" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\RegularFilter</item>
+				<item name="fulltext" xsi:type="object">Magento\Framework\View\Element\UiComponent\DataProvider\FulltextFilter</item>
+			</argument>
+		</arguments>
+	</virtualType>
+    
+    <!-- grid -->
+	<virtualType name="ThemeLayoutHeaderGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+		<arguments>
+			<argument name="collection" xsi:type="object" shared="false">Codazon\ThemeLayoutPro\Model\ResourceModel\Header\Collection</argument>
+			<argument name="filterPool" xsi:type="object" shared="false">ThemeLayoutHeaderGirdFilterPool</argument>
+		</arguments>
+	</virtualType>
+    <virtualType name="ThemeLayoutFooterGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+		<arguments>
+			<argument name="collection" xsi:type="object" shared="false">Codazon\ThemeLayoutPro\Model\ResourceModel\Footer\Collection</argument>
+			<argument name="filterPool" xsi:type="object" shared="false">ThemeLayoutFooterGirdFilterPool</argument>
+		</arguments>
+	</virtualType>
+    <virtualType name="ThemeLayoutMainContentGridDataProvider" type="Magento\Framework\View\Element\UiComponent\DataProvider\DataProvider">
+		<arguments>
+			<argument name="collection" xsi:type="object" shared="false">Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent\GridCollection</argument>
+			<argument name="filterPool" xsi:type="object" shared="false">ThemeLayoutMainContentGirdFilterPool</argument>
+		</arguments>
+	</virtualType>
+	
+    <virtualType name="Codazon\ThemeLayoutPro\Model\ResourceModel\Header\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">themelayout_header</argument>
+			<argument name="resourceModel" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\Header</argument>
+		</arguments>
+	</virtualType>
+    <virtualType name="Codazon\ThemeLayoutPro\Model\ResourceModel\Footer\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">themelayout_footer</argument>
+			<argument name="resourceModel" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\Footer</argument>
+		</arguments>
+	</virtualType>
+    <type name="Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent\Grid\Collection">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">themelayout_maincontent_entity</argument>
+			<argument name="resourceModel" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent</argument>
+		</arguments>
+	</type>
+    <!-- end grid -->
+    
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="themelayout_header_data_source" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\Header\Grid\Collection</item>
+                <item name="themelayout_footer_data_source" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\Footer\Grid\Collection</item>
+                <item name="themelayout_maincontent_data_source" xsi:type="string">Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+    
+    <virtualType name="Magento\Framework\View\TemplateEngine\Xhtml\ConfigCompiler" type="Magento\Framework\View\TemplateEngine\Xhtml\Compiler" shared="false">
+        <arguments>
+            <argument name="compilerText" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\Compiler\Text</argument>
+            <argument name="compilerAttribute" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\Compiler\Attribute</argument>
+            <argument name="compilerCdata" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\Compiler\Cdata</argument>
+            <argument name="compilerComment" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\Compiler\Comment</argument>
+            <argument name="elementCompilers" xsi:type="array">
+                <item name="include" xsi:type="object">Magento\Config\Model\Config\Compiler\IncludeElement</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    
+    <virtualType name="Codazon\ThemeLayoutPro\Model\Config\Structure\HeaderReader" type="Codazon\ThemeLayoutPro\Model\Config\Structure\Reader">
+		<arguments>
+            <argument name="fileName" xsi:type="string">adminhtml/header_variables.xml</argument>
+            <argument name="compiler" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\ConfigCompiler</argument>
+        </arguments>
+	</virtualType>
+    <virtualType name="Codazon\ThemeLayoutPro\Model\Config\Structure\FooterReader" type="Codazon\ThemeLayoutPro\Model\Config\Structure\Reader">
+		<arguments>
+            <argument name="fileName" xsi:type="string">adminhtml/footer_variables.xml</argument>
+            <argument name="compiler" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\ConfigCompiler</argument>
+        </arguments>
+	</virtualType>
+    <virtualType name="Codazon\ThemeLayoutPro\Model\Config\Structure\MainContentReader" type="Codazon\ThemeLayoutPro\Model\Config\Structure\Reader">
+		<arguments>
+            <argument name="fileName" xsi:type="string">adminhtml/maincontent_variables.xml</argument>
+            <argument name="compiler" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\ConfigCompiler</argument>
+        </arguments>
+	</virtualType>
+        
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Header">
+        <arguments>
+            <argument name="reader" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\Structure\HeaderReader</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\Footer">
+        <arguments>
+            <argument name="reader" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\Structure\FooterReader</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Ui\DataProvider\Form\VariablesDataProvider\MainContent">
+        <arguments>
+            <argument name="reader" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\Structure\MainContentReader</argument>
+        </arguments>
+    </type>
+    
+    <!--preference for="Magento\Framework\App\Config\ConfigResource\ConfigInterface" type="Codazon\ThemeLayoutPro\Model\Config\ResourceModel\Config" /-->
+    <type name="Codazon\ThemeLayoutPro\Model\Config\Structure\ThemeReader">
+        <arguments>
+            <argument name="compiler" xsi:type="object">Magento\Framework\View\TemplateEngine\Xhtml\ConfigCompiler</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Model\Config\Structure\Data">
+        <arguments>
+            <argument name="cacheId" xsi:type="string">backend_codazon_theme_configuration_structure</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Model\Config\ThemeConfigValue">
+        <arguments>
+            <argument name="resource" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\ResourceModel\Config\Data</argument>
+            <argument name="resourceCollection" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\ResourceModel\Config\Data\Collection\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\Model\Config\Loader">
+        <arguments>
+            <argument name="configValueFactory" xsi:type="object">Codazon\ThemeLayoutPro\Model\Config\ThemeConfigValueFactory</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\App\Config">
+        <arguments>
+            <argument name="types" xsi:type="array">
+                <item name="theme_system" xsi:type="object">Codazon\ThemeLayoutPro\App\Config\Type\System</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="themeConfigSourceAggregated" type="Magento\Framework\App\Config\ConfigSourceAggregated">
+        <arguments>
+            <argument name="sources" xsi:type="array">
+                <item name="theme" xsi:type="array">
+                    <item name="source" xsi:type="object">Codazon\ThemeLayoutPro\App\Config\Source\ThemeConfigSource</item>
+                    <item name="sortOrder" xsi:type="string">10</item>
+                </item>
+                <item name="dynamic" xsi:type="array">
+                    <item name="source" xsi:type="object">Codazon\ThemeLayoutPro\App\Config\Source\RuntimeConfigSource</item>
+                    <item name="sortOrder" xsi:type="string">100</item>
+                </item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="themeConfigSourceAggregatedProxy" type="Magento\Framework\App\Config\ConfigSourceAggregated\Proxy">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">themeConfigSourceAggregated</argument>
+        </arguments>
+    </virtualType>
+    
+    <type name="Codazon\ThemeLayoutPro\App\Config\Type\System">
+        <arguments>
+            <argument name="source" xsi:type="object">themeConfigSourceAggregatedProxy</argument>
+            <argument name="postProcessor" xsi:type="object">systemConfigPostProcessorCompositeProxy</argument>
+            <argument name="cache" xsi:type="object">Codazon\ThemeLayoutPro\App\Cache\Type\Config</argument>
+            <argument name="preProcessor" xsi:type="object">Magento\Framework\App\Config\PreProcessorComposite</argument>
+            <argument name="reader" xsi:type="object">Codazon\ThemeLayoutPro\App\Config\Type\System\Reader\Proxy</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\App\Config\Type\System\Reader">
+        <arguments>
+            <argument name="source" xsi:type="object">themeConfigSourceAggregated</argument>
+            <argument name="postProcessor" xsi:type="object">systemConfigPostProcessorComposite</argument>
+            <argument name="preProcessor" xsi:type="object">Magento\Framework\App\Config\PreProcessorComposite</argument>
+        </arguments>
+    </type>
+    <type name="Codazon\ThemeLayoutPro\App\Config\Initial\SchemaLocator">
+        <arguments>
+            <argument name="moduleName" xsi:type="string">Codazon_ThemeLayoutPro</argument>
+        </arguments>
+    </type>
+    
+    <type name="Codazon\ThemeLayoutPro\Controller\Adminhtml\Config\Save">
+        <arguments>
+            <argument name="cache" xsi:type="object">Magento\Framework\App\Cache\Type\Layout</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\Console\CommandListInterface">
+        <arguments>
+            <argument name="commands" xsi:type="array">
+                <item name="codazonBuildAssets" xsi:type="object">Codazon\ThemeLayoutPro\Console\Command\BuildAssets</item>
+                <item name="codazonFixData" xsi:type="object">Codazon\ThemeLayoutPro\Console\Command\FixData</item>
+            </argument>
+        </arguments>
+    </type>
+    
+    <!-- <type name="Magento\Framework\Config\View">
+        <plugin name="themelayoutpro_plugin_framework_config_view" type="Codazon\ThemeLayoutPro\Plugin\Framework\Config\View" />
+    </type> -->
+    
+    
+    <type name="Codazon\ThemeLayoutPro\Controller\Adminhtml\Category\ThumbnailUpload">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryThumbnailUpload</argument>
+        </arguments>
+    </type>
+    <virtualType name="Magento\Catalog\CategoryThumbnailUpload" type="Magento\Catalog\Model\ImageUploader">
+        <arguments>
+            <argument name="baseTmpPath" xsi:type="string">catalog/tmp/category/thumbnail</argument>
+            <argument name="basePath" xsi:type="string">catalog/category/thumbnail</argument>
+            <argument name="allowedExtensions" xsi:type="array">
+                <item name="jpg" xsi:type="string">jpg</item>
+                <item name="jpeg" xsi:type="string">jpeg</item>
+                <item name="gif" xsi:type="string">gif</item>
+                <item name="png" xsi:type="string">png</item>
+            </argument>
+            <argument name="allowedMimeTypes" xsi:type="array">
+                <item name="jpg" xsi:type="string">image/jpg</item>
+                <item name="jpeg" xsi:type="string">image/jpeg</item>
+                <item name="gif" xsi:type="string">image/gif</item>
+                <item name="png" xsi:type="string">image/png</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <type name="Codazon\ThemeLayoutPro\Model\Category\Attribute\Backend\Image">
+        <arguments>
+            <argument name="imageUploader" xsi:type="object">Magento\Catalog\CategoryThumbnailUpload</argument>
+        </arguments>
+    </type>
+    <preference for="Magento\Catalog\Model\Category\DataProvider" type="Codazon\ThemeLayoutPro\Model\Category\DataProvider" />    
+    <!-- <type name="Magento\Framework\App\Response\Http">
+        <plugin name="themelayoutpro_plugin_app_response_http" type="Codazon\ThemeLayoutPro\Plugin\App\Response\Http" />
+    </type> -->
+</config>

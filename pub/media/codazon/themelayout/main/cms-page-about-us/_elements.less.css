@@ -1,0 +1,134 @@
+.cms-page-view .page-title-wrapper{
+	text-align:center;
+}
+.cms-codazon-about-us .page-main > .page-title-wrapper .page-title{
+	font-size:30px;
+}
+.section-title {
+    padding: 3em 0;
+    border-top: 1px solid @main_border;
+	text-align: center;
+	h2{
+		color: @main_title_text;
+		text-transform:uppercase;
+		font-size:1.65rem;
+	}
+}
+.skill-value {
+	color:@main_hover_text;
+	.value{
+		font-size: 56px;
+		line-height: 1.519em;
+		font-weight: 700;
+	}
+	.term {
+		font-size: 16px;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
+.des-title-wrap {
+	h2{
+		color:@main_title_text
+	}
+	p.des{
+		max-width: 70%;
+		margin:0 auto
+	}
+}
+.store-event {
+	.icon{
+		display: block;
+		width: 122px;
+		height: 122px;
+		margin: 0 auto 1rem;
+		border-radius: 50%;
+		border: 2px solid @main_hover_text;
+		text-align: center;
+		.fa{
+			color: @main_hover_text;
+			font-size: 50px;
+			line-height: 122px;
+			width: 100%;
+			text-align:center;
+			&:before{
+				margin:0 -10px 0px 0;
+				display: inline-block;
+				.abs-transition();
+			}
+		}
+	}
+	.title{
+		text-transform:uppercase;
+		color:@main_title_text
+	}
+	p.des {
+		font-size: 14px;
+	}
+	.event-item:hover .icon .fa:before{
+		.abs-transform(rotate(360deg))
+	}
+}
+.our-team{
+	.avata img {
+		margin: 0 auto 20px;
+		.abs-transition();
+		border:2px solid @main_hover_text;
+		.abs-borderradius(100%);
+	}
+	.name{
+		text-transform:uppercase;
+		color:@main_hover_text;
+		font-size: 1.2rem;		
+		font-weight: 600;
+		position:relative;
+		&:after{
+			content:"";
+			width:30px;
+			height:2px;
+			position: absolute;
+			background:@main_hover_text;
+			bottom:-5px;
+			left:~'calc((100% - 30px)/2)'
+		}
+	}
+	.des {
+		font-size: 14px;
+		max-width: 80%;
+		margin: 15px auto;
+	}
+	.member-item:hover{
+		.avata img{
+			.abs-transform(rotate(-10deg))
+		}
+	}
+}
+.tesimonial.text-white {
+	.section-title h2{
+		color:#ffffff
+	}
+	.wrapper-adv-style-02 {
+		padding-top:0;
+		.item{
+			color:#ffffff;
+			.tt-header .tt-name{
+				color:#ffffff
+			}
+			.tt-comment {
+				max-width: 80%;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+@media @phone{
+	.des-title-wrap p.des{
+		max-width:90%
+	}
+	.our-team .des{
+		margin-bottom:30px
+	}
+	.tesimonial.text-white .wrapper-adv-style-02 .item .tt-comment{
+		max-width:90%
+	}
+}

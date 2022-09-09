@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-29</identifier>
+  <title>Footer Style 29</title>
+  <variables>
+    <footer_background>#FFFFFF</footer_background>
+    <footer_background_file>/b/k/bkg-newsletter_1.jpg</footer_background_file>
+    <footer_background_image_option>0 0 no-repeat</footer_background_image_option>
+    <footer_background_normal>#0c648c</footer_background_normal>
+    <footer_border>#e7eaf0</footer_border>
+    <footer_bottom_background>#ffffff</footer_bottom_background>
+    <footer_font>13px</footer_font>
+    <footer_hover_text>#1282cc</footer_hover_text>
+    <footer_text>#0c648c</footer_text>
+    <footer_text_normal>#ffffff</footer_text_normal>
+    <footer_title_font>14px</footer_title_font>
+    <footer_title_text>#023247</footer_title_text>
+    <footer_top_background>#0c648c</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceBlock name="footer_links" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="copyright" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="report.bugs" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="form.subscribe" remove="true" /&gt;&#xD;
+    &lt;move element="theme-layout-footer" destination="footer-container" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <custom_variables>@service-banner-text-01: #0c648c;</custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+    <version>62a1a8ea17ece</version>
+    <auto_detect_files>
+      <item>service/_service-block-01.less.css</item>
+    </auto_detect_files>
+    <flexible_less/>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-29"&gt;&#xD;
+&lt;div class="main-footer"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="footer-top-inner col-sm-16 col-md-10"&gt;&#xD;
+&lt;div class="newsletter-title"&gt;&lt;span class="title link-block"&gt;Subscribe Us &amp;amp; Get 20% Off&lt;/span&gt;&lt;span class="desc link-block"&gt;Sign up to receive the latest news and promotions&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;div class="newsletter-content"&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-middle"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="middle-top"&gt;&#xD;
+&lt;div class="service-banner-style01 row"&gt;&#xD;
+&lt;div class="item col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-truck"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Free Shipping&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;On every order, every day!&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-lock"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Secure Payment&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;We value your security&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-money"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Money Back Guarantee&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;30 days money back guarantee&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-phone"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;24/7 Customer Service&lt;/strong&gt;&lt;/p&gt;&#xD;
+&lt;p&gt;Dedicated 24/7 support&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="row middle-bottom"&gt;&#xD;
+&lt;div class="col-sm-8"&gt;&#xD;
+&lt;div class="footer-box contact-info"&gt;&#xD;
+&lt;div id="footer-content-1"&gt;&#xD;
+&lt;div class="footer-about-us space-base"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;INFINIT HEATHY CARE&lt;/strong&gt; are available around-the-clock in the event of a health emergency. Have peace of mind as life changes.&lt;/p&gt;&#xD;
+&lt;p&gt;Established since 1992. Global insurance experts. Affordable flexible plans.&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-text address space-base"&gt;&lt;span class="fa fa-map-marker"&gt;&amp;nbsp;&lt;/span&gt;Address: 156x North Main St, Washington, IL 61571, United States&lt;/div&gt;&#xD;
+&lt;div class="footer-text email space-base"&gt;&lt;span class="fa fa-envelope"&gt;&amp;nbsp;&lt;/span&gt;Email: support@company.com&lt;/div&gt;&#xD;
+&lt;div class="footer-text phone space-base"&gt;&lt;span class="fa fa-phone"&gt;&amp;nbsp;&lt;/span&gt;Number 1: (123) 456 78xx &lt;br&gt;Number 2: (354) 194 48xx&lt;/div&gt;&#xD;
+&lt;div class="footer-social hover-iconsocial"&gt;&#xD;
+&lt;p class="social"&gt;&lt;a href="#"&gt;&lt;span class="fa fa-facebook"&gt;facebook&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-twitter"&gt;twitter&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-pinterest-square"&gt;pinterest&lt;/span&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;span class="fa fa-linkedin"&gt;linkedin&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-youtube-play"&gt;youtube-play&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-push-1 col-sm-10"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-2"&gt;Top Categories&lt;/p&gt;&#xD;
+&lt;div id="footer-content-2" class="row footer-link showhide hover-link01"&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;ul class="footer-link"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Family Tests&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Feminine Care&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Menopause&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Menstrual Pain&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Prenatal Vitamins&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Infection Treatments&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Blood Glucose&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Insulin Injectors&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;ul class="footer-link"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Alternative Medicine&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Diabetes Care&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Ear Care&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Eye Health&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Feminine Care&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;First Aid&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Foot Health&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Women's Health&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-push-1 col-sm-5"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-4"&gt;Get to know us&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-4" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='about-us'}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='privacy-policy-cookie-restriction-mode'}}"&gt;Privacy and Cookie Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='about-us'}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='search/term/popular'}}"&gt;Search Terms&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='catalogsearch/advanced'}}"&gt;Advanced Search&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='sales/guest/form'}}"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Corporate&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Suppliers&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-bottom text-center"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-24"&gt;&#xD;
+&lt;ul class="bottom-links"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Shopping guide&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Company&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;About us &lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Policies&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Services Stores&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Contact us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-24"&gt;&#xD;
+&lt;div class="footer-payment"&gt;&lt;img class="img-responsive cdz-lazy" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-24"&gt;&#xD;
+&lt;div class="footer-address text-center"&gt;&#xD;
+&lt;p&gt;&#xA9; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

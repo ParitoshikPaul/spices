@@ -1,0 +1,108 @@
+@media @tablet_vertical{
+	.tabs-style-10 .box-cate-link {
+        margin-right: 53px;
+    }
+	.service-banner-style03 {
+		.abs-borderradius(5px);
+		border: 2px dashed @main_hover_text;
+		padding: 30px 20px 10px;
+	}
+}
+
+.sidebar,.sidebar-home{
+	.cdz-block-title, .block-title{
+		padding: 15px 20px;
+		.abs-borderradius(25px);
+		color:@main_block_title_text;
+		background:@main_block_title_background;
+		.b-title, strong{
+			font: @f_h2;
+			color:@main_block_title_text;
+		}
+	}
+	@media @tablet_horizontal {
+		.owl-carousel .owl-nav [class*='owl-']{
+			top:-56px;
+			right:20px;
+			.abs-link(@main_text_normal2, @main_title_text);
+			&.owl-prev{
+				left:auto;
+				right: 50px;
+			}
+			.rtl-layout &{
+				right:auto;
+				left:20px;
+				&.owl-prev{
+					right:auto;
+					left:50px;
+				}
+			}
+		}
+	}
+}
+@media @tablet_strict {
+    .sidebar-home {
+        .owl-carousel .owl-nav, .owl-carousel .owl-dots{
+            margin: 10px 0;
+            width: 100%;
+            display: block;
+            float: none;
+            text-align: center;
+        }
+        .owl-carousel .owl-nav [class*='owl-'] {
+            position: relative;
+            top: auto !important;
+            left:auto !important;
+            right:auto !important;
+            background: none!important;
+            transform: none !important;
+            width: auto;
+            height: auto;
+            line-height: 1.35;
+            opacity: 1;
+            border:none;
+            color: @main_text;
+            visibility: visible;
+            margin: 0 5px;
+            .sidebar-home & {
+                color: @main_text;
+            }
+            &.owl-prev {
+                &:before{
+                    content:"\f177";
+                    .rtl-layout &{
+                        content:"\f178";
+                    }
+                }				
+                .rtl-layout & {
+                    &:before{
+                        content:"\f178";
+                    }	
+                }	
+            }
+            &:before{
+                content:"\f178";
+                .rtl-layout &{
+                    content:"\f177";
+                }
+            }
+        }
+    }
+}
+.block-brands .owl-carousel .owl-nav{
+	top:-42px;
+	right:15px;
+	.rtl-layout &{
+		right:auto;
+		left:15px;
+	}
+}
+
+.block.block-brands-search{
+	.block-title{
+		margin-bottom:20px;
+		a:before{
+			.abs-link(@main_block_title_text, @main_block_title_text);
+		}
+	}
+}

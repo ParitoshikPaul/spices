@@ -1,0 +1,98 @@
+/*Furniture*/
+.instagram-style03{
+	.owl-slider-general();
+	position: relative;
+    padding-bottom: 1px;
+    overflow: visible !important;
+	.cdz-block-title{
+		text-align: left;
+		.b-title.h2{			
+			font:@f_h3;
+			font-weight: 400;
+			white-space: initial;
+			span:after{
+				display:none;
+			}
+            .rtl-layout &{
+                text-align: right;
+            }
+		}
+		.title-desc{
+			color:@main_text_normal;
+			font-size: 12px;
+			letter-spacing: 1px;
+            margin-top: 10px;
+            .rtl-layout &{
+                text-align: right;
+            }
+		}
+	}
+	.owl-nav{
+		[class*="owl-"]{
+			top:auto;
+			bottom:-35px;
+			visibility: visible;
+			.abs-borderradius(100%) !important;
+			.abs-transform(translate(0)) !important;
+			.abs-opacity(1);
+			.abs-style(#151515, #151515, #ffffff);			
+			&:hover{
+				&:not(.disabled){
+					.abs-style(#ffffff, #151515, #151515);
+				}
+			}
+            &.owl-prev{
+                left: 10px;
+                .rtl-layout &{
+                    right: 10px;
+                    left: auto;
+                }
+            }
+			&.owl-next{
+				right:auto;
+				left:60px;
+				.rtl-layout &{
+					right:60px;
+					left:auto;
+				}
+			}
+		}
+	}
+	.instagram-photos .photo-item{			
+		a:before{
+			.abs-iconfont('\f16d', 36px);
+			position: absolute;
+			.abs-calc-top(~'(100% - 32px)/2');
+			.abs-calc-left(~'(100% - 32px)/2');
+			z-index: 1;
+			.abs-transition();
+			.abs-opacity(0);
+			background: -webkit-linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+			background: linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;					
+		}
+		img{.abs-transition()}
+		&:hover{
+			background: -webkit-linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+			background: linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+			img{.abs-scale(0.9)}
+			a:before{
+				.abs-opacity(1);
+			}
+		}		
+	}
+    .abs-img.type-video {
+        background: #000;
+        img {
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+	@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+		.instagram-photos .photo-item a:before{
+			background: transparent;
+			color:#ffffff;
+		}
+	}
+}

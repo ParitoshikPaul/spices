@@ -1,0 +1,116 @@
+.cdz-subcategories {
+    margin-bottom: 30px;
+    &.no-loaded {
+        min-height: 100px;
+        overflow: hidden;
+    }
+    .item {
+        background: @main_box_background;
+        position: relative;
+    }
+    .cdz-subcat-title {
+        font: @f_h3;
+        color: @main_title_text;
+        margin-bottom: 10px;
+    }
+    &.base-slider {        
+        .owl-nav {
+            position: static;
+            [class*='owl-'] {
+                top: 50% !important;
+                transform: translateY(-50%) !important;
+                &.owl-prev {
+                    right: auto;
+                    left: 0;
+                }
+                &.owl-next {
+                    right: 0;
+                    left: auto;
+                }
+                .rtl-layout & {
+                    &.owl-next {
+                        right: auto;
+                        left: 0;
+                    }
+                    &.owl-prev {
+                        right: 0;
+                        left: auto;
+                    }
+                }
+            }
+        }
+    }
+    .cdz-subcat-inner {
+        padding: 10px;
+        background:  @main_box_background;
+        border-radius: @main_box_radius;
+        box-shadow: 0px 1px 4px 0px fade(darken(@main_box_background, 10%),48%);
+    }
+    .owl-carousel.cdz-subcat-inner:not(.owl-loaded) {
+        white-space: nowrap;
+        display: inline-block;
+        width: 100%;
+        overflow: hidden;
+        > .item {
+            display: inline-block;
+            width: ~'calc(100%/7 - 10px)';
+            margin-right: 10px;
+        }
+    }
+    .item-top {
+        overflow: hidden;
+        //border: 1px solid @main_border;
+        line-height: 0;
+    }
+    .item-title {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 0px;
+        text-align: center;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all ease 400ms;
+    }
+    .item-title, a.item-title {
+        font-weight: 500;
+        color: @main_productname_text;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    &.hovered-style {
+        @media @tablet_vertical {
+            .item-title {
+                position: absolute;
+                bottom: -20px;
+                left: 0;
+                width: 100%;
+                padding: 5px 5px;
+                background: rgba(0,0,0,0.54);
+                visibility: hidden;
+                opacity: 0;
+                transition: all ease 400ms;
+            }
+            a.item-title, .item-title {
+                color: #fff;
+            }
+            .item:hover .item-title {
+                visibility: visible;
+                opacity: 1;
+                bottom: 0px;
+            }
+        }
+    }
+    &.circular {
+        .item-top {
+            border-radius: 50%;
+        }
+    }
+    &.rounded-corners {
+        .item-top {
+            border-radius: 5px;
+        }
+    }
+}

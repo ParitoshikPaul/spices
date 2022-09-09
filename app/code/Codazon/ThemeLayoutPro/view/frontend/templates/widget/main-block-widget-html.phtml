@@ -1,0 +1,24 @@
+<?php
+/**
+* Copyright © 2018 Codazon. All rights reserved.
+* See COPYING.txt for license details.
+*/
+if ($widget = $this->getRequest()->getParam('main_opt_id')) {
+    $helper = $this->helper(\Codazon\Core\Helper\Data::class);
+    $widget = explode("||", $widget);
+    $identifier = $widget[0];
+    $optId = $widget[1];
+    $store = $this->getRequest()->getParam('store', $helper->getCurrentStoreId());
+    $main = $helper->getObjectManager()
+        ->get(\Codazon\ThemeLayoutPro\Model\ResourceModel\MainContent\CollectionFactory::class)->create()
+        ->setStoreId($store)->addFieldToFilter('identifier', $identifier)
+        ->addFieldToSelect('entity_id')
+        ->addAttributeToSelect('store_options')->getFirstItem();
+    if ($options = $main->getData('store_options')) {
+        $options = json_decode($options, true);
+        if (isset($options[$optId])) {
+            echo $helper->minifyHtml($helper->htmlFilter($options[$optId]));
+        }
+    }
+}
+?>

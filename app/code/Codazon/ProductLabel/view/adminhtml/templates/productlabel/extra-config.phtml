@@ -1,0 +1,17 @@
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$version = str_replace("-dev", "", (string)$objectManager->get(\Magento\Framework\App\ProductMetadataInterface::class)->getVersion());
+$isMage23 = version_compare($version, '2.3.0', '>=');
+$isMage244 = $isMage23 && version_compare($version, '2.4.4', '>=');
+?>
+<?php if ((!$isMage244) && $isMage23) : ?>
+<script>
+require.config({
+    map: {
+        '*': {
+            tinymce: 'tiny_mce_4/tinymce.min'
+        }
+    }
+});
+</script>
+<?php endif ?>

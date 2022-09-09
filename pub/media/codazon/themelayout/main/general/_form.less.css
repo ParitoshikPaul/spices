@@ -1,0 +1,150 @@
+@input_box_shadow: none;
+body {
+	input[type="text"], 
+	input[type="password"], 
+	input[type="url"], 
+	input[type="tel"], 
+	input[type="search"], 
+	input[type="number"], 
+	input[type="datetime"], 
+	input[type="email"] {
+		.abs-allstyle( @main_input_text, @main_input_border, @main_input_background, @f_input );
+		height: @input_height;
+		line-height: @input_height;
+		padding-left: 10px;
+		padding-right: 10px;
+        outline: none;
+        background-clip: padding-box;
+        .abs-boxshadow(@input_box_shadow);
+        .form_input_border();
+	}
+	textarea{ 
+		.abs-allstyle( @main_input_text, @main_input_border, @main_input_background, @f_input );
+        .form_input_border();
+        .abs-boxshadow(@input_box_shadow);
+	}
+    select, .cdz-select-wrap .mk{
+        border: 1px solid;
+		.abs-allstyle( @main_input_text, @main_input_border, @main_input_background, @f_input );
+        .abs-boxshadow( @input_box_shadow );
+        padding: 5px 10px 4px;
+        vertical-align: baseline;
+	}
+    form select, form .cdz-select-wrap .mk{
+        height: @input_height;
+        .form_input_border();
+    }
+	._keyfocus *,
+	input:not([disabled]),
+	textarea:not([disabled]),
+	select:not([disabled]) {
+		&:focus {
+			.abs-boxshadow(@input_box_shadow);
+		}
+	}
+    &.rtl-layout {
+        .abs-field-date input, .form-giftregistry-search .fields-specific-options .datetime-picker, .field.date input {
+            margin-right: 0px;
+            margin-left: 10px;
+        }
+    }
+}
+.rtl-layout {
+    input[type="checkbox"] {
+        margin: 2px 0 0 5px;
+    }
+}
+&when not( @input_height = 40px ) {
+    body .page-footer {
+        input[type=text], input[type=email] {
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+}
+label[for] {
+    cursor: pointer;
+}
+.fieldset > .field, .fieldset > .fields > .field, form .field{
+    margin: 0 0 15px;
+}
+.product-item form .field.qty{
+    margin-bottom: 0;
+}
+.fieldset > .field > .label, .fieldset > .fields > .field > .label, .field > .label {
+    margin: 0 0;
+    font-size: 13px;
+}
+.fieldset > .field:not(.choice) > .label{
+    padding-right: 0;
+}
+.fieldset .fullname .field .control{
+    width: 100%;
+}
+.fieldset .fullname .field .label{
+    text-align: inherit;
+    width: 100%;
+    padding: 0;
+    float: none;
+}
+.column:not(.sidebar-main) form .actions-toolbar, 
+.column:not(.sidebar-additional) form .actions-toolbar{
+	margin: 0;
+}
+.fieldset .legend{
+    margin-left: 0;
+	padding-bottom: 10px;
+    border-bottom: 1px solid @main_border;
+    width: 100%;
+	font: @f_h5;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: @main_title_text;
+	margin-bottom: 10px;
+}
+.fieldset > .field > .label, .fieldset > .fields > .field > .label{
+    font-weight: normal;
+}
+
+@media @tablet_vertical{
+	.fieldset > .field:not(.choice) > .label{
+		clear:both;
+		width: 100%;
+		text-align: left;
+		.rtl-layout &{
+			text-align: right;
+		}
+	}
+	.fieldset > .field:not(.choice) > .control{
+		width: 100%;
+	}
+	.fieldset > .field.choice:before, .fieldset > .field.no-label:before{
+		display: none;
+	}
+    .form.search.advanced{
+        width: 60%;
+        display: inline-block;
+    }
+}
+.form.search.advanced .fields.range .field:first-child .control:after{top: 0px; line-height: @input_height;}
+.form.search.advanced .group.price .addon .addafter{padding-top: 0px; line-height: @input_height; font-family: inherit; font-size: inherit;}
+.actions-toolbar > .secondary:last-child{
+    margin-top: 0;
+}
+body {
+    input[name=qty], .qty input, input[name=min_price], input[name=max_price], .page-footer input[type=email]{
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-radius: 0;
+    }
+}
+.field-tooltip .field-tooltip-action:before {
+    font-family: FontAwesome;
+    content: '\F059';
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.field-tooltip._active .field-tooltip-content {
+    line-height: 1.2;
+}

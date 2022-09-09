@@ -1,0 +1,250 @@
+/*Sport*/
+.cart.main.actions .action{
+	&.continue{
+		padding-left: 5px;
+		.rtl-layout &{
+			padding-left: 25px;
+			padding-right: 5px;
+			&:before{
+				content:"\e608";
+			}
+		}
+	}
+	&.update{
+		padding-left: 5px;
+		.rtl-layout &{
+			padding-left: 25px;
+			padding-right: 5px;
+		}
+	}
+}
+/*Slide-show*/
+.cdz-slideshow{
+	overflow: hidden;
+	.slider-arrow-style-07();
+	.owl-dots{
+		position: absolute;
+		bottom: 10px
+	}
+	.owl-stage{padding:0;}
+}
+.slide-caption{
+	.button-link{
+		.abs-borderradius(@btn_radius);		
+		.button-slide-effect(@btn_primary_text, @btn_primary_background); /*function*/
+	}
+}
+
+/*Title*/
+.cdz-block-title{
+	text-align: center;
+}
+@media @tablet_vertical{
+	.cdz-block-title{
+		margin-bottom: 20px;
+		.b-title.h2{
+			font: @f_h1;
+			color: @main_title_text;
+			margin-bottom: 5px;
+			font-size: 40px;
+		}
+		.title-desc{
+			font: @f_h5;
+			color: @main_title_text;
+		}	
+	}
+}
+
+
+
+/*Product*/
+button.cdz-ajax-trigger{
+	.abs-style(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+	&:hover{
+		.btnprimary-style()
+	}
+}
+
+/*Blog*/
+.cdz-blog-wrap{
+	padding:30px 0;
+}
+.cdz-banner-wrap{
+	padding: 0 10px;
+}
+.cdz-banner img{
+	display: block;
+}
+.block-minicart .cart-total button{
+	font-size: 12px;
+	padding: 5px 7px
+}
+
+
+/*IE Fix*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.cdz-banner img{
+		width: 100%
+	}
+}
+
+/*Responsive*/
+@media @tablet-strict_small{
+	.slide-caption{
+		font-size: 13px !important;
+		.button-link{
+			margin-top: 10px !important;
+			font-size: 12px;
+			padding: 7px 30px;
+		}
+	}
+	.cdz-slideshow .owl-nav [class*="owl-"]{
+		bottom: 20px;
+		width: 32px;
+		height: 32px;		
+		&.owl-prev{
+			right:70px;
+		}
+		&:before{
+			line-height:30px;
+		}
+	}
+	.cdz-banner-wrap .banner-link{
+		.title{
+			font-size: 20px !important
+		}
+	}
+}
+
+/*Mobile*/
+@media @phone{
+	.cdz-block-title .actions {
+	    margin: 10px 0 15px;
+	    a.btn.primary{
+	    	padding: 7px 20px;
+			font-size: 13px;
+	    }
+	}
+	.cdz-slideshow{
+		margin: 10px 0 0;
+		.owl-nav{display: none;}
+		.owl-dots{
+			margin: 0;
+			bottom:5px;
+		}
+		.slide-caption p {
+			margin-bottom: 0
+		}
+	}
+	.cdz-banner-wrap{
+		padding: 0;
+		.banner-link{
+			.title{
+				font-size: 12px !important;
+				text-align: center;
+			}
+		}
+	}
+}
+@media @phonedown{
+	.slide-caption {
+   	 	font-size: 8px !important;
+	}	
+}
+/*Product preview*/
+.review-add .review-form-actions .submit.primary{
+	border: 0;
+	&:hover{
+		border: 0;
+		color:@btn_hover_text;
+	}
+}
+
+// General
+//------------------------------------
+.base-slider{
+	.slider-arrow-style-06();
+}
+[class*='brand-style']{
+	&.brand-style01 .shop-by-brand-slider.style-default{
+		.slider-arrow-style-06();
+		.owl-nav{
+			[class*="owl-"]{
+				.abs-borderradius(0);
+				.abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+				&:hover{
+					.abs-style(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+				}
+			}
+		}
+	}
+}
+.list.products-list{
+	.cdz-product-labels{
+		.prolabels-style04();
+	}
+}
+/*Blog*/
+.blog-index-index .sidebar .block {
+    border: 1px solid @main_border;
+}
+
+.breadcrumbs{
+	margin-bottom: 0;
+}
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style03();	
+}
+.toolbar{
+	.toolbar-option2(0px);
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(0px);
+	}
+}
+
+/*Blog*/
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(0); /*_blog*/
+}
+
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+	.main-inner,
+	.product.info.detailed .product.items{
+		.product-info-box(0);
+	}
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px);
+		}
+	}
+	.product.info.detailed .product.items{
+		.product-info-box(0); 
+	}
+}
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap .main-content-top-left {
+		.cms-index-index .sticky-menu:not(.active):hover .menu-container{
+			display: block;
+		}
+	}
+}

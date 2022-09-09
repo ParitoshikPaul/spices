@@ -1,0 +1,9 @@
+[class*='instagram-wrapper']{
+    @media @desktop{	
+		.owl-slider("false", 40px, 40px);
+		.owl-dots-style-01();
+	}
+	@media @desktop_down{			
+		.owl-nav{display: none}
+	}
+}

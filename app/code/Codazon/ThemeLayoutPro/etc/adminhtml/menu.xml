@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codazon_ThemeLayoutPro::themelayoutpro" parent="Codazon_Core::core" title="Flexible Theme" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="10" resource="Codazon_ThemeLayoutPro::themelayoutpro" />
+        <add id="Codazon_ThemeLayoutPro::header" parent="Codazon_ThemeLayoutPro::themelayoutpro" title="Header" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="10" resource="Codazon_ThemeLayoutPro::header" action="themelayoutpro/header/index" />
+        <add id="Codazon_ThemeLayoutPro::maincontent" action="themelayoutpro/maincontent/index" parent="Codazon_ThemeLayoutPro::themelayoutpro" title="Main Content" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="10" resource="Codazon_ThemeLayoutPro::maincontent" />
+        <add id="Codazon_ThemeLayoutPro::footer" action="themelayoutpro/footer/index" parent="Codazon_ThemeLayoutPro::themelayoutpro" title="Footer" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="20" resource="Codazon_ThemeLayoutPro::footer" />
+        <add id="Codazon_ThemeLayoutPro::settings" action="themelayoutpro/config/index" parent="Codazon_ThemeLayoutPro::themelayoutpro" title="Settings" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="30" resource="Codazon_ThemeLayoutPro::settings" />
+        <add id="Codazon_ThemeLayoutPro::dev" action="adminhtml/system_config/edit/section/themelayoutpro" parent="Codazon_ThemeLayoutPro::themelayoutpro" title="Developer" translate="title" module="Codazon_ThemeLayoutPro" sortOrder="40" resource="Codazon_ThemeLayoutPro::settings" />
+        
+        <add id="Codazon_ProductLabel::menu" title="Product Label" module="Codazon_ThemeLayoutPro" parent="Codazon_Core::core" sortOrder="40"  resource="Codazon_ProductLabel::menu"/>
+        <add id="Codazon_ProductLabel::productlabel" title="Manage Labels" module="Codazon_ProductLabel" sortOrder="0" parent="Codazon_ProductLabel::menu" action="productlabel/productlabel/index" resource="Codazon_ProductLabel::productlabel"/>
+        
+        <add id="Codazon_ThemeLayoutPro::gdpr" title="Privacy (GDPR)" module="Codazon_ThemeLayoutPro" parent="Codazon_Core::core" sortOrder="100"  resource="Codazon_ThemeLayoutPro::settings"/>
+        <add id="Codazon_ThemeLayoutPro::gdpr_settings" title="Settings" module="Codazon_ProductLabel" sortOrder="0" parent="Codazon_ThemeLayoutPro::gdpr" action="adminhtml/system_config/edit/section/customer" resource="Codazon_ThemeLayoutPro::settings"/>
+    </menu>
+</config>

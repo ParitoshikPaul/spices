@@ -1,0 +1,4 @@
+title,page_layout,meta_keywords,meta_description,identifier,content_heading,content,creation_time,update_time,is_active,sort_order,layout_update_xml,custom_theme,custom_root_template,custom_layout_update_xml,custom_theme_from,custom_theme_to,meta_title
+"Codazon About Us",1column,,,codazon-about-us,"ABOUT US","<div>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\FlexibleBlock~~~ block_identifier=~~~cms-page-about-us~~~ enable_full_width=~~~1~~~ type_name=~~~Codazon Flexible Block~~~}}</div>","2018-12-06 16:55:16","2021-05-24 18:13:02",1,0,,,,,,,
+"Codazon Gallery",1column,,,codazon-gallery,"Our Gallery","<p>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\FlexibleBlock~~~ block_identifier=~~~cms-page-gallery~~~ enable_full_width=~~~0~~~ type_name=~~~Codazon Flexible Block~~~}}</p>","2018-12-10 10:26:17","2018-12-10 11:14:32",1,0,,,,,,,
+"Codazon Home Page",1column,,,codazon-home-page,,,"2020-04-28 08:41:56","2020-04-28 08:41:56",1,0,,,,,,,

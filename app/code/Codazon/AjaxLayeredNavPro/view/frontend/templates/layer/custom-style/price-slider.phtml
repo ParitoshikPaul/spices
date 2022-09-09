@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$filter = $this->getOptionsFilter();
+$filterItems = $filter->getItems();
+$count = count($filterItems);
+?>
+<?php if ($count) : ?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$request = $this->getRequest();
+$code = $filter->getRequestVar();
+$query = $request->getQueryValue();
+$query[$code] = null;
+$action = $this->getUrl('*/*/*', [
+    '_current'      => true,
+    '_use_rewrite'  => true,
+    '_query'        => $query
+]);
+$currency = $objectManager->get(\Magento\Store\Model\StoreManagerInterface::class)
+    ->getStore()
+    ->getCurrentCurrency()
+    ->getCurrencySymbol();
+$uniqId = uniqid();
+$widget = [
+    'minValue'  => $filterItems[0]->getUrl(),
+    'maxValue'  => $filterItems[$count - 1]->getUrl(),
+];
+?>
+<div class="price-slider-container hidden" data-role="price-slider-container" data-filter='<?= json_encode($widget) ?>'>
+    <form action="<?= $action ?>" method="get" data-role="price-form" data-code=<?= $code ?>>
+        <input type="hidden" name="<?= $code ?>" value="0-0" />
+        <div class="price-slider" data-role="price-slider"></div>
+        <div class="input-wrap">
+            <div class="control min-value">
+                <input class="input-text" id="min-price-<?= $uniqId ?>" name="min_price" type="text" required="required" number="true" validate-zero-or-greater="true" placeholder="<?= __('From') ?>" data-role="min_price" value="0" />
+            </div>
+            <span class="delimiter">–</span>
+            <div class="control max-value">
+                <input class="input-text" id="max-price-<?= $uniqId ?>" name="max_price" type="text" required="required" number="true" validate-greater-than-zero="true" placeholder="<?= __('To') ?>" data-role="max_price" value="0" />
+            </div>
+            <span class="currency"><?= $currency ?></span>
+        </div>
+        <div class="action">
+            <button type="submit" class="btn submit" data-role="go" title="<?= __('Apply filter') ?>"><?= __('Go') ?></button>
+        </div>
+    </form>
+</div>
+<?php endif ?>

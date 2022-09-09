@@ -1,0 +1,74 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper(\Magento\Search\Helper\Data::class);
+$themeHelper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+$displayAdvancedSearch = (bool)$themeHelper->getConfig('themelayoutpro/header/display_advanced_search');
+$enableFullBox = false; //(bool)$themeHelper->getConfig('themelayoutpro/header/enable_full_search_box');
+$displayFullSearch = (bool)$themeHelper->getConfig('mobile/general/display_full_search');
+$widget = ['themewidgets' => [
+    'codazon.searchtoggle' 		=> [
+        'onlyMobi'  => true
+    ],
+    'codazon.fullsearchbox'   	=> [
+        'enable'            => false
+    ]
+]];
+?>
+<!-- search - search default -->
+<?php if ($displayFullSearch) : ?><div id="desk_header-search" class="desk-search-wrap hidden-xs"><?php endif ?>
+<div class="header-search<?= $displayAdvancedSearch?'':' hide-advanced-search'; ?><?= $enableFullBox?'':' no-full-box'; ?>" data-role="search_container" data-mage-init='<?php echo json_encode($widget); ?>'>
+    <a href="javascript:void(0)" class="search-toggle<?= $enableFullBox?'':' full-box-trigger'; ?> visible-xs" data-role="search_toggle"><?= __('Search') ?></a>
+    <div class="hidden-xs search-form" data-role="search_form">
+        <div class="block block-search">
+            <div class="block block-title"><strong><?= /* @escapeNotVerified */ __('Search') ?></strong></div>
+            <div class="block block-content">
+                <form class="form minisearch" id="search_mini_form" action="<?= /* @escapeNotVerified */ $helper->getResultUrl() ?>" method="get">
+                    <div class="field search">
+                        <div class="control">
+                            <input id="search"
+                                   data-mage-init='{"quickSearch":{
+                                        "formSelector":"#search_mini_form",
+                                        "url":"<?= /* @escapeNotVerified */ $helper->getSuggestUrl()?>",
+                                        "destinationSelector":"#search_autocomplete"}
+                                   }'
+                                   type="text"
+                                   name="<?= /* @escapeNotVerified */ $helper->getQueryParamName() ?>"
+                                   value="<?= /* @escapeNotVerified */ $helper->getEscapedQueryText() ?>"
+                                   placeholder="<?= /* @escapeNotVerified */ __('Search entire store here...') ?>"
+                                   onfocus="this.placeholder = ''"
+                                   onblur="this.placeholder = '<?= str_replace(["'", '"'], ["’", "”"], __('Search entire store here...')) ?>'"
+                                   class="input-text"
+                                   maxlength="<?= /* @escapeNotVerified */ $helper->getMaxQueryLength() ?>"
+                                   role="combobox"
+                                   aria-haspopup="false"
+                                   aria-autocomplete="both"
+                                   autocomplete="off"
+                                   aria-expanded="false" />
+                            <div id="search_autocomplete" class="search-autocomplete"></div>
+                            <?= $block->getChildHtml() ?>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button type="submit"
+                            title="<?= $block->escapeHtml(__('Search')) ?>"
+                            class="action search"
+                            aria-label="Search"
+                        >
+                            <span><?= /* @escapeNotVerified */ __('Search') ?></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<?php if ($displayFullSearch) : ?></div><?php endif ?>

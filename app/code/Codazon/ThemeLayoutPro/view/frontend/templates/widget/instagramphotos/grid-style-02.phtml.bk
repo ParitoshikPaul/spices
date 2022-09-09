@@ -1,0 +1,67 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$templId = uniqid('instagram-photos-list-tmpl-');
+$this->setData('max_items', 8); //maximum only 8 items for footer;
+$ajaxUrl = $this->getInstagramRecentPhotosUrl();
+?>
+<?php if ($ajaxUrl) : ?>
+<script id="<?= $templId ?>" type="text/x-jquery-tmpl">
+<% _.each(posts, function(post, id) { %>
+<% var url = 'https://www.instagram.com/p/' + post.node.shortcode %>
+<div class="item photo-item">
+    <a class="photo-item-link abs-img" style="padding-bottom: 100%" href="<%- url %>" target="_blank">
+        <img alt="" class="img-responsive" src="<%- post.node.thumbnail_resources[0].src %>" />
+    </a>
+</div>
+<% }); %>
+</script>
+<div id="placeholder-<?= $templId ?>" class="no-loaded">
+    <div class="brand-loader double-bounce-spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+</div>
+<script>
+require(['jquery', 'mage/template', 'jquery/jquery.cookie'], function($, tmpl) {
+    var tmplId = '<?= $templId ?>', $placeholder = $('#placeholder-' + tmplId), instTmpl = tmpl('#' + tmplId), storageId = 'instagram_data_<?= $this->getData('user_id') . '_' . $this->getData('max_items') ?>';
+    var buildHTML = function(rs) {
+        var posts = rs.data.user.edge_owner_to_timeline_media.edges;
+        if (posts.length) {
+            var instTmpl = tmpl('#' + tmplId);
+            $(instTmpl({posts: posts})).insertBefore($placeholder);
+        }
+    } 
+    var renderPhotos = function() {
+        if ($.cookie(storageId) && window.localStorage[storageId]) {
+            var rs = JSON.parse(window.localStorage[storageId]); buildHTML(rs); $placeholder.remove();
+         } else {
+            var date = new Date(); date.setTime(date.getTime() + (60*10*1000));
+            $.cookie(storageId, '1', {path: '/', expires: date});
+            $.ajax({
+                url: '<?= $ajaxUrl ?>',
+                cache: true,
+                success: function (rs) {
+                    if (typeof rs.data == 'undefined') {
+                        var instData = window.localStorage ? window.localStorage[storageId] : false;
+                        if (instData) rs = JSON.parse(instData);
+                    }
+                    if (typeof rs.data != 'undefined') {
+                        var posts = rs.data.user.edge_owner_to_timeline_media.edges;
+                        buildHTML(rs);
+                        window.localStorage[storageId] = JSON.stringify(rs);
+                    }
+                }
+            }).always(function() { $placeholder.remove(); });
+         }
+    };
+    if ((typeof window.windowLoaded == 'undefined') || window.windowLoaded) {
+        renderPhotos();
+    } else {
+        $(window).load(renderPhotos);
+    }
+});
+</script>
+<?php endif ?>

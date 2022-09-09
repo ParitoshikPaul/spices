@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Flurrybox Core package.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Flurrybox Core
+ * to newer versions in the future.
+ *
+ * @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+ * @license   GNU General Public License ("GPL") v3.0
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Flurrybox_Core::flurrybox" title="Flurrybox" module="Flurrybox_Core" sortOrder="50"
+             resource="Flurrybox_Core::core"/>
+        <add id="Flurrybox_Core::flurrybox_general" title="General" translate="title" module="Flurrybox_Core"
+             parent="Flurrybox_Core::flurrybox" sortOrder="10" resource="Flurrybox_Core::core"/>
+        <add id="Flurrybox_Core::flurrybox_general_extensions" title="Component Overview" module="Flurrybox_Core"
+             action="adminhtml/system_config/edit/section/flurrybox_components" resource="Flurrybox_Core::core"
+             sortOrder="20" parent="Flurrybox_Core::flurrybox_general"/>
+    </menu>
+</config>

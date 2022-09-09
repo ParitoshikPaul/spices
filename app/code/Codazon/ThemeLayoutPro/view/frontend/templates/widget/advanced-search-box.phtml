@@ -1,0 +1,250 @@
+<?php
+/**
+ * Copyright © Codazon 2020, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$maxQueryLength = $this->helper(\Magento\CatalogSearch\Helper\Data::class)->getMaxQueryLength();
+$wrapHtmlClass = $this->getData('container_class');
+$fieldsetHtmlClass = $block->getData('fieldset_class');
+$itemHtmlClass = $block->getData('item_class');
+$itemHtmlClass = $itemHtmlClass ? 'field attr-item '. $itemHtmlClass : 'field attr-item';
+$uniqId = uniqid('form-validate-');
+$actionLabel = $this->getData('action_label') ? : $block->escapeHtml(__('Search'));
+$title = $this->getData('title') ? : __('Advanced Search');
+$titleIcon = $this->getData('title_icon') ? : false;
+$displayMoreView = $this->getData('display_view_more');
+?>
+<div class="<?= $wrapHtmlClass ?>">
+<div class="cdz-avsb-title"><span class="<?= $titleIcon ? 'cdz-avsb-title-icon ' . $titleIcon : '' ?>"><?= $title ?></span></div>
+<div class="cdz-avsb-wrap">
+<form class="cdz-avsb-form" action="<?= $block->escapeUrl($block->getSearchPostUrl()) ?>" method="get" id="<?= $uniqId ?>">
+<fieldset class="fieldset">
+    <div class="field-wrap <?= $fieldsetHtmlClass ?>">
+    <div class="hidden start"></div>
+    <?php foreach ($block->getDisplayedAttributes() as $_attribute) : ?>
+    <?php $_code = $_attribute->getAttributeCode() ?>
+    <div class="<?= $itemHtmlClass ?> <?= $block->escapeHtmlAttr($_code) ?>" role="attr_item">
+        <div class="attr-item-inner">
+            <label class="label item-label" for="<?= $block->escapeHtmlAttr($_code) ?>">
+                <span><?= $block->escapeHtml(__($block->getAttributeLabel($_attribute))) ?></span>
+            </label>
+            <div class="control">
+                <?php
+                switch ($block->getAttributeInputType($_attribute)) :
+                    case 'number':
+                ?>
+                <div class="range fields group group-2">
+                    <div class="field no-label">
+                        <div class="control">
+                            <input type="text"
+                                   name="<?= $block->escapeHtmlAttr($_code) ?>[from]"
+                                   value="<?= $block->escapeHtmlAttr($block->getAttributeValue($_attribute, 'from')) ?>"
+                                   id="<?= $block->escapeHtmlAttr($_code) ?>"
+                                   title="<?= $block->escapeHtmlAttr($block->getAttributeLabel($_attribute)) ?>"
+                                   class="input-text"
+                                   maxlength="<?= $block->escapeHtmlAttr($maxQueryLength) ?>"
+                                   data-validate="{number:true, 'less-than-equals-to':'#<?= $block->escapeHtmlAttr($_code) ?>_to'}" />
+                        </div>
+                    </div>
+                    <div class="field no-label">
+                        <div class="control">
+                            <input type="text"
+                                   name="<?= $block->escapeHtmlAttr($_code) ?>[to]"
+                                   value="<?= $block->escapeHtmlAttr($block->getAttributeValue($_attribute, 'to')) ?>"
+                                   id="<?= $block->escapeHtmlAttr($_code) ?>_to"
+                                   title="<?= $block->escapeHtmlAttr($block->getAttributeLabel($_attribute)) ?>"
+                                   class="input-text"
+                                   maxlength="<?= $block->escapeHtmlAttr($maxQueryLength) ?>"
+                                   data-validate="{number:true, 'greater-than-equals-to':'#<?= $block->escapeHtmlAttr($_code) ?>'}" />
+                        </div>
+                    </div>
+                </div>
+                <?php
+                        break;
+                    case 'price':
+                ?>
+                <div class="range price fields group group-2">
+                    <div class="field no-label">
+                        <div class="control">
+                            <input name="<?= $block->escapeHtmlAttr($_code) ?>[from]"
+                                   value="<?= $block->escapeHtmlAttr($block->getAttributeValue($_attribute, 'from')) ?>"
+                                   id="<?= $block->escapeHtmlAttr($_code) ?>"
+                                   title="<?= $block->escapeHtmlAttr($block->getAttributeLabel($_attribute)) ?>"
+                                   class="input-text"
+                                   type="text"
+                                   maxlength="<?= $block->escapeHtmlAttr($maxQueryLength) ?>"
+                                   data-validate="{number:true, 'less-than-equals-to':'#<?= $block->escapeHtmlAttr($_code) ?>_to'}" />
+                        </div>
+                    </div>
+                    <div class="field with-addon no-label">
+                        <div class="control">
+                            <div class="addon">
+                                <input name="<?= $block->escapeHtmlAttr($_code) ?>[to]"
+                                       value="<?= $block->escapeHtmlAttr($block->getAttributeValue($_attribute, 'to')) ?>"
+                                       id="<?= $block->escapeHtmlAttr($_code) ?>_to"
+                                       title="<?= $block->escapeHtmlAttr($block->getAttributeLabel($_attribute)) ?>"
+                                       class="input-text"
+                                       type="text"
+                                       maxlength="<?= $block->escapeHtmlAttr($maxQueryLength) ?>"
+                                       data-validate="{number:true, 'greater-than-equals-to':'#<?= $block->escapeHtmlAttr($_code) ?>'}" />
+                                <label class="addafter"
+                                       for="<?= $block->escapeHtmlAttr($_code) ?>_to">
+                                    <?= $block->escapeHtml($block->getCurrency($_attribute)) ?>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <?php
+                        break;
+                    case 'select':
+                    ?>
+                        <?= $block->getAttributeSelectElement($_attribute) ?>
+                        <?php
+                        break;
+                    case 'yesno':
+                        ?>
+                        <?= $block->getAttributeYesNoElement($_attribute) ?>
+                        <?php
+                        break;
+                    case 'date':
+                        ?>
+                <div class="range dates fields group group-2">
+                    <div class="field date no-label">
+                        <div class="control">
+                            <?= $block->getDateInput($_attribute, 'from') ?>
+                        </div>
+                    </div>
+                    <div class="field date no-label">
+                        <div class="control">
+                            <?= $block->getDateInput($_attribute, 'to') ?>
+                        </div>
+                    </div>
+                </div>
+                    <?php
+                        break;
+                    default:
+                    ?>
+                <input type="text"
+                       name="<?= $block->escapeHtmlAttr($_code) ?>"
+                       id="<?= $block->escapeHtmlAttr($_code) ?>"
+                       value="<?= $block->escapeHtmlAttr($block->getAttributeValue($_attribute)) ?>"
+                       title="<?= $block->escapeHtmlAttr($block->getAttributeLabel($_attribute)) ?>"
+                       class="input-text <?= $block->escapeHtmlAttr($block->getAttributeValidationClass($_attribute)) ?>"
+                       maxlength="<?= $block->escapeHtmlAttr($maxQueryLength) ?>" />
+            <?php endswitch; ?>
+            </div>
+        </div>
+    </div>
+    <?php endforeach; ?>
+    <div class="hidden end"></div>
+    </div>
+</fieldset>
+<div class="actions-toolbar">
+  <button type="submit" class="action search primary" title="<?= $block->escapeHtmlAttr(__('Search')) ?>">
+    <span><?= $actionLabel ?></span>
+  </button>
+  <?php if ($displayMoreView && $block->getData('attribute_codes')) : ?>
+  <a class="more-link" href="<?= $this->getUrl('catalogsearch/advanced') ?>"><span><?= __('More Options') ?></span></a>
+  <?php endif ?>
+</div>
+</form>
+</div>
+</div>
+<script>
+require([
+    "jquery", "mage/mage", "mage/validation"
+], function($, alert){
+    var $form = $('#<?= $uniqId ?>'), selectedData = {};
+    $('select', $form).val('').attr('disabled', 'disabled').trigger('change').on('change', function() {
+        var curval = $(this).val();
+        if (!curval) return true;
+        var $icur = $(this), $pcur = $icur.parents('[role="attr_item"]'), $nexts = $pcur.nextUntil('.end'), $prevs = $pcur.prevUntil('.start').andSelf(),
+        $selectnext = $nexts.first().find('select'), nextvals = {}, fixedvals = {};
+        $nexts.find('select').val('').trigger('change').attr('disabled', 'disabled').find('option').show();
+        $selectnext.removeAttr('disabled').find('option').show();
+        if (curval && $nexts.length) {
+            var existed = '';
+            $prevs.find('select').each(function(i, el) {
+                if ($(el).val()) {
+                    fixedvals[$(el).attr('name')] = $(el).val();
+                    existed += '_' + $(el).val();
+                }
+            });
+            if ($selectnext.length) {
+                let code = $selectnext.attr('name');
+                nextvals[code] = [];
+                $selectnext.find('option').each(function(i, op) {
+                    if (op.value) nextvals[code].push(op.value);
+                });
+            }
+            function prepareValues(rs) {
+                $.each(rs, function(name, values) {
+                    $('select[name=' + name + ']', $form).each(function() {
+                        var $select = $(this).removeAttr('disabled');
+                        $.each(values, function(opid, count) {
+                            if (count == 0) {
+                                $('option[value='+opid+']').hide();
+                            } else {
+                                $('option[value='+opid+']').show();
+                            }
+                        });
+                    });
+                });
+            }
+            if (selectedData[existed]) {
+                prepareValues(selectedData[existed]);
+            } else {
+                $.ajax({
+                    url: '<?= $this->getUrl("themelayoutpro/ajax/advancedSearch") ?>',
+                    type: 'get',
+                    showLoader: true,
+                    data: {'selected_values' : fixedvals, 'new_values': nextvals},
+                    success: function(rs) {
+                        prepareValues(rs);
+                        selectedData[existed] = rs;
+                    }
+                });
+            }
+        }
+    }).first().removeAttr('disabled');
+    $form.mage('validation', {
+        errorPlacement: function (error, element) {
+            var parent = element.parent();
+            if (parent.hasClass('range')) {
+                parent.find(this.errorElement + '.' + this.errorClass).remove().end().append(error);
+            } else {
+                error.insertAfter(element);
+            }
+        },
+        messages: {
+            'price[to]': {'greater-than-equals-to': '<?= $block->escapeJs(__('Please enter a valid price range.')) ?>'},
+            'price[from]': {'less-than-equals-to': '<?= $block->escapeJs(__('Please enter a valid price range.')) ?>'}
+        },
+        submitHandler: function() {
+            var formData = new FormData($form[0]);
+            $.ajax({
+                url: $form.attr('action') + '?cdz_ajax_advanced_search=1&' + $form.serialize(),
+                type: 'get',
+                showLoader: true,
+                success: function (res) {
+                    if (res && res.success) {
+                        window.location = $form.attr('action') + '?' + $form.serialize();
+                    } else {
+                        require(["Magento_Ui/js/modal/alert", 'Magento_Customer/js/customer-data'], function (alert, customerData) {
+                            alert({modalClass: 'cdz-alert-popup', title: "<?= __('Message') ?>", content: res.message});
+                            customerData.reload(['messages'], true);
+                        });
+                    }
+                }
+            });
+        }
+    });
+});
+</script>
+<style>
+#<?= $uniqId ?> select[disabled] + .mk {opacity: 0.6;}  
+</style>

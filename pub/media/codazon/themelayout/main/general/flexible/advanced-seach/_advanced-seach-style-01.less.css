@@ -1,0 +1,168 @@
+.avsb-style-01 {
+    /* Variabes */
+    @avsb_1_border : darken( @btn_primary_background , 15%);
+    @avsb_1_border_radius: 5px;
+    @avsb_1_patern_height_base: 15px;
+    @avsb_1_padding_base: 5px;
+    
+    background: @btn_primary_background;
+    color: @btn_primary_text;
+    border-radius: @avsb_1_border_radius @avsb_1_border_radius 0 0;
+    select:not(.multiselect), input.input-text, .cdz-select-wrap .mk{
+        background: darken(@avsb_1_background, 10%);
+        color: @avsb_1_text;
+        border-color: @avsb_1_text;
+        font-size: 14px;
+        height: 40px;
+        line-height: 38px;
+        border-radius: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .group-2 {
+        .field {
+            display: inline-block;
+            input.input-text {
+                display: inline-block;
+                width: 100px;
+                margin: 0 10px 0 0;
+                .rtl-layout & {
+                    margin: 0 0 0 10px;
+                }
+                @media @tablet_strict {
+                    width: 40px;
+                }
+            }
+            &.with-addon {
+                .addon:before {
+                    content: '-';
+                    margin: 0 10px 0 0;
+                    .rtl-layout & {
+                        margin: 0 0 0 10px;
+                    }
+                }
+                .addon:before, .addafter {
+                    height: 40px;
+                    line-height: 38px;
+                }
+            }
+        }
+    }
+    .cdz-avsb-wrap, .cdz-avsb-wrap:before, .cdz-avsb-wrap:after{
+        background: @avsb_1_background;
+        color: @avsb_1_text;
+    }
+    .cdz-avsb-wrap {
+        position: relative;
+        //border-radius: 0 0 @avsb_1_border_radius @avsb_1_border_radius;
+    }
+    .cdz-avsb-title {
+        font-size: 18px;
+        font-weight: 500;
+        padding: 0px 20px 7px;
+        position: relative;
+        margin: 0;
+    }
+    
+    @media @tablet_vertical {
+        padding: @avsb_1_padding_base 3px 0;
+        .cdz-avsb-wrap {
+            &:after, &:before{
+                position: absolute;
+                .flex_right(0);
+                top: -@avsb_1_patern_height_base;
+                height: @avsb_1_patern_height_base + 5px;
+                width: ~'calc(100% - 300px)';
+                content: '';
+            }
+            &:after{
+                .flex_right(@avsb_1_patern_height_base - 5px);
+                transform: skew(-45deg);
+                .rtl-layout & {
+                    transform: skew(45deg);
+                }
+            }
+        }
+        .cdz-avsb-title {
+            border-bottom: @avsb_1_padding_base solid @avsb_1_border;
+            &:after, &:before{
+                position: absolute;
+                .flex_right(0);
+                bottom: 0;
+                height: @avsb_1_patern_height_base;
+                width: ~'calc(100% - 300px)';
+                content: '';
+                background: @avsb_1_border;
+            }
+            &:after{
+                .flex_right( @avsb_1_patern_height_base - 5px );
+                transform: skew(-45deg);
+                .rtl-layout & {
+                    transform: skew(45deg);
+                }
+            }
+        }
+    }
+    .cdz-avsb-title-icon {
+        //display: inline-block;
+        &:before{
+            font-family: FontAwesome;
+            font-size: 22px;
+            .flex_margin_right(10px);
+            font-weight: normal;
+            display: inline-block;
+        }
+    }
+    
+    
+    .cdz-avsb-wrap {
+        .fieldset{
+            padding: 20px 20px 0;
+            margin-bottom: 0;
+        }
+        .actions-toolbar {
+            padding: 10px 20px 20px 20px;
+        }
+    }
+    .attr-item {
+        margin-bottom: 10px;
+    }
+    .fieldset {
+        margin-bottom: 20px;
+    }
+    .item-label {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        display: block;
+    }
+    .actions-toolbar {
+        a, button, .primary{
+            display: inline-block;
+            vertical-align: middle;
+            float: none;
+            margin: 0;
+        }
+        a.more-link{
+            color: @avsb_1_text;
+            margin-top: 5px;
+            float: right;
+            border-bottom: 1px solid;
+            padding-bottom: 3px;
+            text-transform: uppercase;
+            .rtl-layout & {
+                float: left;
+            }
+        }
+        
+    }
+    @media @phone {
+        .cdz-avsb-title {
+            padding: 10px 20px;
+        }
+        .actions-toolbar {
+            a, button, .primary {
+                
+            }
+        }
+    }
+}

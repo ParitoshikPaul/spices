@@ -1,0 +1,42 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+    $getDataImg = $this->getViewFileUrl('Codazon_ThemeLayoutPro::images/get-instagram-data.jpg');
+    $getDataImgId = uniqid('preview_');
+    $getUserIdImg = $this->getViewFileUrl('Codazon_ThemeLayoutPro::images/get-instagram-user-id.jpg');
+    $getUserIdImgId = uniqid('preview_');
+?>
+<div class="note">
+    <p>Note: Used for displaying instagram images slider/grid.</p>
+    <hr />
+    <p style="color:blue; font-weight:bold;">Every time you update your Instagram posts or the Instagram image links are outdated, you have to update this field too. Sorry for this inconvenient, Instagram has no longer allowed to fetch data automatically.</p>
+    <hr />
+    <ul>
+        <li>
+            <p><strong>Step 1:</strong> Go to the following page: <br /><span style="color:#2196f3">https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"<strong>[user_id]</strong>","first":<strong>[count]</strong>}</span></p>
+            <p>Where:</p>
+            <ul>
+                <li>[user_id] is your Instagram user id;</li>
+                <li>[count] is the maximum recent posts number you want to display.</li>
+            </ul>
+            <p><strong>E.g. </strong></p>
+            <p><a style="color:#2196f3" target="_blank" href='https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"7292707175","first":12}'>https://www.instagram.com/graphql/query/?query_hash=e769aa130647d2354c40ea6a439bfc08&variables={"id":"<strong>7292707175</strong>","first":<strong>12</strong>}</a></p>
+            <p><a class="cdz-preview-link" onclick="imagePreview(<?= $getDataImgId ?>); return false;" href="<?= $getDataImg ?>"><img class="cdz-preview-img" id="<?= $getDataImgId ?>" src="<?= $getDataImg ?>" /></a></p>
+        </li>
+        <li><p><strong>Step 2:</strong> Paste all content (json string) of the page above to this field.</p></li>
+    </ul>
+    <hr />
+    <p class="cdz-subtitle">Tip: How to get User Id?</p>
+    <p>Go to the following page:</p>
+    <p>https://www.instagram.com/<strong>[user_name]</strong>/?__a=1</p>
+    <p><a class="cdz-preview-link" onclick="imagePreview(<?= $getUserIdImgId ?>); return false;" href="<?= $getUserIdImg ?>"><img class="cdz-preview-img" id="<?= $getUserIdImgId ?>" src="<?= $getUserIdImg ?>" /></a></p>
+    <style>
+    .cdz-preview-link{display: inline-block !important; width: 100%; background: #fff; border:1px solid #ccc; padding: 10px; border-radius: 3px; margin: 10px 0;}
+    .cdz-preview-img{display: inline-block !important;}
+    .cdz-subtitle{background: #ffc107; padding: 4px 4px;text-transform: uppercase;color: black;}
+    </style>
+</div>

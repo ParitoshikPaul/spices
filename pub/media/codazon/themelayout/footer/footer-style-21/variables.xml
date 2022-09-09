@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-21</identifier>
+  <title>Footer Style 21</title>
+  <variables>
+    <footer_background>#2b2b2b</footer_background>
+    <footer_background_file></footer_background_file>
+    <footer_background_image_option></footer_background_image_option>
+    <footer_background_normal>#000000</footer_background_normal>
+    <footer_border>#434343</footer_border>
+    <footer_bottom_background>#2b2b2b</footer_bottom_background>
+    <footer_font>14px</footer_font>
+    <footer_hover_text>#e8a86e</footer_hover_text>
+    <footer_text>#8a8a8a</footer_text>
+    <footer_text_normal>#ffffff</footer_text_normal>
+    <footer_title_font>20px</footer_title_font>
+    <footer_title_text>#ffffff</footer_title_text>
+    <footer_top_background>#434343</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceBlock name="footer_links" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="copyright" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="report.bugs" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="form.subscribe" remove="true" /&gt;&#xD;
+    &lt;move element="theme-layout-footer" destination="footer-container" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <custom_variables>@service-banner-background: #cf111a;&#xD;
+@service-banner-title: #000000;&#xD;
+@service-banner-hover-title: #f53867;&#xD;
+@service-banner-text: #999999;&#xD;
+@service-banner-hover-text: #f53867;&#xD;
+@service-banner-icon: #f53867;&#xD;
+@service-banner-icon-border: #f53867;&#xD;
+@service-banner-hover-icon: #f53867;&#xD;
+@service-banner-hover-icon-border: #f53867;</custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+    <version>62a1a8e9da308</version>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-21"&gt;&#xD;
+&lt;div class="main-footer"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="row middle-top"&gt;&#xD;
+&lt;div class="col-sm-6 col-left"&gt;&#xD;
+&lt;div class="footer-logo"&gt;&lt;a href="{{store url=""}}"&gt; &lt;img class="footer-logo-img  cdz-lazy" src="{{media url="wysiwyg/codazon/footer_logo_white.png"}}" alt="Logo"&gt; &lt;/a&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-9 col-center"&gt;&lt;span class="fa fa-envelope-open fa-5x"&gt;&amp;nbsp;&lt;/span&gt;&#xD;
+&lt;div class="newsletter-title" style="display: inline-block;"&gt;&lt;span class="title link-block"&gt;Subscribe Us&lt;/span&gt;&lt;span class="desc link-block"&gt;Join The Community To Be Updates Firstly?&lt;/span&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-9 col-right"&gt;&#xD;
+&lt;div class="newsletter-content"&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-middle"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="row middle-bottom"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-1"&gt;About shop&lt;/p&gt;&#xD;
+&lt;div id="footer-content-1" class="showhide"&gt;&#xD;
+&lt;div class="footer-text space-base"&gt;Although, today we&#x2019;re even more excited to release our Wireframe Kit.&lt;/div&gt;&#xD;
+&lt;div class="footer-text space-base"&gt;Address : Cosmetics Store, United States&lt;/div&gt;&#xD;
+&lt;div class="footer-text space-base"&gt;Call us: 1234567890&lt;/div&gt;&#xD;
+&lt;div class="footer-text space-base"&gt;Email us: support@company.com&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-18"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-2"&gt;Codazon.com&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-2" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='privacy-policy-cookie-restriction-mode'}}"&gt;Privacy and Cookie Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='about-us'}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='search/term/popular'}}"&gt;Search Terms&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='catalogsearch/advanced'}}"&gt;Advanced Search&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='sales/guest/form'}}"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-3"&gt;Customer Service&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-3" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Returns Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Product Recalls&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Int&#x2019;l Customers&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Tax Exempt Program&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='contact'}}"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-4"&gt;Get to know us&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-4" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='about-us'}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Corporate&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Suppliers&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Careers&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;The Digital Museum&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-5"&gt;Payment Method&lt;/p&gt;&#xD;
+&lt;div id="footer-content-5" class="footer-link showhide"&gt;&#xD;
+&lt;div class="footer-payment space-md"&gt;&lt;img class="img-responsive cdz-lazy" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+&lt;p class="h5"&gt;Follow Us&lt;/p&gt;&#xD;
+&lt;div class="footer-social hover-iconsocial"&gt;&#xD;
+&lt;p class="social"&gt;&lt;a href="#"&gt;&lt;span class="fa fa-facebook"&gt;facebook&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-twitter"&gt;twitter&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-pinterest-square"&gt;pinterest&lt;/span&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;span class="fa fa-linkedin"&gt;linkedin&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-youtube-play"&gt;youtube-play&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-bottom"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-24"&gt;&#xD;
+&lt;div class="footer-address text-center"&gt;&#xD;
+&lt;p&gt;&#xA9; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

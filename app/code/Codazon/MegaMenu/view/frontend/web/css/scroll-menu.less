@@ -1,0 +1,108 @@
+@menu_max_height: 70vh;
+@menu_box_shadow: 0 3px 3px #e1e1e1;
+@media (min-width: 768px) {
+    .has-scroll-menu {
+        .menu-container {
+            width: auto!important;
+            overflow: visible;
+        }
+        .cdz-vertical-menu {
+            transition: none !important;
+            animation: none !important;
+        }
+    }
+    .cdz-scroll-menu {
+        .menu-inner {
+            width: 1200px;
+            max-width: ~'calc(100vw - 40px)';
+            display: flex;
+            padding-bottom: 10px;
+        } 
+        .m-top-list {
+            display: inline-block;
+            max-height: @menu_max_height;
+            overflow-y: auto;
+            width: 357px;
+            margin: 0;
+            box-shadow: @menu_box_shadow;
+        }
+        .m-org-list {
+            width: 100%;
+            height: @menu_max_height;
+            overflow: visible;
+            margin: 0;
+            position: relative;
+            > .item.level0 {
+                display: none;
+                > .menu-link {
+                    display: none;
+                }
+                > .groupmenu-drop {
+                    background: #fff;
+                    box-shadow: @menu_box_shadow;
+                    position: static;
+                    height: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    overflow-y: auto;
+                    display: flex !important;
+                    flex-direction: column;
+                    opacity: 1 !important;
+                    visibility: visible !important;
+                    transition: none !important;
+                    transform: none !important;
+                    border: none;
+                    > li.tablet-item {
+                        width: 100%;
+                    }
+                    > li.item.level1 {
+                        max-width: 100%;
+                        height: 100%;
+                    }
+                    &:not(.cat-tree) {
+                        overflow-x: hidden;
+                    }
+                    &.cat-tree {
+                        width: 250px;
+                        overflow: visible;
+                        height: auto;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        display: block !important;
+                        .rtl-layout & {
+                            left: auto;
+                            right: 0;
+                        }
+                    }
+                }
+                &.scrm-active {
+                    display: flex;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: auto;
+                    max-width: 100%;
+                    height: 100%;
+                    .rtl-layout & {
+                        left: auto;
+                        right: 0;
+                    }
+                }
+                [class*=groupmenu-width] {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    .cdz-scroll-menu {
+        .m-top-list {
+            display: none;
+        }
+        .menu-inner {
+            position: static;
+        }
+    }
+}

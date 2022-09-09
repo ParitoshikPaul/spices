@@ -1,0 +1,12 @@
+.grey-items {
+    .brand-item,
+    .item-group > div,
+    .item-group > .item,
+    .owl-item > .item {
+        filter: grayscale(1);
+        transition: all ease .3s;
+        &:hover {
+            filter: none;
+        }
+    }
+}

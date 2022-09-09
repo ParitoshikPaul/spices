@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+
+$store = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Store\Model\StoreManagerInterface')->getStore();
+
+?>
+
+<li class="store-language-currency">
+    <div class="account-wrapper">
+        <a href="javascript:;" class="account-trigger" data-autotrigger=".authorization-link .account-trigger">
+            <span class="text-underlink"><?= __('Language') ?></span>
+            <span class="text-uppercase">
+                <span class="language"><?= $store->getName() ?></span> 
+                <span class="currency"><?= $store->getCurrentCurrencyCode() ?></span>
+            </span>
+        </a>
+    </div>
+</li>
+

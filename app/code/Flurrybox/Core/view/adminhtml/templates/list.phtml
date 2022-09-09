@@ -1,0 +1,59 @@
+<?php
+/**
+ * This file is part of the Flurrybox Core package.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Flurrybox Core
+ * to newer versions in the future.
+ *
+ * @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+ * @license   GNU General Public License ("GPL") v3.0
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+/** @var \Flurrybox\Core\Block\Adminhtml\ExtensionList $block */
+?>
+<div class="legends">
+    <div class="up-to-date"><span><?= __('Up to date'); ?></span></div>
+    <div class="out-dated"><span><?= __('Outdated'); ?></span></div>
+</div>
+<div class="extension-list">
+    <?php if (!count($block->getExtensions())): ?>
+        <div class="no-extensions">
+            <span><?= __('No extensions are currently installed!'); ?></span>
+        </div>
+    <?php else: ?>
+        <?php foreach ($block->getExtensions() as $extension): ?>
+            <div class="extension <?= $block->isOutdated($extension); ?>">
+                <div class="details">
+                    <div class="name"><?= $extension->getName(); ?></div>
+                    <div class="description"><?= $extension->getDescription(); ?></div>
+                    <div class="actions">
+                        <?php if ($extension->getStorePageUrl()): ?>
+                            <a target="_blank" href="<?= $extension->getStorePageUrl(); ?>">
+                                <span><?= __('Visit store page'); ?></span>
+                            </a>
+                        <?php endif; ?>
+                        <?php if ($extension->getHelpUrl()): ?>
+                            <a target="_blank" href="<?= $extension->getHelpUrl(); ?>">
+                                <span><?= __('Usage guide'); ?></span>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <div class="versions">
+                    <div class="current-version">
+                        <span><?= __('Current version'); ?>:</span>
+                        <span><?= $extension->getVersion(); ?></span>
+                    </div>
+                    <div class="latest-version">
+                        <span><?= __('Latest version'); ?>:</span>
+                        <span><?= $block->getLatestVersion($extension); ?></span>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    <?php endif; ?>
+</div>

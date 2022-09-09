@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2018 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+    <widget id="product_filter" class="Codazon\ProductFilter\Block\Product\ProductsList" is_email_compatible="true" placeholder_image="Codazon_ProductFilter::images/placeholder.png" ttl="86400">
+        <label translate="true">Codazon Product Filter</label>
+        <description translate="true">List of Products</description>
+        <parameters>
+            <!--parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter-->
+            <parameter name="display_type" xsi:type="select" required="true" visible="true" sort_order="10">
+                <label translate="true">Display Type</label>
+                <options>
+                    <option name="default" value="all_products" selected="true">
+                        <label translate="true">All products</label>
+                    </option>
+                    <option name="item2" value="bestseller_products">
+                        <label translate="true">Best selling products</label>
+                    </option>
+                    <option name="item3" value="new_products">
+                        <label translate="true">New products</label>
+                    </option>
+                    <option name="item4" value="recently_viewed_products">
+                        <label translate="true">Recently Viewed Products</label>
+                    </option>
+                    <option name="item5" value="most_viewed_products">
+                        <label translate="true">Most Viewed Products</label>
+                    </option>
+                    <option name="item6" value="last_month_most_viewed_products">
+                        <label translate="true">Last 30 Days Most Viewed Products</label>
+                    </option>
+                </options>
+            </parameter>            
+            <parameter name="products_count" xsi:type="text" required="true" visible="true" sort_order="20">
+                <label translate="true">Number of Products to Display</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="order_by" xsi:type="select" required="true" visible="true" sort_order="30">
+                <label translate="true">Order by</label>
+                <description translate="true"><![CDATA[This option won't be applied if "Display Type" is "New products".]]></description>
+                <options>
+                    <option name="default" value="name ASC" selected="true">
+                        <label translate="true">Name ASC</label>
+                    </option>
+                    <option name="order1" value="name DESC">
+                        <label translate="true">Name DESC</label>
+                    </option>
+                    <option name="order2" value="price ASC">
+                        <label translate="true">Price ASC</label>
+                    </option>
+                    <option name="order3" value="price DESC">
+                        <label translate="true">Price DESC</label>
+                    </option>
+                    <option name="order4" value="entity_id ASC">
+                        <label translate="true">Product's ID ASC</label>
+                    </option>
+                    <option name="order5" value="entity_id DESC">
+                        <label translate="true">Product's ID DESC</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="show" xsi:type="multiselect" visible="true" source_model="Codazon\ProductFilter\Model\Show" sort_order="40">
+                <label translate="true">Show on frontend</label>
+            </parameter>
+            <parameter name="thumb_width" xsi:type="text" required="true" visible="true" sort_order="50">
+                <label translate="true">Thumbnail Width</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="thumb_height" xsi:type="text" required="true" visible="true" sort_order="60">
+                <label translate="true">Thumbnail Height</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="filter_template" xsi:type="select" required="true" visible="true" sort_order="70">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="product/widget/content/grid.phtml" selected="true">
+                        <label translate="true">Products Grid Template</label>
+                    </option>
+                    <option name="item1" value="custom">
+                        <label translate="true">Custom Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="custom_template" xsi:type="text" required="true" visible="true" sort_order="80">
+                <label translate="true">Custom template</label>
+                <depends>
+                    <parameter name="filter_template" value="custom" />
+                </depends>
+                <value>custom.phtml</value>
+            </parameter>
+            <parameter name="product_ids" xsi:type="text" visible="true" sort_order="84">
+                <label translate="true">Specify products by ids</label>
+                <description translate="true"><![CDATA[You can filter products by ids. Use comma (,) to separate product ids (E.g., 226,2311). Or you can use "Condition" field below to filter products.]]></description>
+            </parameter>
+            <parameter name="condition" xsi:type="conditions" visible="true" required="true" sort_order="85" class="Magento\CatalogWidget\Block\Product\Widget\Conditions">
+                <label translate="true">Conditions</label>
+            </parameter>
+            <parameter name="total_rows" xsi:type="text" visible="true" sort_order="86">
+            	<label translate="true">Total rows</label>
+                <description translate="true"><![CDATA[Only used for some templates.]]></description>
+                <value>1</value>
+            </parameter>
+            <parameter name="total_cols" xsi:type="text" visible="true" sort_order="87">
+            	<label translate="true">Total columns</label>
+                <description translate="true"><![CDATA[Only used for some template.]]></description>
+                <value>4</value>
+            </parameter>
+            <parameter name="ajax_load" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="88">
+                <label translate="true">Load By Ajax</label>
+            </parameter>
+            <parameter name="show_slider" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="90">
+                <label translate="true">Show As Slider</label>
+            </parameter>
+            <parameter name="slider_dots" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="91">
+                <label translate="true">Show Slider Dots</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="slider_nav" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="92">
+                <label translate="true">Show Slider Arrows</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="slider_autoplay" xsi:type="select" visible="true"
+                    source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="95">
+            	<label translate="true">Slider Autoplay</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="slider_autoplay_timeout" xsi:type="text" visible="true" sort_order="96">
+            	<label translate="true">Autoplay Timeout (milliseconds)</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+                <value>5000</value>
+            </parameter>
+            <parameter name="slider_margin" xsi:type="text" visible="true" sort_order="97">
+            	<label translate="true">Item Margin</label>
+                <value>20</value>
+            </parameter>
+            <parameter name="items_1900" xsi:type="text" visible="true" sort_order="100">
+            	<label translate="true">Desktop 1900 view</label>
+                <description translate="true"><![CDATA[Window width ≥ 1900. Default: 6.]]></description>
+                <value>6</value>
+            </parameter>
+            <parameter name="items_1600" xsi:type="text" visible="true" sort_order="110">
+            	<label translate="true">Desktop 1600 view</label>
+                <description translate="true"><![CDATA[1600 ≤ Window width < 1900. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1420" xsi:type="text" visible="true" sort_order="120">
+            	<label translate="true">Desktop 1420 view</label>
+                <description translate="true"><![CDATA[1420 ≤ Window width < 1600. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1280" xsi:type="text" visible="true" sort_order="130">
+            	<label translate="true">Desktop 1280 view</label>
+                <description translate="true"><![CDATA[1280 ≤  Window width < 1420. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_980" xsi:type="text" visible="true" sort_order="140">
+            	<label translate="true">Desktop Small View</label>
+                <description translate="true"><![CDATA[980 ≤  Window width < 1280. Default: 3.]]></description>
+                <value>4</value>
+            </parameter>
+            <parameter name="items_768" xsi:type="text" visible="true" sort_order="150">
+            	<label translate="true">Tablet Lanscape View</label>
+                <description translate="true"><![CDATA[768 ≤ Window width < 980. Default: 3.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_480" xsi:type="text" visible="true" sort_order="160">
+            	<label translate="true">Tablet Portrait View</label>
+                <description translate="true"><![CDATA[480 ≤ Window width < 768. Default: 2.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_320" xsi:type="text" visible="true" sort_order="170">
+            	<label translate="true">Mobile Lanscape View</label>
+                <description translate="true"><![CDATA[320 ≤ Window width < 480. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+            <parameter name="items_0" xsi:type="text" visible="true" sort_order="180">
+            	<label translate="true">Mobile Portrait View</label>
+                <description translate="true"><![CDATA[Window width < 320. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+            <parameter name="cache_lifetime" xsi:type="text" visible="true" sort_order="190">
+                <label translate="true">Cache Lifetime (Seconds)</label>
+                <description translate="true">86400 by default, if not set. To refresh instantly, clear the Blocks HTML Output cache.</description>
+            </parameter>
+            <parameter name="disable_lazyimg" xsi:type="select" visible="true"
+                    source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="200">
+            	<label translate="true">Disable lazyload image</label>
+            </parameter>
+            <parameter name="name_substr_length" xsi:type="text" visible="true" sort_order="210">
+            	<label translate="true">Name substring length</label>
+                <description translate="true"><![CDATA[Only used for some templates.]]></description>
+            </parameter>
+        </parameters>
+        <containers>
+            <container name="content">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.top">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.bottom">
+                <template name="grid" value="default" />
+            </container>
+        </containers>
+    </widget>
+</widgets>

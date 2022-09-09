@@ -1,0 +1,12 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$themeHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$template = 'Magento_Catalog::'.$themeHelper->getMainCustomField('category_view_style');
+?>
+<?= $this->setTemplate($template)->toHtml() ?>

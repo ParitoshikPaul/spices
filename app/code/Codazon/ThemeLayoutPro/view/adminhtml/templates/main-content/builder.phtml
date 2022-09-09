@@ -1,0 +1,155 @@
+<?php
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$attributeCode = 'themelayout_content';
+$isUseDefault = $this->isUseDefault($attributeCode);
+?>
+<div class="main-content-builder custom-bootstrap" data-role="page-builder">
+    <div class="row">
+        <div class="col-sm-5 col-left">
+            <div class="block-title"><?= __('Element Set') ?></div>
+            <div class="element-type-area" data-role="ele-area">
+                <?php if($this->displayUseDefault($attributeCode)) : ?>
+                <div class="admin__field-control">
+                    <div class="admin__field-service">
+                        <input type="checkbox" <?php if ($isUseDefault) : ?>checked<?php endif ?> id="themelayout_content_default" name="use_default[themelayout_content]" class="admin__control-checkbox" onclick="toggleThemeContent(this)" />
+                        <label for="themelayout_content_default" class="admin__field-label">
+                            <span class="use-default-label"><?= __('Use Default Content') ?></span>
+                        </label>
+                    </div>
+                </div>
+                <?php endif ?>
+            </div>
+        </div>
+        <div class="col-sm-19 col-right">
+            <div class="block-title"><?= __('Main Area') ?></div>
+            <div class="page-main-area" data-role="main-area"></div>
+        </div>
+    </div>
+</div>
+
+<?= $this->getChildHtml('element_templates'); ?>
+<?php
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$version = str_replace("-dev", "", (string)$objectManager->get(\Magento\Framework\App\ProductMetadataInterface::class)->getVersion());
+$isMage23 = version_compare($version, '2.3.0', '>=');
+$isMage244 = $isMage23 && version_compare($version, '2.4.4', '>=');
+?>
+<?php if ((!$isMage244) && $isMage23) : ?>
+<script>
+require.config({
+    map: {
+        '*': {
+            tinymce: 'tiny_mce_4/tinymce.min'
+        }
+    }
+});
+</script>
+<?php endif ?>
+<script type="text/javascript">
+/* Editor Tool Config */
+var Codazon = {
+    editorUrl:      '<?= $this->getUrl('themelayoutpro/wysiwyg/index') ?>',
+    imageUrl:       '<?= $this->getUrl('cms/wysiwyg_images/index') ?>',
+    templateUrl:    '<?= $this->getUrl('themelayoutpro/ajax/templates') ?>',
+    mediaUrl:       '<?= $this->getMediaUrl() ?>'
+}
+require.config({
+    map: {
+        '*': {
+            contentBuilder: 'Codazon_ThemeLayoutPro/js/content-builder',
+			jqueryTmpl: 'Codazon_ThemeLayoutPro/js/jquery.tmpl.min',
+			contentBuilderJqueryUi: 'Codazon_ThemeLayoutPro/js/jquery-ui.min'
+        }
+    },
+    shim:{
+		'Codazon_ThemeLayoutPro/js/content-builder': ['jqueryTmpl', 'contentBuilderJqueryUi'],
+		'Codazon_ThemeLayoutPro/js/jquery.tmpl.min': ['jquery'],
+		'jquery/jquery-uiCodazon_ThemeLayoutPro/js/jquery-ui.min': ['jquery/jquery-ui']
+	}
+});
+require(['jquery'], function($) {    
+    require(['jquery/ui', 'Codazon_ThemeLayoutPro/js/editor', 'jquery/jquery-ui-timepicker-addon', 'Codazon_ThemeLayoutPro/js/browser'], function(ui) {
+        /* remove default jquery ui of magento */
+        $.ui.sortable = undefined;
+        $.ui.droppable = undefined;
+        $.ui.draggable = undefined;
+        $.extend($.ui,{plugin:{add:function(n,e,i){var r,t=$.ui[n].prototype;for(r in i)t.plugins[r]=t.plugins[r]||[],t.plugins[r].push([e,i[r]])},call:function(n,e,i){var r,t=n.plugins[e];if(t&&n.element[0].parentNode&&11!==n.element[0].parentNode.nodeType)for(r=0;r<t.length;r++)n.options[t[r][0]]&&t[r][1].apply(n.element,i)}},contains:$.contains,hasScroll:function(n,e){if("hidden"===$(n).css("overflow"))return!1;var i=e&&"left"===e?"scrollLeft":"scrollTop",r=!1;return n[i]>0?!0:(n[i]=1,r=n[i]>0,n[i]=0,r)},isOverAxis:function(n,e,i){return n>e&&e+i>n},isOver:function(n,e,i,r,t,o){return $.ui.isOverAxis(n,i,t)&&$.ui.isOverAxis(e,r,o)}});
+        
+        window.toggleThemeContent = function(object) {
+            var $themeContentParent = $(object).parents('[data-role=page-builder]').first().find('.col-right').first();
+            var themeContentParent = $themeContentParent.get(0);
+            toggleValueElements(object, themeContentParent);
+            if (object.checked) {
+                $themeContentParent.addClass('_disabled');
+                $('#themelayout_content_default_hidden').val('1').trigger('change');
+            } else {
+                $themeContentParent.removeClass('_disabled');
+                $('#themelayout_content_default_hidden').val('0').trigger('change');
+            }
+        }
+        
+        require(['contentBuilderJqueryUi', 'jqueryTmpl', 'contentBuilder'], function() {
+            var $pageBuilder = $('[data-role=page-builder]').first();
+            var $useDefaultCheckbox = $('#themelayout_content_default');
+            var itemData = [];
+            function setupPageBuilder() {
+                if ($('.form-inline input[name=themelayout_content]').length) {
+                    var contentValue = $('.form-inline input[name=themelayout_content]').val();
+                    if (contentValue) {
+                        itemData = JSON.parse(contentValue);
+                    }
+                    $pageBuilder.pagebuilder({
+                        itemTypes: <?= json_encode($this->getItemTypes()) ?>,
+                        itemData: itemData,
+                        imagePlaceholder: '<?= $this->getImageUrl('placeholder.jpg') ?>',
+                        mediaUrl: '<?= $this->getMediaUrl() ?>'
+                    });
+                    var builder = $pageBuilder.data('codazonPagebuilder');
+                    
+                    var $themcontentInput = $('.form-inline input[name=themelayout_content]').first();
+                    var $requiredCss = $('.form-inline input[name=required_less_component]').first();
+                    if ($useDefaultCheckbox.length) {
+                        var $useDefaultHidden = $('<input type="hidden" id="themelayout_content_default_hidden" value="<?php echo $isUseDefault?'1':'0' ?>" name="use_default[themelayout_content]" data-form-part="themelayout_maincontent_form">');
+                        $useDefaultHidden.insertAfter($themcontentInput).trigger('change');
+                    }
+                    
+                    $('body').on('processStart', function(e) {
+                        if ($useDefaultCheckbox.length && $useDefaultCheckbox.get(0).checked) {
+                            $themcontentInput.val('').trigger('change');
+                        } else {
+                            var elementJson = builder.elementHTMLtoJson();
+                            var requireCSS = builder.collectRequiredCss();
+                            $requiredCss.val(JSON.stringify(requireCSS)).trigger('change');
+                            $themcontentInput.val(JSON.stringify(elementJson)).trigger('change');
+                        }
+                    });
+                    if ($useDefaultCheckbox.length) {
+                        var checkbox = $useDefaultCheckbox.get(0);
+                        if (checkbox.checked) {
+                            toggleThemeContent(checkbox);
+                        }
+                    }
+                } else {
+                    setTimeout(function() {
+                        setupPageBuilder();
+                    }, 50);
+                }
+            }
+            setupPageBuilder();
+        });
+    });
+    
+    require(['Codazon_ThemeLayoutPro/js/jquery.sticky-kit.min'], function() {
+        var $eleArea = $('[data-role=ele-area]').first();
+        $eleArea.stick_in_parent({
+            offset_top: 87
+        });
+    });
+});
+</script>

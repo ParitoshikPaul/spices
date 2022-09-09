@@ -1,0 +1,63 @@
+/*Furniture*/
+.service-banner-style01{
+	padding: 20px 0;
+	.item-icon{
+		margin-right:15px;
+		font-size: 24px;
+		.abs-transition();
+		.rtl-layout &{
+			margin-right:0;
+			margin-left:15px;
+		}
+	}
+	.item{
+		display: flex;
+		align-items: center;	
+		color: @service-banner-text-01;	
+		&:hover{
+			cursor:pointer;
+			.item-icon{
+				.abs-scale(1.2);
+			}
+		}
+	}
+	.item-content{
+		letter-spacing: 1px;
+		a, a:visited{
+			.abs-transition();	
+			color: @service-banner-text-01;	
+			&:hover{
+				color: @service-banner-hover-text-01;
+			}		
+		}
+		> p{
+			font-size: 12px;
+			font-style: italic;
+			margin: 0
+		}
+	}
+	@media @tablet_strict{
+		.item{
+			width: 50%;
+			margin: 10px 0;
+		}
+	}
+	@media @phone{
+		.cdz-block-title .title-desc{
+			width: 60%
+		}
+		.item{
+			margin: 8px 0;
+		}
+	}
+	@media @phonedown{
+		.item{
+			width: 100%;
+			float: left;			
+			.item-icon{
+				min-width: 30px;
+    			text-align: center;
+			}
+		}
+	}
+}

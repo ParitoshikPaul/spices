@@ -1,0 +1,150 @@
+<?php
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<script id="el-type-tmpl" type="text/x-jquery-tmpl">
+<div class="el-item el-item-edit-inactive type-${name} {%if typeof custom_class !== 'undefined' %} ${custom_class} {%/if%}" data-itemtype="${name}" data-role="el-item">
+    <div class="el-item-header">
+        <div class="el-item-handle" data-role="sort-handle">
+             <span class="el-title"><span class="el-item-title">${title}</span></span>
+        </div>
+        <div class="header-actions">
+            <a class="item-prev el-btn" href="javascript:void(0)" title="<?= __('Move previous') ?>" data-role="move-prev"><i></i></a>
+            <a class="item-next el-btn" href="javascript:void(0)" title="<?= __('Move next') ?>" data-role="move-next"><i></i></a>
+            <a class="item-copy el-btn" href="javascript:void(0)" title="<?= __('Duplicate') ?>" data-role="copy-item"><i></i></a>
+            <a class="item-edit el-btn" href="javascript:void(0)" title="<?= __('Edit') ?>" data-role="toggle-settings"><i></i></a>
+        </div>
+    </div>
+    <div class="el-item-settings" data-role="setting-panel">
+        <div class="el-item-background" data-role="item-close"></div>
+        <div class="el-item-settings-inner">
+            <div class="el-item-content">
+                <div class="el-item-fields" data-role="item-fields"></div>
+                {%if typeof require_css !== 'undefined' %}<input type="hidden" class="css-require" data-role="css-require" value="${JSON.stringify(require_css)}"></input>{%/if%}
+            </div>
+            <div class="el-item-actions">
+                <a href="javascript:void(0)" class="item-delete el-btn" data-role="item-delete"><?= __('Remove') ?></a>
+                <a href="javascript:void(0)" class="item-close el-btn" data-role="item-close"><?= __('OK') ?></a>
+                <a href="javascript:void(0)" class="add-to-page el-btn" data-role="add-to-page"><?= __('Add to page') ?></a>
+            </div>
+        </div>
+    </div>
+    {%if (typeof disable_children !== 'undefined') && disable_children%}
+    <section class="short-desc" data-role="short-desc"></section>
+    {%else%}
+    <div class="el-item-children" data-role="el-children"></div>
+    {%/if%}
+</div>
+</script>
+
+<script id="el-field-tmpl" type="text/x-jquery-tmpl">
+{%var full_field = ((typeof full_field !== 'undefined')?full_field:false) %}
+{%var prefix = ((typeof prefix !== 'undefined')?prefix:'') %}
+{%var field_class_prefix = ((typeof field_class_prefix !== 'undefined')?field_class_prefix:'el-item') %}
+<div class="${field_class_prefix}-field row" {%if type == 'hidden'%}style="display:none;"{%/if%}>
+    <div class='field-label {%if type == 'editor' || full_field %}col-xs-24{%else%}col-xs-6{%/if%}'>${label}</div>
+    <div class='field-value {%if type == 'editor' || full_field %}col-xs-24{%else%}col-xs-18{%/if%}'>
+    {%if type == 'textarea'%}
+    <textarea class="el-input" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" data-type="${type}" data-${prefix}name="${name}"></textarea>
+    {%elif type == 'select'%}
+    <select class="el-input" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" data-type="${type}" data-${prefix}name="${name}" {%if (typeof selected_value !== 'undefined')%}data-old_value="${selected_value}"{%/if%}>
+        {%each(i, val) values %}
+        <option value="${val.value}" {%if (typeof selected_value !== 'undefined')  && (val.value == selected_value)%}selected{%/if%}>${val.label}</option>
+        {%/each%}
+    </select>
+    {%elif type == 'image'%}
+    <div class="image-container row" data-role="image-container">
+        <div class="el-browser-wrap">
+            <input class="el-input" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" type="text" data-type="${type}" data-${prefix}name="${name}" />
+            <button data-role="el-image" class="el-btn el-image" onclick="CdzMediabrowserUtility.openDialog(this)"><i class="fa fa-file-image-o"></i></button>
+        </div>
+        <a class="el-image-preview-wrap" href="javascipt:void(0)">
+            <img class="el-image-preview" data-role="image-preview" src='<?= $this->getImageUrl('placeholder.jpg') ?>' />
+        </a>
+    </div>
+    {%elif type == 'multitext'%}
+    <div class="multitext-container" data-role="multitext-container">
+        <input class="el-input" type="hidden" data-type="${type}" data-${prefix}name="${name}" />
+        <div class="multitext-items" data-role="multitext-items">
+            <div class="multitext-item" data-role="multitext-item">
+                <a class="mt-open-item" data-role="mt-open-item"><i class="fa fa-pencil"></i></a>
+                <div class="item-icon" href="javascipt:void(0)">
+                    <i class="item-sign fa fa-file-text-o"></i>
+                </div>
+                <div class="item-content" style="display:none;" data-role="mt-content">
+                    <div class="item-content-outer">
+                        <div class="item-background" data-role="mt-close-item"></div>
+                        <div class="item-content-inner">
+                            <div class="editor-settings">
+                                {%if sub_fields %}
+                                    {%tmpl getTmplById('el-field-tmpl', sub_fields, 'm', 'm') %}
+                                {%/if%}
+                            </div>
+                            <div class="multitext-item-toolbar" data-role="multitext-item-toolbar">
+                                <button class="el-btn mt-remove-item" data-role="mt-remove-item" ><i class="fa fa-trash-o"></i></button>
+                                <button class="el-btn mt-close-item" data-role="mt-close-item" ><i class="fa fa-close"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="multitext-toolbar" data-role="multitext-toolbar">
+            <button class="el-btn el-add-new-item" data-role="el-add-new-item" ><i class="fa fa-plus-square-o"></i> <?= __('New Item') ?></button>
+        </div>
+    </div>
+    {%elif type == 'editor'%}
+    <div class="editor-container" data-role="editor-container">
+        <div class="editor-toolbar">
+            <button data-role="el-wysiwyg" class="el-btn el-wysiwyg" onclick="CdzEditor.wysiwyg.open(this)"><?= __('Wysiwyg Editor') ?></button>
+            <button data-role="el-editor-templates" onclick="CdzEditor.template.open(this)" class="el-btn el-editor-templates"><?= __('Templates') ?></button>
+        </div>
+        <textarea class="el-input" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" data-type="${type}" data-${prefix}name="${name}"></textarea>
+    </div>
+    {%elif type == 'hidden'%}
+    <input class="el-input" value="${value}" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" type="hidden" data-type="${type}" data-${prefix}name="${name}" />
+    {%elif type == 'custom_field'%}
+    {%if template_id %}
+        {%tmpl getTmplById(template_id, data) %}
+    {%/if%}
+    {%else%}
+    <input class="el-input" value="${value}" data-attache_desc="${attache_desc}" data-attache_header="${attache_header}" type="text" data-type="${type}" data-${prefix}name="${name}" />
+    {%/if%}
+    {%if (typeof desc !== 'undefined')%}
+        <div class="el-desc">{%html desc %}</div>
+    {%/if%}
+    </div>
+</div>
+</script>
+
+
+<script id="template-list-tmpl" type="text/x-jquery-tmpl">
+    <div class="tpl-set-item">
+        <div class="set-name"><span>${name}</span></div>
+         {%if templates.length %}
+        <div class="tpl-list row">
+        {%each(i, tpl) templates%}
+        <div class="tpl-item col-m-2 col-xs-4" data-role="tpl-item">
+            <div class="tpl-item-inner">
+                <div class="tpl-top">
+                    <div class="tpl-img abs-img" style="padding-bottom: 100%" onclick="CdzEditor.template.insertTmpl(this)">
+                        <img src="${tpl.image}" />
+                    </div>
+                </div>
+                <div class="tpl-bottom">
+                    <div class="tpl-name">${tpl.name}</div>
+                    <div class="action">
+                        <button data-role="import-tpl" onclick="CdzEditor.template.insertTmpl(this)" class="btn import-tpl"><?= __('Import') ?></button>
+                    </div>
+                    <section class="tpl-content" data-role="tpl-content" data-content="${tpl.content}" style="display:none"></section>
+                </div>
+            </div>
+        </div>
+        {%/each%}
+        </div>
+        {%/if%}
+    </div>
+</script>

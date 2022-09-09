@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/system_file.xsd">
+    <system>
+        <section id="variables">
+            <group id="cdz_footer">
+                <label>Footer</label>
+                <field id="footer_background" translate="label" formElement="color">
+                    <label>Footer Background</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="footer_background_file" translate="label" formElement="background">
+                    <label>Footer Background Image</label>
+                </field>
+                <field id="footer_background_image_option" translate="label" formElement="input">
+                    <label>Footer Background Image Option</label>
+                    <default></default>
+                </field>
+                <field id="footer_top_background" translate="label" formElement="color">
+                    <label>Footer Top Background</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="footer_bottom_background" translate="label" formElement="color">
+                    <label>Footer Bottom Background</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="footer_text" translate="label" formElement="color">
+                    <label>Footer Text</label>
+                    <default>#a8aeba</default>
+                </field>
+                <field id="footer_title_text" translate="label" formElement="color">
+                    <label>Footer Title Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="footer_hover_text" translate="label" formElement="color">
+                    <label>Footer Hover Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="footer_border" translate="label" formElement="color">
+                    <label>Footer Border</label>
+                    <default>#5d666f</default>
+                </field>
+                <field id="footer_text_normal" translate="label" formElement="color">
+                    <label>Footer Text Normal</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="footer_background_normal" translate="label" formElement="color">
+                    <label>Footer Background Normal</label>
+                    <default>#5d666f</default>
+                </field>
+                <field id="footer_font" translate="label" formElement="input">
+                    <label>Footer Font Size</label>
+                    <default>14px</default>
+                </field>
+                <field id="footer_title_font" translate="label" formElement="input">
+                    <label>Footer Title Font Size</label>
+                    <default>12px</default>
+                </field>
+            </group>
+            <group id="extra_customization">
+                <label>Extra Customization</label>
+                <field id="custom_variables" translate="label" formElement="textarea" sortOrder="10" dataScope="custom_fields.custom_variables">
+                    <label>Custom LESS Variables</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* @my_main_color: #cccfff; @my_border: ~'1px solid #fff'; */.]]></notice>
+                </field>
+                <field id="custom_less_code" translate="label" formElement="textarea" sortOrder="20" dataScope="custom_fields.custom_less_code">
+                    <label>Custom LESS Code</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* body{ &.checkout-index-index{background: @my_main_color;} }; */.]]></notice>
+                </field>
+                <field id="custom_css_code" translate="label" formElement="textarea" sortOrder="30" dataScope="custom_fields.custom_css_code">
+                    <label>Custom CSS Code</label>
+                    <notice>Your custom css code.</notice>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,56 @@
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<li class="item product product-item" data-role="product-item">
+    <div class="product">
+        <div class="product-item-left">
+            <span class="item-qty"><!-- ko text: item.qty --><!-- /ko --></span>
+            <div data-role="item-trigger" data-bind="attr: {title: product_name}" tabindex="-1" class="product-item-photo">
+                <!-- ko foreach: $parent.getRegion('itemImage') -->
+                    <!-- ko template: {name: getTemplate(), data: item.product_image} --><!-- /ko -->
+                <!-- /ko -->
+            </div>
+        </div>
+        <div class="product-item-right product-item-details" data-role="item-actions">
+            <div class="product-item-actions">
+                <div class="product-item-pricing">
+                    <div class="details-qty qty">
+                        <input data-bind="attr: {
+                               id: 'cdz-cart-item-'+item_id+'-qty',
+                               'data-cart-item': item_id,
+                               'data-item-qty': qty,
+                               'data-cart-item-id': product_sku
+                               }, value: qty"
+                               type="number"
+                               size="4"
+                               class="item-qty cart-item-qty"
+                               maxlength="12"/>
+                        <button data-bind="attr: {
+                               id: 'cdz-update-cart-item-'+item_id,
+                               'data-cart-item': item_id,
+                               title: $t('Update')
+                               }"
+                                class="update-cart-item"
+                                style="display: none">
+                            <span data-bind="i18n: 'Update'"></span>
+                        </button>
+                    </div>
+                    <div class="actions">
+                        <a href="javascript:void(0)" data-bind="attr: {'data-cart-item': item_id, title: $t('Remove item')}"
+                           class="action delete">
+                            <span data-bind="i18n: 'Remove'"></span>
+                        </a>
+                        <!-- ko if: is_visible_in_site_visibility -->
+                        <a data-bind="attr: {href: configure_url, title: $t('Edit item')}" class="action edit">
+                            <span data-bind="i18n: 'Edit'"></span>
+                        </a>
+                        <!-- /ko -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

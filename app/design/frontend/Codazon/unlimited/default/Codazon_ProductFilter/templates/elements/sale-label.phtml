@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$labelHelper = isset($labelHelper) ? $labelHelper : $this->helper('Codazon\ProductLabel\Helper\Data');
+$_product = isset($_product) ? $_product : $this->getData('product');
+$savePercent = $labelHelper->getSavePercent($_product);
+?>
+<?php if ($savePercent) : ?>
+<div class="i-save-pc"><div class="i-label"><?= __('%1% off', $savePercent) ?></div></div>
+<?php endif ?>

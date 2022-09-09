@@ -1,0 +1,215 @@
+/*SuperMarket - Fashion Accessories*/
+.product-list-style-05{	
+	.cdz-product{
+		border: 1px solid @main_box_border;
+		background: @main_box_background;
+		.abs-boxshadow(@main_box_shadow);	
+		.abs-borderradius(@main_box_radius);	
+	}
+	.owl-carousel.owl-drag .owl-item{
+		&:after{
+			width: 1px;
+			height: 100%;
+			background: @main_box_border;
+			position: absolute;
+			top: 0;
+			left: -1px;
+			content: '';
+		}
+	}
+	&.grid.products-grid{
+		.product-item{
+			border: 1px solid @main_box_border;
+			background: @main_box_background;
+			.abs-boxshadow(@main_box_shadow);
+			.abs-borderradius(@main_box_radius);
+		}
+	}
+	.product-item{
+		padding: 10px;
+		margin-bottom: 0;
+		text-align: center;
+		overflow: hidden;
+		.abs-borderradius(@main_box_radius);
+		.abs-product-hover-img-slide();/*hover*/
+	}
+	.product-item-top{
+		position: relative;
+		margin-bottom: 5px;
+	}
+	.product-item-info{
+		position: relative;
+	}
+	/*qs button*/
+	.qs-button{			
+		position: absolute;
+		z-index: 3;
+		line-height: 34px;
+		.abs-opacity(0);
+		.abs-calc-top(~'(100% - 38px)/2');
+		.abs-calc-left(~'(100% - 38px)/2');
+		span{display: none}		
+	}
+	/*product-name*/
+	.product-item-name{
+		padding:0 15px;
+		white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	}
+	/*rating*/
+	.product-reviews-summary {
+	    margin: 0 auto 5px;
+	}
+	/*price*/
+	.price-box{
+		.price{			
+			margin: 0 3px;	
+		}
+		.special-price .price{
+			color:@main_hover_text;
+		}
+		.old-price{
+			float:none;
+			color:lighten(@main_price_text, 25%);
+			margin:0 3px;
+			.price{
+				color:lighten(@main_price_text, 25%)
+			}
+		}
+		.minimal-price-link{
+			width: 100%;
+		}
+	}
+	/*SKU*/
+	.product-item-sku{
+		white-space: nowrap;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		color:lighten(@main_text_normal, 5%);		
+	}
+	.product-item-details {	
+		text-align:center;
+		position: relative;
+		overflow: hidden;	
+		.abs-transition();	
+	}
+	.product-item-actions{
+		position: relative;
+		overflow: hidden;
+		&:before{
+			.abs-boxshadow(0 0px 25px #c0c0c0);
+			content: "";
+			width: 100%;
+		    height: 10px;
+		    position: absolute;
+		    left: 0;
+		    top: -10px;
+		    z-index: 10;
+		}
+	}
+}
+@media @tablet_vertical {
+	.product-list-style-05{	
+		.product-item:hover{
+			.product-item-details{	
+				.abs-transform(~'translateY(-30px)');
+				z-index: 1;
+				.product-item-name{
+					.abs-opacity(0);
+				}
+			}
+			.product-item-inner{
+				bottom:0;	
+				visibility: inherit;
+			}
+			.qs-button{
+				.abs-opacity(1);
+			}
+		}
+		/*icon button wrap*/
+		.product-item-inner{
+			position: absolute;
+			bottom: -100px;
+			left: 0;
+			width: 100%;		
+			.abs-transition();	
+			visibility: hidden;
+		}
+		.product-item-actions{
+			background: @btn_primary_background;
+			border: 2px solid @btn_primary_border;	
+		    margin: 0;
+		    overflow: hidden;
+		    .abs-borderradius(@btn_radius);
+		}
+		.product-item-actions .actions-primary,
+		.product-item-actions .actions-secondary{
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.actions-primary{
+			width: auto
+		}
+		.product-item-actions .actions-primary + .actions-secondary{
+			width: auto;
+			max-width: 95px;
+		}
+		.product-item-actions .actions-secondary {
+			padding: 0;
+    		overflow: hidden;
+    		background: @btn_icon_background;
+    		float: right;
+    		.abs-borderradius(@btn_radius);
+    		.rtl-layout &{
+    			float: left
+    		}
+		}
+		/*primary*/ 
+	    .action.primary{
+			width: 100%;
+		    height: 36px;
+		    padding: 0;
+		    font-size: 12px;
+		    line-height: 36px;
+		    .abs-borderradius(@btn_radius);		
+		    .abs-button-cart-hover-effect();		    	    
+		} 
+		/*secondary*/
+	    .actions-secondary > .action{
+	    	width:40px;
+    		height:36px;
+    		line-height: 36px;
+	    	.btnicon-style();	
+		}	   
+	}
+}
+@media @tablet-strict_small{
+	.product-list-style-05 {
+		.actions-secondary > .action{
+			width:30px;
+		}
+	}
+}
+@media @tablet_strict{
+	.product-list-style-05{	
+		.action.primary > span{
+			padding: 0;
+			.rtl-layout &{
+				padding: 0;
+			}
+			&:after,
+			&:before{
+				display:none;
+			}
+		}
+	}
+}
+
+@media @phone{
+	.product-list-style-05{	
+		.product-item-actions:before{
+			display:none;
+		}
+	}
+}

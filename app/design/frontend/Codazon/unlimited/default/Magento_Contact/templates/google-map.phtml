@@ -1,0 +1,66 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$enable = $helper->getConfig('pages/contact/display_google_map');
+$apiKey = $helper->getConfig('pages/contact/google_api_key');
+?>
+<?php if ($enable && $apiKey) : ?>
+<?php
+$title = $helper->getConfig('pages/contact/map_title');
+$address = $helper->getConfig('pages/contact/map_address');
+$latitude = (float)$helper->getConfig('pages/contact/map_latitude');
+$longitude = (float)$helper->getConfig('pages/contact/map_longitude');
+?>
+<?php if ($address || ($latitude && $longitude)) : ?>
+<?php
+$zoom = (float)$helper->getConfig('pages/contact/map_zoom') ? : 10;
+$mapRatio = (float)$helper->getConfig('pages/contact/map_ratio') ? : 1;
+$additionalMarkers = $helper->getMapAdditionalMarkers();
+$contactInfo = $helper->getConfig('pages/contact/contact_info');
+
+if ( !(($latitude != '') && ($longitude != '')) ) {
+    $mapObject = $helper->getGeocodeByAddress($address);
+    $latitude = $mapObject->results[0]->geometry->location->lat;
+    $longitude = $mapObject->results[0]->geometry->location->lng;
+}
+
+$widget = [
+    'js/googlemap' => [
+        'mapLat'        => $latitude,
+        'mapLong'       => $longitude,
+        'mapZoom'       => $zoom,
+        'mapAddress'    => $address,
+        'markerTitle'   => $title,
+        'jsSource'      => $helper->getGoogleMapJavascriptUrl(),
+        'additionalMarkers' => $additionalMarkers
+    ]
+];
+?>
+<div class="google-map-wrap abs-frame"  style="padding-bottom: <?= $mapRatio*100 ?>%;">
+    <div class="abs-frame-inner google-map" data-mage-init='<?= json_encode($widget) ?>'></div>
+</div>
+<?php endif ?>
+<?php elseif ($replacement = $helper->getConfig('pages/contact/replacement_static_block')) : ?>
+<?php $cmsblock = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Cms\Model\Block')->load($replacement, 'identifier'); ?>
+<?php if ($content = $cmsblock->getContent()) : ?>
+<div class="store-info block">
+<?= $helper->htmlFilter($content) ?>
+</div>
+<?php endif ?>
+<?php elseif ($enable) : ?>
+<?php
+$mapUrl = $helper->getConfig('pages/contact/google_map_url');
+if (stripos($mapUrl, 'embed') === false) {
+    $mapUrl = $mapUrl . ((stripos($mapUrl, '?') === false) ? '?output=embed' : '&output=embed');
+}
+$mapRatio = (float)$helper->getConfig('pages/contact/map_ratio') ? : 1;
+?>
+<div class="google-map-wrap abs-frame"  style="padding-bottom: <?= $mapRatio*100 ?>%;">
+    <iframe class="abs-frame-inner google-map" src="<?= $mapUrl ?>" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+</div>
+<?php endif ?>

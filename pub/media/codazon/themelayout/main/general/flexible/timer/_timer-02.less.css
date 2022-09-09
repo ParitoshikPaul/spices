@@ -1,0 +1,76 @@
+.cdz-timer-02 {
+    display: inline-block;
+    position: relative;
+    @item_space: 10px;
+    .timer-block {
+        background: rgba(0,0,0,.5);
+        padding: 4px 7px;
+        color: #fff;
+    }
+    &.has-ic {
+        padding: 0 21px;
+        .ic-timer {
+            position: absolute;
+            left: 0;
+            top: 15px;
+            font-size: 30px;
+            color: inherit;
+        }
+        .rtl-layout & {
+            .ic-timer {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .countdown-timer {
+        .deal-items {
+            margin-right: -@item_space;
+            display: flex;
+        }
+        .deal-item {
+            display: inline-block;
+            margin-right: @item_space;
+            user-select: none;
+            text-align: center;
+            font: @f_h3;
+            .value {
+                font-size: 120%;
+                font-weight: 500;
+                padding: 4px 3px;
+                border-bottom: 1px solid fade(#ccc,50%);
+                display: block;
+                position: relative;
+                min-width: 30px;
+                line-height: 1;
+            }
+            .label {
+                font-size: 75%;
+                padding: 4px 0;
+                display: block;
+                width: 100%;
+                font-weight: normal;
+                line-height: 1;
+            }
+        }
+    }
+    .cd-expired-msg {
+        padding: 4px 10px;
+        background: rgba(204,204,204,52%);
+        border-radius: 0;
+        margin: 10px 0;
+        &:before {
+            font-family: fontAwesome;
+            content: "\f071";
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 7px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            .rtl-layout & {
+                margin: 0 0 0 7px;
+            }
+        }
+    }
+}

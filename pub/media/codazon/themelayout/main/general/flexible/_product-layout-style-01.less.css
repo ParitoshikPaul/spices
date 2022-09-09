@@ -1,0 +1,96 @@
+/*Suppermarket Style 01*/
+.product-layout-style-01{
+	/*Block Product Title*/
+	.cdz-block-title{
+		.b-title.h2{
+			font:@f_h1;
+			color: @main_title_text;
+			letter-spacing: 2px;
+		}
+	}
+	.block-title{
+		.b-title{
+			color: @main_title_text;
+			letter-spacing: 2px;
+		}
+	}
+	.block-title-deal{
+		text-align: center;
+		.b-title{
+			color: #282828;
+			display: inline-block;
+			padding: 5px 0;
+			font-size: 16px;
+			text-transform: uppercase;
+			margin-top: 10px;
+			border-bottom: 2px solid #4104ef;
+			margin-bottom: -2px;
+		}
+	}
+	.cdz-product{box-shadow: none}
+	.product-col-left {
+        border-right:1px solid @main_border;
+        .rtl-layout &{
+        	border-right:0;
+        	border-left:1px solid @main_border;
+        }
+        [class*='product-list-style']{
+	    	.product-item-top{
+	    		max-width: 250px;
+	    		margin: auto
+	    	}
+	    }
+	}
+	.product-col-right{
+		padding:0;
+		.product-item{
+	   	 	padding:5px 5px 10px;
+	   	 	border-bottom: 1px solid @main_border;
+	   	 	border-left:0;
+	    }
+	    .item-group{
+	    	.product-item:nth-child(2){
+	   	 		margin-top:0px;
+	   	 		border-bottom:0;
+	   	 		margin-top:0px;
+	   	 	}
+	    }
+	    [class*='product-list-style']{
+	    	overflow: hidden;
+	    	.product-item-top{
+	    		max-width: 150px;
+	    		margin: auto
+	    	}
+	    	@media @tablet-strict_small{
+	    		.product-item-top{
+	    			max-width: 125px;
+	    		}
+	    		&.product-list-style-05 {
+	    			.actions-secondary > .action,
+	    			.action.primary{
+		    			height: 30px;
+		    			line-height: 30px;
+		    		}
+	    		}
+	    	}
+	    }
+	}
+	
+	@media @phonedown{
+		.product-col-left{
+			.abs-calc-width(~'50% - 2px');
+		}
+		.product-col-right{
+			width: 50%;
+			[class*='product-list-style'] {
+				.price-box .price{
+					font-size: 13px !important
+				}
+				.actions-primary .tocart, 
+				.actions-secondary > .action{
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+}

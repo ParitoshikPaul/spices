@@ -1,0 +1,63 @@
+/*Food and drink -- Categories Banner*/
+.wrapper-adv-style-07{
+	.groupinfo-desc {
+	    position: absolute;
+	    bottom: 15px;
+	    width: 100%;
+	    left: 0;
+	    color: #000000;	    
+	    letter-spacing: 0;
+	    .abs-transition();
+	}
+	.grifo-desc{
+		a{
+			color:#000000;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: normal;
+			.abs-transition();
+		}
+	}
+	.grifo-title {
+	    margin-bottom: 0;
+	    font-size: 16px;
+	    font-weight: 600;
+	}
+	.item-image{
+		img{
+			.abs-transition() !important;
+		}
+	}
+	.item{	
+		overflow: hidden;	
+		&:hover{
+			img{
+				.abs-transform(scale(1.1));
+			}
+			.groupinfo-desc,
+			.grifo-desc a{
+				color:@main_hover_text;
+			}
+		}
+	}
+}
+@media @tablet_strict{
+	.wrapper-adv-style-07 .item {
+	    padding-bottom: 20px;
+	    background: #ffffff;
+	}
+}
+@media @phone{
+	.wrapper-adv-style-07 .item {
+	    padding-bottom: 20px;
+	    background: #ffffff;
+	}
+}
+@media @phonedown{
+	.wrapper-adv-style-07{
+		.grifo-desc a,
+		.grifo-title{
+			font-size: 12px;
+		}
+	}	
+}

@@ -1,0 +1,573 @@
+@font-face {
+  font-family: 'CodazonFont';
+  src:  url('../fonts/CodazonFont.eot?ji9528');
+  src:  url('../fonts/CodazonFont.eot?ji9528#iefix') format('embedded-opentype'),
+    url('../fonts/CodazonFont.ttf?ji9528') format('truetype'),
+    url('../fonts/CodazonFont.woff?ji9528') format('woff'),
+    url('../fonts/CodazonFont.svg?ji9528#CodazonFont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="cdzfont-"], [class*=" cdzfont-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'CodazonFont' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cdzfont-theme-bars:before {
+  content: "\e9b1";
+}
+.cdzfont-theme-cogwheel:before {
+  content: "\e9b2";
+}
+.cdzfont-theme-line:before {
+  content: "\e9b3";
+}
+.cdzfont-theme-signs:before {
+  content: "\e9b4";
+}
+.cdzfont-theme-signs-1:before {
+  content: "\e9b5";
+}
+.cdzfont-baby-apron:before {
+  content: "\e900";
+}
+.cdzfont-baby-beanbag:before {
+  content: "\e901";
+}
+.cdzfont-baby-boy:before {
+  content: "\e902";
+}
+.cdzfont-baby-carriage:before {
+  content: "\e903";
+}
+.cdzfont-baby-cradle:before {
+  content: "\e904";
+}
+.cdzfont-baby-diaper:before {
+  content: "\e905";
+}
+.cdzfont-baby-feeding-botle:before {
+  content: "\e906";
+}
+.cdzfont-baby-feeding-bottle:before {
+  content: "\e907";
+}
+.cdzfont-baby-food:before {
+  content: "\e908";
+}
+.cdzfont-baby-ice-cream:before {
+  content: "\e909";
+}
+.cdzfont-baby-movil:before {
+  content: "\e90a";
+}
+.cdzfont-baby-nipple:before {
+  content: "\e90b";
+}
+.cdzfont-baby-overhalls:before {
+  content: "\e90c";
+}
+.cdzfont-baby-pail-and-shovel:before {
+  content: "\e90d";
+}
+.cdzfont-baby-pajamas:before {
+  content: "\e90e";
+}
+.cdzfont-baby-pajamas-1:before {
+  content: "\e90f";
+}
+.cdzfont-baby-paper-mill:before {
+  content: "\e910";
+}
+.cdzfont-baby-teddy-bear:before {
+  content: "\e911";
+}
+.cdzfont-baby-woody-rocking-horse:before {
+  content: "\e912";
+}
+.cdzfont-baby-wrapped-baby:before {
+  content: "\e913";
+}
+.cdzfont-fa-climbing:before {
+  content: "\e914";
+}
+.cdzfont-fa-cosmetics:before {
+  content: "\e915";
+}
+.cdzfont-fa-diamond:before {
+  content: "\e916";
+}
+.cdzfont-fa-dress:before {
+  content: "\e917";
+}
+.cdzfont-fa-fashion:before {
+  content: "\e918";
+}
+.cdzfont-fa-fashion-1:before {
+  content: "\e919";
+}
+.cdzfont-fa-fashion-2:before {
+  content: "\e91a";
+}
+.cdzfont-fa-fashion-3:before {
+  content: "\e91b";
+}
+.cdzfont-fa-fashion-4:before {
+  content: "\e91c";
+}
+.cdzfont-fa-fashion-5:before {
+  content: "\e91d";
+}
+.cdzfont-fa-high-heels:before {
+  content: "\e91e";
+}
+.cdzfont-fa-lipstick:before {
+  content: "\e91f";
+}
+.cdzfont-fa-make-up:before {
+  content: "\e920";
+}
+.cdzfont-fa-man:before {
+  content: "\e921";
+}
+.cdzfont-fa-mechanic:before {
+  content: "\e922";
+}
+.cdzfont-fa-necklace:before {
+  content: "\e923";
+}
+.cdzfont-fa-people:before {
+  content: "\e924";
+}
+.cdzfont-fa-ribbon:before {
+  content: "\e925";
+}
+.cdzfont-fa-rings:before {
+  content: "\e926";
+}
+.cdzfont-fa-shirt:before {
+  content: "\e927";
+}
+.cdzfont-fa-shoe:before {
+  content: "\e928";
+}
+.cdzfont-fa-sunglasses:before {
+  content: "\e929";
+}
+.cdzfont-fa-trousers:before {
+  content: "\e92a";
+}
+.cdzfont-fa-tuxedo:before {
+  content: "\e92b";
+}
+.cdzfont-fa-witch:before {
+  content: "\e92c";
+}
+.cdzfont-fa-woman:before {
+  content: "\e92d";
+}
+.cdzfont-fa-women:before {
+  content: "\e92e";
+}
+.cdzfont-gro-beer:before {
+  content: "\e92f";
+}
+.cdzfont-gro-cheese:before {
+  content: "\e930";
+}
+.cdzfont-gro-chicken:before {
+  content: "\e931";
+}
+.cdzfont-gro-chicken-1:before {
+  content: "\e932";
+}
+.cdzfont-gro-coffee:before {
+  content: "\e933";
+}
+.cdzfont-gro-fish:before {
+  content: "\e934";
+}
+.cdzfont-gro-fish-1:before {
+  content: "\e935";
+}
+.cdzfont-gro-hamburger:before {
+  content: "\e936";
+}
+.cdzfont-gro-hotdog:before {
+  content: "\e937";
+}
+.cdzfont-gro-ice-cream:before {
+  content: "\e938";
+}
+.cdzfont-gro-lobster:before {
+  content: "\e939";
+}
+.cdzfont-gro-pizza:before {
+  content: "\e93a";
+}
+.cdzfont-gro-rib:before {
+  content: "\e93b";
+}
+.cdzfont-gro-salad:before {
+  content: "\e93c";
+}
+.cdzfont-gro-seashell:before {
+  content: "\e93d";
+}
+.cdzfont-gro-shrimp:before {
+  content: "\e93e";
+}
+.cdzfont-gro-skewer:before {
+  content: "\e93f";
+}
+.cdzfont-gro-spaguetti:before {
+  content: "\e940";
+}
+.cdzfont-gro-tray:before {
+  content: "\e941";
+}
+.cdzfont-gro-vegetables:before {
+  content: "\e942";
+}
+.cdzfont-gro-wine:before {
+  content: "\e943";
+}
+.cdzfont-tech-game:before {
+  content: "\e944";
+}
+.cdzfont-tech-headphone-2:before {
+  content: "\e945";
+}
+.cdzfont-tech-headphones:before {
+  content: "\e946";
+}
+.cdzfont-tech-headphones-2:before {
+  content: "\e947";
+}
+.cdzfont-tech-headphones-3:before {
+  content: "\e948";
+}
+.cdzfont-tech-lamp:before {
+  content: "\e949";
+}
+.cdzfont-tech-microphone:before {
+  content: "\e94a";
+}
+.cdzfont-tech-monitor:before {
+  content: "\e94b";
+}
+.cdzfont-tech-phone-call:before {
+  content: "\e94c";
+}
+.cdzfont-tech-photo-camera:before {
+  content: "\e94d";
+}
+.cdzfont-tech-photo-camera-1:before {
+  content: "\e94e";
+}
+.cdzfont-tech-printer:before {
+  content: "\e94f";
+}
+.cdzfont-tech-smartphone:before {
+  content: "\e950";
+}
+.cdzfont-tech-smartphone-1:before {
+  content: "\e951";
+}
+.cdzfont-tech-video-camera:before {
+  content: "\e952";
+}
+.cdzfont-tech-wifi:before {
+  content: "\e953";
+}
+.cdzfont-theme-arrow:before {
+  content: "\e954";
+}
+.cdzfont-theme-arrow-1:before {
+  content: "\e955";
+}
+.cdzfont-theme-arrows:before {
+  content: "\e956";
+}
+.cdzfont-theme-arrows-1:before {
+  content: "\e957";
+}
+.cdzfont-theme-arrows-2:before {
+  content: "\e958";
+}
+.cdzfont-theme-arrows-3:before {
+  content: "\e959";
+}
+.cdzfont-theme-arrows-4:before {
+  content: "\e95a";
+}
+.cdzfont-theme-arrows-5:before {
+  content: "\e95b";
+}
+.cdzfont-theme-arrows-6:before {
+  content: "\e95c";
+}
+.cdzfont-theme-arrows-7:before {
+  content: "\e95d";
+}
+.cdzfont-theme-arrows-8:before {
+  content: "\e95e";
+}
+.cdzfont-theme-arrows-9:before {
+  content: "\e95f";
+}
+.cdzfont-theme-arrows-10:before {
+  content: "\e960";
+}
+.cdzfont-theme-arrows-11:before {
+  content: "\e961";
+}
+.cdzfont-theme-arrows-12:before {
+  content: "\e962";
+}
+.cdzfont-theme-arrows-13:before {
+  content: "\e963";
+}
+.cdzfont-theme-arrows-14:before {
+  content: "\e964";
+  color: #26b99a;
+}
+.cdzfont-theme-arrows-15:before {
+  content: "\e965";
+}
+.cdzfont-theme-arrows-16:before {
+  content: "\e966";
+}
+.cdzfont-theme-arrows-17:before {
+  content: "\e967";
+}
+.cdzfont-theme-arrows-18:before {
+  content: "\e968";
+}
+.cdzfont-theme-arrows-19:before {
+  content: "\e969";
+}
+.cdzfont-theme-arrows-20:before {
+  content: "\e96a";
+}
+.cdzfont-theme-arrows-21:before {
+  content: "\e96b";
+}
+.cdzfont-theme-arrows-22:before {
+  content: "\e96c";
+}
+.cdzfont-theme-arrows-23:before {
+  content: "\e96d";
+}
+.cdzfont-theme-arrows-24:before {
+  content: "\e96e";
+}
+.cdzfont-theme-arrows-25:before {
+  content: "\e96f";
+}
+.cdzfont-theme-arrows-26:before {
+  content: "\e970";
+}
+.cdzfont-theme-arrows-27:before {
+  content: "\e971";
+}
+.cdzfont-theme-arrows-28:before {
+  content: "\e972";
+}
+.cdzfont-theme-arrows-29:before {
+  content: "\e973";
+}
+.cdzfont-theme-back:before {
+  content: "\e974";
+}
+.cdzfont-theme-big-star:before {
+  content: "\e975";
+}
+.cdzfont-theme-cancel-button:before {
+  content: "\e976";
+}
+.cdzfont-theme-clear-button:before {
+  content: "\e977";
+}
+.cdzfont-theme-credit-card:before {
+  content: "\e978";
+}
+.cdzfont-theme-double-arrow-left:before {
+  content: "\e979";
+}
+.cdzfont-theme-double-right-arrows-angles:before {
+  content: "\e97a";
+}
+.cdzfont-theme-down-arrow:before {
+  content: "\e97b";
+}
+.cdzfont-theme-exchange:before {
+  content: "\e97c";
+}
+.cdzfont-theme-exchange-arrows:before {
+  content: "\e97d";
+}
+.cdzfont-theme-expand-square:before {
+  content: "\e97e";
+}
+.cdzfont-theme-eye:before {
+  content: "\e97f";
+}
+.cdzfont-theme-eye-1:before {
+  content: "\e980";
+}
+.cdzfont-theme-eye-2:before {
+  content: "\e981";
+}
+.cdzfont-theme-eye-4:before {
+  content: "\e982";
+}
+.cdzfont-theme-favorite:before {
+  content: "\e983";
+}
+.cdzfont-theme-favorite-heart-button:before {
+  content: "\e984";
+}
+.cdzfont-theme-favourite-heart:before {
+  content: "\e985";
+}
+.cdzfont-theme-heart:before {
+  content: "\e986";
+}
+.cdzfont-theme-heart-1:before {
+  content: "\e987";
+}
+.cdzfont-theme-hide-3:before {
+  content: "\e988";
+}
+.cdzfont-theme-interface:before {
+  content: "\e989";
+}
+.cdzfont-theme-like:before {
+  content: "\e98a";
+}
+.cdzfont-theme-like-1:before {
+  content: "\e98b";
+}
+.cdzfont-theme-location-point:before {
+  content: "\e98c";
+}
+.cdzfont-theme-magnifier:before {
+  content: "\e98d";
+}
+.cdzfont-theme-magnifier-1:before {
+  content: "\e98e";
+}
+.cdzfont-theme-magnifying-glass:before {
+  content: "\e98f";
+}
+.cdzfont-theme-musica-searcher:before {
+  content: "\e990";
+}
+.cdzfont-theme-next:before {
+  content: "\e991";
+}
+.cdzfont-theme-online-shopping-cart:before {
+  content: "\e992";
+}
+.cdzfont-theme-online-supermarket-cart:before {
+  content: "\e993";
+}
+.cdzfont-theme-paper-bag:before {
+  content: "\e994";
+}
+.cdzfont-theme-phone-call:before {
+  content: "\e995";
+}
+.cdzfont-theme-picture:before {
+  content: "\e996";
+}
+.cdzfont-theme-placeholder:before {
+  content: "\e997";
+}
+.cdzfont-theme-profile:before {
+  content: "\e998";
+}
+.cdzfont-theme-profile-1:before {
+  content: "\e999";
+}
+.cdzfont-theme-right-arrow:before {
+  content: "\e99a";
+}
+.cdzfont-theme-right-arrows-couple:before {
+  content: "\e99b";
+}
+.cdzfont-theme-rounded-add-button:before {
+  content: "\e99c";
+}
+.cdzfont-theme-search:before {
+  content: "\e99d";
+}
+.cdzfont-theme-search-1:before {
+  content: "\e99e";
+}
+.cdzfont-theme-shapes:before {
+  content: "\e99f";
+}
+.cdzfont-theme-share:before {
+  content: "\e9a0";
+}
+.cdzfont-theme-shelter:before {
+  content: "\e9a1";
+}
+.cdzfont-theme-shop:before {
+  content: "\e9a2";
+}
+.cdzfont-theme-shopping-bag:before {
+  content: "\e9a3";
+}
+.cdzfont-theme-shopping-bag-1:before {
+  content: "\e9a4";
+}
+.cdzfont-theme-shopping-bag-2:before {
+  content: "\e9a5";
+}
+.cdzfont-theme-shopping-cart:before {
+  content: "\e9a6";
+}
+.cdzfont-theme-shopping-cart-1:before {
+  content: "\e9a7";
+}
+.cdzfont-theme-shopping-cart-2:before {
+  content: "\e9a8";
+}
+.cdzfont-theme-show-more-button-with-three-dots:before {
+  content: "\e9a9";
+}
+.cdzfont-theme-user:before {
+  content: "\e9aa";
+}
+.cdzfont-theme-user-1:before {
+  content: "\e9ab";
+}
+.cdzfont-theme-users:before {
+  content: "\e9ac";
+}
+.cdzfont-theme-users-1:before {
+  content: "\e9ad";
+}
+.cdzfont-theme-vibrating-phone:before {
+  content: "\e9ae";
+}
+.cdzfont-theme-web:before {
+  content: "\e9af";
+}
+.cdzfont-theme-zoom-out:before {
+  content: "\e9b0";
+}

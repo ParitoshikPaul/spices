@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<styles>
+    <service-banner-style01>service/_service-block-01.less.css</service-banner-style01>
+    <service-banner-style02>service/_service-block-02.less.css</service-banner-style02>
+    <service-banner-style03>service/_service-block-03.less.css</service-banner-style03>
+    <service-banner-style04>service/_service-block-04.less.css</service-banner-style04>
+	<service-banner-style06>service/_service-block-06.less.css</service-banner-style06>
+    <instagram-wrapper>_instagram.less.css</instagram-wrapper>
+    <pe-7s>_pe-icon-7-stroke.less.css</pe-7s>
+</styles>

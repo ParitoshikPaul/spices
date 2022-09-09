@@ -1,0 +1,88 @@
+.banner-style14 {
+    position: relative;
+    display: flex;
+    display: flex;
+    height: 100%;
+    align-content: center;
+    padding: 0 30px;
+    .item-content {
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: inherit;
+        padding: 30px 10%;
+        &.text-end {
+            text-align: end;
+        }
+        &.text-start {
+            text-align: start;
+        }
+    }
+    .bc-actions {
+        margin-top: 50px;
+    }
+    .bc-desc {
+        font-size: 14px;
+        margin-top: 50px;
+    }
+    .expanded {
+        letter-spacing: .05em;
+    }
+    .lsp-normal {
+        letter-spacing: 0px;
+    }
+    .bc-title {
+        font: @f_h1;
+        font-size: 285%;
+        font-weight: 700;
+        line-height: 1.7;
+        color: @main_title_text;
+    }
+    .bc-subtitle {
+        font: @f_h2;
+        letter-spacing: .3em;
+    }
+    a.bc-btn, .bc-btn {
+        font-size: 14px;
+        text-transform: uppercase;
+        display: inline-block;
+        padding: 0;
+        border: none;
+        background: none;
+        transition: letter-spacing ease 500ms;
+        position: relative;
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 0;
+            bottom: -5px;
+            left: 0;
+            content: '';
+            transition: all ease 500ms;
+            border-bottom: 1px solid;
+            transform: scale(0);
+        }
+        &:hover {
+            @media @tablet_vertical {
+                &:before {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+    @media @general_tablet_down {
+        padding: 20px;
+        .item-content {
+            padding: 0;
+        }
+        .bc-title {
+            font-size: 20px;
+        }
+        .bc-desc, .bc-btn{
+            font: @fm_h4;
+            margin-top: 20px;
+        }
+    }
+}

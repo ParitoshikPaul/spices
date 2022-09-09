@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <block class="Mageplaza\SocialLogin\Block\Popup\Social" before="customer.login.container" ifconfig="sociallogin/general/enabled" name="mageplaza-social-login-buttons" template="Mageplaza_SocialLogin::form/social.phtml"/>
+</page>

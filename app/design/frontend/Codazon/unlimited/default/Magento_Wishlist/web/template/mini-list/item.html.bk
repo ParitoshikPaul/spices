@@ -1,0 +1,42 @@
+<li class="wl-pd-item product-item" data-bind="with: window.rebuildMaterial">
+    <div class="product-item-info row" style="width: 100%">
+        <div class="col-xs-6">
+            <a class="product-item-photo" data-bind="attr: { href: product_url, title: product_name }">
+                <!-- ko template: {name: $data.image.template, data: $data.image} --><!-- /ko -->
+            </a>
+            <md-button aria-label="Remove This Item" href="#" data-bind="attr: {'data-post': delete_item_params}" class="md-icon-button btn-remove action delete"><md-tooltip md-direction="top">Remove This Item</md-tooltip></md-button>
+        </div>
+        <div class="product-item-details col-xs-18">
+            <div class="col-xs-10">
+                <strong class="product-item-name">
+                    <a data-bind="attr: { href: product_url }" class="product-item-link">
+                        <span data-bind="text: product_name"></span>
+                    </a>
+                </strong>
+                <div data-bind="html: product_price"></div>
+            </div>
+            <div class="col-xs-14">
+                <div class="product-item-actions">
+                    <!-- ko if: product_is_saleable_and_visible -->
+                    <div class="actions-primary">
+                        <!-- ko if: product_has_required_options -->
+                        <md-button aria-label="Add to Cart data-bind="attr: {'data-post': add_to_cart_params}" href="#" class="md-ink-ripple tocart"><md-tooltip md-direction="top">Add to Cart</md-tooltip></md-button>
+                        <!-- /ko -->
+                        <!-- ko ifnot: product_has_required_options -->
+                        <form data-bind="attr: {'action': JSON.parse(add_to_cart_params).action, 'method': 'POST'}, 'name': 'miniWishListForm' + JSON.parse(add_to_cart_params).data.item">
+                            <input type="hidden" data-bind="attr: {'value': JSON.parse(add_to_cart_params).data.item, 'name': 'item'}" />
+                            <input type="hidden" data-bind="attr: {'value': JSON.parse(add_to_cart_params).data.uenc, 'name': 'uenc'}" />
+                            <md-input-container class="qty-box">
+                                <label>Qty</label>
+                                <input class="wl-item-qty md-input" type="text" data-bind="attr: {'value': JSON.parse(add_to_cart_params).data.qty, 'name': 'qty'}" />
+                            </md-input-container>
+                            <md-button aria-label="Add to Cart" type="submit" class="md-ink-ripple tocart"><md-tooltip md-direction="top">Add to Cart</md-tooltip></md-button>
+                        </form>
+                        <!-- /ko -->
+                    </div>
+                    <!-- /ko -->
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

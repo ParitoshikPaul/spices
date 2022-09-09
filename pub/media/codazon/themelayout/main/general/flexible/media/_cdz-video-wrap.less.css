@@ -1,0 +1,151 @@
+/*Sport -- Video*/
+
+.cdz-video-wrap {
+    overflow: hidden;
+    position: relative;
+    .ads-col-left {
+        z-index: 1;
+        .cdz-banner-text {
+            padding: 50px 0 50px 10%;
+            height: 100%;
+            background-color: @main_hover_text;
+            color: @main_text_normal2;
+            background-color: @main_hover_text;
+            font-size: 28px;
+            .rtl-layout & {
+                padding: 50px 10% 50px 0;
+            }
+            .sub-title {
+                font-weight: bold;
+            }
+            .banner-title {
+                font: @f_h2;
+                text-transform: uppercase;
+                color: @main_text_normal2;
+            }
+            .desc p {
+                margin: 5% 0 15%;
+                font-size: 50%;
+            }
+        }
+        .text-wrap {
+            position: relative;
+            z-index: 2
+        }
+        .cdz-banner {
+            position: relative;
+            margin: 0;
+            &:after {
+                position: absolute;
+                content: "";
+                top: -30%;
+                border-bottom: 100px solid transparent;
+                width: 100px;
+                height: 190%;
+                background: @main_hover_text;
+                transform: rotate(10deg);
+                border-right: 10px solid #ffffff;
+                .abs-calc-left(~'100% - 50px');
+                .rtl-layout & {
+                    .abs-calc-left(~'auto');
+                    .abs-calc-right(~'100% - 50px');
+                    transform: rotate(-10deg);
+                    border-left: 10px solid #ffffff;
+                    border-right: 0;
+                }
+            }
+        }
+        .btn.primary {
+            border: 2px solid;
+            padding: 10px 45px;
+            float: none;
+            .abs-borderradius(@btn_radius);
+            .abs-style(@main_text_normal2, @main_text_normal2, transparent);
+            &:hover {
+                .abs-style(@main_hover_text, @main_text_normal2, @main_text_normal2);
+                transition-delay: .2s;
+            }
+        }
+    }
+    .ads-col-right {
+        .cdz-video-inner {
+            height: 100%;
+            img {
+                position: absolute;
+                height: 100%;
+                width: 100%
+            }
+        }
+        .cdz-video {
+            height: 100%;
+            &.video-no-loaded .cdz-video-inner {
+                position: absolute;
+                top: 50%;
+                left: 65%;
+                width: auto;
+            }
+            .video-player {
+                width: 115%;
+                right: 0;
+            }
+            .brand-loader {
+                margin: 0;
+            }
+        }
+    }
+    @media @tablet_strict {
+        .ads-col-left {
+            .cdz-banner-text {
+                font-size: 13px;
+                .desc p {
+                    font-size: 100%;
+                    margin: 5% 0 8%
+                }
+                .banner-title {
+                    font: @fm_h1
+                }
+                .btn.primary {
+                    padding: 5px 30px;
+                }
+            }
+            .cdz-banner:after {
+                .rtl-layout & {
+                    left: -12%;
+                }
+            }
+        }
+    }
+    @media @phone {
+        .ads-col-left {
+            padding: 0 10px;
+            .rtl-layout & {
+                padding: 0 10px;
+            }
+            .cdz-banner {
+                position: relative;
+                padding: 3rem;
+                &:after {
+                    display: none;
+                }
+            }
+            .cdz-banner-text .h2 {
+                font-size: 100%;
+            }
+        }
+        .ads-col-right {
+            position: relative;
+            width: 100%;
+            .cdz-video .video-player {
+                width: 100%;
+            }
+            .cdz-video-inner img {
+                position: static;
+            }
+        }
+    }
+    @media @desktop {
+        .ads-col-left .cdz-banner-text .h2 {
+            font-size: 150%
+        }
+    }
+}

@@ -1,0 +1,4 @@
+@import (optional,less)'../_default_variables.less.css';
+@import (less)'_variables.less.css';
+@import (less)'../_product-view-styles.less.css';
+@import (optional,less)'../general/flexible/_product-view-style-03.less.css';

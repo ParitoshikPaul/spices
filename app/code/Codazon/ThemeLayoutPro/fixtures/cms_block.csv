@@ -1,0 +1,625 @@
+title,identifier,content,is_active
+"Unlimited - Product  View - Custom Block - Style 01",unlimited-product-view-custom-block-style-01,"<div class=~~~our-payments~~~>
+<p class=~~~text~~~>Secured and trusted checkout with</p>
+<p class=~~~payment-logo~~~><img src=~~~{{media url=wysiwyg/codazon/footer-payment.png}}~~~ alt=~~~~~~ /></p>
+</div>",1
+"Unlimited - Contact Page - Store Information",unlimited-contact-page-store-information,"<p class=~~~i-mainstore~~~><strong>Store 1:</strong> <span>6505 boulevard Henri-Bourassa, Montr&eacute;al, Quebec, H1G2V5</span></p>
+<p class=~~~i-store~~~><strong>Store 2:</strong> <span>160 Chemin Tour-de-l&rsquo;Isle Montreal, QC H3C 4G8</span></p>
+<p class=~~~i-store~~~><strong>Store 3:</strong> <span>2505 Boulevard des EntreprisesTerrebonne, QC J6X 5S5</span></p>
+<p class=~~~i-time~~~><strong>Open Time:</strong> <span>7:00 am - 10:00 pm</span></p>
+<p class=~~~i-phone~~~><strong>Phone</strong> <a href=~~~tel: (+123) 56789101xxx~~~>(+123) 56789101xxx</a></p>",1
+"Unlimited - Fashion - Newsletter - Popup",unlimited-fashion-newsleter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-04/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Product  View - Custom Block - Style 02",unlimited-product-view-custom-block-style-02,"<p><a href=~~~#~~~><i class=~~~fa fa-truck~~~>&nbsp;</i> WHEN WILL I RECEIVE MY ORDER?</a></p>
+<div class=~~~accept-payment~~~>
+<ul>
+<li><i class=~~~fa fa-check~~~>&nbsp;</i>We accept:</li>
+<li><a href=~~~#~~~>Paypal, </a></li>
+<li><a href=~~~#~~~>Debit and Credit cards, </a></li>
+<li><a href=~~~#~~~>Cash on delivery, </a></li>
+<li><a href=~~~#~~~>Internet banking, </a></li>
+<li><a href=~~~#~~~>Wallets, </a></li>
+<li><a href=~~~#~~~>Landmark rewards point, </a></li>
+<li><a href=~~~#~~~>Gift cards</a></li>
+</ul>
+</div>
+<div class=~~~our-payments~~~>
+<ul class=~~~items~~~>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo01.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo02.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo03.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo07.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo04.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo05.png~~~}}~~~ alt=~~~~~~ /></a></li>
+<li class=~~~ item shake~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/payment-logo06.png~~~}}~~~ alt=~~~~~~ /></a></li>
+</ul>
+</div>",1
+"Unlimited - Product  View - Size Chart",unlimited-product-view-size-chart-popup,"<div class=~~~size-chart-content~~~><img src=~~~{{media url=~~~wysiwyg/codazon/size-chart_1.jpg~~~}}~~~ alt=~~~Size Chart~~~ /></div>",1
+"Unlimited - Product  View - Custom Block - Style 03",unlimited-product-view-custom-block-style-03,"<div class=~~~product-sidebar-info~~~>
+<div class=~~~product-ads-title~~~>
+<h3>Free Shipping</h3>
+<p>On Orders Over $100</p>
+</div>
+<div class=~~~product-ads-content~~~>
+<ul class=~~~items~~~>
+<li><a href=~~~#~~~><span class=~~~fa fa-cc-visa~~~> </span>Accept payments online</a></li>
+<li><a href=~~~#~~~><span class=~~~fa fa-money~~~> </span>Money back guarantee</a></li>
+<li><a href=~~~#~~~><span class=~~~fa fa-calculator~~~> </span>Calculate shipping cost</a></li>
+<li><a href=~~~#~~~><span class=~~~fa fa-check~~~> </span>Ships items quickly</a></li>
+<li><a href=~~~#~~~><span class=~~~fa fa-truck~~~> </span>Same-day delivery</a></li>
+</ul>
+</div>
+</div>
+<div id=~~~mp-wk-block~~~ class=~~~wk-seller-block wk-block~~~>
+<div><span class=~~~wk-block-font-bold-up~~~>Sold By</span> <br /> <span class=~~~wk-block-title-css~~~> <a id=~~~profileconnect~~~ title=~~~Visit Shop~~~ href=~~~#~~~>Footwear Store</a> </span> <br /> <span class=~~~wk-block-rating~~~> 0 / 5 </span>
+<div class=~~~wk-seller-rating wk-mp-design-inner~~~ style=~~~display: none;~~~>
+<div style=~~~padding: 5px 0;~~~><span> 0% positive feedback (0 ratings) </span></div>
+<div class=~~~row~~~>
+<div class=~~~mpfeedback~~~>
+<div class=~~~price~~~><span class=~~~wk-ordertitle-label~~~>Price </span><span>:</span>
+<div class=~~~ratingslider-box~~~>
+<div class=~~~rating~~~ style=~~~width: 0%;~~~></div>
+</div>
+<span> (0/5)</span>
+<div class=~~~clear~~~></div>
+</div>
+<div class=~~~value~~~><span class=~~~wk-ordertitle-label~~~>Value </span><span>:</span>
+<div class=~~~ratingslider-box~~~>
+<div class=~~~rating~~~ style=~~~width: 0%;~~~></div>
+</div>
+<span> (0/5)</span>
+<div class=~~~clear~~~></div>
+</div>
+<div class=~~~quality~~~><span class=~~~wk-ordertitle-label~~~>Quality </span><span>:</span>
+<div class=~~~ratingslider-box~~~>
+<div class=~~~rating~~~ style=~~~width: 0%;~~~></div>
+</div>
+<span> (0/5)</span>
+<div class=~~~wk-clear~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div class=~~~ask_que~~~><a id=~~~askque~~~>Contact Us</a></div>
+</div>
+</div>",1
+"Unlimited - Electronic - Newsletter Popup",unlimited-default-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-03/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Fashion Accessories - Newsletter Popup",unlimited-fashion-accessories-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-02/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Supermarket - Newsletter Popup",unlimited-supermarket-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-05/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Sport - Newsletter Popup",unlimited-sport-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-06/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Fashion Megastore - Newsletter Popup",unlimited-fashion-megastore-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Furniture - Newsletter Popup",unlimited-furniture-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-08/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Drug and Pharmacy - Newsletter Popup",unlimited-drug-pharmacy-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-09/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Food and Drink - Newsletter Popup",unlimited-food-drink-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-10/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Unlimited - Baby Kids - Newsletter Popup",unlimited-baby-kids-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-11/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~ /> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~><span>Sign up for our Newsletter</span></h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>&nbsp;</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>&nbsp;</span></span></a></p>
+</div>
+</div>",1
+"Custom Tab 1",unlimited-product-custom-tab-1,"<div class=~~~cdz-product-wrap product-list-style-17~~~>
+<div class=~~~cdz-block-title~~~>
+<p class=~~~b-title h1~~~><span>Custom Tab 1</span></p>
+</div>
+<div class=~~~cdz-block-content~~~>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</div>
+</div>",1
+"Custom Tab 2",unlimited-product-custom-tab-2,"<div class=~~~cdz-product-wrap product-list-style-17~~~>
+<div class=~~~cdz-block-title~~~>
+<p class=~~~b-title h1~~~><span>Custom Tab 2</span></p>
+</div>
+<div class=~~~cdz-block-content~~~>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+</div>",1
+"Unlimited - Skin Beauty - Newsletter Popup",unlimited-skin-beauty-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-12/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Motorcycle - Newsletter Popup",unlimited-motorcycle-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=&quot;wysiwyg/codazon/main-content-13/newsletter-popup-bg.jpg&quot;}}~~~ alt=~~~Subscribe us!~~~ width=~~~390~~~ height=~~~500~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Megamall - Newsletter Popup",unlimited-megamall-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-14/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~Subscribe us!~~~ width=~~~390~~~ height=~~~500~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Cosmetics - Newsletter - Popup ",unlimited-cosmetics-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-15/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Ceramics - Newsletter - Popup",unlimited-ceramics-newsleter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-16/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Handbag- Newsletter - Popup",unlimited-handbag-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-17/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Luxury - Newsletter Popup",unlimited-luxury-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-18/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Wine - Newsletter Popup",unlimited-wine-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-21/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Book - Newsletter Popup",unlimited-book-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-24/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Home Decor - Newsletter Popup",unlimited-home-decor-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-26/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Lifestyle - Newsletter Popup",unlimited-lifestyle-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Healthcare - Newsletter Popup",unlimited-healthcare-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-29/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Organic Beauty - Newsletter Popup",unlimited-organic-beauty-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Grocery and Gourmet - Newsletter Popup",unlimited-grocery-gourmet-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-25/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Food Market - Newsletter Popup",unlimited-food-market-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-30/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Tools - Newsletter - Popup",unlimited-tools-newsleter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~> <div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~> <div class=~~~popup-banner~~~> <div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=wysiwyg/codazon/main-content-23/newsletter-popup-bg.jpg}}~~~ alt=~~~~~~> </a></div> </div> </div> <div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~> <div class=~~~popup-content~~~> <div class=~~~popup-title~~~> <h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3> </div> <div class=~~~popup-content-ads~~~> <p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p> <div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div> <p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p> </div> </div> <p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p> </div> </div>",1
+"Unlimited - Shop by Attribute - Landing Page - Description",unlimited-shop-by-attribute-landing-page-description,"<div data-content-type=~~~html~~~ data-appearance=~~~default~~~ data-element=~~~main~~~>&lt;p&gt;The world of powersports is very deep and filled with stories of bikes and brands that have come and gone. Today, the industry feels an inch wide but a mile deep – a relatively small cabal of manufacturers with models for nearly every segment. But this has not always been the case… there have been hundreds of motorcycle brands over the years!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This list is as complete as it can be but will never be “finished”&lt;/strong&gt;. Many of the brands and logos featured here are of brands that went out of business, or were acquired, or for some other reason have left us. We also feature numerous aftermarket companies, custom bike shops, and other boutique bike builders, and more of these companies are born every year. We update this list once per year or when a brand reaches out to say hi (which if you are one, do so here).&lt;/p&gt;
+&lt;p&gt;Please let us know if we have missed anything or if any information is incorrect – we want our motorcycle brand section to be a rich resource of information for enthusiasts everywhere!&lt;/p&gt;</div>",1
+"Unlimited - Jewelry - Newsletter Popup",unlimited-jewelry-newsletter-popup,"<div class=~~~cdz-popup-newsletter flex-grid~~~>
+<div class=~~~col-sm-12 cdz-popup-newsletter-left hidden-xs~~~>
+<div class=~~~popup-banner~~~>
+<div class=~~~banner~~~><a href=~~~#~~~> <img src=~~~{{media url=~~~wysiwyg/codazon/main-content-20/newsletter-popup-bg.jpg~~~}}~~~ alt=~~~~~~> </a></div>
+</div>
+</div>
+<div class=~~~ col-sm-12 cdz-popup-newsletter-right~~~>
+<div class=~~~popup-content~~~>
+<div class=~~~popup-title~~~>
+<h3 class=~~~text-uppercase~~~>Sign up for our Newsletter</h3>
+</div>
+<div class=~~~popup-content-ads~~~>
+<p class=~~~popup-content-desc h3~~~>Be the first to learn about our latest trends and get exclusive offers</p>
+<div class=~~~popup-content-newsletter~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~ id_suffix=~~~-popup~~~}}</div>
+<p class=~~~popup-content-small~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3.</p>
+</div>
+</div>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>&nbsp;</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>&nbsp;</span></a></p>
+</div>
+</div>",1
+"Unlimited - Product  View - Custom Block - Style 04",unlimited-product-view-custom-block-style-04,"<div class=~~~text-center~~~>
+<p class=~~~h3~~~>Secured and trusted checkout with</p>
+<p><img class=~~~d-inline-block img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/product-view/payments.png~~~}}~~~ width=~~~220~~~ height=~~~99~~~></p>
+</div>",1

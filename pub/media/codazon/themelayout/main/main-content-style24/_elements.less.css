@@ -1,0 +1,200 @@
+/* Book */
+.slide-caption {
+	&.text-shadow {
+		.h1, .h2, .slide-title, .slide-textcate {
+			text-shadow: 2px 2px 0 #000;
+		}
+	}
+}
+.block {
+    .cdz-block-title {
+        .title-desc {
+            margin-top: 20px;
+            font-weight: 400;
+        }
+    }
+}
+.cdz-block-title {
+    position: relative;
+    margin-bottom: 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+    .b-title.h2 {
+		font: @f_special;
+		color: @main_title_text;
+		margin-bottom: 0;
+        .drop-cap{
+            font-size: 200%;
+            color: @main_hover_text;
+            line-height: 30px;
+        }
+         @media @phone {
+            font-size:  20px;
+        }
+	}
+    .b-title.h2{
+        position: relative;
+    }
+	.title-desc{
+		font: @f_h4;
+		color: @main_text;
+	}
+    .actions{    
+        position: absolute;
+        right: 0;
+        top: ~'calc(50% - 7px)';
+        display: block;
+        width: auto;
+        .rtl-layout &{
+            right:  auto;
+            left:  0;
+        }
+
+        .view-more{
+            text-transform: uppercase;
+            &:after{
+                display: inline-block;
+                width: 0;
+                height: 0;
+                margin: 0 0 0 7px;
+                content: "";
+                border: 0.5rem solid transparent;
+                border-left-color: initial;
+                .rtl-layout & {
+                    margin: 0 7px 0 0;
+                    border-left-color: transparent;
+                    border-right-color: initial;
+                }
+            }
+        }
+    }
+}
+
+.strong-border{
+    border: 3px solid @main_hover_text;
+}
+/*Book*/
+.product-list-style-29{
+    .cdz-block-content{
+        padding: 20px;
+        .product-item-info{
+            border-top: 1px dashed @main_border;
+            padding-top:  20px;
+        }
+        .item:first-child .product-item-info{
+            border-color: transparent;
+            padding-top:  0;
+        }
+        .products-grid .product-item{
+            margin-bottom: 0;
+        }
+    }
+}
+.sidebar-block-title{
+    background: @main_hover_text;
+    padding:  30px 15px 30px 15px;
+    text-align: center;
+    span{
+        color: #FFF;
+        font-size: 26px;
+        text-transform: uppercase;
+    }
+}
+
+.list.products-list{
+    .cdz-product-labels{
+        .prolabels-style05();
+    }
+}
+[class*='brand-style']{
+    .shop-by-brand-slider.style-default{
+        overflow: hidden;
+        .slider-arrow-style-05();       
+        &:hover{
+            .owl-nav [class*='owl-']{
+                .abs-style( @btn_primary_text, @btn_primary_border, @btn_primary_background);
+                &:hover{
+                    .abs-style(@btn_primary_background, @btn_primary_border, @btn_primary_text );
+                }
+            }
+        }
+    }
+}
+/*Blog*/
+.blog-index-index .sidebar .block{
+    &.blog-search {
+        padding: 8px 15px 5px;
+        border: 1px solid @main_border;
+        .block-content{
+            padding-top:0;
+        }
+    }
+}
+
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+    .block-style01();   
+    padding: 0;
+}
+
+.toolbar{
+    .toolbar-option2();
+}
+/*category - product list*/
+.list.products-list{
+    .item.product-item{
+        .toolbar-option2(0px);
+    }
+}
+
+/*My account*/
+.account-nav{
+    .content{
+        .toolbar-option2(0px);
+        padding: 0;
+    }
+}
+/*Blog*/
+.post-list .post-holder,
+.post-view .post-holder{
+    .blog-box(1px); /*_blog*/
+}
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+    .main-inner,
+    .product.info.detailed .product.items{
+        .product-info-box(1px);
+    }
+}
+.product-view-style-04 {
+    .product-media-wrapper,
+    .product-info-main {
+        .product-left{
+            .product-info-box(0px);
+        }
+        .product-right{
+            .product-info-box(1px);
+        }
+    }
+    .product.info.detailed .product.items{
+        .product-info-box(0px);
+    }
+}
+
+/*Header - Left Menu*/
+@media @tablet_vertical {
+    .header-vertical-menu-wrap{
+        .main-content-top-left {
+            .cms-index-index .sticky-menu:not(.active) &{
+                &:hover{
+                    .menu-container{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+.banner-style10 {
+    .cdz-banner {
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    .item-content {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        padding: 20px 20px 0;
+        &.pos-relative {
+            position: relative;
+            left: auto;
+            top: auto;
+        }
+    }
+    .bc-title {
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+    .bc-desc {
+        font-size: 15px;
+        line-height: 25px;
+    }
+    .bc-actions {
+        margin-top: 20px;
+    }
+    .bc-btn {
+        display: inline-block;
+        padding: 8px 25px;
+        font-weight: 600;
+        background: @main_block_background;
+        font-size: 15px;
+        color: @main_title_text;
+        border-radius: 5px;
+        &:hover {
+            color: @main_hover_text;
+        }
+    }
+    &.text-white {
+        color: #fff;
+    }
+    &.text-black {
+        color: #000;
+    }
+    .cdz-banner > a, .cdz-banner a > img {
+        display: block;
+        width: 100%;
+    }
+    @media @general_tablet {
+        .bc-title {
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        .bc-desc, .bc-btn{
+            font-size: 12px;
+            line-height: 1.1;
+        }
+        .bc-btn {
+            padding: 5px 15px;
+        }
+        .bc-actions {
+            margin-top: 10px;
+        }
+    }
+}

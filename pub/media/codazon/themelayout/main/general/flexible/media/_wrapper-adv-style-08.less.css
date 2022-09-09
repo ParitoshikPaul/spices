@@ -1,0 +1,98 @@
+.wrapper-adv-style-08{
+    .item{
+        position: relative;
+        transition: .4s;
+        box-shadow: 0 3px 4px 0 rgba(35,35,35,0.1), 0 0 1px 0 rgba(10,31,68,0.08);
+        margin-bottom: 10px;
+    }
+    .item-image{
+        display: block;
+        transition: .4s;
+        overflow: hidden;
+        position: relative;
+        img{
+            transition: .6s !important;
+        }
+        &:after{
+            opacity: 0;
+            transition: .6s;
+            content: '';
+            .absolute-full-box();
+            visibility: hidden;
+        }
+    }
+    .item-content{
+        position: absolute;
+        top: 10%;
+        width: 100%;
+        text-align: center;
+        .item-sub-title{
+            font: @f_h6;
+            font-size: 14px;
+            padding: 0 20px;
+            color: @main_title_text;
+            display: inline-block;
+            width: 100%;
+            transition: .4s;
+            white-space: nowrap;
+            max-width: 100%;
+            overflow: hidden;
+            width: auto;
+            @media @tablet_vertical{
+                letter-spacing: 1px;
+                padding-bottom: 3px;
+                border-bottom: 1px solid;
+            }
+        }
+        .item-title{
+            font: @f_h6;
+            font-size: 26px;
+            padding: 0 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: @banner_title;
+            display: inline-block;
+            width: 100%;
+            transition: .4s;
+        }
+        transition: .4s;
+        @media @ipad_ipad_pro{
+            .item-sub-title{
+                font-size: 13.5px;
+            }
+            .item-title{
+                font-size: 18px;
+            }
+        }
+    }
+    .item:hover{
+        @media @tablet_vertical{
+            .item-image{
+                img{
+                    transform: scale(1.1);
+                }
+                /* &:after{
+                    visibility: visible;
+                    background-color: @main_hover_text;
+                    opacity: 0.2;
+                } */
+            }
+            .item-sub-title{
+                letter-spacing: 1.2px;
+            }
+            .item-title{
+                letter-spacing: 1.2px;
+            }
+        }
+    }
+    @media @phone{
+        .item-content{
+            .item-sub-title{
+                font-size: 10px;
+            }
+            .item-title{
+                font-size: 13px;
+            }
+        }
+    }
+}

@@ -1,0 +1,154 @@
+.cdz-slideshow {
+    .preview-nav {
+        @slideshow_thumb_arrow_width: 40px;
+        @slideshow_thumb_padding: 3px;
+        @media @tablet_vertical {
+            .owl-nav {
+                position: static !important;
+            }
+            .owl-nav [class*='owl-'] {
+                width: 0px !important;
+                height: 80px !important;
+                background: transparent !important;
+                border: none !important;
+                border-radius: 0 !important;
+                top: ~'calc( (100% - 40px )/2 )' !important;
+                &:before, &:after, span[aria-label]{
+                    display: none !important;
+                }     
+            }
+            .owl-next {
+                right: 40px !important;
+                .rtl-layout & {
+                    right: auto !important;
+                    left: 40px !important;
+                }
+            }
+            .owl-prev {
+                left: 40px !important;
+                .rtl-layout & {
+                    left: auto !important;
+                    right: 40px !important;
+                }
+            }
+            .thumb-arrow {
+                height: 100%;
+                position: relative;
+                width: @slideshow_thumb_arrow_width;
+                float: left;
+                .rtl-layout & {
+                    float: right;
+                }
+                &:before {
+                    font-family: CodazonFont;
+                    content: '\E974';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    color: @btn_primary_text;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 30px;
+                    line-height: 80px;
+                    font-weight: bold;
+                    .rtl-layout & {
+                        content: '\E991';
+                    }
+                }
+                &.thumb-next {
+                    float: right;
+                    .rtl-layout & {
+                        float: left;
+                    }
+                    &:before {
+                        content: '\E991';
+                        .rtl-layout & {
+                            content: '\E974';
+                        }
+                    }
+                }
+            }
+            .thumb-tt {
+                position: absolute;
+                height: 100%;
+                left: @slideshow_thumb_arrow_width;
+                top: 0;
+                max-width: 140px;
+                transition: all ease 500ms;
+                img {
+                    height: 100%;
+                    width: auto;
+                    max-width: none;
+                    display: block;
+                }
+                .tt-title {
+                    height: 0px;
+                    line-height: 25px;
+                    width: 100%;
+                    background: #000;
+                    color: #fff;
+                    font-size: 12px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    overflow: hidden;
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    padding: 0 7px;
+                    transition: all ease 500ms;
+                    text-transform: uppercase;
+                }
+                .cdz-banner {
+                    z-index: 10;
+                    width: 100%;
+                    height: 100%;
+                    &:after {
+                        content: '';
+                        .absolute-full-box();
+                        background: rgba(0,0,0,.22);
+                        transition: all ease 500ms;
+                        z-index: 11;
+                        border: @slideshow_thumb_padding solid @btn_primary_text;
+                    }
+                }
+                .rtl-layout & {
+                    left: auto;
+                    right: @slideshow_thumb_arrow_width;
+                }
+                &:hover{
+                    max-width: 220px;
+                    &:after {
+                        background: rgba(0,0,0,0);
+                    }
+                    .tt-title {
+                        height: 25px;
+                        opacity: 1;
+                    }
+                }
+            }
+            .thumb-arrow:hover {
+                .thumb-tt:after {
+                    //border-color: @btn_primary_background;
+                }
+                &:before { 
+                    //color: @btn_primary_background;
+                }
+            }
+            .thumb-next .thumb-tt {
+                right: @slideshow_thumb_arrow_width;
+                left: auto;
+                .rtl-layout & {
+                    left: @slideshow_thumb_arrow_width;
+                    right: auto;
+                }
+            }
+        }
+        @media @phone {
+            .thumb-arrow {
+                display: none;
+            }
+        }
+    }
+}

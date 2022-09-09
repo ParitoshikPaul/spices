@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <move element="product.info.addto" destination="product.info.addtocart.additional"  />
+        <move element="product.buynow" destination="product.info.addtocart.additional" before="product.info.addto"  />
+        <move element="product.info.addtocart_wrap" destination="product.info.form.middle" before="-" />
+        <referenceBlock name="product.form.wrapper">
+            <action method="setData">
+                <argument name="name" xsi:type="string">has_form_tag</argument>
+                <argument name="value" xsi:type="boolean">0</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

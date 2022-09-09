@@ -1,0 +1,49 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$mainMegamenu = $helper->getConfig('themelayoutpro/header/main_menu');
+$mobileMenu = $helper->getConfig('themelayoutpro/header/mobile_menu');
+$menuType = $this->getData('menu_type');
+$menuType = $menuType ? (int)$menuType : null;
+?>
+<?php if (($mainMegamenu == $mobileMenu) || (!$mobileMenu)) : ?>
+<div id="desk_menu-container" class="hidden-xs pos_static">
+<nav class="cdz-navigation" data-action="navigation">
+<?= $objectManager->create(\Codazon\MegaMenu\Block\Widget\Megamenu::class)
+    ->setMenu($mainMegamenu)
+    ->addData([
+        'use_ajax_menu' => (int)$helper->getConfig('themelayoutpro/header/ajax_menu'),
+        'menu_type' => $menuType,
+        'paging_menu' => (int)$helper->getConfig('themelayoutpro/header/main_menu_paging')
+    ])->toHtml(); ?>
+</nav>
+</div>
+<?php else : ?>
+<div id="desk_menu-container" class="hidden-xs pos_static">
+<nav class="cdz-navigation desk-menu hidden-xs" data-action="navigation">
+<?= $objectManager->create(\Codazon\MegaMenu\Block\Widget\Megamenu::class)
+    ->setMenu($mainMegamenu)
+    ->addData([
+        'use_ajax_menu' => (int)$helper->getConfig('themelayoutpro/header/ajax_menu'),
+        'menu_type' => $menuType,
+        'paging_menu' => (int)$helper->getConfig('themelayoutpro/header/main_menu_paging')
+    ])->toHtml(); ?>
+</nav>
+<nav class="cdz-navigation mobile-menu visible-xs">
+<?= $objectManager->create(\Magento\Framework\View\Element\Template::class)
+    ->setMenu($mobileMenu)
+    ->setTemplate('Codazon_MegaMenu::mobile-menu.phtml')
+    ->toHtml(); ?>
+</nav>
+</div>
+<?php endif ?>
+<?php if ($addTmpl = $this->getData('additional_template')) {
+    include $block->getTemplateFile($addTmpl);
+}
+?>

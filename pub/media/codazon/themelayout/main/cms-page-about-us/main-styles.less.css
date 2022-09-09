@@ -1,0 +1,5 @@
+@import (optional,less)'../_default_variables.less.css';
+@import (less)'_variables.less.css';
+@import (less)'../_mini-general.less.css';
+@import (optional,less)'../general/flexible/media/_wrapper-adv-style-02.less.css';
+@import (less)'_elements.less.css';

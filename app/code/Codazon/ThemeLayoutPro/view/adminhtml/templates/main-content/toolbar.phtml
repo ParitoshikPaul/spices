@@ -1,0 +1,105 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$registry = $this->getData('registry_name') ? : 'themelayout_maincontent';
+$submitUrl = $this->getData('submit_url') ? : 'themelayoutpro/mainContent/cloneElement';
+$helper = $this->helper(\Codazon\Core\Helper\Data::class);
+$object = $helper->getCoreRegistry()->registry($registry);
+?>
+<?php if ($object && $object->getId()) : ?>
+<div class="page-main-actions">
+    <button id="clone-element" title="<?= __('Clone this element') ?>" class="action-default primary">
+        <span><?= __('Clone this element') ?></span>
+    </button>
+</div>
+<div style="display: none;" id="clone-element-modal">
+    <form id="clone-element-form" action="<?= $this->getUrl($submitUrl, ['source_id' => $object->getId()]) ?>" method="post">
+        <div class="fieldset-wrapper">
+            <fieldset class="admin__fieldset">
+                <div class="admin__field _required">
+                    <div class="admin__field-label">
+                        <label><span><?= __('New title') ?></span></label>
+                    </div>
+                    <div class="admin__field-control">
+                        <input class="admin__control-text" type="text" name="new_title" data-validate="{required: true}" />
+                    </div>
+                </div>
+                <div class="admin__field _required">
+                    <div class="admin__field-label">
+                        <label><span><?= __('New indetinfier') ?></span></label>
+                    </div>
+                    <div class="admin__field-control">
+                        <input class="admin__control-text" type="text" name="new_identifier" data-validate="{required: true}" />
+                    </div>
+                </div>
+                <div class="admin__field _required">
+                    <div class="admin__field-label">
+                        <label><span><?= __('Clone mode') ?></span></label>
+                    </div>
+                    <div class="admin__field-control">
+                        <select class="admin__control-select" name="mode">
+                            <option value="0"><?= __('Inherit'); ?></option>
+                            <option value="1"><?= __('Totally independent from parent'); ?></option>
+                        </select>
+                        <div class="admin__field-note">
+                            <span><?= __('If you only want to change colors, text,... for the new element (not modify layout, style), use "Inherit" will be better for theme upgrading process.') ?></span>
+                        </div>
+                    </div>  
+                </div>
+            </fieldset>
+            <div class="actions modal-footer">
+                <button type="submit" id="clone-element-submit" title="<?= __('Submit') ?>" class="action-default primary">
+                    <span><?= __('Submit') ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+require(['jquery', 'Magento_Ui/js/modal/modal', 'Magento_Ui/js/modal/alert', 'validation'], function($,modal, alert, validation) {
+    var $modal = $('#clone-element-modal').modal({
+        title: '<?= __("Cloning Settings") ?>',
+        buttons: []
+    });
+    var $trigger = $('#clone-element');
+    $trigger.on('click', function() {
+        $modal.modal('openModal');
+    });
+    var $form = $('#clone-element-form').validation({
+        submitHandler: function() {
+            var ajaxUrl = $form.attr('action');
+            var formData = new FormData($form[0]);
+            formData.append('form_key', FORM_KEY);
+            $.ajax({
+                url: ajaxUrl,
+                data: formData,
+                showLoader: true,
+                type: 'post',
+                dataType: 'json',
+                cache: false,
+                processData: false,
+                contentType: false,
+                success: function (res) {
+                    if (res.success)  {
+                        if (res.elementUrl) {
+                            document.location.href = res.elementUrl;
+                            return false;
+                        }
+                    }
+                    if (res.message) {
+                        alert({
+                            content: res.message
+                        });
+                    }                    
+                }
+            });
+            return false;
+        }
+    });
+});
+</script>
+<?php endif ?>

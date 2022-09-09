@@ -1,0 +1,75 @@
+@keyframes cssload-updown {
+	0% {
+			.abs-transform(~'translateY(-3px)');
+	}
+	50% {
+			.abs-transform(~'translateY(0)');
+	}
+	100% {
+			.abs-transform(~'translateY(3px)');
+	}
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+@-webkit-keyframes schdBannerPagePulse{to{box-shadow:0 0 0 105px rgba(232,76,61,0)}}@-moz-keyframes schdBannerPagePulse{to{box-shadow:0 0 0 105px rgba(232,76,61,0)}}@-ms-keyframes schdBannerPagePulse{to{box-shadow:0 0 0 105px rgba(232,76,61,0)}}@keyframes schdBannerPagePulse{to{box-shadow:0 0 0 105px rgba(232,76,61,0)}}
+
+@-webkit-keyframes schdBannerPagePulseSmall{to{box-shadow:0 0 0 72px rgba(232,76,61,0)}}@-moz-keyframes schdBannerPagePulseSmall{to{box-shadow:0 0 0 72px rgba(232,76,61,0)}}@-ms-keyframes schdBannerPagePulseSmall{to{box-shadow:0 0 0 72px rgba(232,76,61,0)}}@keyframes schdBannerPagePulseSmall{to{box-shadow:0 0 0 72px rgba(232,76,61,0)}}
+
+@keyframes translator{from{opacity: 0;-webkit-transform: translateY(40px);-moz-transform: translateY(40px);-ms-transform: translateY(40px);-o-transform: translateY(40px);transform: translateY(40px)}to{opacity: 1;-webkit-transform: translateY(0px);-moz-transform: translateY(0px);-ms-transform: translateY(0px);-o-transform: translateY(0px);transform: translateY(0px)}}
+
+@keyframes oscillation{
+    0%{-webkit-transform: translateY(0px);-moz-transform: translateY(0px);-ms-transform: translateY(0px);-o-transform: translateY(0px);transform: translateY(0px)}
+    30%{-webkit-transform: translateY(10px);-moz-transform: translateY(10px);-ms-transform: translateY(10px);-o-transform: translateY(10px);transform: translateY(10px)}
+    60%{-webkit-transform: translateY(-10px);-moz-transform: translateY(-10px);-ms-transform: translateY(-10px);-o-transform: translateY(-10px);transform: translateY(-10px)}
+    100%{-webkit-transform: translateY(0px);-moz-transform: translateY(0px);-ms-transform: translateY(0px);-o-transform: translateY(0px);transform: translateY(0px)}
+}
+
+@keyframes lds-ellipsis1 {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+@keyframes lds-ellipsis3 {
+  0% {transform: scale(1);}
+  100% {transform: scale(0);}
+}
+@keyframes lds-ellipsis2 {
+  0% {transform: translate(0, 0);}
+  100% {transform: translate(24px, 0);}
+}
+
+@keyframes waveline {
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: -20px;
+	}
+	100% {
+		top: 0px;
+	}
+}
+@-webkit-keyframes waveline{
+	0% {
+		top: 0px;
+	}
+	50% {
+		top: -20px;
+	}
+	100% {
+		top: 0px;
+	}
+}

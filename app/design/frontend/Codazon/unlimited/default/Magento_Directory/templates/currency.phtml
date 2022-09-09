@@ -1,0 +1,46 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Currency switcher
+ *
+ * @see \Magento\Directory\Block\Currency
+ */
+?>
+<?php if ($block->getCurrencyCount() > 1): ?>
+<?php $currencies = $block->getCurrencies(); ?>
+<?php $currentCurrencyCode = $block->getCurrentCurrencyCode(); ?>
+<?php $id = $block->getIdModifier() ? '-' . $block->getIdModifier() : ''?>
+<div class="switcher currency switcher-currency" id="switcher-currency<?php /* @escapeNotVerified */ echo $id?>">
+    <div class="actions dropdown options switcher-options">
+        <a href="#" class="action toggle switcher-trigger" id="switcher-currency-trigger<?php /* @escapeNotVerified */ echo $id?>">
+            <span class="label switcher-label"><span><?php /* @escapeNotVerified */ echo __('Currency:') ?></span></span> 
+            <span class="language-<?php echo $block->escapeHtml($block->getCurrentCurrencyCode()) ?>">
+                <span><?php echo $block->escapeHtml($currentCurrencyCode) ?> - <?php echo @$block->escapeHtml($currencies[$currentCurrencyCode]) ?></span>
+            </span>
+        </a>
+        <ul class="dropdown switcher-dropdown" data-mage-init='{"dropdownDialog":{
+            "appendTo":"#switcher-currency<?php /* @escapeNotVerified */ echo $id?> > .options",
+            "triggerTarget":"#switcher-currency-trigger<?php /* @escapeNotVerified */ echo $id?>",
+            "closeOnMouseLeave": false,
+            "triggerClass":"active",
+            "parentClass":"active",
+            "buttons":null}}'>
+            <?php foreach ($currencies as $_code => $_name): ?>
+                <?php if ($_code != $currentCurrencyCode): ?>
+                    <li class="currency-<?php /* @escapeNotVerified */ echo $_code ?> switcher-option">
+                        <a href="#" data-post='<?php /* @escapeNotVerified */ echo $block->getSwitchCurrencyPostData($_code); ?>'><?php /* @escapeNotVerified */ echo $_code ?> - <?php /* @escapeNotVerified */ echo $_name ?></a>
+                    </li>
+                <?php endif; ?>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<?php endif; ?>

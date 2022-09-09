@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>main-content-style28</identifier>
+  <title>Organic Beauty</title>
+  <variables>
+    <bar_active_color>#c26431</bar_active_color>
+    <bar_active_text_color>#ffffff</bar_active_text_color>
+    <bar_main_background>#ffffff</bar_main_background>
+    <bar_main_color>#c26431</bar_main_color>
+    <bar_tooltip_color>#414b56</bar_tooltip_color>
+    <bar_tooltip_text_color>#ffffff</bar_tooltip_text_color>
+    <btn_default_background>#ffffff</btn_default_background>
+    <btn_default_border>#c26431</btn_default_border>
+    <btn_default_text>#c26431</btn_default_text>
+    <btn_font>600 14px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</btn_font>
+    <btn_hover_background>#ffffff</btn_hover_background>
+    <btn_hover_border>#c26431</btn_hover_border>
+    <btn_hover_text>#c26431</btn_hover_text>
+    <btn_icon_background>#696969</btn_icon_background>
+    <btn_icon_border>#696969</btn_icon_border>
+    <btn_icon_hover_background>#ffffff</btn_icon_hover_background>
+    <btn_icon_hover_border>#c26431</btn_icon_hover_border>
+    <btn_icon_hover_text>#c26431</btn_icon_hover_text>
+    <btn_icon_text>#ffffff</btn_icon_text>
+    <btn_mobile_icon_background>#c26431</btn_mobile_icon_background>
+    <btn_mobile_icon_border>#c26431</btn_mobile_icon_border>
+    <btn_mobile_icon_text>#ffffff</btn_mobile_icon_text>
+    <btn_normal_background>#ffffff</btn_normal_background>
+    <btn_normal_border>#c7c8cb</btn_normal_border>
+    <btn_normal_text>#c7c8cb</btn_normal_text>
+    <btn_padding>7px 15px</btn_padding>
+    <btn_primary_background>#c26431</btn_primary_background>
+    <btn_primary_border>#c26431</btn_primary_border>
+    <btn_primary_text>#ffffff</btn_primary_text>
+    <btn_quickshop_background>#c26431</btn_quickshop_background>
+    <btn_quickshop_border>#c26431</btn_quickshop_border>
+    <btn_quickshop_text>#ffffff</btn_quickshop_text>
+    <btn_radius>4px</btn_radius>
+    <btn_shadow>none</btn_shadow>
+    <f_default>400 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_default>
+    <f_h1>600 24px/1.2 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h1>
+    <f_h2>600 30px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h2>
+    <f_h3>600 18px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h3>
+    <f_h4>500 15px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h4>
+    <f_h5>500 16px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h5>
+    <f_h6>500 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_h6>
+    <f_input>400 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_input>
+    <f_note>400 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</f_note>
+    <f_special>600 34px/1.35 Urbanist, Helvetica Neue, Verdana, Arial, sans-serif</f_special>
+    <fm_default>400 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_default>
+    <fm_h1>600 18px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h1>
+    <fm_h2>600 16px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h2>
+    <fm_h3>600 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h3>
+    <fm_h4>500 13px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h4>
+    <fm_h5>500 12px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h5>
+    <fm_h6>500 12px/1.35 Playfair Display, Helvetica Neue, Verdana, Arial, sans-serif</fm_h6>
+    <main_background>#ffffff</main_background>
+    <main_background_file></main_background_file>
+    <main_background_image_option>0 0 no-repeat fixed</main_background_image_option>
+    <main_block_background>#ffffff</main_block_background>
+    <main_block_title_background>#c26431</main_block_title_background>
+    <main_block_title_text>#ffffff</main_block_title_text>
+    <main_border>#e9eaec</main_border>
+    <main_box_background>#ffffff</main_box_background>
+    <main_box_border>#e1e1e1</main_box_border>
+    <main_box_radius>5px</main_box_radius>
+    <main_box_shadow>none</main_box_shadow>
+    <main_hover_text>#c26431</main_hover_text>
+    <main_hover_text_box>#ffffff</main_hover_text_box>
+    <main_input_background>transparent</main_input_background>
+    <main_input_border>#f4f4f4</main_input_border>
+    <main_input_shadow>none</main_input_shadow>
+    <main_input_text>#8c8c8c</main_input_text>
+    <main_label_bg>#c26431</main_label_bg>
+    <main_label_text>#ffffff</main_label_text>
+    <main_mobile_toolbar_background>#c26431</main_mobile_toolbar_background>
+    <main_mobile_toolbar_color>#ffffff</main_mobile_toolbar_color>
+    <main_price_text>#121212</main_price_text>
+    <main_productname_text>#000000</main_productname_text>
+    <main_tab_background>#f6f7f9</main_tab_background>
+    <main_tab_border>#e9eaec</main_tab_border>
+    <main_tab_hover_background>#f6f7f9</main_tab_hover_background>
+    <main_tab_hover_border>#c26431</main_tab_hover_border>
+    <main_tab_hover_text>#c26431</main_tab_hover_text>
+    <main_tab_text>#414b56</main_tab_text>
+    <main_text>#7E7E7E</main_text>
+    <main_text_normal>#6e7370</main_text_normal>
+    <main_text_normal2>#ffffff</main_text_normal2>
+    <main_title_border>#c26431</main_title_border>
+    <main_title_text>#121212</main_title_text>
+    <new_label_bg>#c26431</new_label_bg>
+    <new_label_text>#ffffff</new_label_text>
+    <pd_list_new_label_bg>#c26431</pd_list_new_label_bg>
+    <pd_list_new_label_text>#ffffff</pd_list_new_label_text>
+    <pd_list_sale_label_bg>#f59601</pd_list_sale_label_bg>
+    <pd_list_sale_label_text>#ffffff</pd_list_sale_label_text>
+    <sale_label_bg>#f59601</sale_label_bg>
+    <sale_label_text>#ffffff</sale_label_text>
+    <swatch_color_height>20px</swatch_color_height>
+    <swatch_color_width>20px</swatch_color_width>
+    <swatch_image_height>20px</swatch_image_height>
+    <swatch_image_width>20px</swatch_image_width>
+    <swatch_text_height>32px</swatch_text_height>
+    <swatch_text_width>32px</swatch_text_width>
+  </variables>
+  <layout_xml/>
+  <custom_variables/>
+  <custom_fields>
+    <google_font_weights>200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic</google_font_weights>
+    <google_web_fonts>
+      <item>Playfair Display</item>
+      <item>Roboto</item>
+      <item>Urbanist</item>
+    </google_web_fonts>
+    <google_font_subset>latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext</google_font_subset>
+    <use_as_block>0</use_as_block>
+    <flexible_less/>
+    <version>62a1a8e3b286c</version>
+    <category_view_less>product-44.less.css</category_view_less>
+    <product_view_less>_product-view-style-04.less.css</product_view_less>
+    <auto_import_less_files>1</auto_import_less_files>
+    <custom_variables>@product_top_background: #ffffff;&#xD;
+@product_info_background: #dfece5;&#xD;
+@banner_title: #f59601;</custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+    <auto_detect_files>
+      <item>product-44.less.css</item>
+      <item>blog-21.less.css</item>
+      <item>media/_banner-style17.less.css</item>
+      <item>media/_banner-style18.less.css</item>
+    </auto_detect_files>
+    <category_view_style>product/list/list-styles/list-style44.phtml</category_view_style>
+    <product_view_style>catalog_product_view_style04</product_view_style>
+    <product_view_custom_layout></product_view_custom_layout>
+    <product_view_custom_less></product_view_custom_less>
+    <required_less_component/>
+  </custom_fields>
+  <parent></parent>
+  <themelayout_content>[{"type":"container","settings":{"container_type":"full","class":"slideshow-container space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"slideshow","settings":{"title":"","items":"[{\"title\":\"\",\"link\":\"#\",\"image\":\"{{media url=\\\"wysiwyg/codazon/main-content-28/slide3.jpg\\\"}}\",\"video\":\"\",\"video_ratio\":\"\",\"content\":\"&lt;div class=\\\"slide-caption slide-top-left\\\" style=\\\"color:#ffffff\\\"&gt;\\n&lt;div class=\\\"caption-panel\\\"&gt;\\n&lt;p class=\\\"slide-textcate\\\"&gt;Natural Cosmetic&lt;/p&gt;\\n&lt;p class=\\\"slide-title sstext-4x text-uppercase h2\\\"&gt;Consectetuer Adipiscing Elit&lt;/p&gt;\\n&lt;p class=\\\"hidden-xs slide-text\\\"&gt;Organica we know that washing your face is the most important part&lt;br/&gt; of any skincare routine, but we all use different products to get the job ...&lt;/p&gt;\\n&lt;a class=\\\"button-link slide-btn hidden-xs\\\" style=\\\"margin-top: 30px;\\\"&gt;&lt;span&gt;Shop now&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;\\n&lt;/div&gt;\"},{\"title\":\"\",\"link\":\"#\",\"image\":\"{{media url=\\\"wysiwyg/codazon/main-content-28/slide4.jpg\\\"}}\",\"video\":\"\",\"video_ratio\":\"\",\"content\":\"&lt;div class=\\\"slide-caption slide-top-left\\\" style=\\\"color:#ffffff\\\"&gt;\\n&lt;div class=\\\"caption-panel\\\"&gt;\\n&lt;p class=\\\"slide-textcate\\\"&gt;Comes From Health&lt;/p&gt;\\n&lt;p class=\\\"slide-title sstext-4x text-uppercase h2\\\"&gt;Benefits of Natural Fruits&lt;/p&gt;\\n&lt;p class=\\\"hidden-xs slide-text\\\"&gt;Organica we know that washing your face is the most important part &lt;br/&gt;of any skincare routine, but we all use different products to get the job ...&lt;/p&gt;\\n&lt;a class=\\\"button-link slide-btn hidden-xs\\\" style=\\\"margin-top: 30px;\\\"&gt;&lt;span&gt;Shop now&lt;/span&gt;&lt;/a&gt;&lt;/div&gt;\\n&lt;/div&gt;\"}]","class":"main-slideshow","width":"1920","height":"820","animation_in":"fadeIn","animation_out":"fadeOut","show_nav":"1","show_dots":"1","show_thumb_nav":"0","show_thumb_dots":"0","auto_play":"0","disable_lazy_load":"0","loop":"0","auto_play_timeout":"5000","use_org":"0"}}]},{"type":"container","settings":{"container_type":"box","class":"","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"Page message (important: do not delete this element)","content":"&lt;div class=\"page-messages-placeholder\" style=\"line-height: 0\" data-movefrom=\".page.messages\"&gt;&amp;nbsp;&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"Top Banner","content":"&lt;div class=\"banner-style17\"&gt;\n&lt;div class=\"wrapper-banner\"&gt;\n\t&lt;div class=\"cdz-banner elementor-animation-wobble-horizontal\"&gt;\n\t\t&lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img01.jpg\"}}\"&gt;&lt;/a&gt;\n\t\t&lt;div class=\"item-content\"&gt;\n\t\t\t&lt;div class=\"bc-title\"&gt;Daily Skincare&lt;/div&gt;\n\t\t\t&lt;div class=\"bc-actions\"&gt;\n\t\t\t\t&lt;a href=\"#\" class=\"bc-btn\"&gt;Shop skincare&lt;/a&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t&lt;div class=\"cdz-banner elementor-animation-wobble-horizontal\"&gt;\n\t&lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img02.jpg\"}}\"&gt;&lt;/a&gt;\n\t\t&lt;div class=\"item-content\"&gt;\n\t\t\t&lt;div class=\"bc-title\"&gt;Spring Sale&lt;/div&gt;\n\t\t\t&lt;div class=\"bc-actions\"&gt;\n\t\t\t\t&lt;a href=\"#\" class=\"bc-btn\"&gt;Shop spring&lt;/a&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t&lt;div class=\"cdz-banner elementor-animation-wobble-horizontal\"&gt;\n\t\t&lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img03.jpg\"}}\"&gt;&lt;/a&gt;\n\t\t&lt;div class=\"item-content\"&gt;\n\t\t\t&lt;div class=\"bc-title\"&gt;Haircare&lt;/div&gt;\n\t\t\t&lt;div class=\"bc-actions\"&gt;\n\t\t\t\t&lt;a href=\"#\" class=\"bc-btn\"&gt;Shop haircare&lt;/a&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t&lt;div class=\"cdz-banner elementor-animation-wobble-horizontal\"&gt;\n\t\t&lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img04.jpg\"}}\"&gt;&lt;/a&gt;\n\t\t&lt;div class=\"item-content\"&gt;\n\t\t\t&lt;div class=\"bc-title\"&gt;Bodycare&lt;/div&gt;\n\t\t\t&lt;div class=\"bc-actions\"&gt;\n\t\t\t\t&lt;a href=\"#\" class=\"bc-btn\"&gt;Shop bodycare&lt;/a&gt;\n\t\t\t&lt;/div&gt;\n\t\t&lt;/div&gt;\n\t&lt;/div&gt;\n\t&lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"fa-gear","title":""},"children":[{"type":"html","settings":{"title":"New Product","content":"&lt;div class=\"cdz-product-wrap base-slider product-list-style-44\"&gt;\n&lt;div class=\"cdz-block-title\"&gt;\n&lt;p class=\"b-title h2\"&gt;New Product&lt;/p&gt;\n&lt;p class=\"title-desc\"&gt;Maintaining beautifully glowing and clear skin all year round&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"cdz-block-content\"&gt;\n&lt;div class=\"cdz-product\"&gt;{{widget type=\"Codazon\\ProductFilter\\Block\\Product\\ProductsList\" main_opt_id=\"main-content-style28||widget_1\" display_type=\"all_products\" products_count=\"10\" order_by=\"entity_id DESC\" show=\"thumb,name,price,addtocart,wishlist,compare,quickshop,label\" thumb_width=\"325\" thumb_height=\"397\" filter_template=\"custom\" custom_template=\"grid-style-44.phtml\" conditions_encoded=\"^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`418`^]^]\" total_rows=\"2\" total_cols=\"4\" ajax_load=\"1\" show_slider=\"1\" slider_dots=\"0\" slider_nav=\"1\" slider_autoplay=\"0\" slider_margin=\"30\" items_1900=\"4\" items_1600=\"4\" items_1420=\"4\" items_1280=\"4\" items_980=\"4\" items_768=\"3\" items_480=\"3\" items_320=\"2\" items_0=\"1\" disable_lazyimg=\"0\"}}&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"Our Bestsellers","content":"&lt;div class=\"cdz-product-wrap base-slider product-list-style-44\"&gt;\n&lt;div class=\"cdz-block-title\"&gt;\n&lt;p class=\"b-title h2\"&gt;Our Bestsellers&lt;/p&gt;\n&lt;p class=\"title-desc\"&gt;Maintaining beautifully glowing and clear skin all year round&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"cdz-block-content\"&gt;\n&lt;div class=\"cdz-product\"&gt;{{widget type=\"Codazon\\ProductFilter\\Block\\Product\\ProductsList\" main_opt_id=\"main-content-style28||widget_2\" display_type=\"all_products\" products_count=\"10\" order_by=\"entity_id DESC\" show=\"thumb,name,price,addtocart,wishlist,compare,quickshop,label\" thumb_width=\"325\" thumb_height=\"397\" filter_template=\"custom\" custom_template=\"grid-style-44.phtml\" conditions_encoded=\"^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`132, 133`^]^]\" total_rows=\"2\" total_cols=\"4\" ajax_load=\"1\" show_slider=\"1\" slider_dots=\"0\" slider_nav=\"1\" slider_autoplay=\"0\" slider_margin=\"30\" items_1900=\"4\" items_1600=\"4\" items_1420=\"4\" items_1280=\"4\" items_980=\"4\" items_768=\"3\" items_480=\"3\" items_320=\"2\" items_0=\"1\" disable_lazyimg=\"0\"}}&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"full","class":"space-lg","id":"","style":"background-color:#daad84; padding-top: 70px; padding-bottom: 70px;","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"container","settings":{"container_type":"box","class":"","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"row","settings":{"class":"","id":"","style":"","background":"","hide_on":""},"children":[{"type":"col","settings":{"class":"","id":"","style":"","width":"8","background":"","hide_on":""},"children":[{"type":"html","settings":{"title":"Middle Banner","content":"&lt;div class=\"banner-style18\"&gt;\n    &lt;div class=\"cdz-banner scale-effect\"&gt;\n        &lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img05.jpg\"}}\" alt=\"Essential Oil\" /&gt;&lt;/a&gt;\n        &lt;div class=\"item-content\"&gt;\n            &lt;div class=\"bg-button\"&gt;&lt;/div&gt;\n            &lt;div class=\"bc-actions\"&gt;\n                &lt;a href=\"#\" class=\"bc-btn\"&gt;Essential Oil&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"col","settings":{"class":"","id":"","style":"","width":"8","background":"","hide_on":""},"children":[{"type":"html","settings":{"title":"Middle Banner","content":"&lt;div class=\"banner-style18\"&gt;\n    &lt;div class=\"cdz-banner scale-effect\"&gt;\n        &lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img06.jpg\"}}\" alt=\"Olive Soap\" /&gt;&lt;/a&gt;\n        &lt;div class=\"item-content\"&gt;\n            &lt;div class=\"bg-button\"&gt;&lt;/div&gt;\n            &lt;div class=\"bc-actions\"&gt;\n                &lt;a href=\"#\" class=\"bc-btn\"&gt;Face Milk&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"col","settings":{"class":"","id":"","style":"","width":"8","background":"","hide_on":""},"children":[{"type":"html","settings":{"title":"Middle Banner","content":"&lt;div class=\"banner-style18\"&gt;\n    &lt;div class=\"cdz-banner scale-effect\"&gt;\n        &lt;a href=\"#\"&gt;&lt;img class=\"img-responsive cdz-lazy\" src=\"{{media url=\"wysiwyg/codazon/main-content-28/img07.jpg\"}}\" alt=\"Olive Soap\" /&gt;&lt;/a&gt;\n        &lt;div class=\"item-content\"&gt;\n            &lt;div class=\"bg-button\"&gt;&lt;/div&gt;\n            &lt;div class=\"bc-actions\"&gt;\n                &lt;a href=\"#\" class=\"bc-btn\"&gt;Olive Soap&lt;/a&gt;\n            &lt;/div&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/div&gt;"}}]}]}]}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"The most popular","content":"&lt;div class=\"cdz-product-wrap base-slider product-list-style-44 mb-stage-padding-5\"&gt;\n&lt;div class=\"cdz-block-title text-center\"&gt;\n&lt;p class=\"b-title h2\"&gt;The most popular&lt;/p&gt;\n&lt;p class=\"title-desc\"&gt;Maintaining beautifully glowing and clear skin all year round&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"cdz-block-content\"&gt;\n&lt;div class=\"cdz-product\"&gt;{{widget type=\"Codazon\\ProductFilter\\Block\\Product\\ProductsList\" main_opt_id=\"main-content-style28||widget_3\" display_type=\"all_products\" products_count=\"8\" order_by=\"name ASC\" show=\"thumb,name,price,addtocart,wishlist,compare,quickshop,label\" thumb_width=\"325\" thumb_height=\"325\" filter_template=\"custom\" custom_template=\"grid-style-44.phtml\" conditions_encoded=\"^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`418`^]^]\" total_rows=\"2\" total_cols=\"4\" ajax_load=\"1\" show_slider=\"0\" slider_margin=\"30\" items_1900=\"4\" items_1600=\"4\" items_1420=\"4\" items_1280=\"4\" items_980=\"4\" items_768=\"3\" items_480=\"3\" items_320=\"2\" items_0=\"1\" disable_lazyimg=\"0\"}}&lt;/div&gt;\n&lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"Recent Posts","content":"&lt;div class=\"cdz-blog-wrap base-slider post-list-style21 mb-stage-padding-20\"&gt;\n&lt;div class=\"cdz-block-title text-center\"&gt;\n&lt;p class=\"b-title h2\"&gt;Beauty News&lt;/p&gt;\n&lt;p class=\"title-desc\"&gt;Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac cusantium dolorem que laudantium, totam remae.&lt;/p&gt;\n&lt;/div&gt;\n&lt;div class=\"cdz-block-content\"&gt;{{widget type=\"Codazon\\ThemeLayoutPro\\Block\\Widget\\BlogPostList\" main_opt_id=\"main-content-style28||widget_4\" categories=\"26\" order_by=\"publish_time\" order=\"desc\" post_count=\"6\" show_in_front=\"featured_img,title,short_content,publish_time\" desc_length=\"90\" date_format=\"M d Y\" thumb_width=\"330\" thumb_height=\"203\" post_template=\"custom\" custom_template=\"post/widget/grid-style-09.phtml\" total_rows=\"1\" total_cols=\"6\" show_slider=\"1\" slider_dots=\"0\" slider_nav=\"1\" slider_margin=\"50\" items_1900=\"3\" items_1600=\"3\" items_1420=\"3\" items_1280=\"3\" items_980=\"2\" items_768=\"2\" items_480=\"2\" items_320=\"1\" items_0=\"1\"}}&lt;/div&gt;\n&lt;/div&gt;"}}]},{"type":"container","settings":{"container_type":"box","class":"space-lg","id":"","style":"","background":"","hide_on":"","attach_to_section_menu":"0","section_menu_icon":"","title":""},"children":[{"type":"html","settings":{"title":"Brand","content":"&lt;div class=\"cdz-wrap base-slider\"&gt;\n    &lt;div class=\"cdz-block-title\"&gt;\n        &lt;p class=\"b-title h2\"&gt;&lt;span&gt;Our Brands&lt;/span&gt;&lt;/p&gt;\n    &lt;/div&gt;\n    &lt;div class=\"cdz-block-content\"&gt;{{widget type=\"Codazon\\Shopbybrandpro\\Block\\Widget\\BrandSlider\" list_style=\"widget/brand_slider.phtml\" collection=\"all_brands\" alphabet_table=\"a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z\" order_by=\"brand_label\" order_way=\"asc\" thumb_width=\"220\" thumb_height=\"150\" slider_dots=\"0\" slider_nav=\"1\" slider_loop=\"0\" slider_margin=\"20\" items_1900=\"7\" items_1600=\"6\" items_1420=\"6\" items_1280=\"6\" items_980=\"6\" items_768=\"4.5\" items_480=\"3.5\" items_320=\"2.5\" items_0=\"2.5\"}}&lt;/div&gt;\n&lt;/div&gt;"}}]}]</themelayout_content>
+</config>

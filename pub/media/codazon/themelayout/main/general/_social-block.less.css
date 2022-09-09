@@ -1,0 +1,47 @@
+/*Fashion magestore*/
+@media @tablet-strict_small{
+	.instagram-wrapper{
+		&.cdz-block .cdz-block-title .b-title{
+			white-space: initial;
+		}
+	}
+}
+/*Fashion megasote -- Twitter*/
+.cdz-block{
+	.cdz-block-title{
+		text-align: left;
+		margin-bottom: 20px;
+		.b-title{
+			font:@f_h3;			    
+    		font-weight: 500;
+		}
+		.title-desc {
+		    width: 100%;
+		    font-size: 12px;
+		}
+	}
+	
+	&.twitter-feeds-wrap{
+		.twitter-list {
+		    padding: 0;
+		    list-style: none;
+		}
+		.tweet-text {
+		    position: relative;
+		    &:before{
+		    	.abs-iconfont('\f10d', 20px);
+		    	color:@main_hover_text;
+		    	.rtl-layout &{
+		    		content: '\f10e'
+		    	}
+		    }
+		}
+		.tweet-time {
+		    font-style: italic;
+		    margin: 0 0 5px;
+		}
+		.tweet-user {
+		    font-weight: 600;
+		}
+	}
+}

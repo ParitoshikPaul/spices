@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+/** @var \Magento\Theme\Block\Html\Breadcrumbs $block */
+/** @var \Magento\Catalog\ViewModel\Product\Breadcrumbs $viewModel */
+$viewModel = $block->getData('viewModel');
+$categoryId = $this->getRequest()->getParam('category', false);
+$categoryUrl = $categoryName = false;
+if ($categoryId) {
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    $category = $objectManager->get('\Magento\Catalog\Model\CategoryRepository')->get($categoryId);
+    $categoryUrl = $category->getUrl();
+    $categoryName = $category->getName();
+}
+$widget = [
+    'breadcrumbs' => [
+        'categoryUrlSuffix'     => $block->escapeHtml($viewModel->getCategoryUrlSuffix()),
+        'useCategoryPathInUrl'  =>  (int)$viewModel->isCategoryUsedInProductUrl(),
+        'product'               => $block->escapeHtml(str_replace(["'",'"'],["&#39;", "&#34;"],$viewModel->getProductName())),
+        'categoryUrl'           => $categoryUrl,
+        'categoryName'          => $block->escapeHtml(str_replace(["'",'"'],["&#39;", '&#34;'],$categoryName))
+    ]
+];
+?>
+<div class="breadcrumbs" data-mage-init='<?= str_replace(["&#39;", "&#34;"],["\u0027", "\u0022"], json_encode($widget)) ?>'>
+</div>

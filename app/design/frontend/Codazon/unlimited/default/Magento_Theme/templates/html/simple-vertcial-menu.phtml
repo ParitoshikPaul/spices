@@ -1,0 +1,13 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$verticalMenu = $helper->getConfig('themelayoutpro/header/vertical_menu');
+?>
+<?php if ($verticalMenu) : ?>
+<?php echo $this->getLayout()->createBlock('Codazon\MegaMenu\Block\Widget\Megamenu')->setMenu($verticalMenu)->setType(1)->toHtml(); ?>
+<?php endif ?>

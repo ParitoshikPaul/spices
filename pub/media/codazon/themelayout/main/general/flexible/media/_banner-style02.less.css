@@ -1,0 +1,69 @@
+/*Fashion -- middle*/
+
+.banner-style02 {
+    @color_1: #ffffff;
+    @background_color: #000000;
+    overflow: hidden;
+    .cdz-banner {
+        text-align: center;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: @color_1;
+        overflow: hidden;
+        background-color: @background_color;
+        * {
+            .abs-transition(all 0.4s ease-in);
+        }
+        img {
+            position: relative;
+            max-width: 100%;
+            vertical-align: top;
+            .abs-opacity(0.4);
+        }
+        .abs-img img{
+            position: absolute;
+        }
+        .cdz-banner-text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 1;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                font-size: 36px;
+                text-transform: uppercase;
+                color: @color_1;
+                @media @tablet_vertical_down {
+                    font-size: 30px;
+                }
+                @media @phone {
+                    font-size: 20px;
+                }
+            }
+            .btn.primary {
+                border: 1px solid;
+                font-style: italic;
+                text-transform: lowercase;
+                text-decoration: none;
+                padding: 10px 30px;
+                .abs-style(@color_1, @color_1, transparent);
+                &:hover {
+                    .abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+                }
+            }
+        }
+        &:hover {
+            img {
+                .abs-transform(~'scale(1.1, 1.1) rotate(2deg)');
+            }
+        }
+    }
+}

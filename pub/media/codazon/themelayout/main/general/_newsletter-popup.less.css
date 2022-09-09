@@ -1,0 +1,134 @@
+//
+// Popup Newsletter
+// ----------------------------------------------
+.block.newsletter .field.newsletter {
+    max-width: none;
+}
+.cdz-newsletter-modal.modal-popup {
+	.modal-header{
+		padding: 0;
+        z-index: 100;
+	}
+    .modal-inner-wrap .modal-header .action-close{
+        right: 0;
+        z-index: 5;
+        .rtl-layout &{
+            right: auto;
+            left: 0;
+        }
+    }
+	.modal-inner-wrap {
+	    width: 60%;
+	    max-width: 780px;
+	}
+	.modal-content{
+		padding: 0;
+
+	}
+	[class*="cdz-popup-newsletter"]{
+		padding: 0
+	}
+	.popup-title h3{
+		font-size: 30px;
+		letter-spacing: 1px;
+		margin-bottom: 40px;
+		color: @main_title_text;
+	}
+	.popup-content {
+	    text-align: center;
+	    padding: 60px 40px;
+    	position: relative;
+	}
+	.popup-content-desc{
+		font-size: 16px;
+		font-weight: normal;
+		letter-spacing: 1px;
+		margin-bottom: 30px;
+	}
+	.block.newsletter{
+		width: 100%;
+		margin-bottom: 10px;
+		.newsletter{
+			width: 100%;
+			display: block;
+			margin-bottom: 10px;
+			.control:before{
+				display:none;
+			}
+			input{
+				border:1px solid @main_border;
+				padding: 0;
+			    text-align: center;
+			    font-size: 14px;
+			    height: 35px;
+			    .abs-borderradius(@btn_radius);
+			}
+		}
+		.actions{
+			width: 100%;
+			display: block;
+			.subscribe{
+				width: 100%;
+				height: 35px;
+				padding: 0;
+				text-align: center;
+				font-size: 14px;
+    			letter-spacing: 1px;
+				.abs-borderradius(@btn_radius);
+			}
+		}
+	}
+	.social {
+	    position: absolute;
+	    width: 100%;
+	    bottom: 0;
+	    font-size: 20px;
+	    text-align: center;
+	    a{
+	    	display: inline-block;
+	    	text-align: center;
+	    	margin: 0 10px;
+	    	.abs-transition();
+	    	.abs-link(@main_hover_text, @main_text)
+	    }
+	}
+    .banner img {
+        display: block;
+    }
+	@media @tablet_strict{
+		.modal-inner-wrap{
+			min-width: 650px;
+		}
+		.popup-title h3 {
+		    font-size: 22px;
+		    margin-bottom: 20px;
+		}
+		.popup-content-desc{
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+	}
+	@media @phone{
+		.popup-title h3 {
+		    font-size: 22px;
+		    margin-bottom: 20px;
+		}
+		.popup-content-desc{
+			font-size: 14px;
+			margin-bottom: 15px;
+		}
+		.modal-header .action-close{
+			z-index: 2
+		}
+	}
+	@media @phonedown{
+		.modal-inner-wrap {
+		    width: 90%;
+		}
+	}
+}
+@media @phone{
+    .modal-popup .modal-inner-wrap {
+        max-width: 90%;
+    }
+}

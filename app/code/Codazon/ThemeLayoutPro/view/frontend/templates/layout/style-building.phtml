@@ -1,0 +1,98 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+ ?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$layout = $this->getLayout();
+echo $helper->htmlFilter($helper->getConfig('themelayoutpro/general/head_script'));
+?>
+<script id="codazon-global-config">
+var codazon = <?= json_encode($helper->getThemeGlobalVariables()); ?>
+</script>
+<?= $helper->getCssScript($layout) ?>
+<?php if (false) : /* $helper->isDeveloperMode() */ ?>
+<script>
+less.options.relativeUrls = false;
+less.options.rootpath = '<?php echo $helper->getMediaUrl() ?>';
+var lessFileSet = <?php echo json_encode($helper->getLessFilesSet()) ?>;
+var lessElement;
+for(var lessIndex in lessFileSet) {
+    lessElement = document.createElement('link');
+    lessElement.rel = "stylesheet/less";
+    lessElement.href = lessFileSet[lessIndex];
+    less.sheets.push(lessElement);
+}
+less.refresh();
+</script>
+<?php endif ?>
+<?php
+if ($helper->isMagento23x()) {
+    $cssFiles = [
+        $block->getViewFileUrl('mage/calendar.css'),
+        $block->getViewFileUrl('css/animate/animate.css')
+    ];
+} else {
+    $cssFiles = [
+        $block->getViewFileUrl('mage/calendar.css'),
+        $block->getViewFileUrl('Magento_Swatches::css/swatches.css'),
+        $block->getViewFileUrl('css/animate/animate.css'),
+    ];
+}
+$version = str_replace('-dev', '', $helper->getMagentoVersion());
+?>
+<?php if (version_compare($version, '2.3.2', '<=')) : ?>
+<script>
+require.config({
+    map: {
+        '*': {
+            'jquery-ui-modules/widget': 'jquery/ui',
+            'jquery-ui-modules/autocomplete': 'jquery/ui',
+            'jquery-ui-modules/slider': 'jquery/ui',
+        }
+    }
+});
+</script>
+<?php endif ?>
+<script>
+var windowLoaded = false;
+window.addEventListener('load', function() {
+    windowLoaded = true;
+}, true);
+require(['jquery'], function($) {
+    require(['Codazon_ThemeLayoutPro/js/material-theme']);
+    function loadCSSLinks() {
+        require(['jquery/jquery.cookie'], function() {
+            var styles = <?= json_encode($cssFiles); ?>, cookieName = 'css_first_load';
+            if ($.cookie(cookieName)) { var t = 200; } else {
+                var date = new Date(), t = 5000; date.setTime(date.getTime() + (8640000000)); $.cookie(cookieName, '1', {path: '/', expires: date});
+            }
+            setTimeout(function() {
+                $.each(styles, function(i, styleFile) { $('head').prepend('<'+'link rel="stylesheet" type="text/css" media="all" href="' + styleFile +'" >'); });
+                $('head').prepend('<'+'link rel="stylesheet" type="text/css" media="print" href="<?= $block->getViewFileUrl('css/print.css') ?>" >');
+            }, t);
+        });
+    }
+    windowLoaded ? loadCSSLinks() : $(window).on('load', loadCSSLinks);
+    var updateTimeout = false;
+    $('body').on('contentUpdated', function () {
+        if (updateTimeout) clearTimeout(updateTimeout);
+        require(['mage/apply/main'], function(mage) {if (mage) { updateTimeout = setTimeout(function() { mage.apply(); }, 200) };});
+    });
+    if ($('body').hasClass('checkout-index-index')) { $(document).on('ajax:removeFromCart ajax:updateCartItemQty', function(e, productIds) { location.reload(); }); }
+});
+</script>
+
+<?php
+$cartBlock = $layout->getBlock('minicart');
+if (!$cartBlock) {
+    $cartBlock = $layout->createBlock('Magento\Checkout\Block\Cart\Sidebar');
+}
+?>
+<script>
+if (typeof window.checkout == 'undefined') {
+    window.checkout = <?= $cartBlock->getSerializedConfig() ?>;
+}
+</script>

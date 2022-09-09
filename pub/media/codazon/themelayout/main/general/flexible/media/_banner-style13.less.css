@@ -1,0 +1,99 @@
+.banner-style13 {
+    @color_1: #ffffff;
+    @background_color: #000000;
+    overflow: hidden;
+    .cdz-banner {
+        text-align: center;
+        position: relative;
+        float: left;
+        width: 100%;
+        color: @color_1;
+        overflow: hidden;
+        background-color: @background_color;
+        * {
+            .abs-transition(all 0.4s ease-in);
+        }
+        img {
+            position: relative;
+            max-width: 100%;
+            vertical-align: top;
+            .abs-opacity(0.8);
+        }
+        .abs-img img{
+            position: absolute;
+        }
+    }
+    .item-content {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: 1;
+        padding: 20px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		&.item-content-top{
+			justify-content: flex-start
+		}
+		&.item-content-bottom{
+			justify-content: flex-end;
+		}
+    }
+    .bc-title {
+        font: @f_h1;
+        font-size: 50px;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: .2em;
+        color: @color_1;
+    }
+    .bc-subtitle {
+        font: @f_h2;
+        font-size: 28px;
+        text-transform: uppercase;
+        line-height: 1;
+        letter-spacing: .2em;
+        color: @color_1;
+        margin: 0 0 60px;
+    }
+    .bc-btn, a.bc-btn, button.bc-btn {
+        background: none;
+        border: none;
+        border-bottom: 1px solid;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0 0 5px;
+        color: @color_1;
+        &:hover {
+            letter-spacing: .2em;
+        }
+    }
+    &:hover {
+        img {
+            .abs-transform(~'scale(1.1, 1.1)');
+            .abs-opacity(0.6);
+        }
+    }
+    @media @tablet_vertical_down {
+        .bc-title {
+            font-size: 30px;
+        }
+        .bc-subtitle {
+            font-size: 24px;
+            margin: 0 0 40px;
+        }
+    }
+    @media @phone {
+        .bc-title {
+            font-size: 20px;
+        }
+        .bc-subtitle {
+            font-size: 16px;
+            margin: 0 0 20px;
+        }
+    }
+}

@@ -1,0 +1,108 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$_postCollection = $block->getPostCollection();
+?>
+<?php if (!$_postCollection->count()): ?>
+    <div class="message info empty"><div><?php echo __('We can\'t find posts matching the selection.') ?></div></div>
+<?php else: ?>
+<?php
+$descLength = $block->getData('desc_length')?:100;
+$width = $block->getData('thumb_width')?:200;
+$height = $block->getData('thumb_height')?:200;
+$paddingBottom = $height*100/$width;
+$dateFormat = $this->getData('date_format')?:'Y-m-d H:i:s';
+$imgHelper = $this->helper('Magefan\Blog\Helper\Image');
+$showImage = $this->isShow('featured_img');
+$showTitle = $this->isShow('title');
+$showShortContent = $this->isShow('short_content');
+$showPublishTime = $this->isShow('publish_time');
+$showAuthor = $this->isShow('author');
+$showCategory = $this->isShow('category');
+
+$totalRows = (int)$this->getData('total_rows')?:1;
+$showSlider = $this->getData('show_slider');
+$widget = ['themewidgets' => [
+    'codazon.slider' => ['sliderConfig' => $this->getSliderData()]
+]];
+$readNow = __('Read now');
+?>
+<div class="post-grid-03 wrapper grid blog-post-grid">
+    <div class="items post-items<?= $showSlider?' owl-carousel':''?>" <?php if ($showSlider) : ?>data-mage-init='<?= json_encode($widget) ?>'<?php endif ?>>
+    <?php $i = 0; foreach ($_postCollection as $_post) : ?>
+        <?php
+            $_postName = $block->escapeHtml($_post->getTitle(), true, null);
+            $_postUrl = $_post->getPostUrl();
+        ?>
+        <?php if ($i%$totalRows == 0) : ?>
+        <div class="item-group">
+        <?php endif ?>
+        <div class="item post-item row">
+            <div class="col-xs-24 col-sm-24 col-md-10">
+				<div class="post-top">
+					<?php if ($showImage) : ?>
+					<?php
+					$_postFeatured = $_post->getData('featured_img');
+					$_postImage = '';
+					if ($_postFeatured) {
+						$_postImage = (string)$imgHelper->init($_postFeatured)->resize($width, $height);
+					}
+					?>
+					<a href="<?= $_postUrl ?>" class="post-img abs-img" style="padding-bottom: <?= $paddingBottom ?>%">
+						<?php if ($showSlider) : ?>
+						<img class="owl-lazy img-responsive" data-src="<?= $_postImage ?>" />
+						<?php else : ?>
+						<img class="img-responsive" src="<?= $_postImage ?>" />
+						<?php endif ?>
+					</a>
+					<?php endif ?>
+				</div>
+            </div>
+            <div class="col-xs-24 col-sm-24 col-md-14">
+				<div class="post-bottom ">
+					<?php if ($showTitle) : ?>
+					<div class="post-title">
+						<a class="post-item-link" title="<?= $_postName ?>" href="<?= $_postUrl ?>"><?= $_postName; ?></a>
+					</div>
+					<?php endif ?>
+					
+					<div class="post-header">
+					<?php if ($showCategory) : ?>
+					<?php $category = $_post->getParentCategory(); ?>
+					<?php if ($category->getId()) : ?>
+					<a class="post-category" href="<?= $category->getCategoryUrl() ?>"><?= $category->getTitle() ?></a>
+					<?php endif ?>
+					<?php endif ?>
+					
+					<?php if ($showPublishTime) : ?>
+					<div class="post-date"><?= $block->getPostedOn($_post, $dateFormat) ?></div>
+					<?php endif ?>
+					
+					<?php if ($showAuthor) : ?>
+					<div class="post-author"><?= $_post->getAuthor() ? $_post->getAuthor()->getName() : '' ?></div>
+					<?php endif ?>
+					</div>
+					
+					<?php if ($showShortContent) : ?>
+					<div class="post-desc">
+						<?= $block->subString($_post->getShortContent(), $descLength); ?>
+					</div>
+					<?php endif ?>
+					
+					<div class="post-footer">
+						<a class="post-item-link action btn primary" title="<?= $readNow ?>" href="<?= $_postUrl ?>"><?= $readNow ?></a>
+					</div>
+				</div>
+            </div>
+        </div>
+        <?php if ($i%$totalRows == ($totalRows-1)) : ?>
+        </div>
+        <?php endif ?>
+    <?php $i++; endforeach; ?>
+    </div>
+</div>
+<?php endif ?>

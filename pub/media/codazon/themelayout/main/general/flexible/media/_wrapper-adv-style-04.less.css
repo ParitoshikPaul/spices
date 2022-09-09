@@ -1,0 +1,75 @@
+/*Kids & Baby -- Block Testimonial*/
+.wrapper-adv-style-04{
+	padding: 40px 0;
+	.cdz-block-title .b-title.h2{
+		font-weight: bold;
+		font-size: 36px;
+		color: #4ac2f7;
+	}
+	.cdz-block-content{
+		.abs-borderradius(@main_box_radius);
+		position: relative;
+		@media @tablet_vertical{
+			width: 70%;
+			margin: 0 15%;
+		}
+		&:before{
+			width: 100%;
+			height: 100%;
+			content:'';
+			background: @main_box_background;
+			.abs-opacity(0.7);
+			top: 0;
+			left: 0;
+			position: absolute;
+			.abs-borderradius(@main_box_radius);
+			
+		}
+		.tt-inner{
+			color: @main_title_text;
+			font-size: 16px;
+			padding: 20px;
+			margin-top: 10px;
+			position: relative;
+			text-align: left;
+			@media @tablet_vertical{
+				padding: 20px 90px;
+			}
+			&:before{
+				top: 20px;
+				left: 40px;
+				position: absolute;
+				.abs-iconfont('\f10d', 30px);
+				color: #4ac2f7;
+				z-index: -1;
+				@media @phone{
+					top: 10px;
+					left: 10px;
+				}
+			}
+			.tt-comment{
+				font-style: italic;
+			}
+			.tt-footer{
+				padding-top: 20px;
+			}
+			.customer-photo{
+				float: left;
+				margin-right: 10px;
+				img{
+					width: 40px;
+					height: 40px;
+					.abs-borderradius(100%);
+				}
+			}
+			.tt-name{
+				padding-top: 7px;
+				font-weight: 600;
+			}
+		}
+		.owl-dots{
+			padding-bottom: 15px;
+			margin-top: 10px;
+		}
+	}
+}

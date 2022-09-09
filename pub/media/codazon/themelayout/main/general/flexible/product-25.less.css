@@ -1,0 +1,184 @@
+.product-list-style-25 {
+    .listing-actions{
+        text-align: center;
+        margin-top: 20px;
+        .cdz-ajax-trigger{
+            border-radius: 18px;
+            border-width: 1px;
+        }
+    }
+    .product-item-top{
+        position: relative;
+        margin-bottom: 0;
+        .qs-button {
+            position: absolute;
+            top: ~'calc(50% - 19px)';
+            left: ~'calc(50% - 19px)';
+            z-index: 2;
+            opacity: 0;
+            transition: all ease 400ms;
+        }
+    }
+    .product-item-details {
+        border-top: 1px solid #ccc;
+    }
+    .product-item {
+        box-shadow: 0px 3px 3px #b1afaf;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+        transition: box-shadow ease 400ms;
+        .price-box{
+            text-align: center;
+            display: inline-block;
+        }
+        .abs-product-hover-img-slide();
+        &:hover {
+            box-shadow: 0px 3px 10px #888888;
+            .qs-button {
+                opacity: 1;
+            }
+        }
+        .price-box{
+            text-align: center;
+            display: inline-block;
+        }
+    }
+    .product-item-inner{
+        text-align: center;
+    }
+    .product-item-inner{
+        padding: 10px;
+        background: lighten( @product_bottom_background , 10%);
+        margin: 0;
+    }
+    .product-bottom{
+        padding: 10px;
+        background: @product_bottom_background;
+    }
+    
+    
+    // Elements
+    //Labels
+    .cdz-product-labels {
+        .prolabels-style06();
+    }
+    .price-box {
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    }
+    .product-item-name{
+        margin: 0 0 5px 0;
+    }
+    .product-item-description{
+        margin-top: 5px;
+    }
+    .product-item .product-reviews-summary {
+        width: 100%;
+        text-align: center;
+        display: block;
+        .rating-summary {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    .product-reviews-summary {
+        .reviews-actions {
+            display: none;
+        }
+    }
+    .el-group {
+        width: 100%;
+        display: flex;
+        margin: 0;
+        > *:first-child{
+            //border-radius: 0 0 0 5px;
+        }
+        > *:last-child{
+            //border-radius: 0 0 5px 0;
+        }
+        .el-small{
+            width: 34px;
+            min-width: 34px;
+            height: 34px;
+            color: @btn_normal_text;
+            border: 1px solid @btn_normal_border;
+            background: @btn_normal_background;
+            font-size: 0;
+            text-align: center;
+            border-radius: 50%;
+            &:before, &.action.towishlist:before{
+                font-family: CodazonFont;
+                font-size: 17px;
+                line-height: 32px;
+                color: @btn_default_text;
+            }
+            &.action.towishlist {
+                &:before{
+                    content: "\E986";
+                }
+                &:hover:before{
+                    color: @btn_default_text;
+                }
+            }
+            &.action.tocompare{
+                &:before{
+                    content: "\E963";
+                }
+            }
+            &:hover{
+                opacity: 0.7;
+            }
+        }
+        .el-large{
+            width: 100%;
+            margin: 0 3px;
+            .action{
+                width: 100%;
+                border-radius: 0;
+                font-weight: normal;
+                height: 34px;
+                border-radius: 17px;
+                padding: 0 10px;
+                line-height: 32px;
+                white-space: pre-line;
+                font-size: 13px;
+                span {
+                    line-height: 32px;
+                    vertical-align: top;
+                }
+            }
+            .tocart{
+                &:before{
+                    font-family: CodazonFont;
+                    font-size: 17px;
+                    line-height: 32px;
+                    content: '\E9A8';
+                    margin: 0 7px 0 0;
+                    display: inline-block;
+                    .rtl-layout & {
+                        margin: 0 0 0 7px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .el-group {
+            justify-content: space-around;
+        }
+    }
+    @media @phone{
+        .el-group .el-large .tocart:before{
+            margin: 0;
+        }
+        .product-item {
+            padding: 0;
+            .product-item-actions{
+                margin: 0;
+            }
+        }
+    }
+}

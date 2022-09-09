@@ -1,0 +1,12 @@
+<?php
+/**
+* Copyright © 2019 Codazon. All rights reserved.
+* See COPYING.txt for license details.
+*/
+?>
+<?php
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+if ($helper->getScopeConfig('msp_securitysuite_recaptcha/frontend/enabled')) {
+    echo $this->setTemplate('MSP_ReCaptcha::msp_recaptcha.phtml')->toHtml();
+}
+?>

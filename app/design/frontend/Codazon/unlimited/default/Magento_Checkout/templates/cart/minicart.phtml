@@ -1,0 +1,108 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Checkout\Block\Cart\Sidebar */
+?>
+
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$displayStyle = $this->getData('display_style')?:($helper->getMiniCartStyle()?:'dropdown');
+$uniqid = uniqid();
+?>
+<!-- minicart -->
+<?php if ($displayStyle == 'sidebar') : ?>
+<div data-block="minicart" class="minicart-wrapper" id="desk_cart-wrapper">
+    <a href="javascript:void(0)" data-sidebartrigger='{"side": "right", "section":"utilies-minicart", "event":"dropdowndialogopen"}' class="action showcart cdz-top-link" data-bind="scope: 'minicart_content'">
+        <span class="text"><?php /* @escapeNotVerified */ echo __('Your Cart'); ?></span>
+        <span data-bind="html: getCartParam('subtotal'), css: 'cart-subtotal'"></span>
+        <span class="counter qty empty"
+              data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: false">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+</div>
+<?php elseif ($displayStyle == 'popup') : ?>
+<div data-block="minicart" class="minicart-wrapper" id="desk_cart-wrapper">
+    <a href="#" data-event="dropdowndialogopen" data-cdzpopuptrigger="minicart-popup" class="action showcart cdz-top-link" data-bind="scope: 'minicart_content'">
+        <span class="text"><?php /* @escapeNotVerified */ echo __('Your Cart'); ?></span>
+        <span data-bind="html: getCartParam('subtotal'), css: 'cart-subtotal'"></span>
+        <span class="counter qty empty"
+              data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: false">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+            <!-- /ko -->
+            </span>
+        </span>
+    </a>
+</div>
+<div style="display:none">
+    <div class="md-dialog-container minicart-popup" data-cdzpopup id="minicart-popup" data-block="minicart">
+        <div class="md-dialog-inner">
+            <div class="block block-minicart empty">
+                <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                    <!-- ko template: getTemplate() --><!-- /ko -->
+                </div>
+                <?php echo $block->getChildHtml('minicart.addons'); ?>
+            </div>
+        </div>
+    </div>
+</div>
+<?php else : ?>
+<div class="minicart-wrapper" id="desk_cart-wrapper">
+    <div class="cdz-dropdown" data-role="cdz-dropdown">
+        <a href="<?= $block->getShoppingCartUrl(); ?>" data-role="cdz-dd-trigger" class="action showcart cdz-dd-trigger cdz-top-link" data-bind="scope: 'minicart_content'" data-block="minicart">
+            <span class="text"><?php /* @escapeNotVerified */ echo __('Your Cart'); ?></span>
+            <span data-bind="html: getCartParam('subtotal'), css: 'cart-subtotal'"></span>
+            <span class="counter qty empty"
+                  data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: false">
+                <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+                <span class="counter-label">
+                <!-- ko if: getCartParam('summary_count') -->
+                    <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                    <!-- ko i18n: 'items' --><!-- /ko -->
+                <!-- /ko -->
+                </span>
+            </span>
+        </a>
+        <?php if ($block->getIsNeedToDisplaySideBar()): ?>
+        <div class="cdz-dd-content" data-role="cdz-dd-content">
+            <div class="cdz-dd-content-inner nice-scroll">
+                <div class="block block-minicart empty" data-block="minicart" style="height: auto;">
+                    <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                        <!-- ko template: getTemplate() --><!-- /ko -->
+                    </div>
+                    <?php echo $block->getChildHtml('minicart.addons'); ?>
+                </div>
+            </div>
+        </div>
+        <?php endif ?>
+    </div>
+</div>
+<?php endif ?>
+<script>
+    window.checkout = <?php /* @escapeNotVerified */ echo \Zend_Json::encode($block->getConfig()); ?>;
+</script>
+<script type="text/x-magento-init">
+{
+    "[data-block='minicart']": {
+        "Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout();?>
+    },
+    "*": {
+        "Magento_Ui/js/block-loader": "<?php /* @escapeNotVerified */ echo $block->getViewFileUrl('images/loader-1.gif'); ?>"
+    }
+}
+</script>

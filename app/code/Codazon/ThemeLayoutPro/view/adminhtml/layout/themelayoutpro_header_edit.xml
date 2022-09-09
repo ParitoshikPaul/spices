@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <head>
+        <css src="Magento_Swatches::css/swatches.css"/>
+        <css src="jquery/colorpicker/css/colorpicker.css"/>
+        <css src="Codazon_ThemeLayoutPro::css/theme-layout.css"/>
+    </head>
+    <body>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="page.title">
+            <action method="setTitleClass">
+                <argument name="class" xsi:type="string">complex</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block name="themelayout_toolbar" class="Magento\Backend\Block\Template" template="Codazon_ThemeLayoutPro::main-content/toolbar.phtml">
+                <action method="setRegistryName">
+                    <argument name="params" xsi:type="string">themelayout_header</argument>
+                </action>
+                <action method="setSubmitUrl">
+                    <argument name="params" xsi:type="string">themelayoutpro/header/cloneElement</argument>
+                </action>
+            </block>
+            <block name="element_preview" class="Codazon\ThemeLayoutPro\Block\Adminhtml\MainContent\Edit\ContentBuilder" template="Codazon_ThemeLayoutPro::main-content/preview.phtml">
+                <arguments>
+                    <argument name="registry_name" xsi:type="string">themelayout_header</argument>
+                    <argument name="asset_directory" xsi:type="string">codazon/themelayout/header</argument>
+                </arguments>
+            </block>
+            <uiComponent name="themelayout_header_form" />
+            <block name="config_js" class="Magento\Backend\Block\Template" template="Codazon_ThemeLayoutPro::main-content/js-config.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+		<section id="codazon_lookbook" translate="label" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Lookbook Pro</label>
+            <tab>codazon</tab>
+			<resource>Codazon_Lookbookpro::settings</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="root_category" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Lookbook Root Category</label>
+                    <source_model>Codazon\Lookbookpro\Model\Config\Source\CategoryRoots</source_model>
+                </field>
+            </group>
+			<group id="images" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Image Config</label>
+                <group id="category" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category</label>
+                    <field id="cover_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Cover Width</label>
+                    </field>
+                    <field id="thumbnail_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Thumbnail Width</label>
+                    </field>
+                    <field id="thumbnail_height" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Thumbnail Height</label>
+                    </field>
+                </group>
+                <group id="lookbook" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lookbook</label>
+                    <field id="cover_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Cover Width</label>
+                    </field>
+                    <field id="thumbnail_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Thumbnail Width</label>
+                    </field>
+                    <field id="thumbnail_height" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Thumbnail Height</label>
+                    </field>
+                </group>
+                <group id="lookbook_item" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lookbook Item</label>
+                    <field id="small_width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Width</label>
+                    </field>
+                    <field id="small_height" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Height</label>
+                    </field>
+                </group>
+                <group id="product" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Product</label>
+                    <field id="width" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Width</label>
+                    </field>
+                    <field id="height" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Height</label>
+                    </field>
+                </group>
+            </group>
+            <group id="listing" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Listing</label>
+                <group id="lookbook_list" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Category Page - Lookbook List - Items Per Row</label>
+                    <field id="grid_per_page_values" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Lookbooks per Page on Grid Allowed Values</label>
+                        <comment>Comma-separated.</comment>
+                        <validate>validate-per-page-value-list required-entry</validate>
+                    </field>
+                    <field id="grid_per_page" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Lookbooks per Page on Grid Default Value</label>
+                        <comment>Must be in the allowed values list.</comment>
+                        <validate>validate-per-page-value</validate>
+                    </field>
+                    <field id="items_1900" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1900 view</label>
+                        <comment><![CDATA[Screen width > 1900px]]></comment>
+                    </field>
+                    <field id="items_1600" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1600 view</label>
+                        <comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+                    </field>
+                    <field id="items_1420" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1420 view</label>
+                        <comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+                    </field>
+                    <field id="items_1280" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1280 view</label>
+                        <comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+                    </field>
+                    <field id="items_980" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop small view</label>
+                        <comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+                    </field>
+                    <field id="items_768" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Tablet lanscape view</label>
+                        <comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+                    </field>
+                    <field id="items_480" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Tablet portrait view</label>
+                        <comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+                    </field>
+                    <field id="items_320" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Mobile lanscape view</label>
+                        <comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+                    </field>
+                    <field id="items_0" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Mobile portrait view</label>
+                        <comment><![CDATA[Screen width < 320px]]></comment>
+                    </field>
+                    <field id="margin_right_desktop" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Right Margin on Desktop</label>
+                        <comment>( ↔ ) Horizontal Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_bottom_desktop" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Bottom Margin on Desktop</label>
+                        <comment>( ↕ ) Vertical Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_right_mobile" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Right Margin on Mobile</label>
+                        <comment>( ↔ ) Horizontal Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_bottom_mobile" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Bottom Margin on Mobile</label>
+                        <comment>( ↕ ) Vertical Space Between Two Items (px)</comment>
+                    </field>
+                </group>
+                <group id="lookbook_item_list" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Lookbook Page - Look List - Items Per Row</label>
+                    <field id="grid_per_page_values" translate="label comment" type="text" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Looks per Page on Grid Allowed Values</label>
+                        <comment>Comma-separated.</comment>
+                        <validate>validate-per-page-value-list required-entry</validate>
+                    </field>
+                    <field id="grid_per_page" translate="label comment" type="text" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Looks per Page on Grid Default Value</label>
+                        <comment>Must be in the allowed values list.</comment>
+                        <validate>validate-per-page-value</validate>
+                    </field>
+                    <field id="items_1900" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1900 view</label>
+                        <comment><![CDATA[Screen width > 1900px]]></comment>
+                    </field>
+                    <field id="items_1600" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1600 view</label>
+                        <comment><![CDATA[1600px ≤ Screen width < 1900px]]></comment>
+                    </field>
+                    <field id="items_1420" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1420 view</label>
+                        <comment><![CDATA[1420px ≤ Screen width < 1600px]]></comment>
+                    </field>
+                    <field id="items_1280" translate="label comment" type="text" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop 1280 view</label>
+                        <comment><![CDATA[1280px ≤ Screen width < 1420px]]></comment>
+                    </field>
+                    <field id="items_980" translate="label comment" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Desktop small view</label>
+                        <comment><![CDATA[980px ≤ Screen width < 1280px]]></comment>
+                    </field>
+                    <field id="items_768" translate="label comment" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Tablet lanscape view</label>
+                        <comment><![CDATA[768px ≤ Screen width < 980px]]></comment>
+                    </field>
+                    <field id="items_480" translate="label comment" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Tablet portrait view</label>
+                        <comment><![CDATA[480px ≤ Screen width < 768px]]></comment>
+                    </field>
+                    <field id="items_320" translate="label comment" type="text" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Mobile lanscape view</label>
+                        <comment><![CDATA[320px ≤ Screen width < 480px]]></comment>
+                    </field>
+                    <field id="items_0" translate="label comment" type="text" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Mobile portrait view</label>
+                        <comment><![CDATA[Screen width < 320px]]></comment>
+                    </field>
+                    <field id="margin_right_desktop" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Right Margin on Desktop</label>
+                        <comment>( ↔ ) Horizontal Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_bottom_desktop" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Bottom Margin on Desktop</label>
+                        <comment>( ↕ ) Vertical Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_right_mobile" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Right Margin on Mobile</label>
+                        <comment>( ↔ ) Horizontal Space Between Two Items (px)</comment>
+                    </field>
+                    <field id="margin_bottom_mobile" translate="label comment" type="text" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                        <label>Bottom Margin on Mobile</label>
+                        <comment>( ↕ ) Vertical Space Between Two Items (px)</comment>
+                    </field>
+                </group>
+            </group>
+            <group id="lookbook_category_list" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Lookbook Category List</label>
+                <field id="enable" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display on Sidebar</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_type" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Type</label>
+                    <source_model>Codazon\Lookbookpro\Model\Config\Source\CategoryListType</source_model>
+                </field>
+                <field id="display_created_date" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Display Created Date</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="date_format" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Date Format</label>
+                </field>
+            </group>
+		</section>
+	</system>
+</config>

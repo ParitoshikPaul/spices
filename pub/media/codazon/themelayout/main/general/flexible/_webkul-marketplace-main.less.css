@@ -1,0 +1,95 @@
+/* .wk-mp-collection-container {
+    width: 100%;
+} */
+@luma_eot_font: ~'codazon/themelayout/fonts/Luma-Icons.eot';
+@luma_ttf_font: ~'codazon/themelayout/fonts/Luma-Icons.ttf';
+@luma_woff_font: ~'codazon/themelayout/fonts/Luma-Icons.woff';
+@luma_woff2_font: ~'codazon/themelayout/fonts/Luma-Icons.woff2';
+@luma_svg_font: ~'codazon/themelayout/fonts/Luma-Icons.svg';
+
+
+
+@font-face {
+  font-family: 'luma-icons';
+  src:  url(@luma_eot_font);
+  src:  url(@luma_eot_font) format('embedded-opentype'),
+    url(@luma_woff2_font) format('woff2'),
+    url(@luma_ttf_font) format('truetype'),
+    url(@luma_woff_font) format('woff'),
+    url(@luma_svg_font) format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+.page-layout-1column .wk-mp-collection-container {
+    .block.filter {
+        padding: 10px;
+        .filter-current .items .item {
+            width: 100%;
+            padding: 0 0 0 20px;
+        }
+        .filter-content {
+            visibility: visible;
+            overflow: visible;
+            opacity: 1;
+            height: auto;
+            background: @main_block_background;
+            transform: none;
+            transition: none;
+        }
+        .filter-options {
+            width: 100%;
+            margin: 0;
+            >   div {
+                width: 100%;
+            }
+            .filter-options-item:not(.active) .filter-options-content {
+                display:none !important;
+            }
+            .filter-options-content {
+                padding: 0 !important;
+            }
+            .filter-options-title:before {
+                display: block;
+            }
+        }
+    }
+}
+
+.wk-mp-collection-container .product-list-style-01 .action.primary:hover {
+    border-color: transparent;
+}
+@media (min-width: 980px) {
+    .wk-mp-collection-container .page-products  .products-grid.ctst .product-items .item.product-item {
+        width: ~'calc(25% - 20px)' !important;
+    }
+}
+@media @tablet_vertical {
+    
+    .wk-mp-collection-seller-title {
+        padding: 0 100px;
+    }
+    .wk-mp-collection-seller-title.wk-mp-collection-header-css {
+        margin-left: 0;
+    }
+    
+}
+.wk-seller-card-product-block {
+    max-width: 100%;
+}
+.product-main-wrapper .product-right {
+    .wk-seller-card-details-block {
+        width: 100%;
+    }
+    .wk-seller-card-details-content-block {
+        width: auto;    
+    }
+}
+.rtl-layout {
+    .wk-mp-menu-wrapper {
+        &:before {
+            left: auto;
+            right: 0;
+        }
+    }
+}

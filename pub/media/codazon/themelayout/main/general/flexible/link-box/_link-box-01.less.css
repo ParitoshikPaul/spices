@@ -1,0 +1,36 @@
+.link-box-01 {
+    background-size: cover;
+    padding: 40px 10%;
+    height: 100%;
+    color: @main_text_normal2;
+    .box-title {
+        color: @main_text_normal2 !important;
+        font: @f_h1;
+        display: block;
+        margin-bottom: 20px;
+        strong {
+            padding-bottom: 5px;
+            display: inline-block;
+            border-bottom: 4px solid @main_title_border;
+        }
+    }
+    .box-links {
+        padding: 0 0 0 20px;
+        list-style: disc;
+        margin: 0;
+        .rtl-layout & {
+            padding: 0 20px 0 0;
+        }
+        .box-link {
+            font: @f_h4;
+            color: @main_text_normal2;
+            font-weight: normal;
+            &:hover{
+                color: @main_hover_text;
+            }
+            a {
+                color: inherit;
+            }
+        }
+    }
+}

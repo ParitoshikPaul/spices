@@ -1,0 +1,81 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$verticalMenu = $helper->getConfig('themelayoutpro/header/vertical_menu');
+$title = $helper->getConfig('themelayoutpro/header/vertical_menu_title');
+$clickToDisplay = (bool)$helper->getConfig('themelayoutpro/header/vertical_menu_behavior'); /* 0. hover, 1. click */
+$active = (bool)$helper->getConfig('themelayoutpro/header/vertical_menu_displayed_as_default');
+$clickAroundToClose = (bool)$helper->getConfig('themelayoutpro/header/vertical_menu_close_behavior');
+$wrapClass = $clickToDisplay ? ' click-display':'';
+$wrapClass .= $active ? ' first-active':'';
+?>
+<?php if ($verticalMenu) : ?>
+<?php
+$type = (int)$this->getData('menu_type') ? : 1;
+if ($type === 3) {
+    $clickToDisplay = true;
+}
+?>
+<div id="desk_vertcial-menu-container" class="hidden-xs desk-vertcial-menu-container<?= $wrapClass ?>">
+    <div class="main-content-top-left" data-role="menu-container">
+        <div class="menu-title<?= $clickAroundToClose ? ' closebyaround':'' ?>" data-role="menu-title"><?= $title ?></div>
+        <div class="menu-container hidden-xs" data-role="menu-content">
+            <?php echo $this->getLayout()->createBlock('Codazon\MegaMenu\Block\Widget\Megamenu')
+                ->setMenu($verticalMenu)
+                ->setData('menu_type', $type)->toHtml(); ?>
+        </div>
+    </div>
+</div>
+<script>
+<?php if ($clickToDisplay) : ?>
+require(['jquery'], function($) {
+    if (!$('body').hasClass('cms-index-index')) {
+        $('.click-display').removeClass('first-active');
+    }
+    $('.click-display').on('click', '.menu-title', function() {
+        <?php if ($active) : ?>let $menu = $(this).parents('.click-display').first();
+        if ($menu.hasClass('first-active') && $menu.find('.cdz-vertical-menu').is(':visible')) {
+            $('.js-sticky-menu').first().hasClass('active') ? $menu.toggleClass('cdz-active') : $menu.removeClass('first-active cdz-active');
+        } else {
+            $menu.toggleClass('cdz-active');
+        }<?php else : ?>
+        $(this).parents('.click-display').first().toggleClass('cdz-active');
+        <?php endif ?>
+    
+    });
+    <?php if ($active) : ?>$('.click-display').on('click.firstactive', '.menu-title', function() {
+        $(this).off('click.firstactive').parents('.click-display').first().removeClass('first-active');
+    });
+    <?php endif ?><?php if ($clickAroundToClose) : ?>$('body').on('click', function(e) {
+        let $target = $(e.target);
+        if (!($target.hasClass('click-display') || $target.parents('.click-display').length)) {
+            $('.click-display.cdz-active').removeClass('cdz-active');
+        }
+    });
+    $(window).on('cdz_mobile', function() {
+        $('.click-display').removeClass('cdz-active');
+    });<?php endif ?>
+    
+});
+<?php endif ?>
+window.addEventListener('load', function() {
+    require(['jquery'], function($) {
+        var addOneVer = function() {
+            let $menu = $('.desk-vertcial-menu-container');
+            if ($('.cdz-vertical-menu').length === 1) {
+                $menu.addClass('one-ver');
+            } else {
+                $('.cdz-vertical-menu').last().is(':visible') ? $menu.removeClass('one-ver') : $menu.addClass('one-ver'); 
+            }
+        }
+        addOneVer();
+        $(window).on('cdz_window_width_changed', addOneVer);
+    });
+});
+</script>
+<?php endif ?>

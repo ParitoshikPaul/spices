@@ -1,0 +1,30 @@
+/*extend footer 07*/
+/*Sport Home*/
+.page-footer{	
+	.footer-content-top,
+	.footer-content-middle,
+	.footer-content-bottom{
+		padding-left: 0;
+		padding-right: 0;
+	}	
+	.footer.content{
+		.abs-borderradius(0);
+		.abs-boxshadow(none);
+		margin: 0;
+	}	
+	@media @tablet_vertical{
+		padding-bottom: 0;	
+	}
+	@media @phone{
+		.footer-box .padding-title {
+		    padding-left: 0;
+		    .rtl-layout &{
+		    	padding-right: 0;
+		    }
+		}
+		.container-fluid{
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}

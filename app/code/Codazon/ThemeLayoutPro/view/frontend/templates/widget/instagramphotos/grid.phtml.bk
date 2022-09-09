@@ -1,0 +1,85 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$widget = ['themewidgets' => [
+	'codazon.slider' => ['sliderConfig' => $block->getSliderData()]
+]];
+$rows = $this->getData('total_rows') ? : 1;
+$sliderMargin = (float)$this->getData('slider_margin');
+$stagePadding = $this->getData('stage_padding');
+$templId = uniqid('instagram-photos-list-tmpl-');
+$ajaxUrl = $this->getInstagramRecentPhotosUrl();
+?>
+<?php if ($ajaxUrl) : ?>
+<script id="<?= $templId ?>" type="text/x-jquery-tmpl">
+<div class="instagram-photos items owl-carousel" data-mage-init='<?= json_encode($widget) ?>'>
+<% var i = 0, maxI = count - 1; %>
+<% _.each(posts, function(post, id) { %>
+<% var url = 'https://www.instagram.com/p/' + post.node.shortcode %>
+<%= ((i%rows == 0) && (rows > 1)) ? '<div class="item-group">' : ''  %>
+<div class="item photo-item" <%= (rows > 1) ? 'style="margin-bottom:' + sliderMargin + 'px"' : ''  %> >
+    <a data-largeimg="<%- post.node.display_resources[1].src %>" class="photo-item-link abs-img" style="padding-bottom: 100%" href="<%- url %>" target="_blank">
+        <% if (stagePadding) { %>
+        <img alt="" class="img-responsive" src="<%- post.node.thumbnail_resources[1].src %>" />
+        <% } else { %>
+        <img alt="" class="img-responsive owl-lazy" data-src="<%- post.node.thumbnail_resources[1].src %>" />
+        <% } %>
+    </a>
+</div>
+<%= (((i%rows == rows - 1) || (i == (count - 1)) || (i == maxI)) && (rows > 1)) ? '</div>' : ''  %>
+<% i++ %>
+<% }); %>
+</div>
+</script>
+<div id="placeholder-<?= $templId ?>" class="no-loaded">
+    <div class="brand-loader double-bounce-spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+</div>
+<script>
+require(['jquery', 'mage/template', 'jquery/jquery.cookie'], function($, tmpl) {
+    var tmplId = '<?= $templId ?>', $placeholder = $('#placeholder-' + tmplId), instTmpl = tmpl('#' + tmplId), storageId = 'instagram_data_<?= $this->getData('user_id') . '_' . $this->getData('max_items') ?>';
+    var rows = <?= $rows ?>, sliderMargin = <?= $sliderMargin ?>, stagePadding = <?= $stagePadding ?>;
+    var buildHTML = function(rs) {
+        var posts = rs.data.user.edge_owner_to_timeline_media.edges;
+        if (posts.length) {
+            $(instTmpl({posts: posts, count: posts.length, sliderMargin: sliderMargin, stagePadding: stagePadding, rows: rows})).insertBefore($placeholder);
+            $('body').trigger('contentUpdated');
+        }
+    } 
+    var renderPhotos = function() {
+         if ($.cookie(storageId) && window.localStorage[storageId]) {
+             var rs = JSON.parse(window.localStorage[storageId]);
+             buildHTML(rs);
+             $placeholder.remove();
+         } else {
+            var date = new Date(); date.setTime(date.getTime() + (60*10*1000));
+            $.cookie(storageId, '1', {path: '/', expires: date});
+            $.ajax({
+                url: '<?= $ajaxUrl ?>',
+                cache: true,
+                success: function (rs) {
+                    if (typeof rs.data == 'undefined') {
+                        var instData = window.localStorage ? window.localStorage[storageId] : false;
+                        if (instData) rs = JSON.parse(instData);
+                    }
+                    if (typeof rs.data != 'undefined') {
+                        var posts = rs.data.user.edge_owner_to_timeline_media.edges;
+                        buildHTML(rs);
+                        window.localStorage[storageId] = JSON.stringify(rs);
+                    }
+                }
+            }).always(function() { $placeholder.remove(); });
+         }
+    };
+    if ((typeof window.windowLoaded == 'undefined') || window.windowLoaded) {
+        renderPhotos();
+    } else {
+        $(window).load(renderPhotos);
+    }
+});
+</script>
+<?php endif ?>

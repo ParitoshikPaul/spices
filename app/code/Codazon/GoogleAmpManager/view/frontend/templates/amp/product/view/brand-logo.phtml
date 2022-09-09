@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+/**
+ * Product list template
+ *
+ * @var $block Codazon\Shopbybrandpro\Block\Brand\BrandInformation
+ */ ?>
+
+<?php if ($brand = $this->getBrandOfCurrentProduct()) : ?>
+<?php
+    $block->setBrand($brand);
+    $brandUrl = $brand->getUrl();
+?>
+    <?php if ($brand->getOptionId()) : ?>
+    <?php $label = $this->stripTags($brand->getData('brand_label')); ?>
+    <div class="product-brand-info _mg-top-20">
+        <a class="brand-link _border-light-box btn" title="<?php echo $label; ?>" href="<?php echo $brandUrl ?>">
+            <amp-img layout="fixed" width="70" height="70" alt="<?php echo $label; ?>" class="brand-img cdz-flex-img" src="<?php echo $brand->getThumbnail() ?>" />
+        </a>
+    </div>
+    <?php endif ?>
+<?php endif ?>

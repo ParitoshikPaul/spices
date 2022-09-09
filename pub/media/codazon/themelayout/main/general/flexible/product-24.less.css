@@ -1,0 +1,250 @@
+.product-list-style-24{
+    .product-item{
+        position: relative;
+        padding: 0px;
+        background: transparent;
+        .product-item-info{
+            transition: .6s;
+            //box-shadow: 0px 3px 4px #ccc;
+            box-shadow: 0 3px 4px 0 rgba(35,35,35,.1), 0 0 1px 0 rgba(10,31,68,.08);
+            background: #fff;
+        }
+        &:hover{
+            .product-item-info{
+                box-shadow: 0px 6px 4px #ccc;
+            }
+        }
+    }
+    .product-item-top{
+        position: relative;
+        margin-bottom: 0;
+    }
+    .hovered-product-image-style-01();
+    .cdz-product-labels{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        display: block;
+        text-align: left;
+        .rtl-layout &{
+            left: auto;
+            right: 10px;
+        }
+        .label-item{
+            text-transform: none;
+            border-radius: 0;
+            font-weight: normal;
+        }
+    }
+    .rating-summary{
+        .rating-result{
+            &:before{
+                content: '\f006' '\f006' '\f006' '\f006' '\f006';
+                color: @main_hover_text;
+            }
+            > span:before{
+                color: @main_hover_text;
+            }
+        }
+    }
+    .button-hover-wrap{
+        position: absolute;
+        left: auto;
+        right: 10px;
+        top: 10px;
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: .6s;
+        transform: translateY(-20px);
+        .rtl-layout &{
+            left: 10px;
+            right: auto;
+        }
+    }
+    .product-item:hover .button-hover-wrap{
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    .products.list.items {
+        .action.towishlist, .action.tocompare{
+            display: block;
+            position: relative;
+            color: @btn_primary_background;
+            &:after{
+                .abs-iconfont2("\E987", 15px);
+            }
+            &:hover:after{
+                
+            }
+            span {
+                font-size: 0;
+            }
+        }
+        .action.towishlist:after{
+            content: "\E987";
+        }
+        .action.tocompare:after{
+            content: "\E959";
+        }
+        .product-item-actions{
+            margin: 0px 0px 0px 0px;
+            white-space: nowrap;
+        }
+    }
+    .qs-button{
+        position: absolute;
+        top: ~'calc(50% - 19px)';
+        left: ~'calc(50% - 19px)';
+        z-index: 2;
+        visibility: hidden;
+        opacity: 0;
+        transition: .6s;
+        &:before{
+            .abs-iconfont2("\E982", 20px);
+        }
+    }
+    .product-item:hover .qs-button{
+         visibility: visible;
+         opacity: 1;
+    }
+    .product-item-details{
+        //background-color: @product_info_background;
+    }
+    .product-item-inner{
+        padding: 10px 10px;
+        margin: 0 0 20px 0;
+        margin-bottom: 0px;
+        text-align: center;
+    }
+    .product-item-name{
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 0 20px;
+        white-space: normal;
+        a.product-item-link {
+            font-weight: normal;
+            text-transform: none;
+            //font-size: 13.5px;
+        }
+    }
+    .product-item-sku{
+        font-size: 12px;
+        color: @main_text_normal;
+    }
+    .product-item-description{
+        font-size: 12px;
+        margin-top: 10px;
+        padding: 0px 10px;
+    }
+    .price-box{
+        text-align: center;
+        .old-price, .special-price{
+            float: none;
+            margin-right: 10px;
+        }
+    }
+    .product-item div[class^="swatch-opt-"]{
+        margin-top: 10px;
+    }
+    .product-reviews-summary {
+        .reviews-actions{
+            display: none;
+        }
+    }
+    .product-bottom{
+        padding: 10px 10px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        background-color: @product_info_background;
+    }
+    .product-item-actions{
+        text-align: left;
+        display: inline-block;
+        width: auto;
+        .actions-primary{
+            display: inline-block;
+        }
+        .actions-secondary{
+            display: inline-block;
+            width: auto;
+            vertical-align: middle;
+        }
+    }
+    @media @tablet_vertical{
+    .tocart.primary{
+        .small-button-style-01();
+        > span:before{
+            font-family: CodazonFont;
+            content: "\E9A6";
+            margin-right: 5px;
+        }
+    }    
+    }
+    //Effect
+    @media @tablet_vertical {
+        &.bottom-hovered-style{
+            .product-bottom{
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                opacity: 0;
+                transition: .6s;
+            }
+            .product-item-details{
+                position: relative;
+                transition: .6s;
+                z-index: 6;
+            }
+            .product-item:hover{
+                .product-item-details{
+                    background-color: #fff;
+                    transform: translateY(-50px);
+                }
+                .product-bottom{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .cdz-ajax-trigger {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-width: 1px;
+        font: @f_h5;
+        font-size: 15px;
+        font-weight: normal;
+    }
+    @media @phone{
+        .cdz-ajax-trigger {
+            font: @f_h6;
+            font-size: 13px;
+            border-width: 1px;
+        }
+        .trigger-wrap{
+            margin-top: 10px;
+        }
+        .product-item{
+            margin-bottom: 10px;
+        }
+        .actions-primary .tocart, .products.list.items .action.towishlist, .products.list.items .action.tocompare{
+            color: @btn_mobile_icon_text;
+            background-color: @btn_mobile_icon_background;
+            border-color: @btn_mobile_icon_border;
+            border-radius: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 28px;
+        }
+        .cdz-product-labels .label-item{
+            font-size: 11px;
+        }
+    }
+}

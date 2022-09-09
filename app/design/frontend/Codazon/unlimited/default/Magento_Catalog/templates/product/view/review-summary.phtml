@@ -1,0 +1,99 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\Catalog\Block\Product\AbstractProduct */ ?>
+
+<?php
+$_product = $block->getProduct();
+$summaryData = $_product->getRatingSummary();
+if (!is_object($summaryData)) {
+    $summaryData = $_product;
+}
+?>
+
+<?php if ($summaryData) : ?>
+
+<?php
+$storeId = $_product->getStoreId();
+$productId = $_product->getId();
+$ratingSummary = $summaryData->getRatingSummary() ? : 0;
+$reviewsCount = $summaryData->getReviewsCount();
+$collection = $_product->getCollection();
+$connection = $collection->getConnection();
+
+for($i = 1; $i <=5; $i++) {
+    $select = $connection->select()->from(['vote' => $connection->select()->from(['rov' => $collection->getTable('rating_option_vote')], ['rov.vote_id'])
+        ->joinLeft(['rv' => $collection->getTable('review')], 'rov.review_id = rv.review_id', [])
+        ->joinLeft(['rs' => $collection->getTable('review_store')], 'rv.review_id = rs.review_id', [])
+        ->joinLeft(['r' => $collection->getTable('review')], 'rov.review_id = r.review_id', [])
+        ->where('rov.value = '.$i)
+        ->where('r.status_id = 1')
+        ->where('rov.entity_pk_value = ' . $productId)
+        ->where('rs.store_id = ' . $storeId)
+        ->group('rov.vote_id')], 'count(*)');
+    $ratingGroups[$i] = (int)$connection->fetchOne($select);
+}
+$groupTotal = array_sum($ratingGroups);
+$reviewArray = [
+    'ratingGroups'  => $ratingGroups,
+    'ratingCount'   => $groupTotal,
+    'reviewsCount'  => $reviewsCount,
+    'productId'     => $productId,
+    'ratingSummary' => $ratingSummary
+];
+$widget = [
+    'themewidgets' => ['codazon.ratingSummary' => ['data' => $reviewArray]]
+];
+?>
+
+
+<div class="product-reviews-summary" data-options='<?= json_encode($widget) ?>' data-mage-init='<?= json_encode($widget) ?>'>
+    <div class="reviews-summary-top">
+        <div class="rating-point"><?= round($ratingSummary*5/100, 2) ?></div>
+        <div class="rating-summary">
+            <span class="label"><span><?= __('Rating:') ?></span></span>
+            <div class="rating-result" title="<?= $ratingSummary ?>%">
+            <span style="width: <?= $ratingSummary ?>%"><span><span><?= $ratingSummary ?></span>% of <span>100</span></span></span>
+            </div>
+         </div>
+        <div class="reviews-actions">
+            <a class="action view" href="#customer-reviews" data-scollto="#customer-reviews"><span><?= $reviewsCount ?></span> <span><?= __('Reviews') ?></span></a>
+        </div>
+    </div>
+    <div class="reviews-summary-bottom">
+        <div class="rating-groups">
+            <?php for ($star = 5; $star >=1; $star--) : ?>
+                <div class="group-item">
+                    <label><?= __('%1 star', $star) ?></label>
+                    <div class="value">
+                        <div class="mdl-progress is-upgraded"><div class="progressbar bar bar1" style="width: <?= ($groupTotal > 0)?$ratingGroups[$star]*100/$groupTotal:0 ?>%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+                    </div>
+                </div>
+            <?php endfor ?>
+        </div>
+    </div>
+</div>
+
+<script id="rating-summary-tmpl" type="text/x-magento-template">
+<div class="short-review-summary">
+    <div class="rating-groups">
+    <% _.each(data.ratingGroups, function(count, star) { %>
+    <div class="group-item">
+        <label><%- star %> <span class="start-icon"><?= __('star(s)') ?></span></label>
+        <div class="value">
+            <div class="mdl-progress is-upgraded"><div class="progressbar bar bar1" style="width: <%- (100*count/data.ratingCount) %>%;"></div><div class="bufferbar bar bar2" style="width: 100%;"></div><div class="auxbar bar bar3" style="width: 0%;"></div></div>
+            <div class="item-count"><%- count %></div>
+        </div>
+    </div>
+    <% }) %>
+    </div>
+    <a class="action view" href="#product-review-container" data-scollto="#product-review-container"><span><?= __('View all %1 reviews', $reviewsCount) ?></span></a>
+</div>
+</script>
+<?php endif ?>

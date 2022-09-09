@@ -1,0 +1,37 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$enableCategorySearch = $helper->getConfig('themelayoutpro/search_by_category/enable');
+$parentId = $helper->getConfig('themelayoutpro/search_by_category/category_parent_id');
+$maxDepth = $helper->getConfig('themelayoutpro/search_by_category/category_max_depth');
+$allCatText = __('All Categories');
+$dataSearch = [
+    'allCatText' => $allCatText,
+    'currentCat' => $this->getRequest()->getParam('cat')?:false
+];
+?>
+<?php if ($enableCategorySearch) : ?>
+<script type="x-magento-template" style="display:none" id="search-by-category-tmpl">
+	<div class="cdz-cat-search" data-role="container" data-search='<?= json_encode($dataSearch) ?>'>
+		<div class="inner">
+			<a href="javascript:;" class="current-cat" data-role="trigger"><span><?= $allCatText; ?></span></a>
+			<div class="category-chooser dropdown" data-role="dropdown">
+				<div class="dropdown-inner nice-scroll">
+					<ul class="category-list" data-role="category-list">
+						<li><a class="all-cat"><?php echo $allCatText; ?></a></li>
+						<?= $block->getChildBlock('category.search.list')->addData([
+                            'parent_id' => $parentId,
+                            'max_depth' => $maxDepth
+                        ])->toHtml() ?>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</script>
+<?php endif ?>

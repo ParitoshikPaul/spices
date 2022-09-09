@@ -1,0 +1,940 @@
+template_id,template_set_id,template_name,template_image,content
+1,1,"Products Style 01",product-01.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-01~~~>
+    <div class=~~~cdz-block-title~~~>
+    <p class=~~~b-title h2~~~><span>Products Style 01</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~7~~~ order_by=~~~price ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-01.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`152`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~4~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+2,1,"Products Style 02",product-02.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-02~~~>
+    <div class=~~~cdz-block-title~~~>
+    <p class=~~~b-title h2~~~><span>Products Style 02</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~7~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-01.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`64`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+3,1,"Products Style 03",product-03.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-03~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 03</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~7~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-02.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`64`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+4,1,"Products Style 04",product-04.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-04~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 04</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~12~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-03.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`63`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+5,1,"Products Style 05",product-05.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-05~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 05</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,sku,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-01.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`140`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~0~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~2.2~~~ items_0=~~~2.2~~~}}</div>
+    </div>
+</div>"
+6,1,"Products Style 06",product-06.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-06~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 06</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~14~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-04.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`140`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~7~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~5~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~2.2~~~ items_0=~~~2.2~~~}}</div>
+    </div>
+</div>"
+7,1,"Products Style 07",product-07.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-07~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 07</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~7~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-05.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`157`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~0~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~5~~~ items_980=~~~4.5~~~ items_768=~~~3.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+8,1,"Products Style 08",product-08.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-08~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 08</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~ data-grid=~~~1,2,2~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~price ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-06.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`231`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~40~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~3~~~ items_320=~~~2.5~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+9,1,"Products Style 09",product-09.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-09~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 09</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~ data-grid=~~~2,1,2~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id ASC~~~ show=~~~thumb,name,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-07.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`231`^]^]~~~ total_rows=~~~2~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~4~~~ items_480=~~~3~~~ items_320=~~~2.5~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+10,1,"Products Style 10",product-10.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-10~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~ data-grid=~~~1,3,3,3~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~price ASC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~200~~~ thumb_height=~~~200~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-09.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`64`^]^]~~~ total_rows=~~~2~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~6~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~1.5~~~}}</div>
+    </div>
+</div>"
+11,1,"Products Style 11",product-11.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-11~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 11</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~2~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~400~~~ thumb_height=~~~400~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-08.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`152`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~1~~~ ajax_load=~~~0~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~0~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+12,1,"Products Style 12",product-12.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-12~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 12</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~4~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~100~~~ thumb_height=~~~100~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-10.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`109, 110`^]^]~~~ products=~~~product/175/125~~~ total_rows=~~~1~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+13,1,"Products Style 13",product-13.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-13~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 13</span></p>
+        <p class=~~~title-desc~~~>For over a decade, Flight Club has changed the landscape of sneaker retail.</p>
+        <p class=~~~actions~~~><a class=~~~action btn primary~~~ href=~~~#~~~><span>All Products</span></a></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~price ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-11.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`239`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2.5~~~}}</div>
+    </div>
+</div>"
+14,1,"Products Style 14",product-14.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-13~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~6~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~400~~~ thumb_height=~~~400~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-12.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`239`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~3~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~30~~~ items_1900=~~~4~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div"
+15,1,"Products Style 15",product-15.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-14~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~320~~~ thumb_height=~~~409~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-13.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`244`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2.5~~~}}</div>
+    </div>
+</div>"
+16,1,"Products Style 16",product-16.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-15~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 16</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~3~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~120~~~ thumb_height=~~~160~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-14.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`240, 242, 243, 244`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2.5~~~}}</div>
+    </div>
+</div>"
+17,1,"Products Style 17",product-17.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-16~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h1~~~><span>Product Style 17</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~ data-grid=~~~2,1,2~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~400~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-16.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`396`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~1.5~~~}}</div>
+    </div>
+</div>"
+18,1,"Products Style 18",product-18.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-17~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h1~~~><span>Product Style 18</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~8~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~400~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-15.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`396`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+19,1,"Products Style 19",product-19.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-18~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Product Style 19</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+    <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,sku,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-17.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`140`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~4~~~ items_480=~~~3~~~ items_320=~~~2.5~~~ items_0=~~~2.5~~~}}</div>
+    </div>
+</div>"
+20,2,"Blog Style 01",blog-01.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style01~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 01</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~1,13~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~100~~~ date_format=~~~Y-m-d~~~ thumb_width=~~~260~~~ thumb_height=~~~160~~~ post_template=~~~post/widget/grid.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+21,2,"Blog Style 02",blog-02.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style02~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 02</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~6~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~100~~~ date_format=~~~Y-m-d~~~ thumb_width=~~~300~~~ thumb_height=~~~207~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-02.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~2~~~ items_1600=~~~2~~~ items_1420=~~~2~~~ items_1280=~~~2~~~ items_980=~~~2~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+22,2,"Blog Style 03",blog-03.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style03~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 03</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~16~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~500~~~ date_format=~~~F dS Y~~~ thumb_width=~~~500~~~ thumb_height=~~~600~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-03.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+23,2,"Blog Style 04",blog-04.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style04~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 04</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~1,2~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,publish_time,author,category~~~ desc_length=~~~40~~~ date_format=~~~Y-m-d~~~ thumb_width=~~~80~~~ thumb_height=~~~80~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-04.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+24,2,"Blog Style 05",blog-05.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style05~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 05</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~3,4,5,6~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~4~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~150~~~ date_format=~~~M d Y~~~ thumb_width=~~~420~~~ thumb_height=~~~280~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-05.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+25,2,"Blog Style 06",blog-06.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style06~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 06</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~1,2~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~4~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~70~~~ date_format=~~~F dS Y~~~ thumb_width=~~~100~~~ thumb_height=~~~100~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-06.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~1~~~ slider_nav=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+26,2,"Blog Style 07",blog-07.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style07~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 07</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~2~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~40~~~ date_format=~~~Y-m-d~~~ thumb_width=~~~269~~~ thumb_height=~~~350~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-05.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+27,2,"Blog Style 08",blog-08.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style08~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 08</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~16~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,publish_time,category~~~ desc_length=~~~150~~~ date_format=~~~M d Y~~~ thumb_width=~~~440~~~ thumb_height=~~~487~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-05.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~3.5~~~ items_480=~~~1.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+28,4,"Banner Style 01",banner-01.jpg,"<div class=~~~cdz-shadow shine-effect cdz-banner~~~><a title=~~~Your title~~~ href=~~~#~~~> <img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-03/img_01.jpg~~~}}~~~ width=~~~960~~~ height=~~~95~~~ alt=~~~Image 01~~~ /> </a></div>"
+29,4,"Banner Style 02",banner-02.jpg,"<div class=~~~banner-style02~~~>
+    <div class=~~~cdz-banner~~~>
+        <a title=~~~Your title~~~ href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-04/middle-banner-02.jpg~~~}}~~~ alt=~~~middle-banner-02~~~ width=~~~680~~~ height=~~~342~~~ /> </a>
+        <div class=~~~cdz-banner-text~~~>
+            <h1>Mens Accessories</h1>
+            <a class=~~~btn primary~~~ href=~~~#~~~>Shop now</a>
+        </div>
+    </div>
+</div>"
+30,4,"Banner Style 03",banner-03.jpg,"<div class=~~~row cdz-banner-wrap no-margin banner-style04~~~>
+    <div class=~~~cdz-banner~~~>
+        <div class=~~~banner-link top-right~~~><img class=~~~cdz-lazy~~~ width=~~~710~~~ height=~~~330~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-06/banner-02.jpg~~~}}~~~ alt=~~~The best sellers~~~ /> <a class=~~~title~~~ style=~~~font: 400 40px/1.35 Roboto, Helvetica Neue, Verdana, Arial, sans-serif; padding: 20px 35px; color: #ffffff;~~~ title=~~~The best sellers~~~ href=~~~#~~~>The best sellers</a></div>
+        <div class=~~~banner-link top-left~~~><img class=~~~cdz-lazy~~~ width=~~~710~~~ height=~~~330~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-06/banner-01.jpg~~~}}~~~ alt=~~~Lastest and Greatest~~~ /> <a class=~~~title~~~ style=~~~font: 400 40px/1.35 Roboto, Helvetica Neue, Verdana, Arial, sans-serif; padding: 20px 35px; color: #ffffff;~~~ title=~~~Lastest and Greatest~~~ href=~~~#~~~>Lastest & Greatest</a></div>
+    </div>
+</div>"
+31,1,"Products Style 20",product-20.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-20~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 20</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~8~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-19.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`411`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~3.5~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~2~~~}}</div>
+    </div>
+</div>"
+32,1,"Products Style 21",product-21.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-21~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Products Style 21</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~4~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~100~~~ thumb_height=~~~100~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-20.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`328`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+33,2,"Blog Style 09",blog-09.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style09 text-center~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Blog Style 09</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~10~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content~~~ desc_length=~~~90~~~ date_format=~~~M d Y~~~ thumb_width=~~~300~~~ thumb_height=~~~225~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-05.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3.5~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+34,3,"Brand Style 01",brand-01.jpg,"<div class=~~~cdz-wrap base-slider brand-style01~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Our brands</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\Shopbybrandpro\Block\Widget\BrandSlider~~~ list_style=~~~widget/brand_slider.phtml~~~ collection=~~~all_brands~~~ alphabet_table=~~~a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z~~~ order_by=~~~brand_label~~~ order_way=~~~asc~~~ thumb_width=~~~220~~~ thumb_height=~~~150~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_loop=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~7~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~6~~~ items_768=~~~5~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+</div>"
+35,3,"Brand Style 02",brand-02.jpg,"<div class=~~~cdz-wrap base-slider brand-style01~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Top brands</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\Shopbybrandpro\Block\Widget\BrandSlider~~~ list_style=~~~widget/brand_slider.phtml~~~ collection=~~~all_brands~~~ alphabet_table=~~~a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z~~~ items_per_column=~~~2~~~ order_by=~~~brand_label~~~ order_way=~~~asc~~~ thumb_width=~~~220~~~ thumb_height=~~~150~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_loop=~~~0~~~ slider_margin=~~~0~~~ items_1900=~~~7~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~6.5~~~ items_768=~~~5.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2~~~}}</div>
+</div>"
+36,3,"Brand Style 03",brand-03.jpg,"<div class=~~~cdz-wrap base-slider brand-style03~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Our Brands</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\Shopbybrandpro\Block\Widget\BrandSlider~~~ list_style=~~~widget/brand_slider.phtml~~~ collection=~~~all_brands~~~ alphabet_table=~~~a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z~~~ order_by=~~~brand_label~~~ order_way=~~~asc~~~ thumb_width=~~~220~~~ thumb_height=~~~150~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_loop=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~7~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~6~~~ items_768=~~~4.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~2.5~~~}}</div>
+</div>"
+37,4,"Banner Style 04",banner-04.jpg,"<div class=~~~banner-style05~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ width=~~~439~~~ height=~~~540~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-07/img-05.jpg~~~}}~~~ alt=~~~For you~~~ /></a>
+        <div class=~~~desc~~~>
+            <p class=~~~sub-title text-uppercase~~~>Cologne & Fragrance</p>
+            <p class=~~~h1 text-uppercase~~~>For you + Your one and only</p>
+        </div>
+    </div>
+</div>"
+38,4,"Banner Style 05",banner-05.jpg,"<div class=~~~banner-style06~~~>
+    <div class=~~~cdz-banner scale-effect space-md~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ width=~~~700~~~ height=~~~200~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-09/img-01.jpg~~~}}~~~ alt=~~~~~~ /></a>
+        <div class=~~~cdz-banner-desc~~~>
+            <div class=~~~desc~~~>Vitamins &amp; Supplements</div>
+        </div>
+    </div>
+</div>"
+39,4,"Banner Style 06",banner-06.jpg,"<div class=~~~banner-style07~~~>
+    <div class=~~~cdz-banner~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-11/img-02.jpg~~~}}~~~ alt=~~~~~~ /></a>
+        <div class=~~~item-content~~~>
+            <div class=~~~banner-content~~~>
+                <div class=~~~bc-title text-uppercase~~~><span>Free Shipping</span></div>
+                <div class=~~~bc-desc~~~><span>on orders over $75 </span></div>
+            </div>
+        </div>
+    </div>
+</div>"
+40,4,"Banner Style 07",banner-07.jpg,"<div class=~~~banner-style09~~~>
+    <div class=~~~border-zoom-effect cdz-banner~~~><a title=~~~Work &amp; Safaty~~~ href=~~~#~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-06/img-02.jpg~~~}}~~~ alt=~~~Work &amp; Safaty~~~ /></a></div>
+</div>"
+41,5,Twitter,twitter-01.jpg,"<div class=~~~twitter-feeds-wrap cdz-block~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Twitter</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\TwitterFeeds~~~ page_url=~~~https://www.facebook.com/facebook~~~ hide_cover=~~~0~~~ show_facepile=~~~1~~~ user_name=~~~twitter~~~ limit=~~~3~~~ date_format=~~~D m, Y~~~}}</div>
+</div>"
+42,5,Facebook,facebook-01.jpg,"<div class=~~~facebook-feeds-wrap cdz-block~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>Facebook</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        {{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\FacebookFeeds~~~ show_facepile=~~~1~~~ hide_cover=~~~0~~~ page_url=~~~https://www.facebook.com/facebook~~~}}
+    </div>
+</div>"
+43,5,"Instagram Style 01",instagram-01.jpg,"<div class=~~~base-slider instagram-style01~~~>
+    <div class=~~~instagram-wrapper~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\Instagramphotos~~~ user_id=~~~3893338542~~~ custom_template=~~~widget/instagramphotos/grid.phtml~~~ max_items=~~~12~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_loop=~~~1~~~ slider_margin=~~~3~~~ stage_padding=~~~50~~~ items_1900=~~~10~~~ items_1600=~~~9~~~ items_1420=~~~9~~~ items_1280=~~~8~~~ items_980=~~~6~~~ items_768=~~~4~~~ items_480=~~~3~~~ items_320=~~~2.5~~~ items_0=~~~2~~~}}</div>
+</div>"
+44,5,"Instagram Style 02",instagram-02.jpg,"<div class=~~~instagram-wrapper cdz-block base-slider instagram-style02~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span>#Follow us on Instagram</span></p>
+        <p class=~~~title-desc~~~><span>This is your UO: your favourite looks, spaces, music and more. Share your our pics for a change to be featured</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\Instagramphotos~~~ user_id=~~~3893338542~~~ custom_template=~~~widget/instagramphotos/grid.phtml~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_loop=~~~0~~~ total_rows=~~~2~~~ max_items=~~~10~~~ slider_margin=~~~10~~~ stage_padding=~~~0~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~5~~~ items_768=~~~4.5~~~ items_480=~~~3.5~~~ items_320=~~~2.5~~~ items_0=~~~1.5~~~}}</div>
+</div>"
+45,4,"Banner Style 08",banner-08.jpg,"<div class=~~~service-banner-style01 row~~~>
+    <div class=~~~item col-xs-12 col-sm-6~~~>
+        <div class=~~~item-icon fa fa-truck~~~></div>
+        <div class=~~~item-content~~~>
+            <a href=~~~#~~~><strong>Free Shipping</strong></a>
+            <p>On every order, every day!</p>
+        </div>
+    </div>
+    <div class=~~~item col-xs-12 col-sm-6~~~>
+        <div class=~~~item-icon fa fa-lock~~~></div>
+        <div class=~~~item-content~~~>
+            <a href=~~~#~~~><strong>Secure Payment</strong></a>
+            <p>We value your security</p>
+        </div>
+    </div>
+    <div class=~~~item col-xs-12 col-sm-6~~~>
+        <div class=~~~item-icon fa fa-money~~~></div>
+        <div class=~~~item-content~~~>
+            <a href=~~~#~~~><strong>Money Back Guarantee</strong></a>
+            <p>30 days money back guarantee</p>
+        </div>
+    </div>
+    <div class=~~~item col-xs-12 col-sm-6~~~>
+        <div class=~~~item-icon fa fa-phone~~~></div>
+        <div class=~~~item-content~~~>
+            <a href=~~~#~~~><strong>24/7 Customer Service</strong></a>
+            <p>Support number (0123) 123 456</p>
+        </div>
+    </div>
+</div>"
+46,1,"Products Style 22",product-22.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-23~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Products Style 22</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-21.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`418`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~30~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+47,1,"Products Style 23",product-23.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-23 mb-stage-padding-5~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Products Style 23</p>
+        <p class=~~~title-desc~~~>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-22.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`397`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~30~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+48,1,"Products Style 24",product-24.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-24 bottom-hovered-style mb-stage-padding-5~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Products Style 24</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-23.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`133, 134, 135, 136`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~30~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+49,1,"Products Style 25",product-25.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-24 bottom-hovered-style~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Products Style 25</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-24.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`133, 134, 135, 136`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~30~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+50,2,"Blog Style 10",blog-10.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style11 mb-stage-padding-20~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Recent Posts</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~26~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content,publish_time,category~~~ desc_length=~~~90~~~ date_format=~~~M d Y~~~ thumb_width=~~~330~~~ thumb_height=~~~203~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-08.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+51,4,"Banner Style 09",banner-09.jpg,"<div class=~~~service-banner-style03~~~>
+    <div class=~~~row~~~>
+        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+            <div class=~~~item-icon~~~><span class=~~~fa-tags fa~~~>&nbsp;</span></div>
+            <div class=~~~item-text~~~>
+                <p class=~~~item-title~~~>850+ brands</p>
+                <p class=~~~item-sub-title~~~>Highest Quality</p>
+            </div>
+        </div>
+        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+            <div class=~~~item-icon~~~><span class=~~~fa-plane fa~~~>&nbsp;</span></div>
+            <div class=~~~item-text~~~>
+                <p class=~~~item-title~~~>Free Shipping</p>
+                <p class=~~~item-sub-title~~~>Delivery within 2 days</p>
+            </div>
+        </div>
+        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+            <div class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></div>
+            <div class=~~~item-text~~~>
+                <p class=~~~item-title~~~>Customer Service</p>
+                <p class=~~~item-sub-title~~~>Mail &amp; Telephone</p>
+            </div>
+        </div>
+        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+            <div class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></div>
+            <div class=~~~item-text~~~>
+                <p class=~~~item-title~~~>100% Secured Payment</p>
+                <p class=~~~item-sub-title~~~>We value your security</p>
+            </div>
+        </div>
+    </div>
+</div>"
+52,4,"Banner Style 10",banner-10.jpg,"<div class=~~~banner-style09 text-white shine-effect cdz-banner~~~>
+    <div class=~~~bn-img~~~>
+        <img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-13/img-03.jpg~~~}}~~~ alt=~~~~~~ width=~~~1600~~~ height=~~~250~~~>
+    </div>
+    <div class=~~~bn-info pos-left~~~>
+        <div class=~~~bn-title~~~>Welcome to Motoworld</div>
+        <div class=~~~bn-desc~~~>
+            A sports bike in its purest form, reduced to the essentials-agile, fast, and extremely sporty. Whether you are on country roads or the racetrack, the Moto3 genes are perceptible in every manoeuvre and convey a pure race feeling.
+        </div>
+        <div class=~~~bn-actions~~~>
+            <a class=~~~button action secondary~~~ href=~~~{{store direct_url=~~~motorcycle.html~~~}}~~~>View All Models</a>
+        </div>
+    </div>
+    <a class=~~~abs-fullbox~~~ title=~~~About us~~~ href=~~~{{store direct_url=~~~motorcycle.html~~~}}~~~>&nbsp;</a>
+</div>"
+53,1,"Products Style 26",product-26.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-25 mb-stage-padding-5~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Product Style 26</span></p>
+        <p class=~~~title-desc~~~>We provide various accessories and maintenance equipment.</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-25.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`419`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+54,1,"Products Style 27",product-27.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-25 bottom-hovered-style~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Product Style 27</span></p>
+        <p class=~~~title-desc~~~>We provide various accessories and maintenance equipment.</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-25.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`421`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+55,6,"Lookbook Style 01",lookbook-01.jpg,"<div class=~~~base-slider looks-style-01~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Trending Models</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\Lookbookpro\Block\Widget\FeaturedLooks~~~ width=~~~1400~~~ look_ids=~~~62,63~~~ product_image_width=~~~300~~~ product_image_height=~~~300~~~ product_width=~~~200~~~ slider_dots=~~~1~~~ slider_nav=~~~1~~~ items_1900=~~~1~~~ slider_margin=~~~0~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+56,2,"Blog Style 11",blog-11.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style12~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Motorcyle World</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~27~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content,publish_time,category~~~ desc_length=~~~150~~~ date_format=~~~M d Y~~~ thumb_width=~~~440~~~ thumb_height=~~~330~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-09.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~3.5~~~ items_480=~~~1.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+57,2,"Blog Style 12",blog-12.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style13 mb-stage-padding-10~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>From Our Blog</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~23,24,25~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,category~~~ desc_length=~~~100~~~ date_format=~~~M d Y~~~ thumb_width=~~~327~~~ thumb_height=~~~218~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-09.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+58,4,"Banner Style 11",banner-11.jpg,"<div class=~~~banner-style10 text-black space-base~~~>
+    <div class=~~~cdz-banner shine-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-14/img-01.jpg~~~}}~~~ alt=~~~~~~ width=~~~680~~~ height=~~~680~~~></a>
+        <div class=~~~item-content~~~>
+            <div class=~~~banner-content~~~>
+                <div class=~~~bc-title~~~>Head phones</div>
+                <div class=~~~bc-desc~~~>Our selection of premium headphones to enjoy your favorite playlist with incredible sound.</div>
+                <div class=~~~bc-actions~~~><a class=~~~bc-btn~~~ href=~~~#~~~>Shop now</a></div>
+            </div>
+        </div>
+    </div>
+</div>"
+59,1,"Products Style 28",product-28.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-26 countdown-style-01 black-countdown box-style-01 mb-stage-padding-5~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>New arrivals</span></p>
+        <p class=~~~actions~~~><a class=~~~action view-more~~~ href=~~~{{store direct_url=~~~technology.html~~~}}~~~>View all</a></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~14~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-26.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`152`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~0~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~4~~~ items_480=~~~2~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+60,1,"Products Style 29",product-29.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-27 countdown-style-01 black-countdown~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>Top Trending</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~4~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~100~~~ thumb_height=~~~100~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-27.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`137`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+61,2,"Blog Style 13",blog-13.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style15 box-style-02~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Latest Posts</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~16~~~ order_by=~~~title~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time~~~ desc_length=~~~150~~~ date_format=~~~F dS Y~~~ thumb_width=~~~430~~~ thumb_height=~~~477~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-10.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~2~~~ items_1600=~~~2~~~ items_1420=~~~2~~~ items_1280=~~~2~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+62,4,"Banner Style 12",banner-12.jpg,"<div class=~~~banner-style11~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ width=~~~505~~~ height=~~~660~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-15/img-01.jpg~~~}}~~~ alt=~~~For you~~~ /></a>
+        <div class=~~~item-content~~~>
+            <div class=~~~bc-desc expanded~~~>Limited Edition</div>
+            <div class=~~~bc-title~~~>Black Cherry</div>
+            <div class=~~~bc-actions~~~>
+                <a href=~~~#~~~ class=~~~bc-btn~~~>Shop now</a>
+            </div>
+        </div>
+    </div>
+</div>"
+63,1,"Products Style 30",product-30.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-28 box-style-02 mb-stage-padding-10~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>New Products</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~ data-grid=~~~2,1,2~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~397~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-28.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`2`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+64,1,"Products Style 31",product-31.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-29 box-style-02~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>New Products</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~12~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,description,review,price,addtocart,wishlist,compare,quickshop~~~ thumb_width=~~~350~~~ thumb_height=~~~428~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-29.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`2`^]^]~~~ total_rows=~~~4~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+65,4,"Banner Style 13",banner-13.jpg,"<div class=~~~banner-style11 space-base~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-15/img-02.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~505~~~ height=~~~320~~~></a>
+        <div class=~~~item-content text-left~~~>
+            <div class=~~~bc-desc~~~>Lowest Prices</div>
+            <div class=~~~bc-title~~~>Best Offers</div>
+            <div class=~~~bc-actions~~~>
+                <a href=~~~#~~~ class=~~~bc-btn~~~>Shop now</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=~~~banner-style11~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-15/img-03.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~505~~~ height=~~~320~~~></a>
+        <div class=~~~item-content text-right~~~>
+            <div class=~~~bc-desc~~~>Camo CC Cream</div>
+            <div class=~~~bc-title~~~>New Items</div>
+            <div class=~~~bc-actions~~~>
+                <a href=~~~#~~~ class=~~~bc-btn~~~>Shop now</a>
+            </div>
+        </div>
+    </div>
+</div>"
+66,1,"Products Style 32",product-32.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-30 bottom-hovered-style mb-stage-padding-5 text-center~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>FEATURED PRODUCTS</span></p>
+        <p class=~~~title-desc~~~>Recommended for You</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~8~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~350~~~ thumb_height=~~~473~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-30.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`467`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+67,4,"Banner Style 14",banner-14.jpg,"<div class=~~~banner-style12~~~>
+    <div class=~~~item-content~~~>
+        <div class=~~~bc-title expanded~~~>ABOUT US</div>
+        <div class=~~~bc-desc~~~>The first bag was created in 1873 as durable accessory fit for everyday use, for hardworking Americans. It was originally used by factory workers, farmers and miners...</div>
+        <div class=~~~bc-actions~~~>
+            <a href=~~~#~~~ class=~~~bc-btn~~~>View more</a>
+        </div>
+    </div>
+</div>"
+68,2,"Blog Style 14",blog-14.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style16~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~><span>RECENT POSTS</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~29~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~5~~~ show_in_front=~~~featured_img,title,publish_time,author,category~~~ desc_length=~~~150~~~ date_format=~~~M d Y~~~ thumb_width=~~~300~~~ thumb_height=~~~225~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-11.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~4~~~ items_980=~~~3.5~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+69,4,"Banner Style 15",banner-15.jpg,"<div class=~~~banner-style13~~~>
+    <div class=~~~cdz-banner~~~>
+        <a title=~~~Your title~~~ href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-18/banner02.jpg~~~}}~~~ alt=~~~Image 02~~~ width=~~~600~~~ height=~~~600~~~ /> </a>
+        <div class=~~~item-content~~~>
+            <div class=~~~bc-title~~~>Autumn</div>
+            <div class=~~~bc-subtitle~~~>Collection</div>
+            <a class=~~~bc-btn~~~ href=~~~#~~~>Shop now</a>
+        </div>
+    </div>
+</div>"
+70,4,"Banner Style 16",banner-16.jpg,"<div class=~~~banner-style14~~~>
+    <div class=~~~item-content text-end~~~>
+        <div class=~~~bc-subtitle text-uppercase~~~>Discover the pieces to wear between seasons</div>
+        <div class=~~~bc-title expanded text-uppercase~~~>The look of now</div>
+        <div class=~~~bc-desc~~~>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Integer interdum sem ac magna. Integer in lectus sed ligula commodo commodo. In molestie.</div>
+        <div class=~~~bc-actions~~~>
+            <a href=~~~#~~~ class=~~~bc-btn~~~>View more</a>
+        </div>
+    </div>
+</div>"
+71,4,"Banner Style 17",banner-17.jpg,"<div class=~~~service-banner-style05 row~~~>
+    <div class=~~~item col-xs-24 col-sm-8~~~>
+        <div class=~~~item-icon pe-7s-car~~~></div>
+        <div class=~~~item-content~~~>
+            <h5>FREE SHIPPING ALL</h5>
+        </div>
+    </div>
+    <div class=~~~item col-xs-24 col-sm-8~~~>
+        <div class=~~~item-icon pe-7s-global~~~></div>
+        <div class=~~~item-content~~~>
+            <h5>FASHION AT YOUR FINGERTIPS</h5>
+        </div>
+    </div>
+    <div class=~~~item col-xs-24 col-sm-8~~~>
+        <div class=~~~item-icon pe-7s-timer~~~></div>
+        <div class=~~~item-content~~~>
+            <h5>SUPPORT CUSTOMERS 24/7</h5>
+        </div>
+    </div>
+</div>"
+72,1,"Products Style 33",product-33.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-31 mb-stage-padding-10~~~>
+    <div class=~~~cdz-block-title large-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>New Products</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~330~~~ thumb_height=~~~422~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-31.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`240`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+73,1,"Products Style 34",product-34.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-32~~~>
+    <div class=~~~cdz-block-title text-start~~~>
+        <p class=~~~b-title h2~~~>Best Selling</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~4~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,description,review,price,addtocart,wishlist,compare,quickshop~~~ thumb_width=~~~200~~~ thumb_height=~~~256~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-32.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`243, 393`^]^]~~~ total_rows=~~~4~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+74,2,"Blog Style 15",blog-15.jpg,"<div class=~~~base-slider post-list-style17~~~>
+    <div class=~~~cdz-block-title large-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>From Our Blog</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~29~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~8~~~ show_in_front=~~~featured_img,title,short_content,publish_time,category~~~ desc_length=~~~100~~~ date_format=~~~Y-m-d~~~ thumb_width=~~~450~~~ thumb_height=~~~338~~~ post_template=~~~post/widget/grid.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+75,6,"Lookbook Style 02",lookbook-02.jpg,"<div class=~~~base-slider looks-style-02~~~>
+    <div class=~~~cdz-block-title large-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Our Looks</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\Lookbookpro\Block\Widget\FeaturedLooks~~~ width=~~~1400~~~ look_ids=~~~18,16,17,15,19,20~~~ product_image_width=~~~200~~~ product_image_height=~~~256~~~ product_width=~~~200~~~ slider_dots=~~~1~~~ slider_nav=~~~1~~~ items_1900=~~~1~~~ slider_margin=~~~10~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+76,1,"Products Style 35",product-35.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-33~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h1~~~>New in this season</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ main_opt_id=~~~main-content-style20||widget_1~~~ display_type=~~~all_products~~~ products_count=~~~8~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~350~~~ thumb_height=~~~350~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-33.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`2`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+77,1,"Products Style 36",product-36.jpg,"<div class=~~~cdz-product-wrap countdown-style-01 base-slider product-list-style-34~~~>
+    <div class=~~~cdz-block-title large-title text-center~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~>Best Deals of The Week</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~18~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~180~~~ thumb_height=~~~180~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-34.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`477`^]^]~~~ total_rows=~~~2~~~ total_cols=~~~3~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~1~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~0~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~2~~~ items_980=~~~2~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+78,1,"Products Style 37",product-37.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-35 mb-stage-padding-5~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ main_opt_id=~~~main-content-style23||widget_1~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~300~~~ thumb_height=~~~300~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-35.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`477`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~30~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+79,1,"Products Style 38",product-38.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-36 mb-stage-padding-10~~~>
+    <div class=~~~cdz-block-title large-title~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner~~~><span class=~~~drop-cap~~~>B</span>ook of the month</span></p>
+        <p class=~~~actions~~~><a class=~~~action view-more~~~ href=~~~#~~~>View all</a></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-36.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`478`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~5~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~5~~~ items_768=~~~4~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+80,1,"Products Style 39",product-39.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-38~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2 text-center~~~><span class=~~~inner~~~>New products</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~  products_count=~~~14~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~270~~~ thumb_height=~~~270~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-38.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`120, 125, 137, 325`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~5~~~ items_980=~~~4.3~~~ items_768=~~~3.3~~~ items_480=~~~2.3~~~ items_320=~~~2.3~~~ items_0=~~~1.3~~~}}</div>
+    </div>
+</div>"
+81,1,"Products Style 40",product-40.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-39 box-style-04~~~>
+    <div class=~~~cdz-block-title~~~ style=~~~background:#4fbbcf;color: #ffffff;~~~>
+        <p class=~~~b-title h2~~~><span class=~~~inner ic-title fa fa-stethoscope~~~>Healthcare</span></p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~  products_count=~~~9~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~150~~~ thumb_height=~~~150~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-39.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`397`^]^]~~~ total_rows=~~~3~~~ total_cols=~~~1~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~0~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+    </div>
+</div>"
+82,7,"Countdown 1",countdown-01.jpg,"<div class=~~~cdz-timer-01 js-detail-container~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~06/22/2021  1:52:16 PM~~~ end_date=~~~11/23/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}</div>"
+83,7,"Countdown 2",countdown-02.jpg,"<div class=~~~cdz-timer-01 has-ic js-detail-container~~~>
+    <div class=~~~cdz-flash-icon fa fa-flash ic-timer~~~><span class=~~~inner~~~>flash icon</span></div>
+    {{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~06/22/2021  1:52:16 PM~~~ end_date=~~~11/23/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}
+</div>"
+84,7,"Countdown 3",countdown-03.jpg,"<div class=~~~cdz-timer-02 js-detail-container~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~06/22/2021 1:52:16 PM~~~ end_date=~~~11/23/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}</div>"
+85,1,"Products Style 41",product-41.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-41 countdown-style-02~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>New Arrivals</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~6~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-41.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`389`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~2~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~2~~~ items_0=~~~1~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+86,1,"Products Style 42",product-42.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-42 countdown-style-02~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~3~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,sku,description,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~325~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-42.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`389`^],`1--2`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`special_price`,`operator`:`^)`,`value`:`0`^],`1--3`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`special_to_date`,`operator`:`^(=`,`value`:`2024-01-31`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~2~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~0~~~ items_1900=~~~1~~~ items_1600=~~~1~~~ items_1420=~~~1~~~ items_1280=~~~1~~~ items_980=~~~1~~~ items_768=~~~1~~~ items_480=~~~1~~~ items_320=~~~1~~~ items_0=~~~1~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+87,1,"Products Style 43",product-43.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-43~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h1~~~>Popular Products</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~8~~~ order_by=~~~entity_id ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~320~~~ thumb_height=~~~409~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-15.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`487`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+88,1,"Products Style 45",product-45.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-45~~~>
+    <div class=~~~cdz-block-title clearfix~~~>
+        <div class=~~~cdz-block-title-left~~~>
+            <p class=~~~b-title h2~~~>Diabetic Care Products</p>
+        </div>
+        <div class=~~~cdz-block-title-right~~~><a class=~~~action view-more~~~ href=~~~#~~~>View all</a></div>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~7~~~ order_by=~~~name DESC~~~ show=~~~thumb,name,sku,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~280~~~ thumb_height=~~~280~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-11.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`397`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~0~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~2.2~~~ items_320=~~~2.2~~~ items_0=~~~2.2~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+89,4,"Banner Style 18",banner-18.jpg,"<div class=~~~row~~~>
+    <div class=~~~col-sm-14~~~>
+        <div class=~~~banner-style15 space-base~~~>
+            <div class=~~~cdz-banner scale-effect~~~>
+                <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-26/banner04.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~800~~~ height=~~~382~~~></a>
+                <div class=~~~item-content item-middle-left~~~>
+                    <div class=~~~item-content-box~~~>
+                        <div class=~~~bc-desc~~~>Lowest Prices</div>
+                        <div class=~~~bc-title~~~>Big Sale 15% Off</div>
+                        <div class=~~~bc-actions~~~><a class=~~~action btn primary~~~ href=~~~#~~~>Shop now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=~~~col-sm-10~~~>
+        <div class=~~~banner-style15 space-base~~~>
+            <div class=~~~cdz-banner scale-effect~~~>
+                <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-26/banner02.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~600~~~ height=~~~406~~~></a>
+                <div class=~~~item-content item-middle-right~~~>
+                    <div class=~~~item-content-box~~~>
+                        <div class=~~~bc-title~~~>Decoration</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class=~~~row~~~>
+    <div class=~~~col-sm-10~~~>
+        <div class=~~~banner-style15 space-base~~~>
+            <div class=~~~cdz-banner scale-effect~~~>
+                <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-26/banner03.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~600~~~ height=~~~406~~~></a>
+                <div class=~~~item-content item-middle-right~~~>
+                    <div class=~~~item-content-box~~~>
+                        <div class=~~~bc-title~~~>Living Room</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class=~~~col-sm-14~~~>
+        <div class=~~~banner-style15 space-base~~~>
+            <div class=~~~cdz-banner scale-effect~~~>
+                <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-26/banner01.jpg~~~}}~~~ alt=~~~For you~~~ width=~~~800~~~ height=~~~382~~~></a>
+                <div class=~~~item-content item-middle-right~~~>
+                    <div class=~~~item-content-box~~~>
+                        <div class=~~~bc-title~~~>Bathroom</div>
+                        <div class=~~~bc-actions~~~><a class=~~~action btn primary~~~ href=~~~#~~~>Shop now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+90,4,"Banner Style 19",banner-19.jpg,"<div class=~~~banner-style16~~~>
+    <div class=~~~cdz-banner~~~>
+        <a title=~~~Your title~~~ href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-27/banner05.jpg~~~}}~~~ alt=~~~middle-banner-02~~~ width=~~~2000~~~ height=~~~1033~~~ /> </a>
+        <div class=~~~cdz-banner-text~~~>
+            <div class=~~~item-content~~~>
+                <div class=~~~bc-subtitle text-uppercase h5~~~>Today's Deals</div>
+                <div class=~~~bc-title expanded text-uppercase h1~~~>Trending Collection</div>
+                <div class=~~~cdz-timer-02 js-detail-container space-base~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~06/22/2021 1:52:16 PM~~~ end_date=~~~11/23/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}</div>
+                <div class=~~~bc-desc space-base~~~>Up to 75% off clothing, shoes, handbags, fragrance, beauty. Choose perfect style clothes for your today</div>
+                <div class=~~~bc-actions~~~>
+                    <a href=~~~#~~~ class=~~~bc-btn btn primary~~~>Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+91,2,"Blog Style 16",blog-16.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style18~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>Stay Informed @Infinit</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~34~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content,publish_time~~~ desc_length=~~~100~~~ date_format=~~~M d Y~~~ thumb_width=~~~450~~~ thumb_height=~~~293~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-12.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2.5~~~ items_768=~~~2.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+92,2,"Blog Style 17",blog-17.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style20~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>Stay Informed @Infinit</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~29~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author~~~ desc_length=~~~100~~~ date_format=~~~M d Y~~~ thumb_width=~~~450~~~ thumb_height=~~~338~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-12.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2.5~~~ items_768=~~~2.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+93,2,"Blog Style 18",blog-18.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style22~~~>
+    <div class=~~~cdz-block-title clearfix~~~>
+        <div class=~~~cdz-block-title-left~~~>
+            <p class=~~~b-title h2~~~>Recent Posts</p>
+        </div>
+        <div class=~~~cdz-block-title-right~~~><a class=~~~action view-more~~~ href=~~~#~~~>View all</a></div>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~22~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~5~~~ show_in_front=~~~featured_img,title,publish_time~~~ desc_length=~~~150~~~ date_format=~~~M d Y~~~ thumb_width=~~~446~~~ thumb_height=~~~308~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-05.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~3~~~ items_980=~~~3~~~ items_768=~~~3~~~ items_480=~~~2~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+94,7,"Countdown 4",countdown-04.jpg,"<div class=~~~cdz-timer-03 has-ic js-detail-container cdz-block-title-right~~~>
+    <div class=~~~cdz-flash-icon fa fa-flash ic-timer~~~><span class=~~~inner~~~>flash icon</span></div>
+    {{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~06/22/2021  1:52:16 PM~~~ end_date=~~~11/23/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}
+</div>"
+95,1,"Products Style 46",product-46.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-37  box-cate-style04~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>Top offers this week</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~  products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~150~~~ thumb_height=~~~150~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-37.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`398`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~20~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1.5~~~}}</div>
+    </div>
+</div>"
+96,1,"Products Style 47",product-47.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-40~~~>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~  products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~150~~~ thumb_height=~~~150~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-17.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`408`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3~~~ items_768=~~~2.2~~~ items_480=~~~1.7~~~ items_320=~~~1.7~~~ items_0=~~~1.3~~~}}</div>
+    </div>
+</div>"
+97,1,"Products Style 48",product-48.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-44~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>New Product</p>
+        <p class=~~~title-desc~~~>Maintaining beautifully glowing and clear skin all year round</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~10~~~ order_by=~~~entity_id DESC~~~ show=~~~thumb,name,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~325~~~ thumb_height=~~~397~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-44.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`418`^]^]~~~ total_rows=~~~2~~~ total_cols=~~~4~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_margin=~~~30~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~1~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+98,1,"Products Style 49",product-49.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-46~~~>
+    <div class=~~~cdz-block-heading row~~~>
+        <div class=~~~cdz-block-title col-sm-12 text-right~~~>
+            <p class=~~~b-title h2~~~>Special Offers <span>of the week!</span></p>
+            <p class=~~~title-desc~~~><span>Ut placerat, magna quis porttitor vulputate, magna nunc auctor ante.</span></p>
+        </div>
+        <div class=~~~cdz-timer-04 has-ic js-detail-container col-sm-12~~~>
+            {{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~11/24/2021  1:52:16 PM~~~ end_date=~~~10/24/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}
+        </div>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~  products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~150~~~ thumb_height=~~~150~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-37.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`398`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~10~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~4.5~~~ items_768=~~~3.5~~~ items_480=~~~3.3~~~ items_320=~~~2.3~~~ items_0=~~~1.5~~~}}</div>
+    </div>
+</div>"
+99,1,"Products Style 50",product-50.jpg,"<div class=~~~cdz-product-wrap base-slider product-list-style-47~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>New arrivals</p>
+        <p class=~~~title-desc~~~>Ut placerat, magna quis porttitor vulputate, magna nunc auctor ante.</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>
+        <div class=~~~cdz-product~~~>{{widget type=~~~Codazon\ProductFilter\Block\Product\ProductsList~~~ display_type=~~~all_products~~~ products_count=~~~14~~~ order_by=~~~name ASC~~~ show=~~~thumb,name,review,price,addtocart,wishlist,compare,quickshop,label~~~ thumb_width=~~~150~~~ thumb_height=~~~150~~~ filter_template=~~~custom~~~ custom_template=~~~grid-style-37.phtml~~~ conditions_encoded=~~~^[`1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Combine`,`aggregator`:`all`,`value`:`1`,`new_child`:``^],`1--1`:^[`type`:`Magento||CatalogWidget||Model||Rule||Condition||Product`,`attribute`:`category_ids`,`operator`:`==`,`value`:`401`^]^]~~~ total_rows=~~~1~~~ total_cols=~~~5~~~ ajax_load=~~~1~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_autoplay=~~~0~~~ slider_autoplay_timeout=~~~5000~~~ slider_margin=~~~10~~~ items_1900=~~~6~~~ items_1600=~~~6~~~ items_1420=~~~6~~~ items_1280=~~~6~~~ items_980=~~~4.5~~~ items_768=~~~3.5~~~ items_480=~~~3.3~~~ items_320=~~~2.3~~~ items_0=~~~1.5~~~ disable_lazyimg=~~~0~~~}}</div>
+    </div>
+</div>"
+100,2,"Blog Style 19",blog-19.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style19~~~>
+    <div class=~~~cdz-block-title~~~>
+        <p class=~~~b-title h2~~~>RECENT POSTS</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ categories=~~~21~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~5~~~ show_in_front=~~~featured_img,title,short_content,publish_time,author,category~~~ desc_length=~~~140~~~ date_format=~~~M d Y~~~ thumb_width=~~~446~~~ thumb_height=~~~341~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-13.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~20~~~ items_1900=~~~4~~~ items_1600=~~~4~~~ items_1420=~~~4~~~ items_1280=~~~4~~~ items_980=~~~3.5~~~ items_768=~~~3.5~~~ items_480=~~~2.5~~~ items_320=~~~1.5~~~ items_0=~~~1~~~}}</div>
+</div>"
+101,2,"Blog Style 20",blog-20.jpg,"<div class=~~~cdz-blog-wrap base-slider post-list-style21 mb-stage-padding-20~~~>
+    <div class=~~~cdz-block-title text-center~~~>
+        <p class=~~~b-title h2~~~>Beauty News</p>
+        <p class=~~~title-desc~~~>Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac cusantium dolorem que laudantium, totam remae.</p>
+    </div>
+    <div class=~~~cdz-block-content~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\BlogPostList~~~ main_opt_id=~~~main-content-style28||widget_4~~~ categories=~~~26~~~ order_by=~~~publish_time~~~ order=~~~desc~~~ post_count=~~~6~~~ show_in_front=~~~featured_img,title,short_content,publish_time~~~ desc_length=~~~90~~~ date_format=~~~M d Y~~~ thumb_width=~~~330~~~ thumb_height=~~~203~~~ post_template=~~~custom~~~ custom_template=~~~post/widget/grid-style-09.phtml~~~ total_rows=~~~1~~~ total_cols=~~~6~~~ show_slider=~~~1~~~ slider_dots=~~~0~~~ slider_nav=~~~1~~~ slider_margin=~~~50~~~ items_1900=~~~3~~~ items_1600=~~~3~~~ items_1420=~~~3~~~ items_1280=~~~3~~~ items_980=~~~2~~~ items_768=~~~2~~~ items_480=~~~2~~~ items_320=~~~1~~~ items_0=~~~1~~~}}</div>
+</div>"
+102,4,"Banner Style 20",banner-20.jpg,"<div class=~~~banner-style17~~~>
+    <div class=~~~wrapper-banner~~~>
+        <div class=~~~cdz-banner elementor-animation-wobble-horizontal~~~>
+            <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/img01.jpg~~~}}~~~></a>
+            <div class=~~~item-content~~~>
+                <div class=~~~bc-title~~~>Daily Skincare</div>
+                <div class=~~~bc-actions~~~>
+                    <a href=~~~#~~~ class=~~~bc-btn~~~>Shop skincare</a>
+                </div>
+            </div>
+        </div>
+        <div class=~~~cdz-banner elementor-animation-wobble-horizontal~~~>
+            <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/img02.jpg~~~}}~~~></a>
+            <div class=~~~item-content~~~>
+                <div class=~~~bc-title~~~>Spring Sale</div>
+                <div class=~~~bc-actions~~~>
+                    <a href=~~~#~~~ class=~~~bc-btn~~~>Shop spring</a>
+                </div>
+            </div>
+        </div>
+        <div class=~~~cdz-banner elementor-animation-wobble-horizontal~~~>
+            <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/img03.jpg~~~}}~~~></a>
+            <div class=~~~item-content~~~>
+                <div class=~~~bc-title~~~>Haircare</div>
+                <div class=~~~bc-actions~~~>
+                    <a href=~~~#~~~ class=~~~bc-btn~~~>Shop haircare</a>
+                </div>
+            </div>
+        </div>
+        <div class=~~~cdz-banner elementor-animation-wobble-horizontal~~~>
+            <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/img04.jpg~~~}}~~~></a>
+            <div class=~~~item-content~~~>
+                <div class=~~~bc-title~~~>Bodycare</div>
+                <div class=~~~bc-actions~~~>
+                    <a href=~~~#~~~ class=~~~bc-btn~~~>Shop bodycare</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+103,4,"Banner Style 21",banner-21.jpg,"<div class=~~~banner-style18~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-28/img06.jpg~~~}}~~~ alt=~~~Olive Soap~~~ /></a>
+        <div class=~~~item-content~~~>
+            <div class=~~~bg-button~~~></div>
+            <div class=~~~bc-actions~~~>
+                <a href=~~~#~~~ class=~~~bc-btn~~~>Face Milk</a>
+            </div>
+        </div>
+    </div>
+</div>"
+104,4,"Banner Style 22",banner-22.jpg,"<div class=~~~banner-style20~~~>
+    <div class=~~~cdz-banner scale-effect~~~>
+        <a href=~~~#~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-30/img04.jpg~~~}}~~~ alt=~~~Versatile & Affordable Clothing~~~ /></a>
+        <div class=~~~item-content~~~>
+            <div class=~~~bc-title text-uppercase~~~>FRESH VEGETABLES</div>
+            <div class=~~~bc-desc text-uppercase hidden-xs~~~>Get Flat 20% OFF on all available products!</div>
+            <div class=~~~bc-actions  hidden-xs~~~>
+                <a href=~~~#~~~ class=~~~bc-btn btn~~~>Shop now</a>
+            </div>
+        </div>
+    </div>
+</div>"
+105,7,"Countdown 5",countdown-05.jpg,"<div class=~~~cdz-timer-04 has-ic js-detail-container~~~>
+    {{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer~~~ start_date=~~~11/24/2021  1:52:16 PM~~~ end_date=~~~10/24/2022 1:52:16 PM~~~ day_label=~~~Day~~~ hour_label=~~~Hour~~~ min_label=~~~Min~~~ sec_label=~~~Sec~~~ expired_message=~~~The deal has now expired~~~ hide_when_expired=~~~0~~~ parent_selector=~~~.js-detail-container~~~ details_url=~~~[base_url]jewellery/necklaces.html~~~}}
+</div>"

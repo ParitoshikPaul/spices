@@ -1,0 +1,143 @@
+.post-list-style15{
+	.cdz-block-title{
+		margin-bottom: 25px;
+	}
+	.post-top .post-img{
+		overflow: hidden;
+		img{
+			.abs-transition();
+		}
+		&:hover img{
+			.abs-transform(~'scale(1.1, 1.1) rotate(2deg)');
+		}
+	}
+	.post-header{
+		margin-bottom: 15px;
+		float: left;
+		.rtl-layout &{
+			float: right;
+			width: 100%;
+		}
+	}
+	.post-category{
+		color: @main_text;
+		text-transform: uppercase;
+		margin-bottom: 5px;
+		display: inline-block;
+		vertical-align: top;
+		float:left;
+		margin-right: 20px;
+		.rtl-layout &{
+			float: right;
+			margin-right: 0;
+			margin-left: 20px;
+		}
+	}
+	.post-title{
+		margin-bottom: 10px;
+		clear: both;
+		.post-item-link{
+			font-size: 120%;
+			.abs-link(@main_productname_text, @main_hover_text);			
+		}
+	}
+	.post-desc{
+		margin-bottom: 30px;
+		clear: both;
+	}
+	.post-date{
+		float:left;
+		color: @main_hover_text;
+		font: @f_note;
+		font-weight:500;
+		margin-right: 20px;
+		display: inline-block;
+		.rtl-layout &{
+			float: right;
+			margin-left: 20px;
+			margin-right: 0;
+		}
+		&:before{
+			.abs-iconfont('\f073', 28px);
+			margin-right: 8px;
+			.rtl-layout &{
+				margin-left: 8px;
+				margin-right: 0;
+			}
+		}
+	}
+	.post-author{
+		color: @main_text;
+		font: @f_note;
+		display: inline-block;
+		float: left;
+		&:before{
+			.abs-iconfont2('\e999', 13px);
+			margin-right: 8px;
+			.rtl-layout &{
+				margin-left: 8px;
+				margin-right: 0;
+			}
+		}		
+	}
+	a.readmore{
+		border-bottom: 1px solid @main_productname_text;
+		text-transform: uppercase;
+		.abs-link(@main_productname_text, @main_hover_text);		
+		font-weight: 500;
+	}
+	@media @tablet_strict{
+        .post-bottom {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+		.post-title{
+			white-space: nowrap;
+    		text-overflow: ellipsis;
+    		overflow: hidden;
+    		.abs-link(@main_productname_text, @main_hover_text);
+			.post-item-link{
+				font-size: 80%;
+			}
+		}
+		.post-desc{			
+			margin-top:20px;
+			overflow: hidden;
+		}	
+		.post-header{
+			display: flex;
+    		flex-direction: column;
+		}
+		
+	}
+	@media @phone{
+		.post-bottom{
+			padding-top: 15px;
+            padding-bottom: 15px;
+		}
+		.post-title{
+			white-space: nowrap;
+    		text-overflow: ellipsis;
+    		overflow: hidden;
+    		font-size: 14px;
+    		.abs-link(@main_productname_text, @main_hover_text);
+    		.post-item-link{
+    			font-size: 14px;
+    		}			
+		}
+		.post-desc{				
+			margin-top:10px;			
+			font-size: 13px;			
+		}
+		.post-header{
+			display: flex;
+    		flex-direction: column;
+		}	
+		a.action.primary{			
+			padding: 12px 20px;		
+		}
+		.owl-nav{
+			display:none;
+		}
+	}
+}

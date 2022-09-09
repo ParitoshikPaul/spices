@@ -1,0 +1,59 @@
+<?php
+/**
+ * This file is part of the Flurrybox EnhancedPrivacy package.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Flurrybox EnhancedPrivacy
+ * to newer versions in the future.
+ *
+ * @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+ * @license   GNU General Public License ("GPL") v3.0
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+/** @var \Flurrybox\EnhancedPrivacy\Block\Customer\PrivacyPopup $block */
+?>
+<?php
+$settings = json_decode($block->getJsLayout(), true);
+$settings = $settings['components']['enhancedprivacy-cookie-policy']['config'];
+?>
+<div class="enhanced-privacy-cookie-policy" style="display: none;" id="enhanced-privacy-cookie-policy">
+    <div class="enhanced-privacy-popup">
+        <button role="close" title="<?= __('Close') ?>" class="close"></button>
+        <div class="container">
+            <div class="popup content">
+                <div class="block-content">
+                    <div class="block-content-inner">
+                        <div class="block-title"><strong><span><?= __('Cookie Policy') ?></span></strong></div>
+                        <div class="notification-text"><?= $settings['notificationText'] ?></div>
+                    </div>
+                    <div class="actions-toolbar">
+                        <div class="secondary">
+                            <a class="action" href="<?= $settings['learnMore'] ?>"><span><?= __('More information') ?></span></a>
+                        </div>
+                        <div class="primary">
+                            <button type="button" class="action primary" id="enhanced-privacy-popup-agree"><span><?= __('Agree') ?></span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+require(['jquery', 'mage/cookies'], function($) {
+    var $cookiePolicy = $('#enhanced-privacy-cookie-policy');
+    var cookieName = '<?= $settings["cookieName"] ?>';
+    if (!$.cookie(cookieName)) {
+        $cookiePolicy.css('display', '');
+    }
+    $('#enhanced-privacy-popup-agree').on('click', function() {
+        var date = new Date(), t = 5000; date.setTime(date.getTime() + (8640000000));
+        $.cookie(cookieName, 1, {path: '/', expires: date});
+        $cookiePolicy.slideUp(300);
+    });
+    $('[role=close]').on('click', function() {$cookiePolicy.slideUp(300);});
+});
+</script>

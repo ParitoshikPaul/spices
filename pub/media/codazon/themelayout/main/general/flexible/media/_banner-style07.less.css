@@ -1,0 +1,64 @@
+/*Baby Kids*/
+
+.banner-style07 {
+    .cdz-banner, .item {
+        position: relative;
+        &:hover {
+            .item-content {
+                bottom: 33%;
+                color: #282828;
+                padding: 10px 20px;
+                .banner-content {
+                    position: relative;
+                    z-index: 1;
+                }
+                &:after {
+                    background: #fff;
+                }
+            }
+        }
+    }
+    .cdz-banner {
+        @media @phone {
+            margin-bottom: 10px;
+        }
+    }
+    .item-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        padding: 20px;
+        color: #fff;
+        .abs-transition();
+        &:after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            content: '';
+            height: 100%;
+            z-index: 0;
+            .abs-opacity(0.9);
+            .abs-transition();
+        }
+        .bc-title {
+            font-size: 30px;
+            font-weight: 600;
+            @media @desktop_down {
+                font-size: 25px;
+            }
+            @media @tablet_vertical_down {
+                font-size: 16px;
+            }
+            @media @phone {
+                font-size: 16px;
+            }
+        }
+        .bc-desc {
+            font-style: italic;
+            font-size: 16px;
+        }
+    }
+}

@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/system_file.xsd">
+    <system>
+        <section id="variables">
+            <group id="cdz_header">
+                <label>Header</label>
+                <field id="header_background" translate="label" formElement="color" sortOrder="10">
+                    <label>Header Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_background_file" translate="label" formElement="background" sortOrder="20">
+                    <label>Header Background Image</label>
+                </field>
+                <field id="header_background_image_option" translate="label" formElement="input" sortOrder="30">
+                    <label>Header Background Image Option</label>
+                </field>
+                <field id="header_top_background" translate="label" formElement="color" sortOrder="40">
+                    <label>Header Background Top Background</label>
+                    <default>#ffffff</default>
+                </field>               
+                <field id="header_text" translate="label" formElement="color" sortOrder="50">
+                    <label>Header Text</label>
+                    <default>#34343c</default>
+                </field>
+                <field id="header_top_text" translate="label" formElement="color" sortOrder="60">
+                    <label>Header Top Text Color</label>
+                    <default>#34343c</default>
+                </field>
+                <field id="header_hover_text" translate="label" formElement="color" sortOrder="70">
+                    <label>Header Hover Text Color</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="header_border" translate="label" formElement="color" sortOrder="80">
+                    <label>Header Border</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_shadow" translate="label" formElement="input" sortOrder="90">
+                    <label>Header Shadow</label>
+                    <default>0 -8px 10px #4f5eb0</default>
+                </field>
+                <field id="header_cart_background" translate="label" formElement="color" sortOrder="100">
+                    <label>Header Cart Background</label>
+                    <default>transparent</default>
+                </field>
+                <field id="header_cart_quality_background" translate="label" formElement="color" sortOrder="110">
+                    <label>Header Cart Quantity Background</label>
+                    <default>#0d0d0d</default>
+                </field>
+                <field id="header_cart_text" translate="label" formElement="color" sortOrder="120">
+                    <label>Header Cart Text Color</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_cart_icon" translate="label" formElement="color" sortOrder="130">
+                    <label>Header Cart Icon Color</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="header_cart_border" translate="label" formElement="color" sortOrder="140">
+                    <label>Header Cart Border</label>
+                </field>
+                <field id="header_search_text" translate="label" formElement="color" sortOrder="150">
+                    <label>Header Search Text Color</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_search_background" translate="label" formElement="color" sortOrder="160">
+                    <label>Header Search Background</label>
+                    <default>#8389e1</default>
+                </field>
+                <field id="header_search_button_text" translate="label" formElement="color" sortOrder="170">
+                    <label>Header Search Button Text Color</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_search_button_background" translate="label" formElement="color" sortOrder="180">
+                    <label>Header Search Button Background</label>
+                    <default>transparent</default>
+                </field>
+                <field id="header_drop_text" translate="label" formElement="color" sortOrder="190">
+                    <label>Header Drop Text Color</label>
+                    <default>#282828</default>
+                </field>
+                <field id="header_drop_background" translate="label" formElement="color" sortOrder="200">
+                    <label>Header Drop Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_drop_hover_text" translate="label" formElement="color" sortOrder="210">
+                    <label>Header Drop Hover Text Color</label>
+                    <default>#5C6AC3</default>
+                </field>
+                <field id="header_drop_border_color" translate="label" formElement="color" sortOrder="220">
+                    <label>Header Drop Border Color</label>
+                    <default>#dbdbdb</default>
+                </field>               
+            </group>
+            <group id="menu">
+                <label>Menu</label>
+                <field id="menu_background" translate="label" formElement="color">
+                    <label>Menu Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="menu_hover_background" translate="label" formElement="color">
+                    <label>Menu Hover Background</label>
+                    <default>transparent</default>
+                </field>
+                <field id="menu_text" translate="label" formElement="color">
+                    <label>Menu Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="menu_hover_text" translate="label" formElement="color">
+                    <label>Menu Hover Text</label>
+                    <default>#ffb21e</default>
+                </field>
+                <field id="menu_border" translate="label" formElement="color">
+                    <label>Menu Border</label>
+                    <default>#525fb0</default>
+                </field>
+                <field id="menu_font" translate="label" formElement="input">
+                    <label>Menu Font</label>
+                    <default>600 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+            </group>
+            <group id="vertical_menu">
+                <label>Vertical Menu</label>
+                <field id="vermenu_background" translate="label" formElement="color">
+                    <label>Vertical Menu Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="vermenu_hover_background" translate="label" formElement="color">
+                    <label>Vertical Menu Hover Background</label>
+                    <default>#eaeaea</default>
+                </field>
+                <field id="vermenu_text" translate="label" formElement="color">
+                    <label>Vertical Menu Text</label>
+                    <default>#282828</default>
+                </field>
+                <field id="vermenu_hover_text" translate="label" formElement="color">
+                    <label>Vertical Menu Hover Text</label>
+                    <default>#ff6a00</default>
+                </field>
+                <field id="vermenu_border" translate="label" formElement="color">
+                    <label>Vertical Menu Border</label>
+                    <default>#eaeaea</default>
+                </field>
+                <field id="vermenu_font" translate="label" formElement="input">
+                    <label>Vertical Menu Font</label>
+                    <default>400 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+            </group>
+            <group id="menu_drop">
+                <label>Menu Dropdown</label>
+                <field id="menu_drop_background" translate="label" formElement="color">
+                    <label>Menu Dropdown Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="menu_drop_text_title" translate="label" formElement="color">
+                    <label>Menu Dropdown Title</label>
+                    <default>#282828</default>
+                </field>
+                <field id="menu_drop_text" translate="label" formElement="color">
+                    <label>Menu Dropdown Text</label>
+                    <default>#999999</default>
+                </field>
+                <field id="menu_drop_hover_text" translate="label" formElement="color">
+                    <label>Menu Dropdown Hover Text</label>
+                    <default>#fc7070</default>
+                </field>
+                <field id="menu_drop_border" translate="label" formElement="color">
+                    <label>Menu Dropdown Border</label>
+                    <default>#e1e1e1</default>
+                </field>
+                <field id="menu_drop_shadow" translate="label" formElement="input">
+                    <label>Menu Dropdown Shadow</label>
+                    <default>0 3px 3px #e1e1e1</default>
+                </field>
+                <field id="menu_drop_font" translate="label" formElement="input">
+                    <label>Menu Dropdown Font</label>
+                    <default>400 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+            </group>
+            <group id="header_mobile">
+                <label>Header Mobile</label>
+                <field id="header_mobile_background" translate="label" formElement="color" sortOrder="10">
+                    <label>Header Mobile Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="header_mobile_icon" translate="label" formElement="color" sortOrder="20">
+                    <label>Header Mobile Icon</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_mobile_search_input_background" translate="label" formElement="color" sortOrder="30">
+                    <label>Header Mobile Search Input Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="header_mobile_search_input_text" translate="label" formElement="color" sortOrder="40">
+                    <label>Header Mobile Search Input Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="header_mobile_search_input_border" translate="label" formElement="color" sortOrder="50">
+                    <label>Header Mobile Search Input Border</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="menu_content_background" translate="label" formElement="color" sortOrder="60">
+                    <label>Menu Content Background </label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="menu_content_color" translate="label" formElement="color" sortOrder="70">
+                    <label>Menu Content Color</label>
+                    <default>#444444</default>
+                </field>
+                <field id="menu_content_border" translate="label" formElement="color" sortOrder="80">
+                    <label>Menu Content Border</label>
+                    <default>#d1d1d1</default>
+                </field>
+                <field id="menu_title_background" translate="label" formElement="color" sortOrder="90">
+                    <label>Menu Title Background </label>
+                    <default>#e8e8e8</default>
+                </field>
+                <field id="menu_title_color" translate="label" formElement="color" sortOrder="100">
+                    <label>Menu Title Color</label>
+                    <default>#333333</default>
+                </field>
+                <field id="menu_title_border" translate="label" formElement="color" sortOrder="110">
+                    <label>Menu Title Border</label>
+                    <default>#dbdbdb</default>
+                </field>
+            </group>
+            <group id="extra_customization">
+                <label>Extra Customization</label>
+                <field id="custom_variables" translate="label" formElement="textarea" sortOrder="10" dataScope="custom_fields.custom_variables">
+                    <label>Custom LESS Variables</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* @my_main_color: #cccfff; @my_border: ~'1px solid #fff'; */.]]></notice>
+                </field>
+                <field id="custom_less_code" translate="label" formElement="textarea" sortOrder="20" dataScope="custom_fields.custom_less_code">
+                    <label>Custom LESS Code</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* body{ &.checkout-index-index{background: @my_main_color;} }; */.]]></notice>
+                </field>
+                <field id="custom_css_code" translate="label" formElement="textarea" sortOrder="30" dataScope="custom_fields.custom_css_code">
+                    <label>Custom CSS Code</label>
+                    <notice>Your custom css code.</notice>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

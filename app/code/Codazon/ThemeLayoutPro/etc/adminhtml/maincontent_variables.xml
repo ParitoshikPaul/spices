@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/system_file.xsd">
+    <system>
+        <section id="variables">
+            <group id="library">
+                <label>CSS Optimization</label>
+                <field id="use_as_block" translate="label" formElement="checkbox" sortOrder="14" dataScope="custom_fields.use_as_block">
+                    <label>Use as a CMS Block</label>
+                    <tooltip>Set Yes if you only use this main content as a CMS block, not use for building home page.</tooltip>
+                    <default>0</default>
+                </field>
+                <field id="flexible_less" translate="label" formElement="preview_multiselect" sortOrder="15" sourceModel="Codazon\ThemeLayoutPro\Model\Config\Source\ImportLessFiles" dataScope="custom_fields.flexible_less">
+                    <label>Import Less File</label>
+                    <tooltip>Use to get some special styles.</tooltip>
+                </field>
+                <field id="auto_import_less_files" translate="label" formElement="checkbox" sortOrder="16" dataScope="custom_fields.auto_import_less_files">
+                    <label>Auto Import Less File</label>
+                    <tooltip>Other less files not in list above will be imported automatically if the HTML of main content  has matching CSS classes.</tooltip>
+                </field>
+                <field id="category_view_less" translate="label" formElement="hidden" sortOrder="17" dataScope="custom_fields.category_view_less">
+                    <label></label>
+                </field>
+                <field id="product_view_less" translate="label" formElement="hidden" sortOrder="18" dataScope="custom_fields.product_view_less">
+                    <label></label>
+                </field>
+            </group>
+            <group id="typography">
+                <label>Typography</label>
+                <field id="google_web_fonts" translate="label" formElement="multiselect" sortOrder="10" sourceModel="Codazon\ThemeLayoutPro\Model\Config\Source\GoogleFonts" dataScope="custom_fields.google_web_fonts">
+                    <label>Google Font</label>
+                    <default>Pacifico</default>
+                </field>
+                <field id="google_font_weights" translate="label" formElement="input" sortOrder="20" dataScope="custom_fields.google_font_weights">
+                    <label>Font Weights</label>
+                    <default>200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic</default>
+                </field>
+                <field id="category_view_less" translate="label" formElement="hidden" sortOrder="21" dataScope="custom_fields.category_view_less">
+                    <label>Catagory Library</label>
+                </field>
+                <field id="product_view_less" translate="label" formElement="hidden" sortOrder="22" dataScope="custom_fields.category_view_less">
+                    <label>Product View Less</label>
+                </field>
+                <field id="google_font_subset" translate="label" formElement="input" sortOrder="25" dataScope="custom_fields.google_font_subset">
+                    <label>Font Subset</label>
+                    <default>latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext</default>
+                </field>
+                <field id="f_default" translate="label" formElement="input" sortOrder="30">
+                    <label>Default Font</label>
+                    <default>400 13px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h1" translate="label" formElement="input" sortOrder="40">
+                    <label>H1 Font</label>
+                    <default>600 24px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h2" translate="label" formElement="input" sortOrder="50">
+                    <label>H2 Font</label>
+                    <default>600 20px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h3" translate="label" formElement="input" sortOrder="60">
+                    <label>H3 Font</label>
+                    <default>600 18px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h4" translate="label" formElement="input" sortOrder="70">
+                    <label>H4 Font</label>
+                    <default>500 16px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h5" translate="label" formElement="input" sortOrder="80">
+                    <label>H5 Font</label>
+                    <default>500 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_h6" translate="label" formElement="input" sortOrder="90">
+                    <label>H6 Font</label>
+                    <default>500 11px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_special" translate="label" formElement="input" sortOrder="100">
+                    <label>Special</label>
+                    <default>500 46px/1.35 Pacifico, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_note" translate="label" formElement="input" sortOrder="110">
+                    <label>Note</label>
+                    <default>400 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="f_input" translate="label" formElement="input" sortOrder="120">
+                    <label>Input</label>
+                    <default>400 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+            </group>
+            <group id="mobile_typography">
+                <label>Mobile Typography</label>
+                <field id="fm_default" translate="label" formElement="input" sortOrder="10">
+                    <label>Default Font</label>
+                    <default>400 13px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h1" translate="label" formElement="input" sortOrder="20">
+                    <label>H1 Font/Homepage Title</label>
+                    <default>600 18px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h2" translate="label" formElement="input" sortOrder="30">
+                    <label>H2 Font/Product price</label>
+                    <default>600 16px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h3" translate="label" formElement="input" sortOrder="40">
+                    <label>H3 Font/Product name</label>
+                    <default>600 14px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h4" translate="label" formElement="input" sortOrder="50">
+                    <label>H4 Font</label>
+                    <default>500 13px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h5" translate="label" formElement="input" sortOrder="60">
+                    <label>H5 Font</label>
+                    <default>500 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="fm_h6" translate="label" formElement="input" sortOrder="70">
+                    <label>H6 Font</label>
+                    <default>500 11px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+            </group>
+            <group id="main">
+                <label>Main</label>
+                <field id="main_background_file" translate="label" formElement="background" sortOrder="10">
+                    <label>Main Background Image</label>
+                </field>
+                <field id="main_background" translate="label" formElement="color" sortOrder="11">
+                    <label>Main Background</label>
+                    <default>#f6f7f9</default>
+                </field>
+                <field id="main_background_image_option" translate="label" formElement="input" sortOrder="12">
+                    <label>Main Background Image Option</label>
+                    <default>0 0 no-repeat fixed</default>
+                </field>
+                <field id="main_block_background" translate="label" formElement="color" sortOrder="20">
+                    <label>Main Block Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="main_border" translate="label" formElement="color" sortOrder="30">
+                    <label>Main Border</label>
+                    <default>#e9eaec</default>
+                </field>  
+                <field id="main_block_title_text" translate="label" formElement="color" sortOrder="40">
+                    <label>Main Block Title Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="main_block_title_background" translate="label" formElement="color" sortOrder="50">
+                    <label>Main Block Title Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="main_title_text" translate="label" formElement="color" sortOrder="60">
+                    <label>Main Title Text</label>
+                    <default>#414b56</default>
+                </field>
+                 <field id="main_title_border" translate="label" formElement="color" sortOrder="70">
+                    <label>Main Title Border</label>
+                    <default>#121212</default>
+                </field>
+                <field id="main_text" translate="label" formElement="color" sortOrder="80">
+                    <label>Main Text</label>
+                    <default>#a8aeba</default>
+                </field>
+                <field id="main_text_normal" translate="label" formElement="color" sortOrder="90">
+                    <label>Main Normal Text</label>
+                    <default>#b9bed1</default>
+                </field>
+                <field id="main_text_normal2" translate="label" formElement="color" sortOrder="100">
+                    <label>Main Normal Text 2</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="main_hover_text" translate="label" formElement="color" sortOrder="110">
+                    <label>Main Hovered Text</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="main_productname_text" translate="label" formElement="color" sortOrder="120">
+                    <label>Main Product Name</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="main_price_text" translate="label" formElement="color" sortOrder="130">
+                    <label>Main Price</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="main_hover_text_box" translate="label" formElement="color" sortOrder="140">
+                    <label>Main Hover Text Box</label>
+                    <default>#ffffff</default>
+                </field>             
+                
+                <field id="main_input_background" translate="label" formElement="color" sortOrder="150">
+                    <label>Main Input Background</label>
+                    <default>transparent</default>
+                </field>
+                <field id="main_input_text" translate="label" formElement="color" sortOrder="160">
+                    <label>Main Input Text</label>
+                    <default>#9c9c9c</default>
+                </field>
+                <field id="main_input_border" translate="label" formElement="color" sortOrder="170">
+                    <label>Main Input Border</label>
+                    <default>#e1e1e1</default>
+                </field>
+                <field id="main_input_shadow" translate="label" formElement="input" sortOrder="180">
+                    <label>Main Input Shadow</label>
+                    <default>none</default>
+                </field>
+                <field id="main_box_background" translate="label" formElement="color" sortOrder="190">
+                    <label>Main Box Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="main_box_radius" translate="label" formElement="input" sortOrder="210">
+                    <label>Main Box Radius</label>
+                    <default>5px</default>
+                </field>
+                <field id="main_box_border" translate="label" formElement="color" sortOrder="220">
+                    <label>Main Box Border</label>
+                    <default>#e1e1e1</default>
+                </field>
+                <field id="main_box_shadow" translate="label" formElement="input" sortOrder="230">
+                    <label>Main Box Shadow</label>
+                    <default>0px 4px 34px rgba(0, 0, 0, 0.08)</default>
+                </field>
+            </group>
+            <group id="product_label">
+                <label>Product Label</label>
+                <field id="main_label_bg" translate="label" formElement="color" sortOrder="10">
+                    <label>Main Label Background</label>
+                    <default>#5c6ac3</default>
+                </field> 
+                <field id="main_label_text" translate="label" formElement="color" sortOrder="20">
+                    <label>Main Label Text</label>
+                    <default>#ffffff</default>
+                </field> 
+                <field id="new_label_bg" translate="label" formElement="color" sortOrder="30">
+                    <label>New Label Background</label>
+                    <default>#70c25f</default>
+                </field> 
+                <field id="new_label_text" translate="label" formElement="color" sortOrder="40">
+                    <label>New Label Text</label>
+                    <default>#ffffff</default>
+                </field> 
+                <field id="sale_label_bg" translate="label" formElement="color" sortOrder="50">
+                    <label>Sale Label Background</label>
+                    <default>#eb6565</default>
+                </field> 
+                <field id="sale_label_text" translate="label" formElement="color" sortOrder="60">
+                    <label>Sale Label Text</label>
+                    <default>#ffffff</default>
+                </field> 
+                <field id="pd_list_new_label_bg" translate="label" formElement="color" sortOrder="70">
+                    <label>Product List New Label Background</label>
+                    <default>transparent</default>
+                </field> 
+                <field id="pd_list_new_label_text" translate="label" formElement="color" sortOrder="80">
+                    <label>Product List New Label Text</label>
+                    <default>#40ba25</default>
+                </field> 
+                <field id="pd_list_sale_label_bg" translate="label" formElement="color" sortOrder="90">
+                    <label>Product List Sale Label Background</label>
+                    <default>transparent</default>
+                </field> 
+                <field id="pd_list_sale_label_text" translate="label" formElement="color" sortOrder="100">
+                    <label>Product List Sale Label Text</label>
+                    <default>#db4848</default>
+                </field> 
+            </group>
+            <group id="main_tab">
+                <label>Main Tab</label>
+                <field id="main_tab_background" translate="label" formElement="color" sortOrder="10">
+                    <label>Main Tab Background</label>
+                    <default>#f6f7f9</default>
+                </field>               
+                <field id="main_tab_text" translate="label" formElement="color" sortOrder="20">
+                    <label>Main Tab Text</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="main_tab_border" translate="label" formElement="color" sortOrder="30">
+                    <label>Main Tab Border</label>
+                    <default>#e9eaec</default>
+                </field>
+                <field id="main_tab_hover_background" translate="label" formElement="color" sortOrder="40">
+                    <label>Main Tab Hovered Background</label>
+                    <default>#f6f7f9</default>
+                </field>
+                <field id="main_tab_hover_text" translate="label" formElement="color" sortOrder="50">
+                    <label>Main Tab Horvered Text</label>
+                    <default>#5c6ac3</default>
+                </field>                
+                <field id="main_tab_hover_border" translate="label" formElement="color" sortOrder="60">
+                    <label>Main Tab Hovered Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+            </group>
+            <group id="button">
+                <label>Button</label>
+                <field id="btn_font" translate="label" formElement="input" sortOrder="10">
+                    <label>Button Font</label>
+                    <default>600 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</default>
+                </field>
+                <field id="btn_padding" translate="label" formElement="input" sortOrder="20">
+                    <label>Button Padding</label>
+                    <default>7px 15px</default>
+                </field>
+                <field id="btn_radius" translate="label" formElement="input" sortOrder="30">
+                    <label>Button Radius</label>
+                    <default>4px</default>
+                </field>
+                <field id="btn_shadow" translate="label" formElement="input" sortOrder="40">
+                    <label>Button Shadow</label>
+                    <default>none</default>
+                </field>
+                <field id="btn_default_background" translate="label" formElement="color" sortOrder="50">
+                    <label>Default Button Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_default_text" translate="label" formElement="color" sortOrder="60">
+                    <label>Default Button Text</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_default_border" translate="label" formElement="color" sortOrder="70">
+                    <label>Default Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_primary_background" translate="label" formElement="color" sortOrder="80">
+                    <label>Primary Button Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_primary_text" translate="label" formElement="color" sortOrder="90">
+                    <label>Primary Button Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_primary_border" translate="label" formElement="color" sortOrder="100">
+                    <label>Primary Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_normal_background" translate="label" formElement="color" sortOrder="110">
+                    <label>Normal Button Background</label>
+                    <default>#a8aeba</default>
+                </field>
+                <field id="btn_normal_text" translate="label" formElement="color" sortOrder="120">
+                    <label>Normal Button Text</label>
+                    <default>#a8aeba</default>
+                </field>
+                <field id="btn_normal_border" translate="label" formElement="color" sortOrder="130">
+                    <label>Normal Button Border</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_hover_background" translate="label" formElement="color" sortOrder="140">
+                    <label>Horvered Button Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_hover_text" translate="label" formElement="color" sortOrder="150">
+                    <label>Horvered Button Text</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_hover_border" translate="label" formElement="color" sortOrder="160">
+                    <label>Horvered Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_icon_background" translate="label" formElement="color" sortOrder="170">
+                    <label>Icon Button Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_icon_text" translate="label" formElement="color" sortOrder="180">
+                    <label>Icon Button Text</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_icon_border" translate="label" formElement="color" sortOrder="190">
+                    <label>Icon Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_icon_hover_background" translate="label" formElement="color" sortOrder="200">
+                    <label>Horvered Icon Button Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_icon_hover_text" translate="label" formElement="color" sortOrder="210">
+                    <label>Horvered Icon Button Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_icon_hover_border" translate="label" formElement="color" sortOrder="220">
+                    <label>Hovered Icon Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_quickshop_background" translate="label" formElement="color" sortOrder="230">
+                    <label>Quickview Button Background</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_quickshop_text" translate="label" formElement="color" sortOrder="240">
+                    <label>Quickview Button Text</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_quickshop_border" translate="label" formElement="color" sortOrder="250">
+                    <label>Quickview Button Border</label>
+                    <default>#5c6ac3</default>
+                </field>
+            </group>    
+            <group id="section_bar">
+                <label>Section bar</label>
+                <field id="bar_main_background" translate="label" formElement="color" sortOrder="10">
+                    <label>Bar Main Background</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="bar_main_color" translate="label" formElement="color" sortOrder="20">
+                    <label>Bar Text Color</label>
+                    <default>#8dc7dd</default>
+                </field>
+                <field id="bar_active_color" translate="label" formElement="color" sortOrder="30">
+                    <label>Bar Active Background</label>
+                    <default>#37ccd4</default>
+                </field>
+                <field id="bar_active_text_color" translate="label" formElement="color" sortOrder="40">
+                    <label>Bar Active Text Color</label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="bar_tooltip_color" translate="label" formElement="color" sortOrder="50">
+                    <label>Bar Tooltip Background</label>
+                    <default>#414b56</default>
+                </field>
+                <field id="bar_tooltip_text_color" translate="label" formElement="color" sortOrder="60">
+                    <label>Bar Tooltip Text Color</label>
+                    <default>#ffffff</default>
+                </field>
+            </group>
+            <group id="swatch_custom">
+                <label>Product swatches (Product view page)</label>
+                <field id="swatch_image_width" translate="label" formElement="input" sortOrder="10">
+                    <label>Swatch image width</label>
+                    <default>30px</default>
+                </field>
+                <field id="swatch_image_height" translate="label" formElement="input" sortOrder="20">
+                    <label>Swatch image height</label>
+                    <default>30px</default>
+                </field>
+                <field id="swatch_color_width" translate="label" formElement="input" sortOrder="30">
+                    <label>Swatch color width</label>
+                    <default>30px</default>
+                </field>
+                <field id="swatch_color_height" translate="label" formElement="input" sortOrder="40">
+                    <label>Swatch color height</label>
+                    <default>30px</default>
+                </field>
+                <field id="swatch_text_width" translate="label" formElement="input" sortOrder="50">
+                    <label>Swatch text width</label>
+                    <default>auto</default>
+                </field>
+                <field id="swatch_text_height" translate="label" formElement="input" sortOrder="60">
+                    <label>Swatch text height</label>
+                    <default>auto</default>
+                </field>
+            </group>
+            <group id="mobile_setting">
+                <label>Mobile</label>
+                <field id="main_mobile_toolbar_background" translate="label" formElement="color" sortOrder="10">
+                    <label>Main Mobile Tool Bar Background </label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="main_mobile_toolbar_color" translate="label" formElement="color" sortOrder="20">
+                    <label>Main Mobile Tool Bar Color </label>
+                    <default>#ffffff</default>
+                </field>
+                <field id="btn_mobile_icon_background" translate="label" formElement="color" sortOrder="30">
+                    <label>Mobile Icon Button Background</label>
+                    <default>#dee3ff</default>
+                </field>
+                <field id="btn_mobile_icon_text" translate="label" formElement="color" sortOrder="40">
+                    <label>Mobile Icon Button Text</label>
+                    <default>#5c6ac3</default>
+                </field>
+                <field id="btn_mobile_icon_border" translate="label" formElement="color" sortOrder="50">
+                    <label>Mobile Icon Button Border</label>
+                    <default>#dee3ff</default>
+                </field>
+            </group>
+            <group id="extra_customization">
+                <label>Extra Customization</label>
+                <field id="custom_variables" translate="label" formElement="textarea" sortOrder="10" dataScope="custom_fields.custom_variables">
+                    <label>Custom LESS Variables</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* @my_main_color: #cccfff; @my_border: ~'1px solid #fff'; */.]]></notice>
+                </field>
+                <field id="custom_less_code" translate="label" formElement="textarea" sortOrder="20" dataScope="custom_fields.custom_less_code">
+                    <label>Custom LESS Code</label>
+                    <notice><![CDATA[Carefully: These code will be compiled to CSS. Only edit this field if you have knowledge of LESS. E.g: /* body{ &.checkout-index-index{background: @my_main_color;} }; */.]]></notice>
+                </field>
+                <field id="custom_css_code" translate="label" formElement="textarea" sortOrder="30" dataScope="custom_fields.custom_css_code">
+                    <label>Custom CSS Code</label>
+                    <notice>Your custom css code.</notice>
+                </field>
+                <field id="product_view_custom_layout" translate="label" formElement="input" sortOrder="40" dataScope="custom_fields.product_view_custom_layout">
+                    <label>Product View Custom Layout Handle</label>
+                    <notice>Carefully: Only used for developer. If this field is set value, the "Product View Style" field won't affect to frontend. Don't write anything here if you are not sure about the result.</notice>
+                </field>
+                <field id="product_view_custom_less" translate="label" formElement="input" sortOrder="50" dataScope="custom_fields.product_view_custom_less">
+                    <label>Product View Page Custom LESS File</label>
+                    <notice>Carefully: Only used for developer. If this field is set value, the css of product page specified by "Product View Style" field will be replaced by compiled CSS of the file in this field. Don't write anything here if you are not sure about the result.</notice>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

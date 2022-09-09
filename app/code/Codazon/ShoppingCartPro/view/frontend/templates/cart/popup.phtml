@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+/* $block Codazon\ShoppingCartPro\Block\MiniCart */
+?>
+
+<div class="minicart-popup" id="cdz-minicart-popup" data-block='minicartpro'>
+    <div class="block-minicartpro block">
+        <div id="minicartpro-content-wrapper" class="minicartpro-content-wrapper" data-bind="scope: 'minicartpro_content'">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        </div>
+        <div class="ajaxcart-loader double-bounce-spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+	"[data-block='minicartpro']": {
+		"Magento_Ui/js/core/app": <?= $block->getJsLayout();?>
+	}
+}
+</script>

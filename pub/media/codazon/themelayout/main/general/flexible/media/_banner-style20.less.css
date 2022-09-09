@@ -1,0 +1,63 @@
+.banner-style20{
+    position: relative;
+    overflow: hidden;
+    .cdz-banner {
+        img{
+            .abs-transition();
+        }
+        &:hover{
+            img{.abs-transform(scale(1.1));}
+        }
+    }
+
+    .item-content{
+        position: absolute;
+        top:0;
+        left: 0;
+        text-align: center;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        .bc-title{
+            font-size: 250%;
+            font-weight: 600;
+            
+        }
+        &.text-2x{
+             .bc-title{
+                font-size: 200%;  
+            }
+        }
+        .bc-desc{ font-size: 120%}
+        .bc-actions{ padding-top: 20px; }
+        .btn{
+            border: 1px solid;
+            font-style: italic;
+            text-transform: lowercase;
+            text-decoration: none;
+            padding: 10px 30px;
+            color: #fff;
+            border-color: #fff;
+            background: transparent;
+            display: inline-block;
+            .abs-borderradius(@btn_radius);
+            .abs-transition();
+            &:hover{
+                .abs-style(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+            }
+        }
+    }
+}
+@media @phone {
+	.banner-style04 .item-content{
+		.bc-title{
+            font-size: 130%;
+        }
+		.bc-desc{ font-size: 110%}
+		.bc-actions{ padding-top: 0px; }
+	}
+}

@@ -1,0 +1,35 @@
+@keyframes cdz-flash-icon{
+    0% {
+        opacity: #ff5722;
+        transform: scale(.7);
+    }
+    50% {
+        color: #ff9800;
+    }
+    100% {
+        color: inherit;
+        transform: scale(1);
+    }
+}
+.cdz-flash-icon {
+    display: inline-block;
+    font-size: 45px;
+    color: #fdd835;
+    > span {
+        display: none;
+    }
+    &:before {
+        font-size: inherit;
+        color: inherit;
+        animation: cdz-flash-icon 0.8s linear infinite;
+        display: block;
+    }
+    &.ic-title {
+        font-size: 32px;
+        margin: 0 7px 0 0;
+        vertical-align: middle;
+        .rtl-layout & {
+            margin: 0 0 0 7px;
+        }
+    }
+}

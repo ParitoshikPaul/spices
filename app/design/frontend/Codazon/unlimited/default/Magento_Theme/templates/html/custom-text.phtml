@@ -1,0 +1,21 @@
+<?php
+/**
+* Copyright © 2018 Codazon, Inc. All rights reserved.
+* See COPYING.txt for license details.
+*/
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$configPath = $this->getData('config_path') ? : 'pages/product_view/custom_text';
+$customBlockIdentifier = $helper->getConfig($configPath);
+?>
+<?php if ($customBlockIdentifier) : ?>
+<?php
+$cmsblock = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Cms\Model\Block')
+->setStoreId($helper->getCurrentStoreId())
+->load($customBlockIdentifier, 'identifier');
+?>
+<?php if ($cmsblock->getId()) : ?>
+<?= $helper->htmlFilter($cmsblock->getContent()) ?>
+<?php endif ?>
+<?php endif ?>

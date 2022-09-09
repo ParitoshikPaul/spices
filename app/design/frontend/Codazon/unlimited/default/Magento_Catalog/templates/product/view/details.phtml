@@ -1,0 +1,125 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+$uid = uniqid('product-tabs-');
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$detailedInfoGroup = $block->getGroupChildNames('detailed_info', 'getChildHtml');
+$tabsOrder = $helper->getConfig('pages/product_view/tabs_order');
+$removedTabs = $helper->getConfig('pages/product_view/removed_tabs');
+$maxDescHeight = $helper->getConfig('pages/product_view/desc_tab_max_height') ? : 0;
+if ($removedTabs) {
+    $removedTabs =  explode(',', str_replace(' ', '', $removedTabs));
+    foreach ($detailedInfoGroup as $key => $name) {
+        if (in_array($name, $removedTabs)) {
+            unset($detailedInfoGroup[$key]);
+        }
+    }
+}
+if ($tabsOrder) {
+    $tabsOrder = explode(',', str_replace(' ', '', $tabsOrder));
+    foreach ($tabsOrder as $key => $name) {
+        if (!in_array($name, $detailedInfoGroup)) {
+            unset($tabsOrder[$key]);
+        }
+    }
+    $detailedInfoGroup = array_unique(array_merge($tabsOrder, $detailedInfoGroup));
+}
+?>
+
+<?php if ($detailedInfoGroup): ?>
+    <div class="product info detailed">
+        <?php $layout = $block->getLayout(); ?>
+        <div class="product data items" id="<?= $uid ?>">
+            <?php foreach ($detailedInfoGroup as $name):?>
+                <?php
+                    $html = $layout->renderElement($name);
+                    if (!trim($html)) {
+                        continue;
+                    }
+                    $alias = $layout->getElementAlias($name);
+                    $label = $block->getChildData($alias, 'title');
+                ?>
+                <div class="data item title"
+                     aria-labeledby="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title"
+                     data-role="collapsible" id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>">
+                    <a class="data switch"
+                       tabindex="-1"
+                       data-toggle="switch"
+                       href="#<?php /* @escapeNotVerified */ echo $alias; ?>"
+                       id="tab-label-<?php /* @escapeNotVerified */ echo $alias;?>-title">
+                        <?php /* @escapeNotVerified */ echo $label; ?>
+                    </a>
+                </div>
+                <div class="data item content" id="<?php /* @escapeNotVerified */ echo $alias; ?>" data-role="content">
+                    <?php /* @escapeNotVerified */ echo $html; ?>
+                </div>
+            <?php endforeach;?>
+        </div>
+    </div>
+<?php endif; ?>
+
+<script>
+require(['jquery', 'tabs'], function($) {
+    var $productTabs = $('#<?= $uid ?>');
+    $.mage.tabs({"openedState":"active"}, $productTabs);
+    var mageTabs = $productTabs.data('mageTabs');
+    if (mageTabs) {
+        var $firstTitle = $('.data.item.title', $productTabs).first();
+        if (!$productTabs.data('ui-tabs')) $productTabs.data('ui-tabs', mageTabs);
+        $('.data.item.title', $productTabs).each(function(i, el) {
+            el.scrollIntoView = function() {};
+            var $tt = $(el), $cloneTitle = $tt.clone().removeAttr('id').addClass('hidden-xs tab-clone-title').insertBefore($firstTitle).on('click', function(e) {
+                e.preventDefault(); $tt.trigger('click');
+            });
+            $tt.addClass('visible-xs').data('linkedtitle', $cloneTitle).on('dimensionsChanged', function() {
+                $('.tab-clone-title.active').removeClass('active');
+                $(this).data('linkedtitle').addClass('active');
+            });
+        });
+        var deskTabs = function() {
+            mageTabs.options.collapsible = false;
+            mageTabs._callCollapsible();
+            if ($productTabs.find('[aria-selected="true"]').length == 0) mageTabs.activate(0);
+        }, mobiTabs = function() {
+            mageTabs.options.collapsible = true;
+            mageTabs._callCollapsible();
+        }, deskFirst = false; //fix page scroll down issue in Firefox and IE;
+        if (window.innerWidth < 768) mobiTabs(); else deskFirst = true;
+        $(window).on('cdz_desktop', function() {
+            if (deskFirst) deskFirst = false; else deskTabs();
+        }).on('cdz_mobile', mobiTabs);
+    }
+    <?php if ($maxDescHeight) : ?>var collapseText = function ($wrap, maxHeight, viewMoreText, viewLessText) {
+        var $panel = $('<div>').addClass('panel-toggle-wrap'),
+        $outer = $('<div>').addClass('content-outer'), $inner = $('<div>').addClass('content-inner'),
+        $toolbar = $('<div>').addClass('content-toolbar'),
+        $toggle = $('<div>').addClass('content-toggle').html(viewMoreText);
+        $wrap.children().appendTo($inner);
+        $inner.appendTo($outer);       
+        $outer.appendTo($panel).css({maxHeight: maxHeight, overflow: 'hidden'});
+        $toolbar.appendTo($panel);
+        $toggle.appendTo($toolbar);
+        $panel.appendTo($wrap);
+        $toggle.on('click', function(e){
+            e.preventDefault();
+            $panel.toggleClass('content-open').hasClass('content-open') ? $toggle.html(viewLessText) : $toggle.html(viewMoreText);
+        });
+        function apply() {
+            ($wrap.innerHeight() > maxHeight)? $panel.addClass('applied'):$panel.removeClass('applied');
+        }
+        apply();
+        $(window).on('resize', apply);
+    }
+    var $desc = $('#description');
+    if ($desc.length) {
+        collapseText($desc, <?= $maxDescHeight ?>, '<span><?= __("More view") ?></span>', '<span><?= __("Less view") ?></span>');
+    }<?php endif ?>
+});
+</script>

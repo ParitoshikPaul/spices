@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$tabs = $block->getData('tabs_data');
+$tabItems = json_decode($tabs->getData('items'), true);
+?>
+
+<?php if (count($tabItems)): ?>
+<?php
+$wrapClass = $tabs->getData('class');
+$id = $tabs->getData('id');
+$settings = $tabs->getData('settings');
+$title = $tabs->getData('title');
+$desc = $tabs->getData('desc');
+$item = new \Magento\Framework\DataObject();
+?>
+<div class="cdz-tabs-wrap <?= $wrapClass ?>" <?= $id?'id="'.$id.'"':'' ?>>
+    <?php if ($title) : ?>
+    <div class="cdz-block-title">
+        <p class="b-title h2"><span><?= $title ?></span></p>
+        <?php if ($desc) : ?>
+        <p class="title-desc"><span><?= $desc ?></span></p>
+        <?php endif ?>
+    </div>
+    <?php endif ?>
+    <div class="cdz-block-content" data-role="js-tab-dc-container">
+        <div class="hidden" data-role="tab-links-placeholder"></div>
+        <div class="cdz-tabs df-tabs hidden" data-role="tabs-dynamic-control">
+        <?php foreach ($tabItems as $itemData) : ?>
+            <?php
+                $item->setData($itemData);
+                $icon = $item->getData('icon');
+                $icon = $icon?"<i class=\"tab-icon fa {$icon}\"></i> ":'';
+            ?>
+            <div class="tab-item">
+                <div class="tab-title" data-class="<?= $item->getData('class') ?>" data-externalurl='<?= $item->getData('external_url') ?>'><?= $icon . '<span>' . $item->getData('title') . '</span>' ?></div>
+                <div class="tab-content"><?= $item->getData('content'); ?></div>
+            </div>
+        <?php endforeach ?>
+        </div>
+    </div>
+</div>
+<?php endif ?>

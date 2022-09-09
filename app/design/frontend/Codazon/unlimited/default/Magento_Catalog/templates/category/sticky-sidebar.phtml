@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © 2022 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php if ($this->helper(\Codazon\Core\Helper\Data::class)->getConfig('codazon_ajaxlayerednavpro/general/enable_sticky_sidebar')) : ?>
+<script>
+require(['jquery'], function($) {
+    var stkBr = function() {
+        var $sbMain = $('body[class*=page-layout-2columns] .columns > .sidebar-main').first(), $sbAd = $('body[class*=page-layout-2columns] .columns > .sidebar-additional').first();
+        if ($sbMain.length || $sbAd.length) {
+            var $stkBr = $('#cdz-stk-sidebar');
+            if (!$stkBr.length) {
+                var $stkHr = $('.sticky-menu.js-sticky-menu').first(), t, ev = 'changeStickyState.stickySidebar';
+                $stkBr = $('<div id="cdz-stk-sidebar" class="stk-sidebar nice-scroll _scrhv _scrrd">').insertBefore($sbMain.length ? $sbMain : $sbAd);
+                $sbMain.appendTo($stkBr);
+                $sbAd[(window.innerWidth < 768) ? 'insertAfter' : 'appendTo']($stkBr);
+                $('.page-main > .columns').addClass('has-stk-sb');
+                var calcTop = function() {
+                    if (t)clearTimeout(t);
+                    t = setTimeout(function() {
+                        if (codazon.enableStikyMenu) {
+                            $stkHr.off(ev).on(ev, function() {
+                                if ($stkHr.hasClass('active')) {
+                                    $stkBr.css('--stk_sb_top', 'calc('+$stkHr.outerHeight()+'px + 10px)');
+                                    $stkHr.off(ev);
+                                }
+                            });
+                        } else {
+                            $stkBr.css('--stk_sb_top', '10px');
+                        }
+                    }, 100);
+                }
+                calcTop();
+                $(window).on('cdz_window_width_changed', calcTop).on('cdz_mobile', function() {
+                    $sbAd.insertAfter($stkBr);
+                }).on('cdz_desktop', function() {
+                    $sbAd.appendTo($stkBr);
+                });
+            }
+        }
+    }
+    stkBr();
+    $('body').on('contentUpdated', stkBr);
+});
+</script>
+<?php endif ?>

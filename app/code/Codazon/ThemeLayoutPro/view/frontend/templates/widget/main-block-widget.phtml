@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$helper = $this->helper(\Codazon\Core\Helper\Data::class);
+$widget = [
+    "Codazon_ProductFilter/js/firstload" => [
+        "ajaxUrl"    => $this->getUrl('themelayoutpro/ajax/mainWidget'),
+        "currentUrl" => $this->getUrl(),
+        "jsonData"   => [
+            'main_opt_id' => $this->getData('main_opt_id'),
+            'store' => $helper->getCurrentStoreId()
+        ]
+    ]
+];
+?>
+<div class="no-loaded" data-mage-init='<?= json_encode($widget) ?>'>
+    <div class="brand-loader double-bounce-spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+    </div>
+</div>

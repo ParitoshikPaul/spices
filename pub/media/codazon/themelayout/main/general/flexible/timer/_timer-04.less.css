@@ -1,0 +1,113 @@
+.cdz-timer-04 {
+    @item_space: 18px;
+    display: inline-block;
+    position: relative;
+    margin-bottom: 20px;
+    .countdown-timer {
+        .deal-items {
+            margin-right: -@item_space;
+            display: flex;
+            .deal-item:first-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+        .deal-item {
+            display: inline-block;
+            margin-right: @item_space;
+            user-select: none;
+            text-align: center;
+            position: relative;
+            .value {
+                font-size: 26px;
+                padding: 10px 3px;
+                .abs-borderradius(5px);
+                background: @btn_normal_background;
+                color: @btn_normal_text;
+                display: block;
+                min-width: 60px;
+            }
+            .label {
+                font-size: 20px;
+                margin-top: 5px;
+                color: darken(@btn_primary_background, 10%);
+                font-weight: 500;
+                display: block;
+                width: 100%;
+                display: none;
+            }
+            &:after{
+                content: ":";
+                position: absolute;
+                left: -12px;
+                top: 0;
+                font-size: 26px;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                .rtl-layout &{
+                    left: auto;
+                    right: -12px;
+                }
+            }
+            
+        }
+    }
+    &.has-ic {
+        padding: 0 33px;
+        .ic-timer {
+            position: absolute;
+            left: 0;
+            top: 15px;
+        }
+        .rtl-layout & {
+            .ic-timer {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .cd-expired {
+        .timer-block {
+            opacity: 0.6;
+        }
+    }
+    .cd-expired-msg {
+        padding: 7px 10px;
+        background: #ffc107;
+        color: #fff;
+        border-radius: 2px;
+        margin: 10px 0;
+        &:before {
+            font-family: fontAwesome;
+            content: "\f071";
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 7px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            .rtl-layout & {
+                margin: 0 0 0 7px;
+            }
+        }
+    }
+    @media @phone {
+        width: 100%;
+        text-align: center;
+        .countdown-timer {
+            display: inline-block;
+            .deal-item {
+                .value {
+                    font-size: 22px;
+                    min-width: 45px;
+                    padding: 7px 3px;
+                }
+                .label {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

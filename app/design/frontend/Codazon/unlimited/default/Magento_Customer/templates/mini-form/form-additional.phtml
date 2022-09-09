@@ -1,0 +1,14 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper(\Codazon\Core\Helper\Data::class);
+$enableAjaxCaptcha = $helper->getConfig('themelayoutpro/store/enable_ajax_captcha');
+?>
+<?php if ($enableAjaxCaptcha) : ?>
+<div data-mage-init='{"themewidgets":{"codazon.ajaxcontent": {"ajaxUrl": "<?= $this->getUrl('themelayoutpro/ajax/captcha') ?>", "cache": false, "handle": "append" }}}'></div>
+<?php endif ?>
+<?= $this->getChildHtml() ?>

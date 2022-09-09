@@ -1,0 +1,140 @@
+.box-cate-style01{
+	/*Block Tab Prouct Title*/
+	.abs-title-tab-style-01(@main_hover_text);
+
+	/*Tab title*/
+	.block-title{
+		margin-bottom:0;
+		.b-title.h2{
+			font:@f_h1;
+			color: @main_title_text;
+			letter-spacing: 2px;
+		}
+	}
+	.title-section{
+		padding: 15px 15px 10px;
+		border-bottom:1px solid @main_border;
+		.tab-links-title{
+			.rtl-layout &{
+				padding: 0;
+			}
+		}
+	}
+	/*general*/
+	.box-cate-link{
+		padding: 0;
+	    margin: 0;
+	    list-style: none;
+	    text-align: right;
+	    .item{
+	    	display: inline-block;
+	    	padding: 5px 0;
+	    	margin:0 10px;
+	    	letter-spacing: 1px;
+	    	.abs-borderradius(@btn_radius);
+	    	.abs-transition();
+	    	.tab-title{
+	    		padding: 0 15px;
+	    		font-size: 14px;
+	    		text-decoration: none;	
+	    		.abs-transition();
+	    	}
+	    	&.active{	
+	    		.tab-title{color:#ffffff}
+	    		&:hover{
+	    			.tab-title{color:#ffffff}
+	    		}
+	    	}
+	    }
+	    .rtl-layout &{
+	    	text-align: left;
+	    }
+	}
+	.cdz-box{
+		padding-left: 0;
+    padding-right: 0;
+		background: @main_box_background;
+		.abs-boxshadow(@main_box_shadow);	
+		.abs-borderradius(@main_box_radius);
+	}
+	[class*='product-list-style']{
+		.cdz-product{
+			border: 0;
+			.abs-borderradius(0);
+			.abs-boxshadow(none);
+		}
+		.product-item{
+			.abs-borderradius(0);
+		}
+		.owl-carousel.owl-drag .owl-item{
+			&:after{
+				display: none;
+			}
+		}
+	}
+	.row{
+		margin-left:0; margin-right:0;
+	}
+	/*Tab content*/
+	.tab-content .products{
+		margin-top:0
+	}
+	@media @phone{
+		.title-section{
+			display: flex;
+			align-items: center;
+			padding:10px;
+			padding-left:0;
+			[class*='col-']{
+				flex-basis: 50%
+			}
+		}
+		.tab-links-title {
+		    padding: 0 5px;
+		    > .mobile-toggle{
+		    	padding: 3px 10px;
+		    	float: right;
+		    	.abs-borderradius(@btn_radius);
+		    	&:after{		    		
+		    		margin-left:3px;
+		    		.abs-iconfont("\f107", 13px);
+		    		.abs-transform(rotate(0));
+		    		.abs-transition();
+		    		.rtl-layout &{
+		    			margin-left:0;
+		    			margin-right:3px;
+		    		}
+		    	}
+		    	&.open:after{
+	    			.abs-iconfont("\f107", 13px);
+	    			.abs-transform(rotate(-180deg));
+	    		}
+		    	&:hover,
+		    	&:active{
+		    		text-decoration: none;
+		    	}
+		    	.rtl-layout &{
+		    		float: left;
+		    		margin-left:10px;
+		    	}
+		    }
+		    .abs-dropdown{
+		    	position: absolute;
+		    	right: 0;
+		    	min-width: 150px;
+		    	background: #ffffff;
+		    	top:100%;
+		    	text-align: left;
+		    	z-index: 3;
+		    	.abs-boxshadow(2px 2px 3px #dddddd);	
+		    	.item{
+		    		display: block;
+		    		&.active{
+		    			background: transparent;		    			
+		    			a{color: @main_tab_text}
+		    		}
+		    	}
+		    }
+		}
+	}
+}

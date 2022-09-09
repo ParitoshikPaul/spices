@@ -1,0 +1,96 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+?>
+<?php if ($helper->getConfig('mobile/general/display_bottom_toolbar')) : ?>
+<?php
+$toolbarItems = [
+    ['class' => 'btn-home',         'icon' => 'fa fa-home',             'href' => $this->getUrl(), 'label' => __('Home')],
+    ['class' => 'btn-search',       'icon' => 'fa fa-search',           'href' => 'javascript:void(0);', 'data_action' => '{"trigger": {"event":"click", "target": ".full-box-trigger:first"}}', 'label' => __('Search')]
+];
+$displayLabel = $helper->getConfig('mobile/general/display_button_label');
+$minicartStyle = $helper->getMiniCartStyle();
+if ($minicartStyle == 'dropdown') {
+    $toolbarItems[] = ['class' => 'js-footer-cart btn-cart',         'icon' => 'fa fa-shopping-cart',    'href' => 'javascript:void(0);', 'data_action' => '{"display": {"element": "#mobi_cart-wrapper .block-minicart"}}', 'custom_html' => '<span class="info-wrap" data-bind="scope: \'minicart_content\'" data-block="minicart"><span class="counter-number"><!-- ko text: getCartParam(\'summary_count\') --><!-- /ko --></span></span>', 'label' => __('Cart')];
+} elseif ($minicartStyle == 'popup') {
+    $toolbarItems[] = ['class' => 'js-footer-cart btn-cart',         'icon' => 'fa fa-shopping-cart',    'href' => 'javascript:void(0);', 'data_action' => '{"trigger": {"event":"click", "target": "#mobi_cart-wrapper a.cdz-top-link"}}', 'custom_html' => '<span class="info-wrap" data-bind="scope: \'minicart_content\'" data-block="minicart"><span class="counter-number"><!-- ko text: getCartParam(\'summary_count\') --><!-- /ko --></span></span>', 'label' => __('Cart')];
+} else {
+    $toolbarItems[] = ['class' => 'js-footer-cart btn-cart',         'icon' => 'fa fa-shopping-cart',    'href' => 'javascript:void(0);', 'data_action' => '{"trigger": {"event":"click", "target": "#mobi_cart-wrapper a.cdz-top-link"}}', 'custom_html' => '<span class="info-wrap" data-bind="scope: \'minicart_content\'" data-block="minicart"><span class="counter-number"><!-- ko text: getCartParam(\'summary_count\') --><!-- /ko --></span></span>', 'label' => __('Cart')];
+}
+
+$toolbarItems = array_merge($toolbarItems, [
+    ['class' => 'btn-account',      'icon' => 'fa fa-user-o',           'href' => $this->getUrl('customer/account'), 'label' => __('Account')],
+    ['class' => 'btn-contact',      'icon' => 'fa fa-map-marker',       'href' => $this->getUrl('contact'), 'label' => __('Contact')],
+    ['class' => 'btn-wishlist',     'icon' => 'fa fa-heart-o',          'href' => $this->getUrl('wishlist'), 'label' => __('Wishlist')],
+    ['class' => 'btn-compare',      'icon' => 'fa fa-random',           'href' => $this->getUrl('catalog/product_compare'), 'label' => __('Compare')],
+    ['class' => 'btn-menu',         'icon' => 'fa fa-navicon',          'href' => 'javascript:void(0);', 'data_action' => '{"trigger": {"event":"click", "target": ".page-header .nav-toggle[data-action=toggle-nav]"}}', 'label' => __('Menu')]
+]);
+$count = count($toolbarItems);
+?>
+
+<div class="mb-bottom-toolbar visible-xs" id="mb-bottom-toolbar">
+    <div class="mb-toolbar-backface" data-role="close-content"></div>
+    <div class="mb-toolbar-content">
+        <div class="mb-toolbar-content-inner cdz-dd-content cdz-dropdown" data-role="mb-toolbar-content"></div>
+    </div>
+    <div class="mb-toolbar-inner row">
+        <div class="btn-groups <?= ($count > 4) ? 'col-xs-18' : 'col-xs-24' ?>">
+            <div class="owl-carousel" id="btn-group-slider" data-role="group-slider">
+                <div class="btn-group" id="tool-btn-group-1" data-role="group-item">
+                    <ul class="menu-items items row">
+                        <?php for($i = 0; $i < 4; $i++) : ?>
+                        <?php if (!empty($toolbarItems[$i])) : ?>
+                        <li class="item col-xs-6<?= empty($toolbarItems[$i]['class']) ? '' : ' '.$toolbarItems[$i]['class']; ?>">
+                            <a class="action"
+                                href="<?= empty($toolbarItems[$i]['href']) ? '' : $toolbarItems[$i]['href']; ?>"
+                                <?= empty($toolbarItems[$i]['data_action']) ? '' : "data-action='{$toolbarItems[$i]['data_action']}'" ?>
+                                >
+                                <i class="<?= empty($toolbarItems[$i]['icon']) ? 'fa fa-user-o' : $toolbarItems[$i]['icon']; ?>"></i>
+                                <?= empty($toolbarItems[$i]['custom_html']) ? '' : $toolbarItems[$i]['custom_html']; ?>
+                            </a>
+                            <?php if ($displayLabel) : ?><span class="ilabel"><?= $toolbarItems[$i]['label'] ?></span><?php endif ?>
+                        </li>
+                        <?php endif ?>
+                        <?php endfor ?>
+                    </ul>
+                </div>
+                <?php if ($count > 4) : ?>
+                <div class="btn-group" id="tool-btn-group-2" data-role="group-item">
+                    <ul class="menu-items items row">
+                        <?php for($i = 4; $i < 8; $i++) : ?>
+                        <?php if (!empty($toolbarItems[$i])) : ?>
+                        <li class="item col-xs-6<?= empty($toolbarItems[$i]['class']) ? '' : ' '.$toolbarItems[$i]['class']; ?>">
+                            <a class="action" href="<?= empty($toolbarItems[$i]['href']) ? '' : $toolbarItems[$i]['href']; ?>"
+                                <?= empty($toolbarItems[$i]['data_action']) ? '' : "data-action='{$toolbarItems[$i]['data_action']}'" ?>
+                                >
+                                <i class="<?= empty($toolbarItems[$i]['icon']) ? 'fa fa-user-o' : $toolbarItems[$i]['icon']; ?>"></i>
+                                <?= empty($toolbarItems[$i]['custom_html']) ? '' : $toolbarItems[$i]['custom_html']; ?>
+                            </a>
+                            <?php if ($displayLabel) : ?><span class="ilabel"><?= $toolbarItems[$i]['label'] ?></span><?php endif ?>
+                        </li>
+                        <?php endif ?>
+                        <?php endfor ?>
+                    </ul>
+                </div>
+                <?php endif ?>
+            </div>
+        </div>
+        <?php if ($count > 4) : ?>
+        <div class="col-xs-6 group-switch">
+            <button data-role="switch-group" class="switcher" href="javascript:void(0);">
+                <span class="fa fa-circle-o dot"></span>
+                <span class="fa fa-circle-o dot"></span>
+                <span class="fa fa-circle-o dot"></span>
+                <span class="times"></span>
+            </button>
+            <?php if ($displayLabel) : ?><span class="ilabel"><?= __('More') ?></span><?php endif ?>
+        </div>
+        <?php endif ?>
+    </div>
+</div>
+<?php endif ?>

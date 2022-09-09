@@ -1,0 +1,116 @@
+/*Fashion Megastore*/
+.tabs-style-03 {
+    @media @tablet_vertical {
+        .tab-content {
+            padding-top: 25px;
+        }
+        .box-cate-link {
+            padding: 0;
+            margin-top: 25px;
+            list-style: none;
+            text-align: center;
+            .item {
+                display: inline-block;
+                margin: 0 5px;
+                position: relative;
+                .abs-transition();
+                &:after {
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid transparent;
+                    content: "";
+                    position: absolute;
+                    top: -2px;
+                    left: 2px;
+                    .abs-transition();
+                }
+                .tab-title {
+                    text-transform: uppercase;
+                    font-size: 14px;
+                    position: relative;
+                    z-index: 1;
+                    padding: 5px 10px;
+                    display: block;
+                    .abs-transition();
+                    .abs-link(@main_tab_text, @main_hover_text);
+                }
+                &.active {
+                    background: @main_tab_hover_background;
+                    &:after {
+                        border-color: @main_tab_hover_border;
+                    }
+                    a {
+                        .abs-link(@main_tab_hover_text, @main_tab_hover_text);
+                    }
+                }
+            }
+        }
+    }
+    @media @phone {
+        .tab-content {
+            padding-top: 25px;
+        }
+        .mobile-toggle {
+            text-align: center;
+            display: inline-block !important;
+            width: auto;
+            background: green;
+            margin: 0 auto;
+            position: relative;
+            padding: 5px 30px 5px 20px;
+            text-transform: uppercase;
+            font-weight: 600;
+            min-width: 120px;
+            .abs-calc-left(~'(100% - 120px)/2');
+            .abs-allstyle(@main_tab_hover_text, @main_tab_hover_background);
+            .rtl-layout & {
+                left: auto;
+                .abs-calc-right(~'(100% - 120px)/2');
+                padding: 5px 20px 5px 30px;
+            }
+            &:before {
+                width: 100%;
+                height: 100%;
+                border: 1px solid @main_tab_hover_border;
+                content: "";
+                position: absolute;
+                top: -2px;
+                left: 2px;
+                .abs-transition();
+            }
+            &:after {
+                .abs-iconfont('\f107', 14px);
+                position: absolute;
+                margin: 0 5px;
+            }
+            &.open {
+                &:after {
+                    .abs-transform(rotate(180deg))
+                }
+            }
+            &:focus, &:active, &:hover {
+                color: @main_tab_hover_text;
+            }
+        }
+        .box-cate-link {
+            padding: 0;
+            list-style: none;
+            z-index: 2;
+            background: @main_box_background;
+            padding: 15px 0px 0;
+            text-align: center;
+            margin-bottom: 10px;
+            li {
+                display: inline-block;
+                a {
+                    color: @main_hover_text;
+                    display: block;
+                    padding: 5px 10px;
+                }
+                &.active {
+                    border-bottom: 3px double @main_tab_hover_border
+                }
+            }
+        }
+    }
+}

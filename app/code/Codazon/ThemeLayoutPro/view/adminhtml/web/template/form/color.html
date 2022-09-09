@@ -1,0 +1,33 @@
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div data-bind="attr: {class: 'position-relative'}" style="margin-bottom: 10px;">
+    <input type="text" data-bind="
+        attr: {
+            name: inputName,
+            class: 'color_value admin__control-text',
+            style: 'float: left; margin-right: 10px; width: 150px'
+        },
+        value: value
+    "/>
+    <div class="swatches-visual-col" data-bind="attr: {style: 'float: left; padding: 8px 7px; margin-top: -4px; margin-right: 30px;'}">
+        <div data-bind="attr: {class: 'swatch_window ' + inputName.replace('[','_').replace(']','')}"></div>
+        <div class="swatch_sub-menu_container">
+            <div class="swatch_row position-relative">
+                <div class="swatch_row_name colorpicker_handler">
+                    <p translate="'Choose a color'"></p>
+                </div>
+            </div>
+            <div class="swatch_row">
+                <div class="swatch_row_name btn_remove_swatch">
+                    <p translate="'Clear'"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

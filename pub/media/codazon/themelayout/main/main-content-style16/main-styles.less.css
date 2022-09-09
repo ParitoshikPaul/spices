@@ -1,0 +1,7 @@
+@import (optional,less)'../_default_variables.less.css';
+@import (less)'_variables.less.css';
+@import (less)'../_general.less.css';
+@import (optional,less)'../general/flexible/product-24.less.css';
+@import (optional,less)'../general/flexible/blog-08.less.css';
+@import (optional,less)'../general/flexible/tabs/_tabs-style-04.less.css';
+@import (less)'_elements.less.css';

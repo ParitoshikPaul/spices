@@ -1,0 +1,17 @@
+.preview-wrap{
+    margin-bottom: 40px;
+    margin-top: 40px;
+    .label {
+        font-size: 20px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        color: #eb5202;
+    }
+    .preview-img {
+        text-align: center;
+        background: #ffffff;
+        padding: 0px 0px;
+        box-shadow: 2px 2px 7px #bdbdbd;
+        line-height: 0;
+    }
+}

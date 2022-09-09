@@ -1,0 +1,166 @@
+.post-list-style11{
+    .post-item {
+        margin-bottom: 20px;
+        position: relative;
+        .item-inner{
+            transition: .6s;
+            background: @main_box_background;
+            box-shadow: 0 3px 4px 0 rgba(35,35,35,.1), 0 0 1px 0 rgba(10,31,68,.08);
+        }
+        &:hover .item-inner{
+            box-shadow: 0px 6px 4px #ccc;
+        }
+    }
+    .post-bottom {
+        line-height: 0;
+    }
+    .post-bottom-inner{
+        background: @main_box_background;
+    }
+    .post-header, .post-body, .post-footer{
+        display: inline-block;
+        padding: 20px 20px;
+        width: 100%;
+    }
+    .post-header{
+        font: @f_h5;
+        padding-bottom: 0px;
+        margin-bottom: -10px;
+        .post-header-left, .post-header-right{
+            display: block;
+            float: left;
+            margin-bottom: 10px;
+        }
+        .post-header-right{
+            float: right;
+        }
+    }
+    .post-footer{
+        padding: 10px 20px;
+        background-color: @product_info_background;
+        .post-footer-left, .post-footer-right{
+            display: block;
+            float: left;
+        }
+        .post-footer-right{
+            float: right;
+        }
+    }
+    .post-category, a.post-category{
+        color: @btn_default_text;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+    .post-date{
+        color: @btn_default_text;
+        font-weight: 600;
+        float: right;
+    }
+    .post-footer{
+        @media @general_tablet{
+            overflow: hidden;
+        }
+        white-space: nowrap;
+    }
+    a.more-link, .more-link{
+        .small-button-style-01();
+        vertical-align: middle;
+        > span:before{
+            font-family: FontAwesome;
+            content: "\f02d";
+            margin-right: 7px;
+        }
+    }
+    .share-buttons{
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 10px;
+        .rtl-layout &{
+            margin-left: 0px;
+            margin-right: 10px;
+        }
+        .item {
+            cursor: pointer;
+            color: @btn_icon_text;
+            font-size: 14px;
+            border: 1px solid @btn_icon_text;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            text-align: center;
+            line-height: 23px;
+            margin-right: 5px;
+            transition: transform ease .2s;
+            .rtl-layout &{
+                margin-left: 5px;
+                margin-right: 0px;
+            }
+            &:last-child{
+                margin-right: 0px;
+                margin-left: 0px;
+            }
+            &:hover{
+                transform: scale(1.2);
+                background: @btn_icon_text;
+                color: @btn_icon_background;
+                //box-shadow: inset 0px 0px 3px @btn_icon_hover_text;
+            }
+        }
+    }
+    .post-title .post-item-link{
+        font: @f_h5;
+    }
+    .post-author{
+        color: @main_text_normal;
+        font: @f_note;
+        margin-top: 10px;
+        &:before{
+            .abs-iconfont2('\E998', 13px);
+            margin-right: 7px;
+        }
+    }
+    .post-desc{
+        color: @main_text_normal;
+        font: @f_note;
+        margin-top: 10px;
+    }
+    
+    //Effect
+    @media @tablet_vertical {
+        .post-footer{
+            visibility: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            opacity: 0;
+            transition: .6s;
+        }
+        .post-item{
+            .post-bottom{
+                position: relative;
+                transition: .6s;
+            }
+            &:hover{
+                .post-bottom{
+                    transform: translateY(-50px);
+                }
+                .post-bottom-inner{
+                    
+                }
+                .post-footer{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    @media @phone {
+        .post-footer{
+            text-align: center;
+            .more-link{
+                display: none;
+            }
+        }
+    }
+}

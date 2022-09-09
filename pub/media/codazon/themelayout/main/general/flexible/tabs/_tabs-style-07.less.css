@@ -1,0 +1,82 @@
+.tabs-style-07{
+    position: relative;
+    .cdz-block-title{
+        text-align: left;
+        margin-bottom: -40px;
+        .rtl-layout &{
+            text-align: right;
+        }
+    }
+    .title-desc{
+        display: none;
+    }
+    @media @tablet_vertical{
+        .box-cate-link{
+            text-align: right;
+            .rtl-layout &{
+                text-align: left;
+            }
+            .item{
+                display: inline-block;
+                margin: 0px 8px 0px 0px;
+                &:last-child{
+                    margin: 0;
+                }
+                .rtl-layout &{
+                    margin: 0px 0px 0px 8px;
+                    &:last-child{
+                        margin: 0;                        
+                    }
+                }
+                
+            }
+            .tab-title{
+                padding: 7px 15px;
+                position: relative;
+                display: inline-block;
+                transition: .5s;
+                color: @main_text_normal2;
+                background: @btn_normal_background;
+                line-height: 1;
+                box-shadow: 0px 3px 2px #cccccc;
+                font: @f_h5;
+                font-size: 16px;
+                min-width: 100px;
+                text-align: center;
+            }
+            .item:first-child .tab-title{
+                border-radius: 3px 0px 0px 3px;
+            }
+            .item:last-child .tab-title{
+                border-radius: 0px 3px 3px 0px;
+            }
+            .tab-icon {
+                display: inline-block;
+                font-size: 20px;
+                margin-right: 10px;
+                .rtl-layout &{
+                    margin-right: 0px;
+                    margin-left: 10px;
+                }
+            }
+            .item.active, .item:hover{
+                .tab-title{                                       
+                    background: @main_block_title_background;
+                    color: @main_text_normal2;
+                }
+            }
+            .item:hover{
+                .tab-title{
+                    position: relative;
+                    &:after{
+                        .page-pulse-effect();
+                    }
+                }
+            }
+        }
+        .tab-content{
+            padding: 40px 0px 20px 0px;
+        }
+    }
+    .mobile-tabs-style-01();
+}

@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2020 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div class="theme-actions">
+    <div class="theme-action-inner">
+        <button role="cdz_fix_data" data-problem="fix_template" id="update-main-template" class="action fix-data"><?= __('Fix main content template') ?></button>
+        <button role="cdz_fix_data" data-problem="fix_data" id="fix-theme-data" class="action fix-data"><?= __('Fix Theme Data') ?></button>
+    </div>
+</div>
+
+<script>
+require(['jquery', 'Magento_Ui/js/modal/confirm'], function($, confirm) {
+    $('[role="cdz_fix_data"]').on('click', function() {
+        var $btn = $(this), problem = $btn.data('problem');
+        confirm({
+            title: '<?= __("Warning") ?>',
+            content: '<?= __("Are you sure?") ?>',
+            actions: {
+                confirm: function () {
+                    document.location.href = '<?= $this->getUrl("themelayoutpro/config/fixData", ["problem" => "___problem___"]) ?>'.replace('___problem___', problem);
+                },
+                cancel: function () {},
+                always: function () {}
+            }
+        })
+    });
+});
+</script>

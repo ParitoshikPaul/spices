@@ -1,0 +1,48 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$_product = $block->getProduct();
+$isSale = false;
+//if ($_product->getTypeId() != 'configurable') {
+    $isSale = $_product->getPrice() > $_product->getFinalPrice();
+    $_saleItem = $_product;
+    if ((!$isSale) && ($_product->getTypeId() == 'configurable')) {
+        $_children = $_product->getTypeInstance()->getUsedProducts($_product);
+        foreach ($_children as $_child) {
+            $isSale = $_child->getPrice() > $_child->getFinalPrice();
+            if ($isSale) {
+                $_saleItem = $_child;
+                break;
+            }
+        }
+    }   
+    if ($isSale) {
+        $specialFromDate = $_saleItem->getData('special_from_date');
+        $specialToDate = str_replace(' 00:00:00', ' 23:59:59', (string)$_saleItem->getData('special_to_date'));
+        if (!$specialToDate) {
+            $isSale = false;
+        }
+        $widget = ['themewidgets' => [
+            'codazon.minicountdown' => [
+                'startDate'     => $specialFromDate,
+                'stopDate'      => $specialToDate,
+                'dayLabel'      => __('Day'),
+                'hourLabel'     => __('Hour'),
+                'minLabel'      => __('Min'),
+                'secLabel'      => __('Sec'),
+            ]
+        ]];
+    }
+//}
+?>
+
+<?php if ($_product->isSaleable() && $isSale) : ?>
+    <div class="product-deal">
+        <div class="deal-wrap" data-mage-init='<?php echo json_encode($widget); ?>'></div>
+    </div>
+<?php endif ?>

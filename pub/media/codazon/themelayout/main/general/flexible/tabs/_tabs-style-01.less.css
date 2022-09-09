@@ -1,0 +1,43 @@
+/* Electronic */
+
+.tabs-style-01 {
+    @media @tablet_vertical {
+        .box-cate-link .item {
+            .abs-allstyle(@main_tab_text, @main_tab_border, @main_tab_background, @f_h3);
+            border: 1px solid #e1e1e1;
+            text-transform: capitalize;
+            font-size: 18px;
+            margin-right: -1px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 0;
+            .tab-title {
+                padding: 7px 24px;
+                display: block;
+                font-weight: 500;
+            }
+            &:hover {
+                .abs-style(@main_tab_hover_text, @main_tab_border, @main_tab_hover_background)
+            }
+            .rtl-layout & {
+                margin-right: 0;
+                margin-left: -1px;
+            }
+            &.active {
+                &:after {
+                    content: "";
+                    width: 100%;
+                    height: 4px;
+                    background: @main_tab_hover_border;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+        .cdz-tabs {
+            margin-top: 25px;
+        }
+    }
+    .cdz-mobile-tabs();
+}

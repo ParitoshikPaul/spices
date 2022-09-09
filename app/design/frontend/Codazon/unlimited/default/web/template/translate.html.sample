@@ -1,0 +1,3 @@
+<p data-bind="i18n: 'Your cart is empty'"></p>
+<p data-bind="i18n: 'item in your cart'"></p>
+<p data-bind="i18n: 'items in your cart'"></p>

@@ -1,0 +1,69 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$slider = $block->getData('slider_data');
+$slideItems = json_decode($slider->getData('items'), true);
+?>
+
+<?php if ($slideItems[0]['image']): ?>
+<?php
+$wrapClass = $slider->getData('class');
+$itemClass = $slider->getData('item_class');
+$settings = $slider->getData('settings');
+$title = $slider->getData('title');
+$uniqid = uniqid('slideshow-');
+$item = new \Magento\Framework\DataObject();
+$imgeHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Image');
+$mediaUrl = $block->getMediaUrl();
+$width = $slider->getData('width')?:1900;
+$height = $slider->getData('height')?:800;
+$lazyLoad = $slider->getData('disable_lazy_load') ? false : true;
+$paddingBottom = $height*100/$width;
+$slides = [];
+$desc = '';
+foreach ($slideItems as $i => $itemData) {
+    $item->setData($itemData);
+    $image = $item->getData('image');
+    $tempImage = str_replace($mediaUrl, '', $this->filter($image)); 
+    if (strpos($tempImage, "//") === false) {
+        $image = $slider->getData('use_org') ? $mediaUrl . $tempImage : (string)$imgeHelper->init($tempImage)->resize($width, $height);
+        $smallImage = (string)$imgeHelper->init($tempImage)->resize(200, round($height * 200/$width));
+    } else {
+        $image = $smallImage = $tempImage;
+    }
+    if ($content = $item->getData('content')) {
+        $desc .= '<div class="item-desc item-desc-'.$i.'">' . $content .'</div>';
+    }
+    $slides[] = [
+        'img'       => $image,
+        'smallImg'  => $smallImage,
+        'link'      => $item->getData('link'),
+        'video'     => $item->getData('video'),
+        'video_ratio' => $item->getData('video_ratio'),
+        'title'     => $block->stripTags($item->getData('title')),
+    ];
+}
+$widget = ['themewidgets' => [
+    'codazon.slideshow' => [
+        'sliderConfig'  => $block->getSlideshowSettings($slider),
+        'items'         => $slides,
+        'lazyLoad'      => $lazyLoad,
+        'paddingBottom' => $paddingBottom,
+        'showThumbNav'  => (bool)($slider->getData('show_thumb_nav') && $slider->getData('show_nav')),
+        'showThumbDots' => (bool)($slider->getData('show_thumb_dots') && $slider->getData('show_dots'))
+    ]
+]];
+?>
+<div id="<?= $uniqid ?>" class="cdz-slideshow <?= $wrapClass ?>" data-role="cdz-slideshow" data-mage-init='<?= json_encode($widget, JSON_HEX_QUOT) ?>'>
+    <div class="cdz-slideshow-outer abs-frame" style="padding-bottom: <?= $paddingBottom ?>%;background: url(<?= $slides[0]['img'] ?>) no-repeat center center; background-size: cover;">
+        <div class="cdz-slideshow-inner abs-frame-inner">
+            <div class="items" role="items"></div>
+            <div class="desc-placeholder" style="display:none;"><?= $desc ?></div>
+        </div>
+    </div>
+</div>
+<?php endif ?>

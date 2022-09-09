@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Checkout\Block\Cart\Sidebar */
+?>
+
+<div data-block="minicart" id="minicart-list">
+    <div class="block block-minicart empty">
+        <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+            <!-- ko template: getTemplate() --><!-- /ko -->
+        </div>
+        <?php echo $block->getBlockHtml('minicart.addons'); ?>
+    </div>
+</div>

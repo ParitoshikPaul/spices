@@ -1,0 +1,72 @@
+/*Block Category*/
+/*Home food and drink*/
+.wrapper-adv-style-03{
+	border-radius:4px; 
+	padding: 20px 10px;
+    margin: 0;
+	.cdz-banner-text{
+		width: 65%;
+    	float: right;
+    	margin:0 30px;
+    	.rtl-layout &{
+    		float: left;
+    	}
+    	.h2{
+    		color:#ffffff;
+    		font-size: 24px;
+    	}
+    	.primary{
+    		text-transform: inherit;
+		    padding: 5px 25px;
+		    font-size: 14px;
+    		.abs-borderradius(@btn_radius);
+    	}
+	}
+	.cdz-categories-slider{
+		padding:0;
+		.owl-stage{
+			padding-top:7px;
+			padding-bottom:7px;
+		}
+		.item-image {
+		    display: block;
+		    border-radius: 100%;
+		    overflow: hidden;
+		    padding: 5px;
+		    background: #ffffff;
+		    margin:0 auto;
+		    .abs-transition();
+		    img{border-radius: 100%}
+		}
+		.item {
+		    text-align: center;
+		    &:hover{
+		    	.item-image{
+		    		.abs-boxshadow(0 0 0 5px rgba(255, 255, 255, 0.5));
+		    	}
+		    }
+		}
+		.item-title{
+			color:#ffffff;
+		}
+		.owl-slider-general();
+		.owl-slider("false", 40px, 40px);
+	}
+	@media @tablet-strict_small{
+		.cdz-banner-text {
+		    width: 100%;
+		    margin: 0;
+		}
+	}
+	@media @phone{
+		.cdz-categories-slider{
+			padding: 0 0 0 15px;
+		    width: 100%;
+		    float: right;
+		    .item-image{
+		    	width: 100%;
+		    	height: auto
+		    }
+		}
+	}
+}

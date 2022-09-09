@@ -1,0 +1,144 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$element = $this->getFormElement();
+$id = $element->getId();
+?>
+<div class="cdz-container" id="<?= $id ?>_container">
+    <div class="cdz-items-list" id="<?= $id ?>_items_list"></div>
+    <div>
+    <div class="cdz-actions"><button id="<?= $id ?>_add_item" type="button" class="button action-primary"><?= __('Add Item') ?></button></div>
+    </div>
+</div>
+<script type="text/x-jquery-tmpl" id="<?= $id ?>_item_tmpl">
+<div class="js-item item ">
+    <div class="sort-handle" title="<?= __('Move to sort') ?>"></div>
+    <div class="item-data row">
+        <div class="col col-xs-2"><label>Type</label>
+            <select data-name="type">
+                <% _.each(types, function(type) { %>
+                <option <%- (value.type == type.value) ? 'selected' : '' %> value="<%- type.value %>"><%- type.label %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="col col-xs-2"><label>Label</label>
+            <input type="text" data-name="label" value="<%- value.label %>">
+        </div>
+        <div class="col col-xs-3"><label>URL (E.g.: <em>{{store url="contact"}}</em>)</label>
+            <input type="text" data-name="url" value="<%- value.url %>">
+        </div>
+        <div class="col col-xs-2"><label>Icon (E.g.: <em>fa fa-home</em>)</label>
+            <input type="text" data-name="icon" value="<%- value.icon %>">
+        </div>
+        <div class="col col-xs-1"><label>CSS class</label>
+            <input type="text" data-name="class" value="<%- value.class %>">
+        </div>
+        <div class="col col-xs-1"><label>Attributes</label>
+            <input type="text" data-name="attributes" value="<%- value.attributes %>">
+        </div>
+        <div class="col col-xs-1">
+            <button type="button" class="js-remove"><?= __('Remove') ?></button>
+        </div>
+    </div>
+</div>
+</script>
+<script>
+require(['jquery', 'mage/template', 'jquery-ui-modules/sortable'], function($, mageTmpl) {
+    var id = '<?= $id ?>';
+    var types = {
+        'cutsom': {label: 'Custom link', value: 'custom'},
+        'cart': {label: 'Cart', value: 'cart'},
+        'search': {label: 'Search', value: 'search'},
+        'menu': {label: 'Menu', value: 'menu'},
+    };
+    var $input = $('#' + id), value = $input.val(), $btnAdd = $('#' + id + '_add_item'), $list = $('#' + id +'_items_list'),
+        tmpl = mageTmpl('#' + id + '_item_tmpl');
+    $list.on('click', '.js-remove', function() {
+        $(this).parents('.js-item').first().fadeOut(300, 'swing', function(){ $(this).remove(); collectData(); });
+        $list.sortable('refresh');
+        $list.sortable('refreshPositions');
+    });
+    $btnAdd.on('click', function(e) {
+        e.preventDefault();
+        var count = $list.find('.item').length;
+        if (count < 8) {
+            $(tmpl({
+                types: types,
+                value: {
+                    label: '',
+                    url: '',
+                    icon: '',
+                    class: '',
+                    attributes: '',
+                }
+            })).appendTo($list);
+            collectData();
+            $list.sortable('refresh');
+            $list.sortable('refreshPositions');
+        } else {
+            alert('<?= __("You can only add maximum 8 items") ?>')
+        }
+    });
+    var collectData = function() {
+        var items = [];
+        $('.js-item', $list).each(function() {
+            var item = {};
+            $(this).find('[data-name]').each(function(i, field) {
+                var $field = $(this);
+                item[$field.data('name')] = $field.val();
+            });
+            items.push(item);
+        });
+        $input.val(JSON.stringify(items));
+    }
+    var prepareHtml = function(data) {
+        $.each(data, function(i, item) {
+            $(tmpl({
+                types: types,
+                value: item
+            })).appendTo($list);
+        });
+    }
+    $list.on('change', '[data-name]', collectData);
+    if (value) { 
+        prepareHtml(JSON.parse(value));
+    }
+    $list.sortable({
+        handle: '.sort-handle',
+        stop: function() {
+            collectData();
+        }
+    });
+    var $inherit = $('#' + id + '_inherit');
+    if ($inherit.length) {
+        var checkInherit = function() {
+            var inherit = $inherit.is(':checked');
+            if (inherit) {
+                $('#' + id + '_container').addClass('disable');
+            } else {
+                $('#' + id + '_container').removeClass('disable');
+            }
+        }
+        $inherit.on('change', checkInherit);
+        checkInherit();
+    }
+});
+</script>
+<style>
+#<?= $id ?>{display:none;}
+.cdz-container.disable{opacity: 0.5;position: relative}
+.cdz-container.disable:after{position:absolute;left:0;top:0;width:100%;height:100%;content:'';display:block;}
+.cdz-items-list{font-size: 11px;}
+.cdz-items-list .item {display: flex; align-items: flex-start;}
+.cdz-items-list .item .col{padding: 7px; box-sizing: border-box;}
+.cdz-items-list .item .col:first-child{padding-left: 0;}
+.cdz-items-list .item .col:last-child{padding-right: 0;}
+.cdz-items-list .item .sort-handle{width: 34px; height: 34px; margin-top: 20px; line-height: 34px;}
+.cdz-items-list .item .sort-handle:before{content:'\E63D'; font-family: 'Admin Icons'; font-size: 17px; color: #ccc; cursor: move;}
+.cdz-items-list .item .item-data{width: calc(100% - 40px); box-sizing: border-box; display: flex; align-items: flex-end;}
+.cdz-actions{text-align: right;}
+</style>

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-30</identifier>
+  <title>Footer Style 30</title>
+  <variables>
+    <footer_background>#fcf4eb</footer_background>
+    <footer_background_file></footer_background_file>
+    <footer_background_image_option></footer_background_image_option>
+    <footer_background_normal>#c20f3a</footer_background_normal>
+    <footer_border>#a1052a</footer_border>
+    <footer_bottom_background>#ffffff</footer_bottom_background>
+    <footer_font>13px</footer_font>
+    <footer_hover_text>#ed174a</footer_hover_text>
+    <footer_text>#121212</footer_text>
+    <footer_text_normal>#ffffff</footer_text_normal>
+    <footer_title_font>18px</footer_title_font>
+    <footer_title_text>#282828</footer_title_text>
+    <footer_top_background>#ed174a</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt; &lt;referenceBlock name="footer_links" remove="true" /&gt; &lt;referenceBlock name="copyright" remove="true" /&gt; &lt;referenceBlock name="report.bugs" remove="true" /&gt; &lt;referenceBlock name="form.subscribe" remove="true" /&gt; &lt;move element="theme-layout-footer" destination="footer-container" /&gt; &lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8ea1d890</version>
+    <custom_variables></custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-30"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row newsletter"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-social"&gt;&#xD;
+&lt;p class="social"&gt;&lt;a class="spin circle" href="#"&gt;&lt;span class="fa fa-facebook"&gt;facebook&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-twitter"&gt;twitter&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-pinterest-p"&gt;pinterest&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-google-plus"&gt;google plus&lt;/span&gt;&lt;/a&gt;&lt;a href="#"&gt;&lt;span class="fa fa-rss"&gt;rss&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-18"&gt;&#xD;
+&lt;div class="newsletter-content"&gt;&lt;span class="newsletter-title"&gt;Be the first to save!&lt;/span&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-middle"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box contact-info"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-6"&gt;About US&lt;/p&gt;&#xD;
+&lt;div id="footer-content-6" class="footer-link"&gt;&#xD;
+&lt;p&gt;&lt;strong&gt;Food Market&lt;/strong&gt; may mean. Marketplace, a public market with vendor stalls or spaces; A retail store selling food such as a.&lt;/p&gt;&#xD;
+&lt;div class="footer-text address space-base"&gt;&lt;span class="fa fa-map-marker"&gt;&amp;nbsp;&lt;/span&gt;Address: 156x North Main St, Washington, IL 61571, United States&lt;/div&gt;&#xD;
+&lt;div class="footer-text email space-base"&gt;&lt;span class="fa fa-envelope"&gt;&amp;nbsp;&lt;/span&gt;Email: support@company.com&lt;/div&gt;&#xD;
+&lt;div class="footer-text phone space-base"&gt;&lt;span class="fa fa-phone"&gt;&amp;nbsp;&lt;/span&gt;Number 1: (123) 456 78xx &lt;br&gt;Number 2: (354) 194 48xx&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-1"&gt;Infomation&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-1" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;Privacy and Cookie Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;Search Terms&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;Advanced Search&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="{{config path="web/unsecure/base_url"}}"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-2"&gt;Quick Links&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-2" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;My Account&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Checkout&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Shopping Cart&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Register&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Blog&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="#"&gt;Login&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-3"&gt;Shop&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-3" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Technology&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Fashion&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Sport&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Home &amp;amp; Garden&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Jewellery&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="#"&gt;Toys&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-bottom"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;div class="footer-address"&gt;&#xD;
+&lt;p&gt;&#xA9; 2022 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;div class="footer-payment"&gt;&#xD;
+&lt;div class="f-right"&gt;&lt;img class="img-responsive" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

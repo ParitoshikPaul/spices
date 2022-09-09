@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This file is part of the Flurrybox Core package.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Flurrybox Core
+ * to newer versions in the future.
+ *
+ * @copyright Copyright (c) 2018 Flurrybox, Ltd. (https://flurrybox.com/)
+ * @license   GNU General Public License ("GPL") v3.0
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="flurrybox" translate="label" sortOrder="9999" class="flurrybox-tab">
+            <label>Flurrybox</label>
+        </tab>
+        <section id="flurrybox_components" translate="label" sortOrder="0" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Components</label>
+            <tab>flurrybox</tab>
+            <resource>Magento_Customer::config_customer</resource>
+            <group id="general" translate="label" sortOrder="1618" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Installed Flurrybox Components</label>
+                <field id="list" type="textarea" sortOrder="100" translate="label comment" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <frontend_model>Flurrybox\Core\Block\Adminhtml\ExtensionList</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

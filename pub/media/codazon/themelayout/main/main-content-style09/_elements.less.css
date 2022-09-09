@@ -1,0 +1,196 @@
+/*Drug Pharmacy*/
+.cms-index-index.page-layout-1column .column.main{
+	padding-bottom:0;
+}
+
+@media @tablet_vertical{
+	.page-header .header.panel{
+		margin-bottom:20px;
+	}
+}
+
+.main-slideshow{
+	position: relative;
+	&:after{
+		width: 100%;
+		height: 100%;
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		.abs-borderradius(@main_box_shadow);
+		.abs-boxshadow(@main_box_shadow);
+	}
+}
+
+.cdz-block-title{
+	margin-bottom: 20px;
+	.b-title{
+		font: @f_h1;
+		font-weight:500;
+		color: @main_title_text;
+		&.h2{
+			font-weight:500;
+		}
+	}
+}
+
+.product-list-style-02{
+	background-color:transparent;
+	.slider-arrow-style-01(~'-35px');
+	.abs-borderradius(0);
+	.abs-boxshadow(none);
+}
+.product-list-style-04,
+.post-list-style02{
+	.slider-arrow-style-01(~'-35px');
+}
+
+
+.brand-slider-wrapper{
+	background-color:@main_box_background;
+	.abs-borderradius(3px);
+	.abs-boxshadow(@main_box_shadow);
+	position: relative;
+	.shop-by-brand-slider {
+		.slider-arrow-style-01();
+	}
+}
+.brand-style01{
+	overflow: visible;
+}
+
+.wrapper-adv-style-02{
+	padding-bottom:60px;
+}
+@media @tablet_vertical{
+	.product-list-style-02{
+		.product-item-details{
+			text-align:inherit;
+		}
+		.product-item-name{
+			padding:0;
+		}
+		.price-box{
+			justify-content: inherit;
+		}
+	}
+}
+
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style04();	
+}
+.toolbar{
+	.toolbar-option2(0px);
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(0px);
+	}
+}
+/*Blog*/
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(2px); /*_blog*/
+}
+
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+	.main-inner,
+	.product.info.detailed .product.items{
+		.product-info-box(0px);
+	}
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px);
+		}
+	}
+	.product.info.detailed .product.items{
+		.product-info-box(0px);
+	}
+}
+
+/*Product Detail*/
+.block.crosssell,
+.block.upsell,
+.block.related{
+	.abs-boxshadow(@main_box_shadow);
+	background-color: @main_box_background;
+	.abs-borderradius(@main_box_radius);
+	padding: 20px;
+}
+.section-bottom{
+	.block.crosssell{
+		padding: 0;
+		.abs-boxshadow(none);
+	}
+}
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap{
+		.main-content-top-left {
+			.cms-index-index .sticky-menu:not(.active) &{
+				&:hover{
+					.menu-container{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+    .brand-container {
+        .featured-brands.owl-carousel .owl-nav [class*='owl-']:before {
+            line-height: 1;
+        }
+        .brand-slider-wrapper .shop-by-brand-slider {
+            .owl-nav [class*='owl-'] {
+                top: -57px;
+                &.owl-next {
+                    right: 280px;
+                }
+                &.owl-prev {
+                    right: 318px;
+                }
+                .rtl-layout & {
+                    &.owl-next {
+                        right: auto;
+                        left: 280px;
+                    }
+                    &.owl-prev {
+                        right: auto;
+                        left: 318px;
+                    }
+                }
+            }
+        }
+    }
+    .brand-container .owl-carousel.owl-loaded {
+        z-index: 2;
+    }
+}
+@media @phone{
+	.cdz-product{
+		.owl-carousel .owl-stage-outer{
+			padding: 10px 0
+		}
+		.cl-shadow .owl-loaded .owl-stage{
+			padding: 0
+		}
+	}
+}

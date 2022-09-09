@@ -1,0 +1,21 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$contactInfo = $helper->getConfig('pages/contact/contact_info');
+?>
+<?php if ($contactInfo) : ?>
+<?php $cmsblock = \Magento\Framework\App\ObjectManager::getInstance()->get('Magento\Cms\Model\Block')
+    ->setStoreId($helper->getCurrentStoreId())
+    ->load($contactInfo, 'identifier'); ?>
+<?php if ($cmsblock->getId()) : ?>
+<div class="store-info block">
+<div class="block-title"><?= __('Store Information') ?></div>
+<div class="block-content"><?= $helper->htmlFilter($cmsblock->getContent()) ?></div>
+</div>
+<?php endif ?>
+<?php endif ?>

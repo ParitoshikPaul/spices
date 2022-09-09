@@ -1,0 +1,58 @@
+/* ============= Search category ============= */
+.block-search .action.search[disabled] {
+    opacity: 1;
+}
+@media @tablet_vertical {
+    #search_mini_form {
+        width: auto;
+        float: none;
+    }
+}
+.searchsuite-autocomplete-box();
+.search-by-category();
+.search-box-default();
+
+.desk-search-wrap {
+    position: static;
+}
+.mobi-search-wrap {
+    width: 100%;
+    margin-top: 10px;
+}
+@media @phone {
+    .page-header.display-full-search {
+        //margin-bottom: 0px;
+    }
+    .page-header .sticky-menu.active + .mobi-search-wrap {
+        position: fixed;
+        top: 47px;
+        left: 0;
+        z-index: 20;
+        margin-top: 0;
+    }
+    .page-header.display-full-search {
+        .sticky-menu.active {
+            box-shadow: none;
+        }
+    }
+}
+.display-full {
+    .header-search .search-toggle {
+        display: none !important;
+    }
+    .header-search {
+        width: 100%;
+    }
+    .header-search .search-form {
+        visibility: visible;
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        opacity: 1;
+        width: 100%;
+    }
+    .searchsuite-autocomplete {
+        top: 100%;
+    }
+}

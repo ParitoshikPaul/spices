@@ -1,0 +1,65 @@
+<!--
+/**
+ * Copyright © Codazon 2018, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div class="block-content block-minicart">
+    <if args="getCartParam('summary_count')">
+        <div class="cart-items cart-inner-left">
+            <div class="minicart-items-wrapper section-content">
+                <div data-action="scroll" class="section-content-inner">
+                    <ol id="minicartpro" class="minicart-items" data-bind="foreach: { data: getCartItems(), as: 'item' }">
+                        <each args="$parent.getRegion($parent.getItemRenderer(item.product_type))"
+                              render="{name: 'Codazon_ShoppingCartPro/minicart/item/footer-item.html', data: item, afterRender: function() {$parents[1].initSidebar()}}"
+                        />
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="cart-inner-right row">
+            <div class="minicartpro-summary col-xs-14">
+                <strong class="subtitle">
+                    <span translate="'Cart Summary'" />
+                    <a class="action viewcart" data-bind="attr: {href: shoppingCartUrl, title: $t('View and Edit Cart')}">
+                        <span translate="'View and Edit Cart'"/>
+                    </a>
+                </strong>
+                <div class="section-content">                
+                    <div class="total-qty">
+                        <span class="label"><span translate="'Total Quantity'" /></span>
+                        <span class="amount"><span text="getCartParam('summary_count')" /></span>
+                    </div>
+                    <each args="getRegion('subtotalContainer')" render=""/>
+                    <each args="getRegion('extraInfo')" render=""/>
+                </div>
+            </div>
+            <div class="minicartpro-actions col-xs-10">
+                <div class="actions" if="getCartParam('possible_onepage_checkout')">
+                    <div class="primary">
+                        <button id="minicartpro-btn-checkout" type="button" class="action primary checkout" data-action="close"
+                                data-bind="
+                                    attr: {
+                                        title: $t('Proceed to Checkout')
+                                    },
+                                    click: closeMinicart()
+                                "
+                                translate="'Proceed to Checkout'"
+                        />
+                        <div data-bind="html: getCartParam('extra_actions')"></div>
+                    </div>
+                </div>
+                
+                <div id="cdz-minicart-widgets" class="minicart-widgets">
+                    <each args="getRegion('promotion')" render=""/>
+                </div>
+            </div>
+        </div>
+    </if>
+    <ifnot args="getCartParam('summary_count')">
+    <div class="cart-empty">
+        <p translate="'You have no items in your shopping cart'" />
+    </div>
+    </ifnot>
+</div>

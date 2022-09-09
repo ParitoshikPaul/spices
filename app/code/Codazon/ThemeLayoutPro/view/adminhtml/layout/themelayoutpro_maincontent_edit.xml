@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="styles"/>
+    <update handle="editor"/>
+    <head>
+        <css src="Magento_Swatches::css/swatches.css"/>
+        <css src="jquery/colorpicker/css/colorpicker.css"/>
+        <css src="Codazon_ThemeLayoutPro::css/custom-bootstrap.css"/>
+        <css src="Codazon_ThemeLayoutPro::css/font-awesome.min.css"/>
+        <css src="Codazon_ThemeLayoutPro::css/content-builder.css"/>        
+    </head>
+    <body>
+        <referenceBlock name="page.title">
+            <action method="setTitleClass">
+                <argument name="class" xsi:type="string">complex</argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="page.main.actions">
+            <block class="Magento\Backend\Block\Store\Switcher" name="store_switcher">
+                <action method="setUseConfirm">
+                    <argument name="params" xsi:type="string">1</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block name="themelayout_toolbar" class="Magento\Backend\Block\Template" template="Codazon_ThemeLayoutPro::main-content/toolbar.phtml">
+                <action method="setRegistryName">
+                    <argument name="params" xsi:type="string">themelayout_maincontent</argument>
+                </action>
+                <action method="setSubmitUrl">
+                    <argument name="params" xsi:type="string">themelayoutpro/mainContent/cloneElement</argument>
+                </action>
+            </block>
+            <block name="element_templates" class="Codazon\ThemeLayoutPro\Block\Adminhtml\MainContent\Edit\ContentBuilder" template="Codazon_ThemeLayoutPro::main-content/element-templates.phtml" />
+            <uiComponent name="themelayout_maincontent_form" />
+            <block name="themelayout_config_js" class="Magento\Backend\Block\Template" template="Codazon_ThemeLayoutPro::main-content/js-config.phtml" />
+        </referenceContainer>
+    </body>
+</page>

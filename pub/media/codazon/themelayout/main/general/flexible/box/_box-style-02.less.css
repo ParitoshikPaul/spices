@@ -1,0 +1,45 @@
+.box-style-02 {
+    @media @tablet_vertical {
+        .owl-carousel .owl-nav [class*='owl-'] {
+            top:-50px;
+            width: auto;
+            height: auto;
+            line-height: 1.35;
+            border:none;
+            background:none!important;
+            left:auto;
+            right:0;
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+            .abs-link(@main_text, @main_hover_text);
+            .rtl-layout &{
+                right:auto;
+                left:0px;
+            }
+            &.owl-prev{
+                left:auto;
+                right: 30px;
+                &:before{
+                    content:"\f177";
+                    .rtl-layout &{
+                        content:"\f178";
+                    }
+                }				
+                .rtl-layout &{
+                    left: 30px;
+                    right: auto;
+                    &:before{
+                        content:"\f178";
+                    }	
+                }	
+            }
+            &:before{
+                content:"\f178";
+                .rtl-layout &{
+                    content:"\f177";
+                }
+            }
+        }    
+    }
+}

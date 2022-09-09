@@ -1,0 +1,209 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$element = $this->getFormElement();
+$id = $element->getId();
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$types = $objectManager->get(\Magento\Catalog\Model\Product\Type::class);
+$defaultLayoutMapImage = $this->getViewFileUrl('Codazon_ThemeLayoutPro::images/product-page-map-default.jpg');
+$themeLayoutMapImage = $this->getViewFileUrl('Codazon_ThemeLayoutPro::images/product-page-map-theme.jpg');
+?>
+<div class="cdz-container" id="<?= $id ?>_container">
+    <div class="cdz-items-list" id="<?= $id ?>_items_list"></div>
+    <div>
+    <div class="cdz-actions"><button id="<?= $id ?>_add_item" type="button" class="button action-primary"><?= __('Add Item') ?></button></div>
+    </div>
+    <div class="note-block">
+        <p><strong style="color:red">NOTE</strong></p>
+        <ol style="margin: 0 0 0 30px">
+        <li><div><strong>Label</strong> : Add "none" to remove the block title. Or, empty this field to use the label of your attribute  for block title.</div></li>
+        <li><div><strong>Value type</strong> : Select "<em>Text</em>" for the attributes having multiple options. If you choose "<em>CMS Block HTML</em>" for this field, your attribute value (for text attribute) or option label (for multi options attribute) will be the <em>identifier</em> of a CMS block. The content of this CMS block will be displayed in frontend instead of the value of attribute.</div></li>
+        <li><div><strong>Template</strong> : If you select "<em>Tab</em>", you don't need to add the value for "<em>Parent Block/Container</em>" field. Your attribute will be displayed in the product tabs.</div></li>
+        <li><div><strong>Sibling</strong> : Add "-" to set "<em>before all</em>" or "<em>after all</em>".</div></li>
+        <li><div><strong>Parent Block/Container</strong> and <strong>Sibling</strong> : You can view some most used blocks and containers in the following pictures:
+            <ul style="margin: 10px 0 0 30px">
+            <li>Default elements: 
+            <a class="preview-img" onclick="imagePreview('<?= $id ?>_elements_map_default'); return false;" href="<?= $defaultLayoutMapImage ?>">
+                <img id="<?= $id ?>_elements_map_default" src="<?= $defaultLayoutMapImage ?>" />
+            </a></li>
+            <li>Theme elements:
+            <a class="preview-img" onclick="imagePreview('<?= $id ?>_elements_map_theme'); return false;" href="<?= $themeLayoutMapImage ?>">
+                <img id="<?= $id ?>_elements_map_theme" src="<?= $themeLayoutMapImage ?>" />
+            </a></div></li>
+        </ol>
+    </div>
+</div>
+<script type="text/x-magento-template" id="<?= $id ?>_item_tmpl">
+<div class="js-item item">
+    <div class="sort-handle" title="<?= __('Move to sort') ?>"></div>
+    <div class="item-data row">
+        <div class="col col-xs-2">
+            <label><?= __('Attribute code') ?></label>
+            <input type="text" data-name="code" value="<%- value.code %>">
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Label') ?></label>
+            <input type="text" data-name="label" value="<%- value.label %>">
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Template') ?></label>
+            <select data-name="template">
+                <% _.each(templates, function(option) { %>
+                <option <%- (value.template == option.value) ? 'selected' : '' %> value="<%- option.value %>"><%- option.label %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Parent Block/Container') ?></label>
+            <input type="text" data-name="parent" value="<%- value.parent %>">
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Position') ?></label>
+            <select data-name="position">
+                <% _.each(positions, function(option) { %>
+                <option <%- (value.position == option.value) ? 'selected' : '' %> value="<%- option.value %>"><%- option.label %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Sibling') ?></label>
+            <input type="text" data-name="sibling" value="<%- value.sibling %>">
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Value type') ?></label>
+            <select data-name="type">
+                <% _.each(types, function(option) { %>
+                <option <%- (value.type == option.value) ? 'selected' : '' %> value="<%- option.value %>"><%- option.label %></option>
+                <% }); %>
+            </select>
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('CSS class') ?></label>
+            <input type="text" data-name="css_class" value="<%- value.css_class %>">
+        </div>
+        <div class="col col-xs-1">
+            <label><?= __('Apply for') ?></label>
+            <select data-name="product_type">
+                <option value=""><?= __('All types') ?></option>
+                <% _.each(productTypes, function(option) { %>
+                <option <%- (value.product_type == option.value) ? 'selected' : '' %> value="<%- option.value %>"><%- option.label %></option>
+                <% }); %>
+                </select>
+            </select>
+        </div>
+        <div class="col col-xs-1">
+            <button type="button" class="js-remove"><?= __('Remove') ?></button>
+        </div>
+    </div>
+</div>
+</script>
+
+<script>
+require(['jquery', 'mage/template', 'jquery-ui-modules/sortable'], function($, mageTmpl) {
+    var max = 20, id = '<?= $id ?>',
+    defaultOptions = {
+        types: <?= json_encode([
+            ['label' => __('Default'), 'value' => ''],
+            ['label' => __('Text'), 'value' => 'text'],
+            ['label' => __('CMS Block HTML'), 'value' => 'cms_block']
+        ]) ?>,
+        positions: <?= json_encode([
+            ['label' => __('-'), 'value' => ''],
+            ['label' => __('Before'), 'value' => 'before'],
+            ['label' => __('After'), 'value' => 'after']
+        ]) ?>,
+        templates: <?= json_encode([
+            ['label' => __('Line'), 'value' => 'Codazon_ThemeLayoutPro::catalog/product/custom-attribute/line.phtml'],
+            ['label' => __('Block'), 'value' => 'Codazon_ThemeLayoutPro::catalog/product/custom-attribute/block.phtml'],
+            ['label' => __('Popup'), 'value' => 'Codazon_ThemeLayoutPro::catalog/product/custom-attribute/popup.phtml'],
+            ['label' => __('Tab'), 'value' => 'tab'],
+        ]) ?>,
+        productTypes: <?= json_encode($types->toOptionArray()) ?>
+    };
+    var $input = $('#' + id), value = $input.val(), $btnAdd = $('#' + id + '_add_item'), $list = $('#' + id +'_items_list'),
+        tmpl = mageTmpl('#' + id + '_item_tmpl');
+    $list.on('click', '.js-remove', function() {
+        $(this).parents('.js-item').first().fadeOut(300, 'swing', function(){ $(this).remove(); collectData(); });
+        $list.sortable('refresh');
+        $list.sortable('refreshPositions');
+    });
+    $btnAdd.on('click', function(e) {
+        e.preventDefault();
+        var count = $list.find('.item').length;
+        if (count < max) {
+            defaultOptions.value = {};
+            $(tmpl(defaultOptions)).appendTo($list);
+            collectData();
+            $list.sortable('refresh');
+            $list.sortable('refreshPositions');
+        } else {
+            alert('<?= __("You can only add maximum 8 items") ?>')
+        }
+    });
+    var collectData = function() {
+        var items = [];
+        $('.js-item', $list).each(function() {
+            var item = {};
+            $(this).find('[data-name]').each(function(i, field) {
+                var $field = $(this);
+                item[$field.data('name')] = $field.val();
+            });
+            items.push(item);
+        });
+        $input.val(JSON.stringify(items));
+    }
+    var prepareHtml = function(data) {
+        $.each(data, function(i, item) {
+            defaultOptions.value = item;
+            $(tmpl(defaultOptions)).appendTo($list);
+        });
+    }
+    $list.on('change', '[data-name]', collectData);
+    if (value) { 
+        prepareHtml(JSON.parse(value));
+    }
+    $list.sortable({
+        handle: '.sort-handle',
+        stop: function() {
+            collectData();
+        }
+    });
+    var $inherit = $('#' + id + '_inherit');
+    if ($inherit.length) {
+        var checkInherit = function() {
+            var inherit = $inherit.is(':checked');
+            if (inherit) {
+                $('#' + id + '_container').addClass('disable');
+            } else {
+                $('#' + id + '_container').removeClass('disable');
+            }
+        }
+        $inherit.on('change', checkInherit);
+        checkInherit();
+    }
+});
+</script>
+<style>
+#<?= $id ?>{display:none;}
+#<?= $id ?>_container{margin-top: 20px;}
+#<?= $id ?>_container select, #<?= $id ?>_container input{font-size:10px;}
+.cdz-container.disable{opacity: 0.5;position: relative}
+.cdz-container.disable:after{position:absolute;left:0;top:0;width:100%;height:100%;content:'';display:block;}
+.cdz-items-list{font-size: 11px;}
+.cdz-items-list .item {display: flex; align-items: flex-start;}
+.cdz-items-list .item .col{padding: 7px; box-sizing: border-box;}
+.cdz-items-list .item .col:first-child{padding-left: 0;}
+.cdz-items-list .item .col:last-child{padding-right: 0;}
+.cdz-items-list .item .sort-handle{width: 34px; height: 34px; margin-top: 20px; line-height: 34px;}
+.cdz-items-list .item .sort-handle:before{content:'\E63D'; font-family: 'Admin Icons'; font-size: 17px; color: #ccc; cursor: move;}
+.cdz-items-list .item .item-data{width: calc(100% - 40px); box-sizing: border-box; display: flex; align-items: flex-end;}
+.cdz-container .preview-img{display: inline-block; width: 40px; vertical-align: middle; margin: 2px 1rem; border: 1px solid #ccc; padding: 4px; background: #fff; line-height: 0;}
+.cdz-container .preview-img img {width: 100%; height: auto;}
+.cdz-container .note-block {padding: 20px; border: 1px solid #999; border-radius:7px; background: #f9f7f7;margin:10px 0;}
+.cdz-container .note-block ol > li > div {margin-left:5px;}
+.cdz-container .note-block ol > li::marker {font-weight: bold;}
+</style>

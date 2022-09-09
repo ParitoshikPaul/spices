@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>header-style-19</identifier>
+  <title>Header Style 19</title>
+  <variables>
+    <header_background>#ffffff</header_background>
+    <header_background_file/>
+    <header_background_image_option>0 0</header_background_image_option>
+    <header_border>#282828</header_border>
+    <header_cart_background>transparent</header_cart_background>
+    <header_cart_border/>
+    <header_cart_icon>#464646</header_cart_icon>
+    <header_cart_quality_background>#282828</header_cart_quality_background>
+    <header_cart_text>#464646</header_cart_text>
+    <header_drop_background>#ffffff</header_drop_background>
+    <header_drop_border_color>#dbdbdb</header_drop_border_color>
+    <header_drop_hover_text>#648683</header_drop_hover_text>
+    <header_drop_text>#282828</header_drop_text>
+    <header_hover_text>#648683</header_hover_text>
+    <header_mobile_background>#ffffff</header_mobile_background>
+    <header_mobile_icon>#464646</header_mobile_icon>
+    <header_mobile_search_border>#ffffff</header_mobile_search_border>
+    <header_mobile_search_input_background>#009688</header_mobile_search_input_background>
+    <header_mobile_search_input_border>#ffffff</header_mobile_search_input_border>
+    <header_mobile_search_input_text>#ffffff</header_mobile_search_input_text>
+    <header_mobile_search_text>#ffffff</header_mobile_search_text>
+    <header_mobile_sidebar_background/>
+    <header_mobile_sidebar_border/>
+    <header_mobile_sidebar_color/>
+    <header_search_background>#ffffff</header_search_background>
+    <header_search_button_background>#ffffff</header_search_button_background>
+    <header_search_button_text>#464646</header_search_button_text>
+    <header_search_text>#464646</header_search_text>
+    <header_shadow>0 -8px 10px #6c14eb</header_shadow>
+    <header_text>#464646</header_text>
+    <header_text_cart>#999999</header_text_cart>
+    <header_top_background>#000000</header_top_background>
+    <header_top_text>#ffffff</header_top_text>
+    <menu_background>#ffffff</menu_background>
+    <menu_border>#e1e1e1</menu_border>
+    <menu_content_background>#353535</menu_content_background>
+    <menu_content_border>#1f1f1f</menu_content_border>
+    <menu_content_color>#ffffff</menu_content_color>
+    <menu_drop_background>#ffffff</menu_drop_background>
+    <menu_drop_border>#e1e1e1</menu_drop_border>
+    <menu_drop_font>400 13px/1.35 Raleway, Helvetica Neue, Verdana, Arial, sans-serif</menu_drop_font>
+    <menu_drop_hover_text>#648683</menu_drop_hover_text>
+    <menu_drop_shadow>0 3px 3px #e1e1e1</menu_drop_shadow>
+    <menu_drop_text>#282828</menu_drop_text>
+    <menu_drop_text_title>#282828</menu_drop_text_title>
+    <menu_font>400 14px/1.35 Raleway, Helvetica Neue, Verdana, Arial, sans-serif</menu_font>
+    <menu_hover_background>#ffffff</menu_hover_background>
+    <menu_hover_text>#648683</menu_hover_text>
+    <menu_text>#464646</menu_text>
+    <menu_title_background>#ffffff</menu_title_background>
+    <menu_title_border>#1f1f1f</menu_title_border>
+    <menu_title_color>#353535</menu_title_color>
+    <vermenu_background>#fafafa</vermenu_background>
+    <vermenu_border>#ebebeb</vermenu_border>
+    <vermenu_font>500 12px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif</vermenu_font>
+    <vermenu_hover_background>#009688</vermenu_hover_background>
+    <vermenu_hover_text>#ffffff</vermenu_hover_text>
+    <vermenu_text>#444444</vermenu_text>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceContainer name="header.container" htmlClass="page-header header-style-09"&gt;&#xD;
+        &lt;container name="header-panel-top" htmlTag="div" htmlClass="header-top" before="-"&gt;&#xD;
+            &lt;block name="header-extra-text" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/header-content.phtml" /&gt;&#xD;
+        &lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceContainer name="header.panel"&gt;&#xD;
+        &lt;container name="header-panel-row" htmlTag="div" htmlClass="row cdz-fix-left" after="skip_to_content"&gt;&#xD;
+            &lt;container name="header-panel-left" htmlTag="div" htmlClass="col-sm-12 col-md-5 header-panel-left" /&gt;&#xD;
+            &lt;container name="header-panel-middle" htmlTag="div" htmlClass="col-sm-24 col-md-14 header-panel-middle" /&gt;&#xD;
+            &lt;container name="header-panel-right" htmlTag="div" htmlClass="col-sm-12 col-md-5 header-panel-right" /&gt;&#xD;
+            &lt;container name="header-search-wrap" htmlId="header-search-wrap" htmlTag="div" htmlClass="col-sm-24 header-search-wrap" /&gt;&#xD;
+        &lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &#xD;
+    &lt;referenceBlock name="top.links"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;css_class&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="string"&gt;header links visible-xs&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &#xD;
+    &lt;referenceBlock name="top.links.features"&gt;&#xD;
+        &lt;block class="Magento\Framework\View\Element\Template" name="links.features.search" template="Magento_Search::search-trigger.phtml"  before="-"&gt;&#xD;
+            &lt;arguments&gt;&#xD;
+                &lt;argument name="html_class" xsi:type="string"&gt;search-link&lt;/argument&gt;&#xD;
+            &lt;/arguments&gt;&#xD;
+        &lt;/block&gt;&#xD;
+        &lt;block class="Magento\Framework\View\Element\Template" name="links.features.linkslist" template="Magento_Theme::html/custom-li.phtml"  after="-"&gt;&#xD;
+            &lt;arguments&gt;&#xD;
+                &lt;argument name="html_class" xsi:type="string"&gt;linkslist-link&lt;/argument&gt;&#xD;
+            &lt;/arguments&gt;&#xD;
+        &lt;/block&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &lt;referenceBlock name="utilities.toggle.linkslist"&gt;&#xD;
+        &lt;action method="setDirection"&gt;&#xD;
+            &lt;argument name="value" xsi:type="string"&gt;right&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &#xD;
+    &lt;move element="header-store-info" destination="header-panel-top" /&gt;    &#xD;
+    &lt;move element="top.links.features" destination="header-panel-right" /&gt;&#xD;
+    &lt;move element="mobi-cart-placeholder" destination="header-search-wrap" /&gt;&#xD;
+    &lt;move element="top.search" destination="header-search-wrap" /&gt;&#xD;
+    &lt;move element="header-links-list" destination="utilities.sidebar.right" /&gt;&#xD;
+    &lt;move element="links.features.cart" destination="top.links.features" after="authorization-link-features" before="links.features.linkslist" /&gt;&#xD;
+    &lt;move element="utilities.toggle.linkslist" destination="links.features.linkslist" /&gt;&#xD;
+    &#xD;
+    &lt;move element="logo" destination="header-panel-left" /&gt;&#xD;
+    &lt;move element="catalog.topnav" destination="header-panel-middle" after="-" /&gt;&#xD;
+    &lt;move element="store-menu-placeholder" destination="store.menu" /&gt;&#xD;
+    &lt;move element="minicart" destination="links.features.cart" /&gt;&#xD;
+    &lt;referenceBlock name="header-contact-link" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="wish-list-link-features" remove="true" /&gt;&#xD;
+	&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e76aa1a</version>
+    <custom_variables/>
+    <custom_less_code/>
+    <custom_css_code/>
+  </custom_fields>
+  <parent>header-style-08</parent>
+  <content>{"content_1":"&lt;div class=\"store-info-top container\"&gt;\r\n&lt;div class=\"row\"&gt;\r\n&lt;div class=\"col-sm-12 col-left\"&gt;\r\n&lt;div class=\"store-contact\"&gt;&lt;a class=\"store-tel\" href=\"tel:0123456789\"&gt; (0123) 456 xxx&lt;\/a&gt; &lt;a class=\"store-mail\" href=\"mailto:codazon@sample.com\"&gt; codazon@sample.com&lt;\/a&gt;&lt;\/div&gt;\r\n&lt;\/div&gt;\r\n&lt;div class=\"col-sm-12 col-right\"&gt;\r\n&lt;div class=\"social-wrap f-right\"&gt;&lt;a href=\"#\"&gt;&lt;span class=\"fa fa-pinterest-p\"&gt;&lt;span class=\"hidden\"&gt;pinterest&lt;\/span&gt;&lt;\/span&gt;&lt;\/a&gt; &lt;a href=\"#\"&gt;&lt;span class=\"fa fa-vimeo\"&gt;&lt;span class=\"hidden\"&gt;vimeo&lt;\/span&gt;&lt;\/span&gt;&lt;\/a&gt; &lt;a href=\"#\"&gt;&lt;span class=\"fa fa-twitter\"&gt;&lt;span class=\"hidden\"&gt;twitter&lt;\/span&gt;&lt;\/span&gt;&lt;\/a&gt; &lt;a href=\"#\"&gt;&lt;span class=\"fa fa-facebook\"&gt;&lt;span class=\"hidden\"&gt;facebook&lt;\/span&gt;&lt;\/span&gt;&lt;\/a&gt; &lt;a href=\"#\"&gt;&lt;span class=\"fa fa-google-plus\"&gt;&lt;span class=\"hidden\"&gt;google-plus&lt;\/span&gt;&lt;\/span&gt;&lt;\/a&gt;&lt;\/div&gt;\r\n&lt;\/div&gt;\r\n&lt;\/div&gt;\r\n&lt;\/div&gt;","content_2":""}</content>
+</config>

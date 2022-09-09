@@ -1,0 +1,28 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<script>
+    require(
+        [
+            'jquery'
+        ],
+        function($) {
+            $(function() {
+                if (window.windowLoaded) {
+                    setTimeout(function() {
+                        window.print();
+                    }, 2000);
+                } else {
+                    $(window).on('load', function() {
+                        setTimeout(function() {
+                            window.print();
+                        }, 2000);
+                    });
+                }
+            });
+        }
+    );
+</script>

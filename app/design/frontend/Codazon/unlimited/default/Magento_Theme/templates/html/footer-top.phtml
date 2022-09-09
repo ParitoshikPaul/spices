@@ -1,0 +1,27 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$html = '';
+$childBlocks = explode(',', $this->getData('child_blocks'));
+foreach ($childBlocks as $childBlockName) {
+    $childHtml = $this->getBlockHtml($childBlockName);
+    if ($childHtml) {
+        $html .= '<div class="' . $childBlockName.'">' . $childHtml . '</div>';
+    }
+}
+?>
+
+<?php if ($html) : ?>
+<div class="footer-content-top">
+    <div class="row switcher-footer">
+        <div class="col-sm-24">
+            <?php echo $html ?>
+        </div>
+    </div>
+</div>
+<?php endif ?>

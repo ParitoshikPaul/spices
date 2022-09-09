@@ -1,0 +1,43 @@
+<?php
+    /**
+     * Copyright © 2017 Codazon, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
+?>
+<?php $childBlocks = $block->getChildNames(); ?>
+
+
+<div class="<?php echo $block->getData('css_class'); ?> cdz-sidebar" data-sidebarid="<?php echo $block->getData('component_id'); ?>">
+    <?php if ($block->getData('label')) : ?>
+    <div class="md-theme-indigo">
+        <h1 class="div-tools"><?php echo $block->getData('label'); ?></h1>
+    </div>
+    <?php endif ?>
+    <div class="utilies-sections">
+        <?php
+        if ($requiredBlocks = $block->getData('required_blocks')) {
+            if ($requiredBlocks) {
+                $helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+                foreach($requiredBlocks as $action => $childName) {
+                    if (method_exists($helper, $action)) {
+                        if ($helper->{$action}() != 'sidebar') {
+                            unset($requiredBlocks[$action]);
+                        }
+                    }
+                }
+            }
+            $childBlocks = array_unique(array_merge($requiredBlocks, $childBlocks));
+        }
+        ?>
+        <?php if ($childBlocks) : ?>
+        <?php $active = 'active'; ?>
+        <?php foreach ($childBlocks as $childName) : ?>
+        <?php $child = $block->getLayout()->getBlock($childName); ?>
+        <div class="utilies-section nice-scroll <?php echo $active ?> <?php echo $child->getData('css_class') ?>" <?php echo $child->getData('html_id')?'id="'.$child->getData('html_id').'"':''; ?> >
+            <?php echo $child->toHtml() ?>
+        </div>
+        <?php $active = ''; ?>
+        <?php endforeach ?>
+        <?php endif ?>
+    </div>
+</div>

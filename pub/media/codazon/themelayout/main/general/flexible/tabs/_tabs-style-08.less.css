@@ -1,0 +1,78 @@
+.tabs-style-08{
+    @media @tablet_vertical{
+        .cdz-block-title{
+            text-align: center;
+        }
+        .box-cate-link{
+            text-align: center;
+            .item{
+                display: inline-block;
+                margin: 0px 0px;
+            }
+            .tab-title{
+                padding: 7px 30px 7px 20px;
+                position: relative;
+                display: inline-block;
+                transition: .5s;
+                color: @main_text_normal2;
+                background: transparent;
+                line-height: 1;
+                position: relative;
+                font: @f_h5;
+                font-size: 16px;
+                min-width: 100px;
+                text-align: center;
+                box-sizing: content-box;
+                .rtl-layout & {
+                    padding: 7px 20px 7px 30px;
+                }
+                &:before {
+                    content: '';
+                    background: @btn_normal_background;
+                    box-shadow: 5px 5px 0px #d6d6d6;
+                    .absolute-full-box();
+                    border-right: 10px solid @btn_normal_text;
+                    transform: skew(-30deg);
+                    .rtl-layout & {
+                        border-left: 10px solid @btn_normal_text;
+                        border-right: none;
+                        transform: skew(30deg);
+                        box-shadow: -5px 5px 0px #d6d6d6;
+                    }
+                }
+                > span{
+                    position: relative;
+                }
+            }
+            .tab-icon {
+                display: inline-block;
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 30px;
+            }
+            .item.active, .item:hover{
+                .tab-title{                                       
+                    color: @main_text_normal2;
+                    &:before{
+                        background: @main_block_title_background;
+                    }
+                }
+            }
+        }
+        .tab-content{
+            padding: 40px 0px 20px 0px;
+        }
+    }
+    .mobile-tabs-style-01();
+    @media @phone {
+        .cdz-block-title {
+            margin-bottom: -35px;
+            padding-bottom: 0;
+            .b-title {
+                &:before, &:after {
+                    display: none;
+                }
+            }
+        }
+    }
+}

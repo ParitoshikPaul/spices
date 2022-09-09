@@ -1,0 +1,81 @@
+/*Custom print page*/
+body.page-print{
+	@media print{
+		.order-status,
+		.mb-bottom-toolbar,
+		.actions-toolbar{
+			display:none !important
+		}
+		.box-order{
+			&-shipping-address,
+			&-shipping-method,
+			&-billing-address,
+			&-billing-method{
+				display:inline-block;
+				vertical-align:top	
+			}
+		}
+		.box-order{
+			&-shipping-address, 
+			&-billing-address {
+				width: 50%;
+			}
+		}
+		a:link, a:visited, a {
+			text-decoration:none !important;
+			&:after{
+				display:none
+			}
+		}		
+		a.logo{
+			margin-left:0;
+			background:black;
+			&:after {
+				display:none
+			}			
+		}
+		img { 
+			page-break-inside:avoid; 
+			page-break-after:avoid; 
+		}
+		.logo{
+			.main-logo{
+				display:block !important;
+				margin-left:10px;
+			}
+			.small-logo{
+				display:none !important
+			}
+		}
+		.page-break	{ display: block; page-break-before: always; }
+		/* Adding custom messages before and after the content */
+		.entry a:after {
+			content: "Thank for your order" !important;
+		}
+	}
+	@media @tablet_vertical{
+		.logo {
+			padding-left: 25px;
+			display: block;
+		}		
+	}
+	@media @phone{
+		.page-main{
+			padding-top:0;
+		}
+		.nav-toggle{
+			display:none
+		}
+		.logo {
+			background: @main_hover_text;
+			width: 100%;
+			max-width: 100%;
+			text-align: center;
+			margin: 0 0 15px;
+			padding: 10px;
+			img.small-logo{
+				display:inline-block !important
+			}
+		}
+	}
+}

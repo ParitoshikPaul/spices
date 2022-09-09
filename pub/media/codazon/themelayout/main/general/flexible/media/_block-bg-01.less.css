@@ -1,0 +1,40 @@
+.block-bg-01{
+    padding-top: 60px;
+    padding-bottom: 40px;
+    position: relative;
+    > .container {
+       position: relative; 
+    }
+    &.white-title {
+        .cdz-block-title .b-title.h2{
+            color: #fff;
+        }
+        .cdz-block-title .title-desc {
+            color: #fff !important;
+        }
+    }
+    &.overlay-dark {
+        &:before{
+            content: '';
+            .absolute-full-box();
+            background: #000;
+            opacity: 0.5;
+            z-index: 0;
+        }
+        .cdz-block-title .b-title.h2{
+            color: #fff;
+        }
+        .cdz-block-title .title-desc {
+            color: #fff !important;
+        }
+        .product-item, .post-item .item-inner{
+            box-shadow: none;
+        }
+    }
+    @media @phone{
+        > .container {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}

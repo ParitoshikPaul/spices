@@ -1,0 +1,26 @@
+.page-footer{
+	background:none;
+	.footer-bottom{
+		background:@footer_background url(@footer_background_file) @footer_background_image_option;
+	}
+	.block.newsletter {
+		.field .control:before{
+			display: none;
+		}
+		input{
+			padding-left: 0;
+			.rtl-layout &{
+				padding-right: 0;
+				padding-left: 25px
+			}
+		}
+	}
+}
+@media @phone{
+	.page-footer{
+		.footer-bottom{
+			background-position: center;
+    		background-size: cover;
+		}
+	}
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>header-style-11</identifier>
+  <title>Header Style 11</title>
+  <variables>
+    <header_background>#ffffff</header_background>
+    <header_background_file/>
+    <header_background_image_option>0 0</header_background_image_option>
+    <header_border>#eaeaee</header_border>
+    <header_cart_background>transparent</header_cart_background>
+    <header_cart_border/>
+    <header_cart_icon>#282828</header_cart_icon>
+    <header_cart_quality_background>#f96668</header_cart_quality_background>
+    <header_cart_text>#282828</header_cart_text>
+    <header_drop_background>#ffffff</header_drop_background>
+    <header_drop_border_color>#dbdbdb</header_drop_border_color>
+    <header_drop_hover_text>#dddddd</header_drop_hover_text>
+    <header_drop_text>#282828</header_drop_text>
+    <header_hover_text>#dddddd</header_hover_text>
+    <header_mobile_background>#ffffff</header_mobile_background>
+    <header_mobile_icon>#282828</header_mobile_icon>
+    <header_mobile_search_border>#ffffff</header_mobile_search_border>
+    <header_mobile_search_input_background>#ffffff</header_mobile_search_input_background>
+    <header_mobile_search_input_border>#000000</header_mobile_search_input_border>
+    <header_mobile_search_input_text>#282828</header_mobile_search_input_text>
+    <header_mobile_search_text>#ffffff</header_mobile_search_text>
+    <header_search_background>#ffffff</header_search_background>
+    <header_search_button_background>#282828</header_search_button_background>
+    <header_search_button_text>#ffffff</header_search_button_text>
+    <header_search_text>#282828</header_search_text>
+    <header_shadow/>
+    <header_text>#282828</header_text>
+    <header_text_cart>#999999</header_text_cart>
+    <header_top_background>#ffffff</header_top_background>
+    <header_top_text>#282828</header_top_text>
+    <menu_background>#000000</menu_background>
+    <menu_border>#000000</menu_border>
+    <menu_content_background>#353535</menu_content_background>
+    <menu_content_border>#1f1f1f</menu_content_border>
+    <menu_content_color>#ffffff</menu_content_color>
+    <menu_drop_background>#ffffff</menu_drop_background>
+    <menu_drop_border>#e1e1e1</menu_drop_border>
+    <menu_drop_font>400 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</menu_drop_font>
+    <menu_drop_hover_text>#dddddd</menu_drop_hover_text>
+    <menu_drop_shadow>0 3px 3px #e1e1e1</menu_drop_shadow>
+    <menu_drop_text>#999999</menu_drop_text>
+    <menu_drop_text_title>#282828</menu_drop_text_title>
+    <menu_font>500 14px/1.35 Montserrat, Helvetica Neue, Verdana, Arial, sans-serif</menu_font>
+    <menu_hover_background>#000000</menu_hover_background>
+    <menu_hover_text>#dddddd</menu_hover_text>
+    <menu_text>#ffffff</menu_text>
+    <menu_title_background>#ffffff</menu_title_background>
+    <menu_title_border>#1f1f1f</menu_title_border>
+    <menu_title_color>#353535</menu_title_color>
+    <vermenu_background>#fafafa</vermenu_background>
+    <vermenu_border>#ebebeb</vermenu_border>
+    <vermenu_font>500 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</vermenu_font>
+    <vermenu_hover_background>#e6c1a3</vermenu_hover_background>
+    <vermenu_hover_text>#555555</vermenu_hover_text>
+    <vermenu_text>#444444</vermenu_text>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;!-- Layout --&gt;&#xD;
+    &lt;referenceContainer name="header.container" htmlClass="page-header header-style-11" /&gt;&#xD;
+    &lt;referenceContainer name="header-container-inner"&gt;&#xD;
+	&lt;container name="header-panel" htmlId="header-panel" htmlTag="div" htmlClass="header panel"&gt;&#xD;
+        &lt;container name="header-top" htmlId="header-top" before="-" htmlTag="div" htmlClass="header-top" /&gt;&#xD;
+        &lt;container name="header-middle" htmlId="header-middle" after="header-top" htmlTag="div" htmlClass="header-middle container" /&gt;&#xD;
+        &lt;container name="header-bottom" htmlId="header-bottom" after="-" htmlTag="div" htmlClass="header-bottom" /&gt;&#xD;
+	&lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceContainer name="header-top"&gt;&#xD;
+		&lt;container name="header-top-panel" htmlTag="div" htmlClass="header-top-panel container"&gt;&#xD;
+			&lt;container name="header-top-row" htmlTag="div" htmlClass="header-top-row row"&gt;&#xD;
+				&lt;container name="header-top-left" htmlTag="div" htmlClass="col-sm-8 col-md-8 header-top-left"&gt;&#xD;
+					&lt;block name="header-extra-text-1" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/header-content.phtml"&gt;&#xD;
+						&lt;action method="setData"&gt;&#xD;
+							&lt;argument name="name" xsi:type="string"&gt;content_type&lt;/argument&gt;&#xD;
+							&lt;argument name="value" xsi:type="string"&gt;content_1&lt;/argument&gt;&#xD;
+						&lt;/action&gt;&#xD;
+					&lt;/block&gt;&#xD;
+				&lt;/container&gt;&#xD;
+				&lt;container name="header-top-right" htmlTag="div" htmlClass="col-sm-16 col-md-14 header-panel-right" /&gt;&#xD;
+			&lt;/container&gt;&#xD;
+		&lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceContainer name="header.panel"&gt;&#xD;
+        &lt;container name="header-panel-row" htmlTag="div" htmlClass="header-panel-row row"&gt;&#xD;
+            &lt;container name="header-panel-left" htmlTag="div" htmlClass="col-sm-10 col-md-6 col-lg-6 header-panel-left" /&gt;&#xD;
+            &lt;container name="header-panel-center" htmlTag="div" htmlClass="col-sm-14 col-md-9 col-lg-10 header-panel-center header-search-wrap" /&gt;&#xD;
+            &lt;container name="header-panel-right" htmlTag="div" htmlClass="col-sm-12 col-md-9 col-lg-7 header-panel-right" /&gt;&#xD;
+        &lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;move element="header.panel" destination="header-middle" /&gt;&#xD;
+    &lt;!-- End Layout --&gt;&#xD;
+    &#xD;
+    &lt;!-- Top Right --&gt;&#xD;
+    &lt;move element="top.links.features" destination="header-top-right" before="-" /&gt;&#xD;
+    &lt;referenceContainer name="header-top-right"&gt;&#xD;
+        &lt;block class="Magento\Store\Block\Switcher" name="header-switch-language" template="Magento_Store::switch/languages-style-02.phtml" /&gt;&#xD;
+        &lt;block class="Magento\Directory\Block\Currency" name="header-switch-currency" template="Magento_Directory::currency-style-02.phtml" /&gt;&#xD;
+        &lt;block class="Magento\Store\Block\Switcher" name="header-switch-store" template="switch/stores.phtml"&gt;&#xD;
+            &lt;arguments&gt;&#xD;
+                &lt;argument name="id_modifier" xsi:type="string"&gt;header-nav&lt;/argument&gt;&#xD;
+            &lt;/arguments&gt;&#xD;
+        &lt;/block&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;!-- End Top Right --&gt;&#xD;
+    &#xD;
+    &lt;!-- Middle - Left --&gt;&#xD;
+    &lt;move element="logo" destination="header-panel-left" /&gt;&#xD;
+    &lt;!-- End Middle - Left --&gt;&#xD;
+    &#xD;
+    &lt;!-- Middle - Center --&gt;&#xD;
+    &lt;move element="mobi-cart-placeholder" destination="header-panel-center" /&gt;&#xD;
+    &lt;move element="top.search" destination="header-panel-center" before="-" /&gt;&#xD;
+    &lt;!-- End Middle - Center --&gt;&#xD;
+    &#xD;
+    &lt;!-- Middle - Right --&gt;&#xD;
+    &lt;move element="minicart" destination="header-panel-right" after="-" /&gt;&#xD;
+    &lt;referenceContainer name="header-panel-right"&gt;&#xD;
+        &lt;block name="header-extra-text-2" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/header-content.phtml"&gt;&#xD;
+            &lt;action method="setData"&gt;&#xD;
+                &lt;argument name="name" xsi:type="string"&gt;content_type&lt;/argument&gt;&#xD;
+                &lt;argument name="value" xsi:type="string"&gt;content_2&lt;/argument&gt;&#xD;
+            &lt;/action&gt;&#xD;
+        &lt;/block&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceBlock name="header-contact-link" remove="true" /&gt;&#xD;
+    &lt;!-- End Middle - Right --&gt;&#xD;
+    &#xD;
+    &lt;!-- Bottom --&gt;&#xD;
+    &lt;move element="catalog.topnav" destination="header-bottom" before="-" /&gt;&#xD;
+    &lt;move element="store-menu-placeholder" destination="store.menu" /&gt;&#xD;
+    &lt;!-- End Bottom --&gt;&#xD;
+    &#xD;
+    &lt;referenceBlock name="utilities.sidebar.right"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;required_blocks&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="array"&gt;&#xD;
+                &lt;item name="getAccountPanelStyle" xsi:type="string"&gt;utilities.content&lt;/item&gt;&#xD;
+                &lt;item name="getHeaderWishlistStyle" xsi:type="string"&gt;wishlist-sidebar&lt;/item&gt;&#xD;
+                &lt;item name="getMiniCartStyle" xsi:type="string"&gt;minicart-sidebar&lt;/item&gt;&#xD;
+            &lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &lt;referenceBlock name="utilities.sidebar.left"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;required_blocks&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="boolean"&gt;0&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &#xD;
+    &lt;referenceBlock name="top.links"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;css_class&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="string"&gt;header links visible-xs&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e633a91</version>
+    <custom_variables/>
+    <custom_less_code/>
+    <custom_css_code/>
+  </custom_fields>
+  <parent/>
+  <content>{"content_1":"&lt;ul class=\"header-extra-links\"&gt;\r\n&lt;li&gt;&lt;a href=\"{{store url=\"contact\"}}\"&gt;Contact&lt;\/a&gt;&lt;\/li&gt;\r\n&lt;li&gt;&lt;a href=\"#\"&gt;FAQ&lt;\/a&gt;&lt;\/li&gt;\r\n&lt;li&gt;&lt;a href=\"#\"&gt;Ship to United State&lt;\/a&gt;&lt;\/li&gt;\r\n&lt;\/ul&gt;","content_2":"&lt;div class=\"hot-line-wrapper\"&gt;&lt;span class=\"msg-text\"&gt;Need Help? Call us now: &lt;\/span&gt;&lt;a class=\"telephone\" href=\"tel:123455688719\"&gt;(123) 455688719&lt;\/a&gt;&lt;\/div&gt;"}</content>
+</config>

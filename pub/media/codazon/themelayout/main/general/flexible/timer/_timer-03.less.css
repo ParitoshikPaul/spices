@@ -1,0 +1,82 @@
+.cdz-timer-03 {
+    @item_space: 8px;
+    display: inline-block;
+    position: relative;
+    .countdown-timer {
+		padding: 5px 20px;
+		background: @main_timer_background;
+		color: @main_timer_text;
+		border-radius: 30px;
+        .deal-items {
+            display: flex;  
+        }
+        .deal-item {
+            display: inline-block;
+            user-select: none;
+            text-align: center;
+			text-transform: uppercase;
+			&:before {
+				content: ":";
+				margin: 0 7px;
+			}
+			&:first-child{
+				&:before {
+					display:none;
+				}
+			}
+            .value {               
+                font-size:160%;
+				font-weight:600;
+            }
+        }
+    }
+    &.has-ic {
+        padding-left: 30px;
+        .ic-timer {
+            position: absolute;
+            left: 0;
+            top: 0;
+			font-size: 40px;
+        }
+        .rtl-layout & {
+			padding-left: 0px;
+			padding-right: 30px;
+            .ic-timer {
+                left: auto;
+                right: 0;
+            }
+        }
+    }
+    .cd-expired {
+        .timer-block {
+            opacity: 0.6;
+        }
+    }
+    .cd-expired-msg {
+        padding: 7px 10px;
+        background: #ffc107;
+        color: #fff;
+        border-radius: 2px;
+        margin: 10px 0;
+        &:before {
+            font-family: fontAwesome;
+            content: "\f071";
+            font-size: 18px;
+            font-weight: normal;
+            margin: 0 7px 0 0;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: 1;
+            .rtl-layout & {
+                margin: 0 0 0 7px;
+            }
+        }
+    }
+    @media @phone {
+        .countdown-timer {
+            .deal-item {
+                
+            }
+        }
+    }
+}

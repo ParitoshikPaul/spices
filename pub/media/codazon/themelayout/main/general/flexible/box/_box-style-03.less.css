@@ -1,0 +1,47 @@
+.box-style-03 {
+    .owl-carousel .owl-nav, .owl-carousel .owl-dots{
+        margin: 10px 0;
+        width: 100%;
+        display: block;
+        float: none;
+        text-align: center;
+    }
+    .owl-carousel .owl-nav [class*='owl-'] {
+        position: relative;
+        top: auto !important;
+        left:auto !important;
+        right:auto !important;
+        background: none!important;
+        transform: none !important;
+        width: auto;
+        height: auto;
+        line-height: 1.35;
+        opacity: 1;
+        border:none;
+        color: @main_text;
+        visibility: visible;
+        margin: 0 5px;
+        .sidebar-home & {
+            color: @main_text;
+        }
+        &.owl-prev {
+            &:before{
+                content:"\f177";
+                .rtl-layout &{
+                    content:"\f178";
+                }
+            }				
+            .rtl-layout & {
+                &:before{
+                    content:"\f178";
+                }	
+            }	
+        }
+        &:before{
+            content:"\f178";
+            .rtl-layout &{
+                content:"\f177";
+            }
+        }
+    }
+}

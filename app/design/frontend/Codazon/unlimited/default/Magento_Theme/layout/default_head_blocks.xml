@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>	
+		<css src="css/fontawesome/fontawesome-all.css" media="all" />
+		<!--css src="css/fontawesome/font-awesome.css" media="all" /-->
+		<!-- <css src="css/cdzfonts/cdzfonts.css" media="all" /> -->
+		<css src="css/owlcarousel/owl.carousel.min.css" media="all" />
+        <remove src="Magento_Swatches::css/swatches.css" />
+        <remove src="mage/calendar.css" />
+        <remove src="css/print.css" />
+		<remove src="Magento_Swatches::css/swatches.css" />
+		<remove src="Magefan_Blog::css/blog-m.css" />
+		<remove src="Magefan_Blog::css/blog-custom.css" />
+		<remove src="MageWorx_SearchSuiteAutocomplete::css/searchsuiteautocomplete.css" />
+		<!--css src="css/animate/animate.css" media="all" /-->
+    </head>
+</page>

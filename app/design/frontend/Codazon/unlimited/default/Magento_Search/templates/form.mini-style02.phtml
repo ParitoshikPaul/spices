@@ -1,0 +1,56 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+$helper = $this->helper('Magento\Search\Helper\Data');
+$themeHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$displayAdvancedSearch = (bool)$themeHelper->getConfig('themelayoutpro/header/display_advanced_search');
+$enableFullBox = false; //(bool)$themeHelper->getConfig('themelayoutpro/header/enable_full_search_box');
+$widget = [ 'themewidgets' => [
+    'codazon.searchtoggle'      => ['onlyMobi' => false],
+    'codazon.fullsearchbox'   	=> ['enable' => $enableFullBox]
+]];
+?>
+<!-- search - search style02 -->
+<div class="header-search style02<?= $displayAdvancedSearch?'':' hide-advanced-search' ?><?= $enableFullBox?'':' no-full-box'; ?>" 
+layout="column" data-role="search_container" data-mage-init='<?php echo json_encode($widget); ?>' >
+    <div class="hidden-xs md-content" data-role="search_form">
+        <form name="searchForm" class="form minisearch" id="search_mini_form" action="<?php /* @escapeNotVerified */ echo $helper->getResultUrl() ?>" method="get">
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label md-input-container">
+                <label for="search" data-role="minisearch-label"><?php echo __('Search entire store here...'); ?></label>
+                <input id="search"
+                   data-mage-init='{"quickSearch":{
+                        "formSelector":"#search_mini_form",
+                        "url":"<?php /* @escapeNotVerified */ echo $block->getUrl('search/ajax/suggest', ['_secure' => $block->getRequest()->isSecure()]); ?>",
+                        "destinationSelector":"#search_autocomplete"}
+                   }'
+                   type="text"
+                   name="<?php /* @escapeNotVerified */ echo $helper->getQueryParamName() ?>"
+                   value="<?php /* @escapeNotVerified */ echo $helper->getEscapedQueryText() ?>"
+                   class="input-text"
+                   maxlength="<?php /* @escapeNotVerified */ echo $helper->getMaxQueryLength();?>"
+                   role="combobox"
+                   aria-haspopup="false"
+                   aria-autocomplete="both"
+                   autocomplete="off"/>
+                   <div id="search_autocomplete" class="search-autocomplete"></div>
+            </div>
+            <?php echo $block->getChildHtml() ?>
+            <div class="actions">
+                <button type="submit" title="<?php echo $block->escapeHtml(__('Search')) ?>" class="action search">
+                    <?php echo __('Search'); ?>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="search-toggle-wrap">
+        <button class="search-toggle md-fab md-mini md-ink-ripple" data-role="search_toggle"><span class="icon"><?php echo __('Search') ?></span></button>
+    </div>
+</div>

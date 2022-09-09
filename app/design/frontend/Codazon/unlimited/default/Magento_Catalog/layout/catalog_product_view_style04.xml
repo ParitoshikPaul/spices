@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="product-view-style-04"/>
+        <referenceContainer name="content">
+            <container name="product.row" htmlTag="div" htmlClass="row main-inner" before="-">
+                <container name="product.media.wrapper" htmlTag="div" htmlClass="product-media-wrapper col-sm-8" />
+                <container name="product.main.wrapper" htmlTag="div" htmlClass="product-main-wrapper col-sm-16">
+                    <block class="Magento\Catalog\Block\Product\View" name="product.form.wrapper" template="Magento_Catalog::product/view/form-wrapper.phtml">
+                        <action method="setData">
+                            <argument name="name" xsi:type="string">has_form_tag</argument>
+                            <argument name="value" xsi:type="boolean">0</argument>
+                        </action>
+                        <container name="product.main.row" htmlTag="div" htmlClass="row product-info-main full-width">
+                            <container name="product.info.left" htmlTag="div" htmlClass="product-left col-sm-16" />
+                            <container name="product.info.right" htmlTag="div" htmlClass="product-right col-sm-8" />
+                        </container>
+                    </block>
+                </container>
+            </container>
+            <container name="product.info.details.before" before="product.info.details" after="product.row" htmlTag="div" htmlClass="product-details-before" />
+        </referenceContainer>
+        
+        
+        <referenceContainer name="product.info.media" htmlClass="product media full-width" />
+        <referenceContainer name="product.info.main" htmlClass="product-info-main-inner" />
+        
+        <move element="product.info.media" destination="product.media.wrapper" />
+        <move element="page.main.title" destination="product.info.left" before="-" />
+        <move element="product.price.final" destination="product.info.left" before="product.info.main"/>
+        <!-- <move element="product.price.tier" destination="product.info.left" before="product.info.addtocart_wrap" /> -->
+        <move element="product.info.main" destination="product.info.left" />
+        <move element="product-static-text" destination="product.info.right" after="-" />
+        
+        <!-- move cart -->
+        <referenceBlock name="product.info">
+            <container name="product.info.form.middle" as="form_middle" before="product.info.extrahint">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart_wrap" template="Magento_Catalog::product/view/product-info-form-content.phtml" />
+            </container>
+        </referenceBlock>
+        <move element="product.info.form.content" as="product_info_form_content" destination="product.info.addtocart_wrap" />
+        <move element="product.info.form.options" as="options_container" destination="product.info.addtocart_wrap" />
+        <!-- <move element="product.info.addtocart_wrap" destination="product.info.left" before="product.info.extrahint"  /> -->
+        <move element="product.info.addto" destination="product.info.addtocart" />
+        <!-- end move cart -->
+        
+        <referenceContainer name="product.info.social">
+             <container name="product.info.social.inner" htmlTag="div" htmlClass="product-social-inner" />
+        </referenceContainer>
+        <move element="product.info.mailto" destination="product.info.social.inner" />
+        <move element="product.info.overview" destination="product.info.social.inner" />
+        
+        <move element="product.info.extrahint" destination="product.info.left" />
+        <move element="product.info.review" destination="product.info.main" before="-" />
+        <move element="catalog.product.related" destination="product.info.details.before" />
+        
+        <block class="Magento\Catalog\Block\Product\View" name="product.review.summary" template="Magento_Catalog::product/view/review-summary.phtml" />
+        
+        <referenceContainer name="product.info.extrahint">
+            <block class="Magento\Catalog\Block\Product\View" name="product.inventory.deal" template="Magento_Catalog::product/view/inventory-deal.phtml" after='-' />
+        </referenceContainer>
+        <!-- <referenceContainer name="product.info.addtocart"> -->
+            <block class="Magento\Catalog\Block\Product\View" name="product.buynow" template="Magento_Catalog::product/view/buy-now.phtml" />
+        <!-- </referenceContainer> -->
+        <referenceContainer name="product.info.price">
+            <block class="Magento\Catalog\Block\Product\View" name="product.sizeguide" template="Magento_Catalog::product/view/size-guide.phtml" />
+        </referenceContainer>
+        <referenceContainer name="product-static-text">
+            <block class="Magento\Framework\View\Element\Template" name="product-custom-text" template="Magento_Theme::html/custom-text.phtml">
+                <action method="setData">
+                    <argument name="name" xsi:type="string">config_path</argument>
+                    <argument name="value" xsi:type="string">pages/product_view/custom_text</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceBlock name="product.info.media.image">
+            <action method="setData">
+                <argument name="name" xsi:type="string">media_side</argument>
+                <argument name="value" xsi:type="string">left</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="product.info.overview">
+            <action method="setData">
+                <argument name="name" xsi:type="string">at_label</argument>
+                <argument name="value" xsi:type="string" translate="true">Quick Overview</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

@@ -1,0 +1,36 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$elements = $this->getMainContentElements();
+$id = $this->getMainContent()->getIdentifier();
+?>
+
+<?php if ($elements) : ?>
+<script>
+<?php if ($this->getData('enable_full_width')) : ?>
+document.getElementById('maincontent').classList.add('page-main-full');
+<?php endif ?>
+require(['jquery'], function($) {
+    var styleFile = '<?= $this->getCssUrl() ?>';
+    var id = 'cdz-flexibleblock-css-<?= $id ?>';
+    var link = '<link id="' + id + '" rel="stylesheet" type="text/css" media="all" href="' + styleFile +'" >';
+    if ($('#'+id).length == 0) {
+        if ($('#cdz-maincontent-css').length) {
+            $('#cdz-maincontent-css').before(link);
+        } else if ($('#codazon-global-config').length){
+            $('#codazon-global-config').before(link);
+        } else {
+            $('head').prepend(link);
+        }
+    }
+});
+</script>
+<div class="cdz-main-content widget block block-static-block">
+    <?= $this->getElementHtml($elements); ?>
+</div>
+<?php endif ?>

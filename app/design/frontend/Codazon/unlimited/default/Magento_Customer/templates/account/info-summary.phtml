@@ -1,0 +1,33 @@
+<?php
+    /**
+     * Copyright © 2017 Codazon, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
+     
+     /** @var \Magento\Customer\Block\Account\Dashboard $block */
+?>
+<?php
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+$customer = $helper->getObject(\Magento\Customer\Model\SessionFactory::class)->create()->getCustomer();
+$greeting = $helper->getConfig('themelayoutpro/header/customer_greeting_format');
+$greeting = $greeting ? str_replace(['{{firstname}}', '{{fullname}}'], ['<span data-customerinfo="firstname"></span>', '<span data-customerinfo="fullname"></span>'], $greeting) : __('Hi %1','<span data-customerinfo="firstname"></span>');
+?>
+<div class="account-info-summary">
+    <div class="info-summary-top">
+        <?php if (!$customer->getId()) : ?>
+            <?php echo $this->getBlockHtml('mini-login-form-simple'); ?>
+        <?php else: ?>
+            <div class="icon-account"></div>
+        <?php endif ?>
+    </div>
+    <div class="info-summary-bottom">
+        <div class="md-content">
+            <?php if ($customer->getId()) : ?>
+            <p class="title"><a href="<?php echo $block->getUrl('customer/account', ['_secure' => true]); ?>" /><?= $greeting ?></a></p>
+            <p><a class="md-raised md-primary" href="<?php echo $block->getUrl('customer/account/logout'); ?>"><?php echo __('Sign Out') ?></a></p>
+            <?php else : ?>
+            <p class="secondary"><span class="create-account-question"><?php echo __('New customer?') ?></span> <a class="create-account-link" href="<?php echo $block->getUrl('customer/account/create'); ?>"><?php echo __('Start Here.') ?></a></p>
+            <?php endif ?>
+        </div>
+    </div>
+</div>

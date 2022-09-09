@@ -1,0 +1,89 @@
+.cdz-detailed-02 {
+    @media @tablet_vertical {
+        --coll_bd: @main_tab_border;
+        &when (@main_tab_border = @main_tab_background) {
+            --coll_bd: fade(darken(@main_tab_border, 20%), 70%);
+        }
+        width: 100%;
+        display: block;
+        float: left;
+        .product.data.items > .item.title {
+            display: block;
+            width: 100%;
+            float: left;
+            margin: 0;
+        }
+        .item-t-no {
+            font-size: 70%;
+            background: #000;
+            color: #fff;
+            height: 18px;
+            min-width: 18px;
+            border-radius: 9px;
+            line-height: 18px;
+            margin-inline-end: 20px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: baseline;
+        }
+        &.product.info.detailed .product.items {
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid var(--coll_bd);
+            .item.title {
+                > .switch {
+                    width: 100%;
+                    padding: 12px 20px;
+                    border-bottom: 1px solid var(--coll_bd);
+                    position: relative;
+                    &:after {
+                        position: absolute;
+                        width: auto;
+                        height: auto;
+                        border: none;
+                        inset-block: ~'calc(50% - 9px)' auto;
+                        inset-inline: auto 10px;
+                        font: normal 17px/1 CodazonFont;
+                        content: "\e9b4";
+                        background: none;
+                    }
+                }
+                &.active > .switch {
+                    background: @main_tab_hover_background;
+                    color: @main_tab_hover_text;
+                    &:after {
+                        content: "\e9b3";
+                    }
+                }
+            }
+            > .item.content {
+                margin: 0;
+                display: block;
+                width: 100%;
+                float: left;
+                border: none;
+                padding: 30px;
+                border-bottom: 1px solid var(--coll_bd);
+                .block-shipping-estimation .block-content {
+                    display: block !important;
+                }
+                .block-shipping-estimation .block-heading a.content-toggle {
+                    display: none;
+                }
+            }
+        }
+        .product-review-wrap {
+            > [class*="col-sm-"] {
+                width: 100%;
+            }
+            .product-reviews-summary {
+                max-width: 300px;
+            }
+        }
+    }
+    @media @phone {
+        &.product.info.detailed .product.items {
+            padding-inline: 0;
+        }
+    }
+}

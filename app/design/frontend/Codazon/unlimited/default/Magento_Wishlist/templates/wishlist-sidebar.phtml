@@ -1,0 +1,32 @@
+<?php
+    /**
+     * Copyright © 2017 Codazon, Inc. All rights reserved.
+     * See COPYING.txt for license details.
+     */
+?>
+<?php
+$session = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Customer\Model\Session');
+$wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
+?>
+<div class="wislist-sidebar-content">
+<?php if ($session->isLoggedIn()) : ?>
+<?php echo $block->getBlockHtml('wishlist.minilist') ?>
+<?php else: ?>
+<div class="account-info-summary mini-list no-login">
+    <div class="block-top">
+        <div class="block-title">
+            <strong><?php echo __('Please login first'); ?></strong>
+        </div>
+    </div>
+    <div class="info-summary-top">
+        <p class="desc"><?php echo __('You must be logged in to manage your wish list.'); ?></p>
+        <?php echo $block->getBlockHtml('mini-login-form-simple') ?>
+    </div>
+    <div class="info-summary-bottom">
+        <div class="md-content">
+            <p class="secondary"><span class="create-account-question"><?php echo __('New customer?') ?></span> <a class="create-account-link" href="<?php echo $block->getAccountUrl('customer/account/create'); ?>"><?php echo __('Start Here.') ?></a></p>
+        </div>
+    </div>
+</div>
+<?php endif ?>
+</div>

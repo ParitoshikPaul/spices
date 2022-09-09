@@ -1,0 +1,288 @@
+.shadow-box{
+    box-shadow: 0px 5px 19px 16px #cac6c6;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.no-loaded .brand-loader {
+    display: block;
+    margin: 0 auto;
+    top: 30px;
+}
+.columns .column.main{
+	padding-bottom: 0;
+}
+/*Title*/
+.block {
+    .cdz-block-title {
+        .title-desc {
+            margin-top: 20px;
+            font-weight: 400;
+        }
+    }
+}
+.cdz-block-title {
+    position: relative;
+    margin-bottom: 20px;
+    .b-title.h2 {
+		font: @f_h2;
+		color: @main_title_text;
+		margin-bottom: 0;
+	}
+    .b-title.h2{
+        position: relative;
+    }
+	.title-desc{
+		font: @f_h4;
+		color: @main_text;
+	}
+}
+.wrapper-adv-style-05 {
+    a.item-title {
+        background: @banner_title_background;
+        color: @banner_title_text;
+        border-radius: 0;
+        @media @phone {
+            font: @fm_h3;
+        }
+    }
+	.item:hover a.item-title {
+        background: @banner_title_hover_background;
+        color: @banner_title_hover_text;
+    }
+    .item{
+        border-radius: 0;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0px 3px 3px #b1afaf;
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.2), 0 1px 5px 0 rgba(0,0,0,0.12);
+        margin-bottom: 10px;   
+    }
+}
+.brand-style01 {
+    .brand-item {
+        box-shadow: 0 2px 3px #b5b5b5;
+        margin-bottom: 10px;
+        margin-top: 5px;
+    }
+}
+@media @desktop {
+    .base-slider {
+        .slider-arrow-style-02();
+    }
+    .base-slider-small {
+        .slider-arrow-style-03();
+    }
+}
+
+.catalog-product-view{
+    .product-info-main{
+        .page-title-wrapper .page-title {
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+        .product-addto-links .action{
+            color: @main_text;
+        }
+    }
+}
+
+
+/*slide show*/
+.cdz-slideshow {
+	position: relative;
+	.owl-dots-style-03();
+	.slider-arrow-style-02();
+	.owl-loaded .owl-stage{
+		padding: 0;
+	}
+	.item-desc{
+		position: absolute;
+		top: 10%;
+		left: 0;
+		width: 100%;
+		.slide-caption.slide-center{
+			position: absolute;
+			top: 10%;
+			left: 25%;
+			width: 50%;
+		}
+	}
+    background: @main_block_background;
+}
+
+/*--------------------------*/
+/*Responsive*/
+/*--------------------------*/
+@media @phone{
+	.cdz-slideshow .item-image{.abs-borderradius(0);}
+	.banner-img{padding: 0}
+	.cdz-block-title .b-title.h2{font-weight: 600; font: @fm_h1}
+	.slide-desc{display: none}
+	.product-list-style-02 {
+		> .row{
+		    margin: 0;
+		}
+		.cdz-banner{
+			width: 100%;
+			display: block;
+			.abs-borderradius(5px 5px 0 0);			
+			&:after{display: none}
+			.label{margin-bottom: 20px;}
+			.h2{font-size: 160%}
+			.desc{margin-bottom: 30px}
+		}
+		.wrap-left{
+			padding: 0
+		}
+	}
+}
+@media @tablet-strict_small{
+	.product-list-style-02 {
+		.cdz-banner .h2{
+			font-size: 150%
+		}
+		.wrap-left{width: 30%;}
+		.wrap-right{width: 70%}
+	}
+}
+@media @tablet-strict_large{
+	.product-list-style-02{
+		.wrap-left{width: 25%}
+		.wrap-right{width: 75%}
+	}
+}
+/*General style*/
+.list.products-list{
+	.cdz-product-labels{
+		.prolabels-style01();
+	}
+}
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style04();	
+}
+.toolbar{
+	.toolbar-option2(0px);
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(0px);
+	}
+}
+
+/*Blog*/
+
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(0px); /*_blog*/
+}
+
+/*Product page*/
+.catalog-product-view {
+    .swatch-option-tooltip .corner, .swatch-option-tooltip-layered .corner{
+        bottom: 1px;
+    }
+}
+.product-view-style-01 .main-inner .product.info.detailed .product.items,
+.product-view-style-02 .main-inner .product.info.detailed .product.items,
+.product-view-style-03 .main-inner .product.info.detailed .product.items{
+	.product-info-box(0px);
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px); /*product view*/
+		}
+        .page-title-wrapper .page-title {
+            font: @f_h1;
+            font-size: 21px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .price-box .price-wrapper .price {
+            font-weight: 500;
+        }
+	}
+	.product.info.detailed .product.items{
+		.product-info-box(0); /*product view*/
+	}
+}
+.cdz-newsletter-modal.modal-popup .popup-title h3 {
+    font: @f_h2;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: normal;
+}
+/*Product Detail*/
+.section-bottom{
+	.block.crosssell{
+		padding: 0;
+		.abs-boxshadow(none);
+	}
+}
+.block.related .block-actions{
+    margin-top: 10px;
+}
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap .main-content-top-left {
+		.cms-index-index .sticky-menu:not(.active) &{
+			&:hover .menu-container{
+				display: block;
+			}
+		}
+	}
+    .footer-style-15 {
+        .service-banner-style04 {
+            .item-title {
+                font: @f_h2;
+                font-weight: 500;
+                font-size: 20px;
+            }
+        }
+    }
+    .slideshow-container {
+        .cdz-vertical-menu .item.level0:first-child,
+        .cdz-vertical-menu .item.level0:first-child > a.menu-link,
+        .cdz-vertical-menu > .groupmenu {
+            border-radius: 7px 0 0 0;
+            .rtl-layout & {
+                border-radius: 0 7px 0 0;
+            }
+        }
+        .cdz-slideshow {
+            border-radius: 0 7px 0 0;
+            overflow: hidden;
+            .rtl-layout & {
+                border-radius: 7px 0 0 0;
+            }
+        }
+    }
+}
+.slideshow-container {
+    .wrapper-adv-style-10 .items {
+        border-radius: 0 0 7px 7px;
+        border-top: none;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+}
+.account-nav .content .item a, .account-nav .content .item > strong,
+.sidebar .product-item-name .product-item-link, .sidebar .product-item-link, .sidebar .product.name a,
+.mini-list .product-item .product-item-info .product-item-name a{
+    font: @f_default;
+}
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2018 Codazon. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Category" type="Codazon\AjaxLayeredNavPro\Model\Layer\Filter\Category" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Attribute" type="Codazon\AjaxLayeredNavPro\Model\Layer\Filter\Attribute" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Price" type="Codazon\AjaxLayeredNavPro\Model\Layer\Filter\Price" />
+    <preference for="Magento\CatalogSearch\Model\Layer\Filter\Decimal" type="Codazon\AjaxLayeredNavPro\Model\Layer\Filter\Decimal" />
+    
+    <type name="Magento\Elasticsearch\Model\Adapter\BatchDataMapper\ProductDataMapper">
+        <plugin sortOrder="10" name="codazon_ajax_layered_nav_pro_add_data_to_mappers_result" type="Codazon\AjaxLayeredNavPro\Plugin\Elasticsearch\BatchDataMapper\ProductDataMapper"/>
+    </type>
+    <type name="Magento\Framework\Search\Request\Config\FilesystemReader">
+        <plugin name="codazon_ajax_layered_nav_pro_search_request_config_reader"  type="Codazon\AjaxLayeredNavPro\Plugin\Elasticsearch\Request\ConfigReader" />
+    </type>
+</config>

@@ -1,0 +1,48 @@
+<?php
+/**
+* Copyright © 2017 Codazon, Inc. All rights reserved.
+* See COPYING.txt for license details.
+*/
+
+// @codingStandardsIgnoreFile
+
+/** @var $block \Magento\Catalog\Block\Product\View */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+?>
+<?php if ($helper->getConfig('pages/product_view/display_social_links')) : ?>
+<?php
+$productHelper = $this->helper('Magento\Catalog\Helper\Output');
+$imageHelper = $this->helper('Magento\Catalog\Helper\Image');
+$_product = $this->getProduct();
+$url = urlencode($this->stripTags($block->getProductUrl($_product)));
+$desc = urlencode($this->stripTags($_product->getShortDescription()));
+$image = urlencode($imageHelper->init($_product, 'image')->setImageFile($_product->getImage())->resize(1000)->getUrl());
+$name = urlencode($this->stripTags($productHelper->productAttribute($_product, $_product->getName(), 'name')));
+?>
+<ul class="cdz-social-listing">
+    <li class="cdz-facebook">
+        <a onclick='window.open("https://www.facebook.com/sharer/sharer.php?u=<?= $url; ?>","","menubar=1,resizable=1,width=700,height=600")'  target="_blank" href="javascript:void(0)" title="<?= __('Share on Facebook') ?>"><i class="fa fa-facebook"></i></a>
+    </li>
+    <li class="cdz-twitter">
+        <a onclick='window.open("https://twitter.com/intent/tweet?url=<?= $url; ?>&text=<?= $desc ?>","","menubar=1,resizable=1,width=700,height=600")' rel="nofollow" target="_blank" href="javascript:void(0)" title="<?= __('Share on Twitter') ?>"><i class="fa fa-twitter"></i></a>
+    </li>
+    <li class="cdz-linkedin">
+        <a onclick='window.open("https://www.linkedin.com/shareArticle?mini=true&url=<?= $url; ?>&title=<?= $name ?>&ro=false&summary=<?= $desc ?>&source=","","menubar=1,resizable=1,width=700,height=600")' rel="nofollow" title="<?= __('Share on LinkedIn') ?>"  target="_blank" href="javascript:void(0)"><i class="fa fa-linkedin"></i></a>
+    </li>
+    <?php /* <li class="cdz-google-plus">
+        <a onclick='window.open("https://plus.google.com/share?url=<?= $url; ?>","","menubar=1,resizable=1,width=700,height=600")' rel="nofollow" title="<?= __('Share on Google+') ?>"
+        class="js-cdz-tooltip" target="_blank" href="javascript:void(0)"><i class="fa fa-google-plus"></i></a>
+    </li> */ ?>
+    <li class="cdz-pinterest">
+        <a onclick='window.open("https://www.pinterest.com/pin/create/a/?url=<?= $url; ?>&media=<?= $image ?>&description=<?= $desc ?>","","menubar=1,resizable=1,width=700,height=600")' rel="nofollow" title="<?= __('Pin this') ?>" target="_blank" href="javascript:void(0)"><i class="fa fa-pinterest"></i></a>
+    </li>
+    <?php if ($this->canEmailToFriend()): ?>
+    <li class="cdz-email">
+        <a href="<?= $this->helper('Magento\Catalog\Helper\Product')->getEmailToFriendUrl($_product) ?>" title="<?= __('Email') ?>"
+       class="mailto friend" target="_blank"><i class="fa fa-envelope"></i></a>
+    </li>
+    <?php endif ?>
+</ul>
+<?php endif ?>

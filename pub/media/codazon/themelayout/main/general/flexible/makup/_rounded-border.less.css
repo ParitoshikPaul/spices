@@ -1,0 +1,9 @@
+.cdz-rounded-border {
+    border-radius: 8px;
+    overflow: hidden;
+}
+@media @phone {
+    .cdz-rounded-border {
+        border-radius: 5px;
+    }
+}

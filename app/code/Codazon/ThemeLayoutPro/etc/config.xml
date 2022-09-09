@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/config.xsd">
+    <default>
+        <themelayoutpro>
+            <env>
+                <enable_dev_mode>0</enable_dev_mode>
+                <minify_html>1</minify_html>
+            </env>
+            <store>
+                <enable_ajax_captcha>1</enable_ajax_captcha>
+            </store>
+		</themelayoutpro>
+	</default>
+</config>

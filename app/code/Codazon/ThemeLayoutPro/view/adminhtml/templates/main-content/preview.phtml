@@ -1,0 +1,16 @@
+<?php
+/**
+ *
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$previewImg = $this->getPreviewImage();
+?>
+<?php if ($previewImg) : ?>
+<div class="preview-wrap">
+    <div class="label"><?php echo __('Preview'); ?></div>
+    <div class="preview-img"><img class="img-responsive" src="<?= $previewImg ?>" /></div>
+</div>
+<?php endif ?>

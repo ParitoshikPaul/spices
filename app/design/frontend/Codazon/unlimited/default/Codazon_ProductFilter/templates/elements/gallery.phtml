@@ -1,0 +1,26 @@
+<?php
+$_product = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Catalog\Model\Product')->load($block->getProduct()->getId());
+$images = $_product->getMediaGalleryImages();
+$width = $block->getImageWidth();
+$height = $block->getImageHeight();
+$smallWidth = $block->getSmallWidth()?:100;
+$smallHeight = $height*$smallWidth/$width;
+$_helper = $this->helper('Magento\Catalog\Helper\Image');
+$widget = [];
+if ($images) {
+    $images = $images->getItems();
+    $widget = [];
+    $widget['width'] = $width;
+    $widget['height'] = $height;
+    $widget['moreviewSettings'] = $this->getData('moreview_settings')?:['items' => 4, 'nav'   => 1, 'dots'  => 0];
+    foreach ($images as $img) {    
+        $widget['images'][] = [
+            'large' => $_helper->init($_product, 'category_page_grid',['aspect_ratio' => false])->setImageFile($img->getFile())->resize($width, $height)->getUrl(),
+            'small' => $_helper->init($_product, 'category_page_grid',['aspect_ratio' => false])->setImageFile($img->getFile())->resize($smallWidth, $smallHeight)->getUrl()
+        ];
+    }
+}
+?>
+<?php if ($widget) : ?>
+<div class="img-gallery hidden-xs" data-gallery='<?php echo json_encode($widget); ?>'></div>
+<?php endif ?>

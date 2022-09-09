@@ -1,0 +1,168 @@
+@tabs_09_background: #1d71aa;
+@tabs_09_item_label_width: 220px;
+@tabs_09_item_label_background: #fff;
+@tabs_09_item_label_text: #282828;
+@tabs_09_item_label_active_background: #189eff;
+@tabs_09_item_label_active_text: #fff;
+@tabs_09_item_label_hover_background: #ccc;
+@tabs_09_item_label_hover_text: #000;
+@tabs_09_item_content_background: #fff;
+@tabs_09_border: @main_box_border;
+//==================================
+@tabs_09_02_item_label_active_background: #a9033b;
+@tabs_09_02_item_label_active_text: #fff;
+
+.tabs-style-09{
+    @media @tablet_vertical {
+        &.cdz-tabs-wrap > .cdz-block-content {
+            display: flex;
+            background: @tabs_09_item_label_background;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        &.cdz-tabs-wrap > .cdz-block-content.cdz-tabs-bg {
+            background-size: @tabs_09_item_label_width auto;
+            background-position: left bottom;
+            background-repeat: no-repeat;
+            background-color: @tabs_09_background;
+            .rtl-layout & {
+                background-position: right bottom;
+            }
+        }
+        .tab-icon {
+            margin: 0 7px 0 0;
+            font-size: 15px;
+            .rtl-layout & {
+                margin: 0 0 0 7px;
+            }
+        }
+        .abs-dropdown {
+            width: @tabs_09_item_label_width;
+            padding: 10px 0 10px 10px;
+            border-right: 1px solid @tabs_09_border;
+            .rtl-layout & {
+                padding: 10px 10px 10px 0;
+            }
+            .item {
+                background: @tabs_09_item_label_background;
+                border-bottom: 1px solid @tabs_09_border;
+                border-left: 1px solid @tabs_09_border;
+                margin: 0;
+                position: relative;
+                transition: all ease 400ms;
+                &:first-child {
+                    border-top: 1px solid @tabs_09_border;
+                    border-radius: 5px 0 0 0;
+                    .rtl-layout & {
+                        border-radius: 0 5px 0 0;
+                    }
+                }
+                &:last-child {
+                    border-radius: 0 0 0 5px;
+                    .rtl-layout & {
+                        border-radius: 0 0 5px 0;
+                    }
+                }
+                a {
+                    padding: 10px;
+                    color: @tabs_09_item_label_text;
+                    display: block;
+                    width:100%;
+                }
+                &:hover {
+                    background: @tabs_09_item_label_hover_background;
+                    border-color: transparent;
+                    a {
+                        color: @tabs_09_item_label_hover_text;
+                    }
+                }
+                &.active {
+                    background: @tabs_09_item_label_active_background;
+                    color: @tabs_09_item_label_active_text;
+                    border-color: transparent;
+                    padding-right: 30px;
+                    width: ~'calc(100% + 5px)';
+                    .rtl-layout & {
+                        padding-right: 0;
+                        padding-left: 30px;
+                    }
+                    a {
+                        color: @tabs_09_item_label_active_text;
+                        font-weight: 600;
+                    }
+                    &:after {
+                        .abs-iconfont2("\E991", 17px);
+                        position: absolute;
+                        right: 5px;
+                        top: ~'calc(50% - 8px)';
+                        .rtl-layout & {
+                            right: auto;
+                            left: 5px;
+                            content: "\E974";
+                        }
+                    }
+                }
+            }
+            .item:last-of-type {
+                //border-bottom: none;
+            }
+        }
+        .cdz-tabs {
+            width: ~'calc(100% - @{tabs_09_item_label_width})';
+            padding: 10px;
+            margin: 0;
+            background: @tabs_09_item_content_background;
+        }
+    }
+    .mobile-tabs-style-01();
+    @media @phone {
+        .cdz-block-title {
+            //margin-bottom: -35px;
+            padding-bottom: 0;
+            .b-title {
+                &:before, &:after {
+                    display: none;
+                }
+            }
+        }
+        &.cdz-tabs-wrap > .cdz-block-content.cdz-tabs-bg {
+            background-image: none !important;
+            background-color: transparent !important;
+            min-height: 0 !important;
+        }
+    }
+}
+
+.tabs_09_special_color (@class, @tabs_background, @label_background, @label_text) {
+    .tabs-style-09 {
+        &@{class} {
+             .abs-dropdown .item.active, .mobile-toggle {
+                background: @label_background;
+                color: @label_text;
+             }
+             &.cdz-tabs-wrap > .cdz-block-content {
+                background-color: @tabs_background;
+             }
+             .product-list-style-26 {
+                .cart-qty {
+                    background-color: @label_background;
+                    .tocart.primary, .qs-button, .field.qty .qty-ctl button{
+                        color: @label_text;
+                    }
+                    .tocart.primary, .qs-button {
+                        border-color: @label_text;
+                    }
+                }
+                .products.list.items .action.towishlist:before, .products.list.items .action.tocompare:before {
+                    color: @label_background;
+                }
+            }
+            .owl-carousel .owl-nav [class*='owl-'] {
+                color: @label_text;
+                border-color: @label_background;
+                background: @label_background;
+            }
+        }
+    }
+}
+
+.tabs_09_special_color(~'.tabs-style-09-color-02', @tabs_09_color_02_tabs_background, @tabs_09_color_02_label_background, @tabs_09_color_02_label_text );

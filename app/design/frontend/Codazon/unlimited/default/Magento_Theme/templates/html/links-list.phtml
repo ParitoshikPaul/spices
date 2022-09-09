@@ -1,0 +1,47 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$linksList = $helper->getConfig('themelayoutpro/header/left_menu');
+$id = uniqid('link-list-');
+?>
+
+<?php if ($linksList) : ?>
+<div class="links-list" id="<?= $id ?>">
+<?php
+    $useHover = $helper->getConfig('themelayoutpro/header/left_menu_hovering');
+    $type = $useHover ? 1 : 2;
+    $menu = $block->getLayout()->createBlock('Codazon\MegaMenu\Block\Widget\Megamenu');
+    $menu->setMenu($linksList)->setData('menu_type', $type);
+    $menu->getMenuObject()->setData('type', $type);
+    echo $menu->toHtml();
+?>
+</div>
+<?php if ($useHover) : ?>
+<script>
+require(['jquery'], function($) {
+    var $list = $('#<?= $id ?>'), $sidebar = $list.parents('.cdz-sidebar').first();
+    if ($sidebar.data('sidebarid') == 'left') {
+        var $verMenuStage = $('<div class="ver-menu-stage fullbox">').appendTo('body'), $inner = $('<div class="ver-menu-stage-inner">').appendTo($verMenuStage);
+        var $backface = $('<div class="stage-backface fullbox">').appendTo($inner).on('click', function() {$('#cdz-sidebar-backface').trigger('click');}), $menuWrap = $('<div class="stage-menu-wrap">').appendTo($inner).append($list);
+    } else {
+        var $menu = $list.find('.cdz-menu').removeClass('cdz-vertical-menu').addClass('cdz-toggle-menu force-toggle');
+        $menu.hasClass('no-loaded') ? '' : $menu.data('codazonMegamenu')._setupMenu();
+    }
+    $('body').on('cdzmenu.initialized', function(e, $menu) {
+        if ($menu.parent().is($list)) {
+            var menuWidget = $menu.data('codazonMegamenu');
+            if (menuWidget._isTabletDevice() || $menu.hasClass('force-toggle')) {
+                $menu.removeClass('cdz-vertical-menu').addClass('cdz-toggle-menu');
+                menuWidget._setupMenu();
+            }
+        }
+    });
+});
+</script>
+<?php endif ?>
+<?php endif ?>

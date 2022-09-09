@@ -1,0 +1,77 @@
+<?php
+/**
+ * Copyright © 2016 Ihor Vansach (ihor@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post next and prev post links
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\NextPrev
+ */
+?>
+
+<?php
+$imgHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Image');
+$width = 100;
+?>
+
+
+<?php if ($block->displayLinks()) { ?>
+    <?php
+        $prevPost = $this->getPrevPost();
+        $nextPost = $this->getNextPost();
+    ?>
+    <?php if ($prevPost || $nextPost) { ?>
+        <div class="post-nextprev-hld clearfix">
+            <?php if ($prevPost) : ?>
+                <?php $title = $block->escapeHtml($prevPost->getTitle());
+                $_postFeatured = $prevPost->getData('featured_img');
+                $_postImage = '';
+                if ($_postFeatured) {
+                    $_postImage = (string)$imgHelper->init($_postFeatured)->setBaseDir('blog/cache/')->keepFrame(false)->resize($width, null);
+                }
+                ?>
+                <div class="link-wrap prev">
+					<a class="nextprev-link prev-link" href="<?php echo $prevPost->getPostUrl() ?>">
+                       <span class="icon-wrap"> <?php echo __('Previous') ?></span>
+                    </a>
+                    <div class="post-thumb">
+						<a class="arrow-post-title" href="<?php echo $prevPost->getPostUrl() ?>"><?php echo $title ?></a>
+                        <a class="nextprev-img abs-img" style="padding-bottom: 100%"  href="<?php echo $prevPost->getPostUrl() ?>">
+                            <?php if ($_postImage) : ?>
+                            <img src="<?= $_postImage ?>" alt="<?= $title ?>" />
+                            <?php endif ?>
+                        </a>
+                    </div>
+                </div>
+            <?php endif ?>
+            
+            <?php if ($nextPost) : ?>
+                <?php $title = $block->escapeHtml($nextPost->getTitle());
+                $_postFeatured = $nextPost->getData('featured_img');
+                $_postImage = '';
+                if ($_postFeatured) {
+                    $_postImage = (string)$imgHelper->init($_postFeatured)->resize($width, null);
+                }
+                ?>
+                <div class="link-wrap next">
+					<a class="nextprev-link next-link" href="<?php echo $nextPost->getPostUrl() ?>">
+						<span class="icon-wrap"><?php echo __('Next') ?></span>
+					</a>
+                    <div class="post-thumb">
+                        <a class="nextprev-img abs-img" style="padding-bottom: 100%">
+                            <?php if ($_postImage) : ?>
+                            <img src="<?= $_postImage ?>" alt="<?= $title ?>" />
+                            <?php endif ?>
+                        </a>
+						<a class="arrow-post-title" href="<?php echo $nextPost->getPostUrl() ?>"><?php echo $title ?></a>
+                    </div>
+                </div>
+            <?php endif ?>
+        </div>
+    <?php } ?>
+<?php } ?>

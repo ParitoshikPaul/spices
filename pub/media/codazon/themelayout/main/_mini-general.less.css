@@ -1,0 +1,22 @@
+/* ============================================ *
+ * Codazon_Theme
+ * ============================================ */
+@import (less)'../_function.less.css';
+@import (less)'../_monitor.less.css';
+@codazon_eot_font: ~'codazon/themelayout/fonts/CodazonFont.eot';
+@codazon_ttf_font: ~'codazon/themelayout/fonts/CodazonFont.ttf';
+@codazon_woff_font: ~'codazon/themelayout/fonts/CodazonFont.woff';
+@codazon_svg_font: ~'codazon/themelayout/fonts/CodazonFont.svg';
+
+@font-face {
+  font-family: 'CodazonFont';
+  src:  url(@codazon_eot_font);
+  src:  url(@codazon_eot_font) format('embedded-opentype'),
+    url(@codazon_ttf_font) format('truetype'),
+    url(@codazon_woff_font) format('woff'),
+    url(@codazon_svg_font) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import (less)'general/_function.less.css';

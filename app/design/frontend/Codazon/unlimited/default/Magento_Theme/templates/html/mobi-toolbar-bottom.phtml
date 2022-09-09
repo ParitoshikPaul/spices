@@ -1,0 +1,13 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+if ((bool)$this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class)->getConfig('mobile/general/use_custom_bottom_toolbar')) {
+    include $this->getTemplateFile('Magento_Theme::html/mobi-toolbar-bottom-custom.phtml');
+} else {
+    include $this->getTemplateFile('Magento_Theme::html/mobi-toolbar-bottom-default.phtml');
+}
+?>

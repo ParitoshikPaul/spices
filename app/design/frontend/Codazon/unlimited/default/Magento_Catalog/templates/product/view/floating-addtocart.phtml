@@ -1,0 +1,62 @@
+<?php
+/**
+ * Copyright © 2022 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$product = $this->getProduct();
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+?>
+<?php if ($product && (bool)$helper->getConfig('pages/product_view/enable_sticky_cartqty')) : ?>
+<?php
+$position = ($helper->getConfig('pages/product_view/sticky_cartqty_pos') === '1') ? 'bottom' : 'top';
+$imageHelper = $this->helper(\Magento\Catalog\Helper\Image::class);
+$mainImage = $imageHelper->init($product, 'category_page_grid')->keepFrame(false)->setImageFile($product->getData('base_image'))->resize(50, null)->getUrl();
+$name = $product->getName();
+?>
+<script id="scr-pinfo-tmpl" type="text/x-magento-template">
+<div class="scr-pinfo src-gopr">
+    <div class="scr-qty-thumb"><img src="<?= $mainImage ?>" /></div>
+    <div class="scr-pname" title=<?= $block->escapeHtmlAttr($name) ?>><?= $block->escapeHtml($name) ?></div>
+</div>
+</script>
+<script>
+require(['jquery', 'js/theme-widgets'], function($) {
+    var floatingAddtocart = function() {
+        var $qtyBox = $('#product_addtocart_form .box-tocart').first(), t;
+        if ($qtyBox.length && $qtyBox.is(':visible') && !$qtyBox.hasClass('att-scr-qty')) {
+            $qtyBox.addClass('att-scr-qty scr-<?= $position ?>');
+            var $anchor = $('#qtybox-anchor'), threshold = $qtyBox.offset().top + $qtyBox.outerHeight() + 20, $fieldset = $('.fieldset', $qtyBox).first(),
+            $info = $($('#scr-pinfo-tmpl').html()).prependTo($fieldset);
+            if (!$anchor.length) $anchor = $('<div id="qtybox-anchor" class="qtybox-anchor">').insertBefore($qtyBox).append($qtyBox);
+            $.codazon.stickyMenu({threshold: threshold, enableSticky: true, anchor: $anchor}, $qtyBox);
+            var stickyData = $qtyBox.data('codazonStickyMenu');
+            var $deal = $('.product-inventory-deal .product-deal .deal-wrap').first();
+            if ($deal.length) {
+                var dealData = $deal.data('codazonMinicountdown'), $scrDeal = $('<div class="scr-pdeal src-gopr">').appendTo($fieldset.addClass('scr-has-cd'));
+                dealData ? $.codazon.minicountdown(dealData.options, $scrDeal) : $scrDeal.attr('data-mage-init', $deal.attr('data-mage-init'));
+            }
+            $qtyBox.on('click', '.src-gopr', function() {
+                $('html, body').animate({scrollTop: $('.product-info-main').offset().top - 80},200);
+            });
+            $qtyBox.on('changeStickyState', function() {
+                if ($qtyBox.hasClass('active')) {
+                    $fieldset.addClass('container');
+                } else {
+                    $fieldset.removeClass('container');
+                }
+            });
+            $(window).on('cdz_window_width_changed', function() {
+                $qtyBox.removeClass('active');
+                setTimeout(function() {
+                    if (stickyData) stickyData.changeThreshold($qtyBox.offset().top + $qtyBox.outerHeight() + 20);
+                }, 50);
+            });
+        }
+    };
+    floatingAddtocart();
+    $('body').on('contentUpdated', floatingAddtocart);
+});
+</script>
+<?php endif ?>

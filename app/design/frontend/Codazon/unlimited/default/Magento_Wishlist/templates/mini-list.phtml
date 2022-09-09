@@ -1,0 +1,66 @@
+<?php
+$wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
+?>
+<?php if ($wishlistHelper->isAllow()) : ?>
+<div class="mini-list" data-bind="scope: 'wishlist'">
+    <div class="block-top">
+        <div class="block-title">
+            <strong><?php echo __('Your Wish List') ?></strong>
+            <!-- ko if: wishlist().counter -->
+            <span> - </span><span data-bind="text: wishlist().counter"></span>
+            <a class="details md-icon-button launch md-ink-ripple" href="<?php echo $wishlistHelper->getListUrl() ?>"></a>
+            <!-- /ko -->
+        </div>
+    </div>
+    <!-- ko ifnot: wishlist().counter -->
+    <div class="block-content" layout-padding>
+        <p class="empty"><?php echo __('You have no item in your wish list.') ?>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: wishlist().counter -->
+    <div class="block-content">
+        <ul class="product-items" data-bind="foreach: wishlist().items, css: {'no-display': null}">
+            <li class="item product-item">
+                <div class="product-item-info row" style="width: 100%">
+                    <div class="col-xs-6 product-item-left">
+                        <a data-bind="attr: { href: product_url }" class="product-item-image">
+                            <img data-bind="attr: { src: image.src, alt: image.alt}" class="img-responsive" />
+                        </a>
+                        <a href="#" data-bind="attr: {'data-post': delete_item_params}" class="md-icon-button btn-remove action delete"></a>
+                    </div>
+                    <div class="product-item-details col-xs-18 row">
+                        <div class="col-xs-14">
+                            <strong class="product-item-name">
+                                <a data-bind="attr: { href: product_url }" class="product-item-link">
+                                    <span><!-- ko text: product_name --><!-- /ko --></span>
+                                </a>
+                            </strong>
+                            <div class="product-item-price" data-bind="html: product_price"></div>
+                        </div>
+                        <div class="col-xs-10">
+                            <!-- ko if: product_is_saleable_and_visible -->
+                            <div class="product-item-actions">
+                                <div class="actions-primary">
+                                    <form method="POST" data-bind="attr: {action: JSON.parse(add_to_cart_params).action}">
+                                        <?php echo $block->getBlockHtml('formkey');?>
+                                        <input type="hidden" data-bind="attr: {value: JSON.parse(add_to_cart_params).data.item}" name="item" />
+                                        <input type="hidden" data-bind="attr: {value: JSON.parse(add_to_cart_params).data.uenc}" name="uenc" />
+                                        <div class="qty-box">
+                                            <label><?php echo __('Qty'); ?></label>
+                                            <input class="wl-item-qty md-input" data-bind="attr: {value: parseInt(JSON.parse(add_to_cart_params).data.qty)}" type="text" name="qty" />
+                                        </div>
+                                        <button title="<?php echo __('Add to Cart') ?>" type="submit" class="tocart"></button>
+                                    </form>
+                                </div>
+                            </div>
+                            <!-- /ko -->
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <!-- /ko -->
+</div>
+<?php endif ?>
+

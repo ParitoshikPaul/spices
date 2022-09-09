@@ -1,0 +1,197 @@
+/*Fasion*/
+.cms-index-index .column.main{padding-bottom:0 !important;}
+/*Slideshow*/
+.cdz-slideshow-inner {
+	.owl-loaded .owl-stage{
+		padding:0;
+	}
+	.owl-dots-style-04();
+	.slider-arrow-style-08();
+	.slide-caption{
+		.button-link{
+			border:1px solid;
+	    	text-transform: lowercase;
+	    	text-decoration: none;
+	    	padding: 12px 70px;
+    		font-size: 17px;
+	    	.abs-style(#ffffff, #ffffff, transparent);
+	    	.abs-transition();
+	    	&:hover{
+	    		.abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+	    	}
+		}
+	}
+}
+/*Page title*/
+@media @tablet_vertical{
+	.cdz-block-title .b-title.h2{
+		font:@f_h1;
+		margin-bottom: 20px;
+	}
+}
+.cdz-block-title{
+	.b-title.h2{
+		color: @main_title_text;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid @main_border;
+		span{
+			border-bottom: 3px solid @main_title_border;
+			padding-bottom:6px;
+		}
+	}
+}
+/*Brand*/
+.brand-slider-wrapper{
+	position: relative;
+    border: 1px solid @main_border;
+    .owl-stage-outer{position: static;}
+}
+
+/*Instagram*/
+.instagram-wrapper{
+	.owl-stage{padding:0;}
+}
+/*-----------------------------*/
+/*      RESPONSIVE       */
+/*-----------------------------*/
+@media @tablet-strict_small{
+	/*Product Grid*/
+	.cdz-product-labels .label-item{
+		padding: 3px 15px;
+	}
+}
+/*IE fix*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+	.cdz-banner-wrap .cdz-banner-text{
+		max-width: 80%;
+		margin:0 auto;
+	}
+}
+/*General*/
+.base-slider{
+	@media @tablet_vertical{
+		.slider-arrow-style-04(); /*wrapper-product*/
+		.owl-nav{
+			display: block;
+		}
+	}
+}
+
+.instagram-wrapper{
+	@media @desktop{
+		.slider-arrow-style-05(); /*wrapper-product*/
+	}
+}
+
+/*Blog page*/
+.blog-index-index .sidebar .block {
+    border: 1px solid @main_border;
+    padding: 15px 20px;
+    &.blog-search {
+    	padding: 8px 15px 5px;
+    	.block-content{
+    		padding-top:0;
+    	}
+    }
+}
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style01();	
+}
+.toolbar{
+	.toolbar-option2();
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+	/*label*/
+	.cdz-product-labels{
+		.prolabels-style03();
+	}
+	.actions-secondary > .action{
+		width: 42px;
+	    height: 42px;
+	    line-height: 42px;
+	}
+}
+
+/*Blog*/
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(1px); /*blog*/
+}
+
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+	.main-inner,
+	.product.info.detailed .product.items{
+		padding: 0;
+		.product-info-box(0); /*product-view*/
+	}
+	@media @phone{
+		.product.info.detailed .product.items{
+			padding: 10px;
+		}
+	}
+}
+.product-view-style-03 .product-main-top,
+.product-view-style-02 .product-main-top .product-info-main{
+	padding: 0
+}
+
+.product-view-style-02 .product-left {
+    margin-left: -10px;
+    &.rtl-layout {
+    	margin-left: 0;
+    	margin-right: -10px;
+    }
+}
+
+.product-view-style-01 .product-media-wrapper{
+	margin-left: -20px;
+	&.rtl-layout {
+    	margin-left: 0;
+    	margin-right: -20px;
+    }
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px); /*product view*/
+		}
+	}
+	.product.info.detailed .product.items{
+		.product-info-box(0); /*product view*/
+	}
+}
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(1px);
+	}
+}
+
+
+
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap{
+		.main-content-top-left {
+			.cms-index-index .sticky-menu:not(.active) &{
+				&:hover{
+					.menu-container{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

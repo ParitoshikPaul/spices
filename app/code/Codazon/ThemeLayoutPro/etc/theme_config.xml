@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Codazon_ThemeLayoutPro:etc/config.xsd">
+    <default>
+        <themelayoutpro>
+            <general>
+                <enable_rtl>0</enable_rtl>
+                <newsletter_popup>unlimited-default-newsletter-popup</newsletter_popup>
+                <newsletter_popup_delay_time>30000</newsletter_popup_delay_time>
+                <newsletter_popup_frequency>60</newsletter_popup_frequency>
+            </general>
+			<header>
+				<header>header-style-01</header>
+				<left_menu>codazon-links-list</left_menu>
+                <left_menu_style>sidebar</left_menu_style>
+				<wishlist_style>dropdown</wishlist_style>
+                <mini_cart_style>dropdown</mini_cart_style>
+				<account_panel_style>sidebar</account_panel_style>
+                <display_advanced_search>1</display_advanced_search>
+                <enable_sticky_menu>1</enable_sticky_menu>
+                <main_menu>unlimited-electronic-main-menu</main_menu>
+                <mobile_menu></mobile_menu>
+                <main_menu_paging>1</main_menu_paging>
+                <vertical_menu>unlimited-supermarket-left-navigation</vertical_menu>
+                <vertical_menu_title>All Categories</vertical_menu_title>
+                <ajax_menu>1</ajax_menu>
+                <vertical_menu_align_height>1</vertical_menu_align_height>
+                <left_menu_hovering>1</left_menu_hovering>
+                <vertical_menu_behavior>1</vertical_menu_behavior>
+                <vertical_menu_displayed_as_default>0</vertical_menu_displayed_as_default>
+                <vertical_menu_close_behavior>1</vertical_menu_close_behavior>
+			</header>
+            <footer>
+                <footer>footer-style-01</footer>
+            </footer>
+			<search_by_category>
+				<enable>1</enable>
+				<category_parent_id>2</category_parent_id>
+				<category_max_depth>3</category_max_depth>
+			</search_by_category>
+            <env>
+                <enable_dev_mode>0</enable_dev_mode>
+            </env>
+		</themelayoutpro>
+        <pages>
+            <home>
+                <head_script><![CDATA[<meta property="og:type" content="product" />
+<meta property="og:title" content="Home page" />
+<meta property="og:image" content="{{media url="wysiwyg/codazon/home-image.jpg"}}" />
+<meta property="og:description" content="Welcome to our website." />
+<meta property="og:url" content="{{store url=""}}" />]]></head_script>
+            </home>
+            <product_view>
+                <layout>catalog_product_view_style01</layout>
+                <moreview_style>vertical</moreview_style>
+                <moreview_margin>20</moreview_margin>
+                <show_caption>0</show_caption>
+                <enable_zoom_lens>1</enable_zoom_lens>
+                <inner_zoom>1</inner_zoom>
+                <inner_zoom_ratio>1</inner_zoom_ratio>
+                <lens_width>300</lens_width>
+                <lens_height>300</lens_height>
+                <fullscreenzoom>20</fullscreenzoom>
+                <display_product_labels>1</display_product_labels>
+                <display_labels_on_right>0</display_labels_on_right>
+                <display_social_links>1</display_social_links>
+                <relation_list_style></relation_list_style>
+                <display_sale_timer>1</display_sale_timer>
+                <display_size_chart>1</display_size_chart>
+                <display_size_chart_as_page_link>0</display_size_chart_as_page_link>
+                <size_chart_label>Size Chart</size_chart_label>
+                <size_chart_type>cms_block</size_chart_type>
+                <size_chart_link>sizechart.html</size_chart_link>
+                <size_chart_block>unlimited-product-view-size-chart-popup</size_chart_block>
+                <size_chart_attribute>short_description</size_chart_attribute>
+                <size_chart_attribute_set_mapping><![CDATA[Default:unlimited-product-view-size-chart-popup
+Women Clothing:unlimited-product-view-custom-block-style-01]]></size_chart_attribute_set_mapping>
+                <custom_text>unlimited-product-view-custom-block-style-01</custom_text>
+                <custom_tab_block>unlimited-product-custom-tab-1,unlimited-product-custom-tab-2</custom_tab_block>
+                <custom_tab_attributes>codazon_custom_tab</custom_tab_attributes>
+                <display_buy_now_button>1</display_buy_now_button>
+                <desc_tab_max_height>300</desc_tab_max_height>
+                <enable_sticky_cartqty>1</enable_sticky_cartqty>
+                <sticky_cartqty_pos>0</sticky_cartqty_pos>
+                <!-- <desc_tab_more_view_label>More View</desc_tab_more_view_label>
+                <desc_tab_less_view_label>Less View</desc_tab_less_view_label> -->
+            </product_view>
+            <category_view>
+				<design>
+					<template>product/list/list-styles/list-style02.phtml</template>
+					<show>thumb,name,review,price,addtocart,wishlist,compare,quickshop,label</show>
+					<margin_right_desktop>20</margin_right_desktop>
+					<margin_bottom_desktop>20</margin_bottom_desktop>
+					<margin_right_mobile>10</margin_right_mobile>
+					<margin_bottom_mobile>10</margin_bottom_mobile>
+				</design>
+				<items_per_row_1>
+					<items_1900>5</items_1900>
+					<items_1600>5</items_1600>
+					<items_1420>5</items_1420>
+					<items_1280>5</items_1280>
+					<items_980>4</items_980>
+					<items_768>3</items_768>
+					<items_480>2</items_480>
+					<items_320>2</items_320>
+					<items_0>2</items_0>
+				</items_per_row_1>
+				<items_per_row_2>
+					<items_1900>4</items_1900>
+					<items_1600>4</items_1600>
+					<items_1420>4</items_1420>
+					<items_1280>4</items_1280>
+					<items_980>3</items_980>
+					<items_768>2</items_768>
+					<items_480>2</items_480>
+					<items_320>2</items_320>
+					<items_0>2</items_0>
+				</items_per_row_2>
+				<items_per_row_3>
+					<items_1900>3</items_1900>
+					<items_1600>3</items_1600>
+					<items_1420>3</items_1420>
+					<items_1280>3</items_1280>
+					<items_980>2</items_980>
+					<items_768>1</items_768>
+					<items_480>2</items_480>
+					<items_320>2</items_320>
+					<items_0>2</items_0>
+				</items_per_row_3>
+                <subcategories>
+                    <enable>1</enable>
+                    <title></title>
+                    <show_slider>1</show_slider>
+                    <show_slider_non_anchor>1</show_slider_non_anchor>
+                    <thumbnail_width>150</thumbnail_width>
+                    <thumbnail_height>150</thumbnail_height>
+					<items_1900>7</items_1900>
+					<items_1600>7</items_1600>
+					<items_1420>7</items_1420>
+					<items_1280>7</items_1280>
+					<items_980>5</items_980>
+					<items_768>4</items_768>
+					<items_480>5</items_480>
+					<items_320>3</items_320>
+					<items_0>2</items_0>
+                    <slider_margin>10</slider_margin>
+                    <slider_autoplay>1</slider_autoplay>
+                    <slider_autoplay_timeout>5000</slider_autoplay_timeout>
+                    <slider_dots>0</slider_dots>
+                    <slider_nav>1</slider_nav>
+                    <slider_loop>0</slider_loop>
+                    <style>rounded-corners</style>
+                    <placeholder>placeholder.jpg</placeholder>
+                    <hovered_style>0</hovered_style>
+                </subcategories>
+            </category_view>
+            <blog>
+                <date_format>M d Y</date_format>
+                <use_ajax_blog>1</use_ajax_blog>
+            </blog>
+            <contact>
+                <display_google_map>1</display_google_map>
+                <google_api_key></google_api_key>
+                <google_map_url><![CDATA[https://maps.google.com/maps?q=6505%20boulevard%20Henri-Bourassa,%20Montr%C3%A9al,%20Quebec,%20H1G2V5&t=&z=13&ie=UTF8&iwloc=&output=embed]]></google_map_url>
+                <map_zoom>10</map_zoom>
+                <map_title>Main Store</map_title>
+                <map_address>6505 boulevard Henri-Bourassa, Montréal, Quebec, H1G2V5</map_address>
+                <map_ratio>0.86</map_ratio>
+                <map_latitude>45.6107667</map_latitude>
+                <map_longitude>-73.6108024</map_longitude>
+                <map_additional_markers><![CDATA[a:2:{s:18:"_1530007318116_116";a:4:{s:5:"title";s:7:"Store 2";s:8:"latitude";s:10:"45.5107660";s:9:"longitude";s:11:"-73.5108023";s:7:"address";s:48:"160 Chemin Tour-de-l’Isle Montreal, QC H3C 4G8";}s:18:"_1530007373241_241";a:4:{s:5:"title";s:7:"Store 3";s:8:"latitude";s:9:"45.710767";s:9:"longitude";s:11:"-73.7108656";s:7:"address";s:52:"2505 Boulevard des EntreprisesTerrebonne, QC J6X 5S5";}}]]></map_additional_markers>
+                <contact_info>unlimited-contact-page-store-information</contact_info>
+            </contact>
+        </pages>
+        <images>
+            <general>
+                <lazyload_for_product_images>1</lazyload_for_product_images>
+            </general>
+            <product>
+                <product_base_image_width>1000</product_base_image_width>
+                <product_base_image_height>1000</product_base_image_height>
+                <product_base_image_width_mobile></product_base_image_width_mobile>
+                <product_base_image_height_mobile></product_base_image_height_mobile>
+                <product_moreview_image_width>110</product_moreview_image_width>
+                <product_moreview_image_height>110</product_moreview_image_height>
+                <swatch_image_width>30</swatch_image_width>
+                <swatch_image_height>30</swatch_image_height>
+                <swatch_thumb_width>100</swatch_thumb_width>
+                <swatch_thumb_height>100</swatch_thumb_height>
+            </product>
+            <category>
+                <product_image_width>320</product_image_width>
+                <product_image_height>320</product_image_height>
+            </category>
+            <blog>
+                <blog_base_image_width>1100</blog_base_image_width>
+                <blog_base_image_height>841</blog_base_image_height>
+                <blog_thumbnail_image_width>276</blog_thumbnail_image_width>
+                <blog_thumbnail_image_height>184</blog_thumbnail_image_height>
+            </blog>
+        </images>
+        <mobile>
+            <general>
+                <floating_shopby>1</floating_shopby>
+                <display_bottom_toolbar>1</display_bottom_toolbar>
+                <display_button_label>0</display_button_label>
+                <use_custom_bottom_toolbar>1</use_custom_bottom_toolbar>
+                <bottom_toolbar_json><![CDATA[[{"type":"custom","label":"Home","url":"{{store url=\"\"}}","icon":"fa fa-home","class":"btn-home","attributes":""},{"type":"search","label":"Search","url":"javascript:void(0)","icon":"fa fa-search","class":"btn-search","attributes":""},{"type":"cart","label":"Cart","url":"javascript:void(0)","icon":"fa fa-shopping-cart","class":"btn-cart","attributes":""},{"type":"custom","label":"Account","url":"{{store url=\"customer/account\"}}","icon":"fa fa-user-o","class":"btn-account","attributes":""},{"type":"custom","label":"Contact","url":"{{store url=\"contact\"}}","icon":"fa fa-map-marker","class":"btn-contact","attributes":""},{"type":"custom","label":"Wishlist","url":"{{store url=\"wishlist\"}}","icon":"fa fa-heart-o","class":"btn-wishlist","attributes":""},{"type":"custom","label":"Compare","url":"{{store url=\"catalog/product_compare\"}}","icon":"fa fa-random","class":"btn-compare","attributes":""},{"type":"menu","label":"Menu","url":"javascript:void(0)","icon":"fa fa-navicon","class":"btn-menu","attributes":""}]]]>
+                </bottom_toolbar_json>
+                <disable_section_tabs>0</disable_section_tabs>
+            </general>
+        </mobile>
+        <checkout>
+            <general>
+                <use_normal_layout>1</use_normal_layout>
+                <display_social_login_buttons>1</display_social_login_buttons>
+            </general>
+        </checkout>
+	</default>
+</config>

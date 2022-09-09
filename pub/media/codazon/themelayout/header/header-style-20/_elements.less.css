@@ -1,0 +1,30 @@
+@media @tablet_vertical {
+	.page-header{
+        background: @header_background;
+		border-bottom:1px solid @header_border;
+		.sticky-menu:not(.active){
+			margin-top:0;
+			margin-bottom:0;			
+		}
+	}
+    .cms-index-index .sticky-menu:not(.active) .header-search {
+        background: @header_search_background;
+        padding: 10px;
+        box-shadow: 2px 4px 7px 0px rgba(204,204,204,.62);
+    }
+	
+}
+@media @tablet_strict{
+	.page-header .logo {
+	    margin: 10px 0 0 20px;
+	}
+}
+
+@media @phone {
+	.page-header{
+		border-color:@header_border;
+		.logo {
+			margin-top: 15px;
+		}
+	}
+}

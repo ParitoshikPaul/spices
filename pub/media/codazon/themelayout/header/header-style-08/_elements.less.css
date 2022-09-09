@@ -1,0 +1,16 @@
+/*Sport*/
+@media @tablet_vertical {
+	.page-header{
+        background: @header_background;
+		.sticky-menu:not(.active){
+			margin-top:0;
+			margin-bottom:0;			
+		}
+	}
+
+}
+@media @tablet_strict{
+	.page-header .logo {
+	    margin: 10px 0 0 20px;
+	}
+}

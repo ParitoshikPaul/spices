@@ -1,0 +1,219 @@
+.columns .column.main{
+	padding-bottom: 0;
+}
+.page-header{
+	border: 0;
+	margin-bottom: 0;
+}
+.product-item .product-image-wrapper .product-image-photo{
+	.abs-borderradius(@main_box_radius);
+}
+/*Slideshow*/
+.cdz-slideshow{
+	position: relative;
+	.owl-dots-style-03();
+	.slider-arrow-style-03();
+	.owl-loaded .owl-stage{
+		padding: 0;
+	}
+	.item-image{
+		.abs-borderradius(@main_box_radius);
+	}
+	.item-desc{
+		position: absolute;
+		top: 10%;
+		left: 0;
+		width: 100%;
+		.slide-caption.slide-center{
+			position: absolute;
+			top: 10%;
+			left: 25%;
+			width: 50%;
+		}
+	}
+}
+@media @tablet_vertical{
+	.slideshow-container{
+		margin-bottom: 60px;
+		margin-top: 40px;
+	}
+	.cdz-slideshow:after{
+		width: 100%;
+		height: 100%;
+		content:'';
+		position: absolute;
+		left: 0;
+		top: 0;
+		.abs-boxshadow(@main_box_shadow);
+		.abs-borderradius(@main_box_radius);
+	}
+}
+/*Blog*/
+@media @tablet_vertical{
+	.post-list-style04 {
+		margin-bottom: 0;
+		.owl-nav{
+			margin: 0 10px;
+		}
+		.cdz-block-title .b-title{
+			text-transform: capitalize;
+			font: @f_h1;
+		}
+	}
+}
+/*Mobile*/
+@media @phone{
+	.slideshow-container{
+		margin-top:25px;
+		.owl-dots{
+			margin-bottom: 5px;
+			bottom:0;
+		}
+	}
+	.cdz-slideshow .owl-nav [class*='owl-']{
+		left: 10px;
+		&.owl-next{
+			left: auto;
+			right: 10px;
+		}
+		.rtl-layout &{
+			left: auto;
+			right: 10px;
+			&.owl-next{
+				left: 10px;
+			}
+		}
+	}	
+	.slide-desc{
+		display: none;
+	}
+	.post-list-style04 .owl-nav {
+    top: 10px;
+    position: absolute;
+    right: 0;
+	}
+}
+/*General style*/
+
+[class*='product-list-style']{
+	@media @desktop {
+		.slider-arrow-style-01(~'-30px'); /*wrapper product*/
+	}
+}
+[class*='product-list-style-05']{
+	@media @desktop {
+		.slider-arrow-style-01(~'-50px'); /*wrapper product*/
+	}
+}
+[class*='post-list-style']{
+	@media @desktop {
+		.slider-arrow-style-01(~'-40px'); /*wrapper product*/
+	}
+}
+[class*='brand-style'] .shop-by-brand-slider {
+	@media @desktop {
+		.slider-arrow-style-01(~'-60px'); /*wrapper product*/
+	}
+}
+[class*='product-list-style'],
+.list.products-list{
+	.cdz-product-labels{
+		.prolabels-style01(); /*wrapper product*/
+	}
+}
+[class*='wrapper-adv-style']{
+	@media @desktop{
+		&:not(.wrapper-adv-style-02){
+			.slider-arrow-style-01(~'-30px'); /*wrapper product*/
+		}		
+		&.wrapper-adv-style-02{
+			.owl-slider("false", 40px, 40px); /*wrapper product*/
+			.owl-nav [class*='owl-']{
+				border-width: 2px;
+				line-height: 35px;
+		        .abs-style(@main_title_text, @main_text_normal, @main_background);
+		        &:hover:not(.disabled){
+	        		.abs-style(@btn_hover_text, @btn_hover_border, @btn_hover_background);
+	        	}
+		    }
+		}
+	}
+}
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style04();	
+}
+.toolbar{
+	.toolbar-option2(0px);
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(0px);
+	}
+}
+/*Blog*/
+
+.post-list .post-holder,
+.post-view .post-holder{
+	.blog-box(0); /*_blog*/
+}
+/*Product page*/
+.product-view-style-02,
+.product-view-style-01,
+.product-view-style-03{
+	.main-inner,
+	.product.info.detailed .product.items{
+		.product-info-box(0px); /*_product-view*/
+	}
+}
+.product-view-style-04 {
+	.product-media-wrapper,
+	.product-info-main {
+		.product-left,
+		.product-right{
+			.product-info-box(0px); /*product view*/
+		}
+	}
+	.product.info.detailed .product.items{
+		.product-info-box(0); /*product view*/
+	}
+}
+
+
+/*Product Detail*/
+.block.crosssell,
+.block.upsell,
+.block.related{
+	padding: 20px;
+	background-color: @main_box_background;
+	.abs-boxshadow(@main_box_shadow);	
+	.abs-borderradius(@main_box_radius);	
+	[class*='product-list-style'] .owl-nav [class*='owl-']{
+		top: -50px;
+	}
+}
+.section-bottom{
+	.block.crosssell{
+		padding: 0;
+		.abs-boxshadow(none);
+	}
+}
+/*Header - Left Menu*/
+@media @tablet_vertical {
+	.header-vertical-menu-wrap .main-content-top-left {
+		.cms-index-index .sticky-menu:not(.active) &{
+			&:hover .menu-container{
+				display: block;
+			}
+		}
+	}
+}

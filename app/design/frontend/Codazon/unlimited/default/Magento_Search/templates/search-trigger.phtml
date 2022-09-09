@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/** @var $block \Magento\Framework\View\Element\Template */
+/** @var $helper \Magento\Search\Helper\Data */
+
+$wrapperTag = $this->getData('wrapper_tag')?:'li';
+$targetId = $this->getData('target_id')?:'header-search-wrap';
+$widget = [ 'themewidgets' => [
+    'codazon.searchtrigger' => [
+        'searchContainer' => '#'.$targetId 
+    ]
+]];
+?>
+<!-- search - search trigger -->
+<<?php echo $wrapperTag ?> class="<?php echo $this->getHtmlClass() ?>">
+    <button class="search-trigger" data-mage-init='<?php echo json_encode($widget); ?>'><?php echo __('Search') ?></button>
+    <?php echo $block->getChildHtml() ?>
+</<?php echo $wrapperTag ?>>

@@ -1,0 +1,26 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$helper = $this->helper('Codazon\AjaxLayeredNavPro\Helper\Data');
+?>
+<?php if ($helper->enableAjaxLayeredNavigation()) : ?>
+<script type="text/javascript">
+(function() {
+var config = {
+    config: {
+        mixins: {
+            'Magento_Swatches/js/swatch-renderer': {
+                'Codazon_AjaxLayeredNavPro/js/swatch-renderer': true
+            }
+        }
+    }
+};
+require.config(config);
+})();
+</script>
+<?php endif ?>

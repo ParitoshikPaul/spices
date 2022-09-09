@@ -1,0 +1,81 @@
+<?php
+/**
+ * Copyright © 2021 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$widget = ['themewidgets' => [
+	'codazon.slider' => ['sliderConfig' => $block->getSliderData()]
+]];
+$stagePadding = $this->getData('stage_padding');
+$rows = $this->getData('total_rows')?:1;
+$sliderMargin = (float)$this->getData('slider_margin');
+?>
+<?php if ($token = $this->getData('token')) : ?>
+<?php $templId = uniqid('instagram-photos-list-tmpl-'); ?>
+<script id="<?= $templId ?>" type="text/x-jquery-tmpl">
+<div class="instagram-photos items owl-carousel" data-mage-init='<?= json_encode($widget) ?>'>
+<% var i = 0, maxI = count - 1; %>
+<% _.each(posts, function(post, id) { %>
+<% var mediaUrl = (post.media_type == 'VIDEO') ? post.thumbnail_url : post.media_url; %>
+<%= ((i%rows == 0) && (rows > 1)) ? '<div class="item-group">' : ''  %>
+<div class="item photo-item" <%= (rows > 1) ? 'style="margin-bottom:' + sliderMargin + 'px"' : ''  %> >
+    <a class="photo-item-link abs-img type-<%- post.media_type.toLocaleLowerCase() %>" style="padding-bottom: 100%" href="<%- post.permalink %>" target="_blank">
+        <% if (stagePadding) { %>
+        <img alt="" class="img-responsive" src="<%- mediaUrl %>" />
+        <% } else { %>
+        <img alt="" class="img-responsive owl-lazy" data-src="<%- mediaUrl %>" />
+        <% } %>
+    </a>
+</div>
+<%= (((i%rows == rows - 1) || (i == (count - 1)) || (i == maxI)) && (rows > 1)) ? '</div>' : ''  %>
+<% i++ %>
+<% }); %>
+</div>
+</script>
+<div id="placeholder-<?= $templId ?>" class="no-loaded">
+    <div class="brand-loader double-bounce-spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+</div>
+<script>
+require(['jquery', 'mage/template'], function($, tmpl) {
+    var tmplId = '<?= $templId ?>', $placeholder = $('#placeholder-' + tmplId), instTmpl = tmpl('#' + tmplId),
+    rows = <?= $rows ?>, sliderMargin = <?= $sliderMargin ?>, stagePadding = <?= $stagePadding ?>;
+    $.ajax({
+        url: 'https://graph.instagram.com/me/media',
+        data: {access_token: '<?= $token ?>', limit: <?= (int)$this->getData('max_items') ?>, fields: 'media_url, permalink,media_type,thumbnail_url'},
+        cache: true,
+        success: function (rs) {
+            if (typeof rs.data != 'undefined'){
+                $(instTmpl(
+                    {posts: rs.data, count: rs.data.length, sliderMargin: sliderMargin, stagePadding: stagePadding, rows: rows})
+                ).insertBefore($placeholder);
+                $('body').trigger('contentUpdated');
+            };
+        }
+    }).always(function() { $placeholder.remove(); });
+});
+</script>
+<?php else : ?>
+<?php
+$recentPhotos = $block->getStoredInstagramPhotos();
+$count = count($recentPhotos);
+$maxI = $this->getData('max_items') - 1;
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+?>
+<?php if ($count > 0 ) : ?>
+<div class="instagram-photos items owl-carousel" data-mage-init='<?= json_encode($widget) ?>'>
+	<?php $i = 0; foreach($recentPhotos as $photo): ?>
+    <?php echo (($i%$rows == 0) && ($rows > 1))?'<div class="item-group">':'' ?>
+    <div class="photo-item" <?php echo ($rows > 1)?"style='margin-bottom: {$sliderMargin}px'":'' ?>>
+        <a class="photo-item-link abs-img" style="padding-bottom: 100%" href="<?php echo $photo->link ?>" target="_blank">
+            <img alt="" class="img-responsive" src="<?= $helper->getMediaUrl($photo->images->standard_resolution->url); ?>" />
+        </a>
+    </div>
+    <?php echo ((($i%$rows == $rows - 1) || ($i == ($count - 1)) || ($i == $maxI)) && ($rows > 1))?'</div>':'' ?>
+    <?php if ($i == $maxI) break; ?>
+    <?php $i++ ?>
+    <?php endforeach ?>
+</div>
+<?php endif ?>
+<?php endif ?>

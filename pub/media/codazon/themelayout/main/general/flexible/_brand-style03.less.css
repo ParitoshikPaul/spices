@@ -1,0 +1,14 @@
+.brand-style03{  
+    .shop-by-brand-slider{
+        .slider-arrow-style-11();/*wraper product*/
+        .owl-dots-style-01();
+    }
+	.cdz-block-content{
+		border: 2px solid @main_box_border;
+		.abs-borderradius(@main_box_radius);
+		background: @main_box_background;
+	}
+	.owl-carousel .owl-stage-outer{
+		padding: 10px;
+	}
+}

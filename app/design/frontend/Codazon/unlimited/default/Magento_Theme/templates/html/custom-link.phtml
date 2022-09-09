@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$liClass = $this->getHtmlClass();
+$aClass = $this->getClass();
+?>
+<li class="nav item<?php echo $liClass?' '.$liClass:''; ?>">
+    <a <?php echo $this->getTitle()?'title="'.$this->escapeHtml((string)__($this->getTitle())).'"':''; ?> href="<?php echo $this->escapeHtml($this->getHref()); ?>" <?php echo $aClass?'class="'.$aClass.'"': '' ?> <?php echo $this->getAttributesHtml() ?>>
+        <?php echo $this->getIsHighlighted()?"<strong>":"" ?>
+        <?php echo __($this->getLabel()) ?>
+        <?php echo $this->getIsHighlighted()?"</strong>":"" ?>
+    </a>
+</li>

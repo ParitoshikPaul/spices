@@ -1,0 +1,44 @@
+.banner-style19 {
+    .cdz-banner-text {
+		padding: 30px 20px;
+		margin: 0;
+		.box-links{
+			margin:0;
+			padding:0;
+			list-style: none;
+			a{
+				position: relative;
+				.abs-transition();
+				color:@main_title_text;
+				&:hover{
+					color: @main_hover_text;
+				}
+			}
+		}
+	}
+	@media @tablet_vertical {
+		.cdz-banner-text {
+			.box-links{
+				a{
+					&:before{
+						content:"";
+						width:0px;
+						height:1px;
+						position: absolute;
+						left:0;
+						top:50%;
+						background:@main_title_text;
+						.abs-transition();
+					}
+					&:hover{
+						padding-left:15px;
+						&:before{
+							width:10px;
+							background: @main_hover_text;
+						}
+					}
+				}
+			}
+		}
+	}
+}

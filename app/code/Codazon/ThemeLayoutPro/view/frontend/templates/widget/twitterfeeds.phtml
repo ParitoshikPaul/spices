@@ -1,0 +1,36 @@
+<?php
+$tweets = $this->getLastestTweets();
+$username = $this->getData('user_name');
+$dateFormat = $this->getData('date_format')?:'D m, Y';
+$userPage = 'https://twitter.com/'.$username;
+?>
+
+<?php if ($tweets) : ?>
+<ul class="twitter-list">
+<?php foreach ($tweets as $tweet) : ?>
+<li class="tweet-item">
+    <div class="tweet-text">
+        <?= $tweet->text ?>
+    </div>
+    <div class="tweet-time">
+        <a target="_blank" href="https://twitter.com/<?= $tweet->user->id ?>/status/<?= $tweet->id_str ?>" ><?= $this->dateFormat($tweet->created_at, $dateFormat); ?></a>
+    </div>
+    <div class="tweet-user">
+        <span><?= __('by') ?></span> <a target="_blank" href="<?= $userPage ?>"><?= $tweet->user->name ?></a>
+    </div>
+</li>
+<?php endforeach ?>
+</ul>
+<?php elseif ($username) : ?>
+<div class="twitter-list">
+    <a class="twitter-timeline" data-chrome="noheader nofooter noborders noscrollbar transparent" data-tweet-limit="<?= (int)$this->getData('limit') ? : 2 ?>" href="<?= $userPage ?>">
+        <span class="no-loaded">
+            <span class="brand-loader double-bounce-spinner">
+                <span class="double-bounce1"></span>
+                <span class="double-bounce2"></span>
+            </span>
+        </span>
+    </a>
+    <script>setTimeout(function(){require(["//platform.twitter.com/widgets.js"])},2500);</script>
+</div>
+<?php endif ?>

@@ -1,0 +1,67 @@
+<?php
+/**
+ * Copyright © 2022 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<script>
+require(['jquery'], function($) {
+    var $menu = $('[data-action="navigation"] > .cdz-menu').first();
+    if ($menu.length) {
+        var $menuWr = $('#desk_menu-container'), t = false, pt = false, atClass = 'scrm-active',
+        $sticky = $('.page-header .sticky-menu');
+        var fullHeightMenu = function($menu) {
+            var $fhWrap = $('<div class="fh-menu-wrap">').insertAfter($sticky),
+            $topMenu = $('<div>').attr('class', $menu.attr('class')).removeClass('no-loaded').addClass('fh-top-links').appendTo(
+                $('<nav class="cdz-navigation">').appendTo(
+                    $('<div class="hidden-xs pos_static">').insertBefore($menuWr)
+                )
+            ),
+            $topUl = $('<div class="groupmenu">').appendTo($topMenu);
+            $menuWr.appendTo($fhWrap);
+            var menuWidget = $menu.data('codazonMegamenu'), conf = menuWidget.options;
+            $menu.find(' > .groupmenu > li.level0').each(function() {
+                var $orgli = $(this),
+                $topLi = $('<li>').addClass($orgli.attr('class')).appendTo($topUl),
+                $a = $orgli.find('> .menu-link').clone().appendTo($topLi);
+                $topLi.hover(function() {
+                    if (t) clearTimeout(t);
+                    t = setTimeout(function() {
+                        $topLi.addClass(atClass).siblings().removeClass(atClass);
+                        $orgli.addClass(atClass).siblings().removeClass(atClass).trigger('mouseover.lazyimages');
+                    }, 10);
+                }, function() {});
+                $a.on('click', function(e) {
+                    if (menuWidget._isTabletDevice()) {
+                        if ($topLi.hasClass('parent')) {
+                            e.stopPropagation();
+                            e.preventDefault();
+                        }
+                    }
+                });
+            });
+            $.each([$topMenu, $fhWrap], function(i, el) {
+                $(el).hover(function() {
+                    if (pt) clearTimeout(pt);
+                    pt = setTimeout(function() {
+                        $fhWrap.addClass('fhm-active');
+                    }, 50);
+                }, function() {
+                    if (pt) clearTimeout(pt);
+                    pt = setTimeout(function() {
+                        $fhWrap.removeClass('fhm-active');
+                        $topMenu.find('.'+atClass).removeClass(atClass);
+                    }, 50);
+                });
+            });
+        }
+        if ($menu.hasClass('no-loaded')) {
+            $('body').on('cdzmenu.initialized', function(e, $curmenu) {
+                fullHeightMenu($curmenu);
+            });
+        } else {
+            fullHeightMenu($menu);
+        }
+    }
+});
+</script>

@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-23</identifier>
+  <title>Footer Style 23</title>
+  <variables>
+    <footer_background>#1c1c1e</footer_background>
+    <footer_background_file>/b/k/bkg-footer1.png</footer_background_file>
+    <footer_background_image_option>0 0 no-repeat</footer_background_image_option>
+    <footer_background_normal>#ffb700</footer_background_normal>
+    <footer_border>#bdbdbd</footer_border>
+    <footer_bottom_background>#101010</footer_bottom_background>
+    <footer_font>13px</footer_font>
+    <footer_hover_text>#ffb700</footer_hover_text>
+    <footer_text>#ffffff</footer_text>
+    <footer_text_normal>#ffffff</footer_text_normal>
+    <footer_title_font>14px</footer_title_font>
+    <footer_title_text>#ffffff</footer_title_text>
+    <footer_top_background>#ffb700</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceBlock name="footer_links" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="copyright" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="report.bugs" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="form.subscribe" remove="true" /&gt;&#xD;
+    &lt;move element="theme-layout-footer" destination="footer-container" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <custom_variables>@service-banner-background: #ffb700;&#xD;
+@service-banner-title: #000000;&#xD;
+@service-banner-hover-title: #000000;&#xD;
+@service-banner-text: #000000;&#xD;
+@service-banner-hover-text: #000000;&#xD;
+@service-banner-icon: #000000;&#xD;
+@service-banner-hover-icon: #000000;&#xD;
+@service-banner-icon-border: #ffb700;&#xD;
+@service-banner-hover-icon-border: #ffb700;</custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+    <version>62a1a8e9e539c</version>
+    <auto_detect_files>
+      <item>service/_service-block-01.less.css</item>
+    </auto_detect_files>
+    <flexible_less/>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-23"&gt;&#xD;
+&lt;div class="container-fluid footer-top"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="service-banner-style01 row"&gt;&#xD;
+&lt;div class="item col-xs-12 col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-truck"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&lt;a href="#"&gt;&lt;strong&gt;Free Shipping&lt;/strong&gt;&lt;/a&gt;&#xD;
+&lt;p&gt;On every order, every day!&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-xs-12 col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-lock"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&lt;a href="#"&gt;&lt;strong&gt;Secure Payment&lt;/strong&gt;&lt;/a&gt;&#xD;
+&lt;p&gt;We value your security&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-xs-12 col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-money"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&lt;a href="#"&gt;&lt;strong&gt;Money Back Guarantee&lt;/strong&gt;&lt;/a&gt;&#xD;
+&lt;p&gt;30 days money back guarantee&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="item col-xs-12 col-sm-6"&gt;&#xD;
+&lt;div class="item-icon fa fa-refresh"&gt;&amp;nbsp;&lt;/div&gt;&#xD;
+&lt;div class="item-content"&gt;&lt;a href="#"&gt;&lt;strong&gt;Easy return&lt;/strong&gt;&lt;/a&gt;&#xD;
+&lt;p&gt;30 days return&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="container-fluid footer-middle"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box-1"&gt;&#xD;
+&lt;div class="footer-logo"&gt;&lt;img src="{{media url="wysiwyg/codazon/footer_logo_white.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+&lt;ul class="footer-link"&gt;&#xD;
+&lt;li&gt;Montergade 19 1140&lt;/li&gt;&#xD;
+&lt;li&gt;Copenhagen, Denmark&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;div class="footer-social hover-iconsocial"&gt;&#xD;
+&lt;p class="social"&gt;&lt;a href="#"&gt;&lt;span class="fa fa-facebook"&gt;facebook&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-twitter"&gt;twitter&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-pinterest-p"&gt;pinterest&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-google-plus"&gt;google plus&lt;/span&gt;&lt;/a&gt; &lt;a href="#"&gt;&lt;span class="fa fa-rss"&gt;rss&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-1"&gt;Infomation&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-1" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='privacy-policy-cookie-restriction-mode'}}"&gt;Privacy and Cookie Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='about-us'}}"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='search/term/popular'}}"&gt;Search Terms&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='catalogsearch/advanced'}}"&gt;Advanced Search&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='sales/guest/form'}}"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="{{store url='contact'}}"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-2"&gt;Customer Suport&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-2" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Help &amp;amp; FAQs&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{store url='contact'}}"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Order History&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="#"&gt;Sample Links&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-5"&gt;Need help? / Quick contacts&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-5" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li class="phone"&gt;&lt;span class="fa fa-phone"&gt;&amp;nbsp;&lt;/span&gt;0123 456 789&lt;/li&gt;&#xD;
+&lt;li&gt;Monday - Friday: 9:00 - 20:00&lt;/li&gt;&#xD;
+&lt;li style="margin-bottom: 20px;"&gt;Saturday: 10:00 - 15:00&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="newsletter footer-box"&gt;&#xD;
+&lt;p class="newsletter-title h5" data-cdz-toggle="#footer-content-4"&gt;Subscribe Us&lt;/p&gt;&#xD;
+&lt;div id="footer-content-4" class="showhide"&gt;&#xD;
+&lt;div class="newsletter-content"&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="container-fluid footer-bottom"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;div class="footer-address"&gt;&#xD;
+&lt;p&gt;&#xA9; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-12"&gt;&#xD;
+&lt;div class="footer-payment"&gt;&lt;img class="img-responsive" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment"&gt;&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

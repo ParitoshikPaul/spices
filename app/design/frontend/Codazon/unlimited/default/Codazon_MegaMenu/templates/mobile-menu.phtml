@@ -1,0 +1,16 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$dataMenu = json_encode(['megamenu' => [
+    'type'              => 0,
+    'useAjaxMenu'       => true,
+    'menu'              => $this->getMenu(),
+    'ajaxUrl'           => $this->getUrl('megamenu/index/ajax'),
+]], JSON_HEX_TAG);
+?>
+<div class="cdz-menu no-loaded cdz-horizontal-menu" data-mage-init='<?php echo $dataMenu ?>'><ul class="groupmenu"></ul></div>

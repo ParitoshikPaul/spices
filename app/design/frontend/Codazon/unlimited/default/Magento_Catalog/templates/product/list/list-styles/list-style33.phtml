@@ -1,0 +1,187 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+use Magento\Framework\App\Action\Action;
+
+// @codingStandardsIgnoreFile
+
+?>
+
+<?php if ($block->getMode() == 'grid') : ?>
+<?php
+/**
+ * Product list template
+ *
+ * @var $block \Magento\Catalog\Block\Product\ListProduct
+ */
+?>
+<?php
+$_productCollection = $block->getLoadedProductCollection();
+?>
+
+<?php if (!$_productCollection->count()): ?>
+    <div class="message info empty"><div><?= __('We can\'t find products matching the selection.') ?></div></div>
+<?php else: ?>
+<?php
+/* helper */
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+$imageHelper = $this->helper('Magento\Catalog\Helper\Image');
+$themeHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$quickShopHelper = $this->helper('Codazon\QuickShop\Helper\Data');
+$compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');
+$wishlistHelper = $this->helper('Magento\Wishlist\Helper\Data');
+$labelHelper = $this->helper('Codazon\ProductLabel\Helper\Data');
+
+/* layout */
+$layout = $themeHelper->getBlockPageLayout($block);
+
+/* show on list */
+$showDescription = $themeHelper->isDisplayOnList('description');
+$showSku = $themeHelper->isDisplayOnList('sku');
+$showWishlist = $themeHelper->isDisplayOnList('wishlist') && $wishlistHelper->isAllow();
+$showCompare = $themeHelper->isDisplayOnList('compare') && $block->getAddToCompareUrl();
+$showCart = $themeHelper->isDisplayOnList('addtocart');
+$showQuickShop = $themeHelper->isDisplayOnList('quickshop');
+$showLabel = $themeHelper->isDisplayOnList('label');
+$showThumb = $themeHelper->isDisplayOnList('thumb');
+$showName = $themeHelper->isDisplayOnList('name');
+$showReview = $themeHelper->isDisplayOnList('review');
+$showPrice = $themeHelper->isDisplayOnList('price');
+
+$width = $themeHelper->getProductImageSize('width');
+$height = $themeHelper->getProductImageSize('height');
+$paddingBottom = $height*100/$width;
+
+$cartWidget = $block->isRedirectToCartEnabled()?'':'data-mage-init=\'{"catalogAddToCart":{}}\'';
+$wlLabel = $block->escapeHtml(__('Add to Wish List'));
+$cpLabel = $block->escapeHtml(__('Add to Compare'));
+$cartLabel = $block->escapeHtml(__('Add to Cart'));
+$formKey = $block->getBlockHtml('formkey');
+?>
+<style type="text/css">
+<?= $themeHelper->getColumnStyle('.page-products .products-grid.ctst .product-items', '.page-products .products-grid.ctst .product-items .item.product-item', '.page-products .ctst .product-items .item.product-item', $layout); ?>
+</style>
+    <?= $block->getToolbarHtml() ?>
+    <?= $block->getAdditionalHtml() ?>
+    <?php
+	$viewMode = 'grid';
+	$image = 'category_page_grid';
+	$templateType = \Magento\Catalog\Block\Product\ReviewRendererInterface::SHORT_VIEW;
+    $pos = $block->getPositioned();
+    ?>
+	
+    <div class="products wrapper product-list-style-33 ctst <?= $viewMode ?> products-<?= $viewMode ?>" data-sameheight=".product-item-details">
+        <ol class="products list items product-items flex-grid">
+            <?php foreach ($_productCollection as $_product): ?><li class="item product product-item">
+                <div class="product-item-info" data-container="product-grid">
+                    <?php if ($showThumb) : ?>
+                    <?php
+						$mainImage = $_product->getData('small_image');
+						$hoveredImage = $_product->getData('thumbnail');
+                    ?>
+                    <div class="product-item-top">
+                        <a href="<?= $_product->getProductUrl() ?>" class="product photo product-item-photo">
+                            <span class="product-image-container">
+                                <span class="product-image-wrapper" style="padding-bottom: <?= $paddingBottom ?>%;"><?= $themeHelper->getProductImageHtml($_product, $width, $height, $imageHelper, $block) ?></span>
+                            </span>
+                        </a>
+                        <?php $i = 1; ?>
+                        <?= $showLabel?$labelHelper->showLabel($_product):''; ?>
+						<div class="button-hover-wrap hidden-xs">
+                            <?php if ($showCart) : ?>
+							<div class="cart-wrap">
+							<?php if ($_product->isSaleable()): ?>
+								<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+								<form <?= $cartWidget ?> data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= $postParams['action'] ?>" method="post">
+									<input type="hidden" name="product" value="<?= $postParams['data']['product'] ?>">
+									<input type="hidden" name="<?= Action::PARAM_NAME_URL_ENCODED ?>" value="<?= $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+									<?= $formKey ?>
+									<button type="submit" title="<?= $cartLabel ?>" class="action tocart primary <?php echo "effect-{$i}"; $i++; ?>"><span><?= $cartLabel ?></span></button>
+								</form>
+							<?php else: ?>
+								<?php if ($_product->getIsSalable()): ?>
+									<button onclick="document.location.href = '<?= $_product->getProductUrl(); ?>'" class="action tocart primary stock available <?php echo "effect-{$i}"; $i++; ?>"><span><?= __('In stock') ?></span></button>
+								<?php else: ?>
+									<button class="action tocart primary disabled stock unavailable <?php echo "effect-{$i}"; $i++; ?>" disabled><span><?= __('Out of stock') ?></span></button>
+								<?php endif; ?>
+							<?php endif; ?>
+							</div>
+                            <?php endif ?>
+							<?php if ($showQuickShop) { echo '<div class="qs-wrap effect-' . $i . '">' . $quickShopHelper->getQuickShopButton($_product) . '</div>'; $i++; }; ?>
+                            <?php if ($showWishlist): ?>
+                                <a href="#" data-post='<?= $block->getAddToWishlistParams($_product); ?>' class="action towishlist <?php echo "effect-{$i}"; $i++; ?>" data-action="add-to-wishlist" title="<?= $wlLabel ?>"><span><?= $wlLabel ?></span></a>
+                            <?php endif; ?>
+                            <?php if ($showCompare): ?>
+                                <a href="#" class="action tocompare <?php echo "effect-{$i}"; $i++; ?>" data-post='<?= $compareHelper->getPostDataParams($_product);?>' title="<?= __('Add to Compare') ?>"><span><?= __('Add to Compare') ?></span></a>
+                            <?php endif; ?>
+						</div>
+                    </div>
+                    <?php endif ?>
+                    <div class="product details product-item-details">
+						<div class="product-item-inner">
+							<?php if ($showName): ?>
+							<strong class="product name product-item-name">
+								<a class="product-item-link" href="<?= $_product->getProductUrl() ?>"><?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a>
+							</strong>
+							<?php endif ?>
+							<?php if ($showSku) : ?>
+                            <div class="product-item-sku"><span class="label"><?= __('SKU: ') ?></span><span class="value"><?= $_product->getData('sku') ?></span></div>
+                            <?php endif ?>
+							<?= $showPrice?$block->getProductPrice($_product):'' ?>
+							<?= $block->getProductDetailsHtml($_product) ?>
+							<?php if ($showDescription):?>
+							<div class="product description product-item-description">
+								<?= $themeHelper->subString($_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description'), 60) ?>
+							</div>
+							<?php endif; ?>
+							<?= $showReview?$block->getReviewsSummaryHtml($_product, $templateType):'' ?>
+                            <div class="button-hover-wrap visible-xs">
+								<div class="product-item-inner">
+									<div class="product actions product-item-actions">
+										<?php if ($showCart) : ?>
+                                        <div class="actions-primary">
+											<?php if ($_product->isSaleable()): ?>
+												<?php $postParams = $block->getAddToCartPostParams($_product); ?>
+												<form <?= $cartWidget ?> data-role="tocart-form" data-product-sku="<?= $block->escapeHtml($_product->getSku()) ?>" action="<?= $postParams['action'] ?>" method="post">
+													<input type="hidden" name="product" value="<?= $postParams['data']['product'] ?>">
+													<input type="hidden" name="<?= Action::PARAM_NAME_URL_ENCODED ?>" value="<?= $postParams['data'][Action::PARAM_NAME_URL_ENCODED] ?>">
+													<?= $formKey ?>
+													<button type="submit" title="<?= $cartLabel ?>" class="action tocart primary"><span><?= $cartLabel ?></span></button>
+												</form>
+											<?php else: ?>
+												<?php if ($_product->getIsSalable()): ?>
+													<button onclick="document.location.href = '<?= $_product->getProductUrl(); ?>'" class="action tocart primary stock available"><span><?= __('In stock') ?></span></button>
+												<?php else: ?>
+													<button class="action tocart primary disabled stock unavailable" disabled><span><?= __('Out of stock') ?></span></button>
+												<?php endif; ?>
+											<?php endif; ?>
+										</div>
+                                        <?php endif ?>
+										<?= $showQuickShop?$quickShopHelper->getQuickShopButton($_product):''; ?>
+										<?php if ($showWishlist || $showCompare): ?>
+										<div data-role="add-to-links" class="actions-secondary">
+											<?php if ($showWishlist): ?>
+												<a href="#" data-post='<?= $block->getAddToWishlistParams($_product); ?>' class="action towishlist" data-action="add-to-wishlist" title="<?= $wlLabel ?>"><span><?= $wlLabel ?></span></a>
+											<?php endif; ?>
+											<?php if ($showCompare): ?>
+												<a href="#" class="action tocompare" data-post='<?= $compareHelper->getPostDataParams($_product);?>' title="<?= $cpLabel ?>"><span><?= $cpLabel ?></span></a>
+											<?php endif; ?>
+										</div>
+										<?php endif ?>
+									</div>
+								</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <?php endforeach; ?>
+        </ol>
+    </div>
+    <?= $block->getToolbarHtml() ?>
+<?php endif; ?>
+<?php else : ?>
+<?php echo $this->setTemplate('Magento_Catalog::product/list/list-mode/list.phtml')->toHtml(); ?>
+<?php endif ?>

@@ -1,0 +1,19 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<li class="item link compare" data-bind="scope: 'compareProducts'" data-role="compare-products-link">
+    <a class="action compare" title="<?php /* @escapeNotVerified */ echo __('Compare') ?>"
+       data-bind="attr: {'href': compareProducts().listUrl}"
+    >
+        <?php /* @escapeNotVerified */ echo __('Compare') ?>
+        <!-- ko if: compareProducts().countCaption -->
+        <span class="counter qty" data-bind="text: '(' + compareProducts().countCaption + ')'"></span>
+        <!-- /ko -->
+    </a>
+</li>
+<script type="text/x-magento-init">
+{"[data-role=compare-products-link]": {"Magento_Ui/js/core/app": <?php /* @escapeNotVerified */ echo $block->getJsLayout();?>}}
+</script>

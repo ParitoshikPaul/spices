@@ -1,0 +1,43 @@
+/*Fashion*/
+.instagram-style01{
+	.instagram-photos .photo-item{
+		position: relative;
+		overflow: hidden;    		
+		img{
+			.abs-opacity(1);
+			.abs-transition();
+		}
+		.photo-item-link:before{
+			position: absolute;   				
+			color:#ffffff;
+		    z-index: 1;
+			.abs-iconfont("\f16d", 35px);    			
+			.abs-calc-top(~'(100% - 35px)/2');
+			.abs-calc-left(~'(100% - 30px)/2');
+		    .abs-transition();
+		    .abs-opacity(0);
+		}
+		&:hover{
+			.photo-item-link{
+				background: -webkit-linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+				background: linear-gradient(to bottom left, rgba(164,63,185,0.8), rgba(238,194,113,0.8));
+				&:before{
+		    		.abs-opacity(1);
+				}
+			}    			
+			img{
+				.abs-opacity(0.2);
+			}
+			&:before{
+				.abs-opacity(1);
+			}
+		}
+	}
+    .abs-img.type-video {
+        background: #000;
+        img {
+            transform: translateY(-50%);
+            top: 50%;
+        }
+    }
+}

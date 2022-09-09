@@ -1,0 +1,29 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$blockIdentifier = $helper->getConfig('themelayoutpro/general/newsletter_popup');
+$delay = (float)$helper->getConfig('themelayoutpro/general/newsletter_popup_delay_time') ? : 0;
+$frequency = (float)$helper->getConfig('themelayoutpro/general/newsletter_popup_frequency') ? : 60;
+$widget = [
+    'themewidgets' => [
+        'codazon.newsletterPopup' => [
+            'cookieName'        =>  'cdz-newsletter-modal',
+            'frequency'         =>  $frequency,
+            'delay'             =>  $delay,
+            'blockIdentifier'   =>  $blockIdentifier,
+            'ajaxUrl'           =>  $this->getUrl('themelayoutpro/ajax/cmsblock')
+        ]
+    ]
+];
+?>
+<?php if ($blockIdentifier) : ?>
+<div style="display:none">
+<div class="cdz-newsletter-content" id="cdz-newsletter-modal" data-mage-init='<?= json_encode($widget) ?>'></div>
+</div>
+<?php endif ?>

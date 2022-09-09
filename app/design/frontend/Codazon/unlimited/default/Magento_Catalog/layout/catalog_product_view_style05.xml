@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <attribute name="class" value="pdv-l05"/>
+        <referenceContainer name="content">
+            <container name="product.row" htmlTag="div" htmlClass="main-inner" before="-">
+                <container name="product.top.row" htmlTag="div" htmlClass="full-width pdif-sticky-wrap product-info-wrap">
+                    <container name="product.info.left" htmlTag="div" htmlClass="product-left pdif-sticky-col" />
+                    <container name="product.info.right" htmlTag="div" htmlClass="product-right">
+                        <container name="product.main.top" htmlTag="div" htmlClass="product-main-top product-info-main">
+                            <block class="Magento\Catalog\Block\Product\View" name="product.form.wrapper" template="Magento_Catalog::product/view/form-wrapper.phtml">
+                                <action method="setData">
+                                    <argument name="name" xsi:type="string">has_form_tag</argument>
+                                    <argument name="value" xsi:type="boolean">0</argument>
+                                </action>
+                            </block>
+                        </container>
+                        <container name="product.main.bottom" htmlTag="div" htmlClass="product-main-bottom" />
+                    </container>
+                </container>
+            </container>
+            <container name="product.info.details.before" before="product.info.details" after="product.row" htmlTag="div" htmlClass="product-details-before" />
+        </referenceContainer>
+        
+        
+        <referenceContainer name="product.info.media" htmlClass="product media full-width" />
+        <referenceContainer name="product.info.main" htmlClass="product-info-main-inner" />
+        
+        
+        
+        <!-- move cart -->
+        <referenceBlock name="product.info">
+            <container name="product.info.form.middle" as="form_middle">
+                <block class="Magento\Catalog\Block\Product\View" name="product.info.addtocart_wrap" template="Magento_Catalog::product/view/product-info-form-content.phtml" />
+            </container>
+        </referenceBlock>
+        <move element="product.info.form.content" as="product_info_form_content" destination="product.info.addtocart_wrap" />
+        <move element="product.info.form.options" as="options_container" destination="product.info.addtocart_wrap" />
+        <!-- end move cart -->
+        
+        <move element="product.info.media" destination="product.info.left" />
+        <move element="page.main.title" destination="product.main.top" before="-" />
+        <move element="product.info.main" destination="product.main.top" />
+        <move element="product.info.extrahint" destination="product.main.top" />
+        <!-- move element="product.info.review" destination="product.info.main" before="-" /-->
+        <move element="product.info.overview" destination="product.main.top" />
+        <move element="product-static-text" destination="product.main.top" />
+        <move element="catalog.product.related" destination="product.info.details.before" />
+        <move element="product.info.details" destination="product.main.bottom" />
+        <move element="catalog.product.related" destination="product.main.bottom" after="product.info.details" />
+        <move element="product.info.upsell" destination="product.main.bottom" after="catalog.product.related" />
+        <move element="shipping-estimation-simple" destination="product.info.details" />
+        <referenceBlock name="product.info.details">
+            <action method="setTemplate">
+                <argument name="template" xsi:type="string">Magento_Catalog::product/view/details-02.phtml</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="shipping-estimation-simple" group="detailed_info">
+            <action method="setData">
+                <argument name="name" xsi:type="string">title</argument>
+                <argument name="value" xsi:type="string" translate="true">Estimate Shipping Cost</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="shipping-estimation-configurable" remove="true" />
+        <referenceBlock name="catalog.product.related" template="Magento_Catalog::product/list/items-02.phtml" />
+        <referenceBlock name="product.info.upsell" template="Magento_Catalog::product/list/items-02.phtml" />
+        
+        
+        <block class="Magento\Catalog\Block\Product\View" name="product.review.summary" template="Magento_Catalog::product/view/review-summary.phtml" />
+        
+        <referenceContainer name="product.info.extrahint">
+            <block class="Magento\Catalog\Block\Product\View" name="product.inventory.deal" template="Magento_Catalog::product/view/inventory-deal.phtml" after='-' />
+            <block class="Magento\Catalog\Block\Product\View" name="product.inventory.deal" template="Magento_Catalog::product/view/inventory-deal.phtml" after='-' />
+        </referenceContainer>
+        
+        <referenceContainer name="product.info.price">
+            <block class="Magento\Catalog\Block\Product\View" name="product.sizeguide" template="Magento_Catalog::product/view/size-guide.phtml" after="-" />
+        </referenceContainer>
+        <block class="Magento\Catalog\Block\Product\View" name="product.buynow" template="Magento_Catalog::product/view/buy-now.phtml" />
+        
+        <referenceContainer name="product-static-text">
+            <block class="Magento\Framework\View\Element\Template" name="product-custom-text" template="Magento_Theme::html/custom-text.phtml">
+                <action method="setData">
+                    <argument name="name" xsi:type="string">config_path</argument>
+                    <argument name="value" xsi:type="string">pages/product_view/custom_text</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        
+        <referenceBlock name="product.info.media.image">
+            <action method="setData">
+                <argument name="name" xsi:type="string">media_side</argument>
+                <argument name="value" xsi:type="string">left</argument>
+            </action>
+        </referenceBlock>
+        <referenceBlock name="product.info.overview">
+            <action method="setData">
+                <argument name="name" xsi:type="string">at_label</argument>
+                <argument name="value" xsi:type="string" translate="true">Quick Overview</argument>
+            </action>
+        </referenceBlock>
+    </body>
+</page>

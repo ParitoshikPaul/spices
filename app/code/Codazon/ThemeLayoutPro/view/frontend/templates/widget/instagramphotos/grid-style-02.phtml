@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © 2021 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php if ($token = $this->getData('token')) : ?>
+<?php
+$templId = uniqid('instagram-photos-list-tmpl-');
+$maxCount = 8;
+$ajaxUrl = $this->getInstagramRecentPhotosUrl();
+?>
+<script id="<?= $templId ?>" type="text/x-jquery-tmpl">
+<% _.each(posts, function(post, id) { %>
+<div class="item photo-item">
+    <a class="photo-item-link abs-img type-<%- post.media_type.toLocaleLowerCase() %>" style="padding-bottom: 100%" href="<%- post.permalink %>" target="_blank">
+        <img alt="" class="img-responsive cdz-lazy" src="<%- (post.media_type == 'VIDEO') ? post.thumbnail_url : post.media_url %>" />
+    </a>
+</div>
+<% }); %>
+</script>
+<div id="placeholder-<?= $templId ?>" class="no-loaded">
+    <div class="brand-loader double-bounce-spinner"><div class="double-bounce1"></div><div class="double-bounce2"></div></div>
+</div>
+<script>
+require(['jquery', 'mage/template'], function($, tmpl) {
+    var tmplId = '<?= $templId ?>', $placeholder = $('#placeholder-' + tmplId), instTmpl = tmpl('#' + tmplId);
+    $.ajax({
+        url: 'https://graph.instagram.com/me/media',
+        data: {access_token: '<?= $token ?>', limit: <?= $maxCount ?>, fields: 'media_url,permalink,media_type,thumbnail_url'},
+        cache: true,
+        success: function (rs) {
+            if (typeof rs.data != 'undefined'){
+                $(instTmpl({posts: rs.data})).insertBefore($placeholder);
+                $('body').trigger('contentUpdated');
+            };
+        }
+    }).always(function() { $placeholder.remove(); });
+});
+</script>
+<?php else : ?>
+<?php
+$recentPhotos = $block->getStoredInstagramPhotos();
+$maxCount = 8;
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+?>
+<?php if( count($recentPhotos) > 0 ): ?>
+<?php $i = 0; foreach($recentPhotos as $photo): $img = $photo->images->thumbnail; ?>
+<div class="item photo-item">
+    <a class="photo-item-link abs-img" style="padding-bottom: 100%" href="<?php echo $photo->link ?>" target="_blank">
+        <img alt="" class="img-responsive cdz-lazy" src="<?= $helper->getMediaUrl($img->url) ?>" />
+    </a>
+</div>
+<?php $i++; if ($i == $maxCount) break ?>
+<?php endforeach ?>
+<?php endif ?>
+<?php endif ?>

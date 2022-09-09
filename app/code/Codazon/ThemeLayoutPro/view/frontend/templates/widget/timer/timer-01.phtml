@@ -1,0 +1,51 @@
+<?php
+/**
+ * Copyright © 2021 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$startDate = $this->getData('start_date');
+$endDate = $this->getData('end_date');
+?>
+<?php if ($endDate) : ?>
+<?php
+$dayLabel = $this->getData('day_label') ? : __('Day');
+$hourLabel = $this->getData('hour_label') ? : __('Hour');
+$minLabel = $this->getData('min_label') ? : __('Min');
+$secLabel = $this->getData('sec_label') ? : __('Sec');
+$detailsUrl = $this->getData('details_url');
+$expiredMessage = trim($this->getData('expired_message'));
+?>
+<?php
+$widget = ['themewidgets' => [
+    'codazon.minicountdown' => [
+        'startDate'     => $startDate,
+        'stopDate'      => $endDate,
+        'dayLabel'      => $dayLabel,
+        'hourLabel'     => $hourLabel,
+        'minLabel'      => $minLabel,
+        'secLabel'      => $secLabel,
+        'parentSelector' => $this->getData('parent_selector'),
+        'hideWhenExpired' => (bool)$this->getData('hide_when_expired'),
+    ]
+]];
+?>
+<div class="countdown-timer" role="timer_wrap">
+    <div class="timer-block" role="timer_block">
+        <div class="timer-wrap" data-mage-init='<?php echo json_encode($widget); ?>'>
+            <div class="deal-items">
+                <div class="deal-item days"><span class="value">…</span> <span class="label"><?= $dayLabel ?></span></div>
+                <div class="deal-item hours"><span class="value">…</span> <span class="label"><?= $hourLabel ?></span></div>
+                <div class="deal-item mins"><span class="value">…</span> <span class="label"><?= $minLabel ?></span></div>
+                <div class="deal-item secs"><span class="value">…</span> <span class="label"><?= $secLabel ?></span></div></div>
+        </div>
+        <?php if ($detailsUrl) : ?>
+        <a class="abs-fullbox" href="<?= str_replace('[base_url]', $this->getUrl(), $detailsUrl) ?>"></a>
+        <?php endif ?>
+    </div>
+    <?php if ($expiredMessage) : ?>
+    <div class="cd-expired-msg hidden" role="expired_msg"><?= $expiredMessage ?></div>
+    <?php endif ?>
+</div>
+<?php endif ?>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/**
+* Copyright © 2018 Codazon. All rights reserved.
+* See COPYING.txt for license details.
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="empty" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">	
+	<update handle="catalog_product_view" />
+    <body>
+        
+        <block name="quickshop_root" class="Codazon\QuickShop\Block\QuickShop" template="quickshop.content.phtml" />
+        
+        <container name="quickshop.info" htmlTag="div" htmlClass="quickshop-wrapper">
+            <container name="quickshop.info.media" htmlTag="div" htmlClass="quickshop-media" />
+            <container name="quickshop.info.main" htmlTag="div" htmlClass="quickshop-main" />
+        </container>
+        
+        <move element="product.info.media" destination="quickshop.info.media" />
+        <move element="page.main.title" destination="quickshop.info.main" before="-" />
+        <move element="product.info.main" destination="quickshop.info.main" />
+        <move element="quickshop.info" destination="quickshop_root" />
+        <referenceBlock name="shipping-estimation-simple" remove="true" />
+        <referenceBlock name="shipping-estimation-configurable" remove="true" />
+        <referenceBlock name="product.info.media.image" template="Codazon_QuickShop::product/view/gallery.phtml" />
+    </body>
+</page>

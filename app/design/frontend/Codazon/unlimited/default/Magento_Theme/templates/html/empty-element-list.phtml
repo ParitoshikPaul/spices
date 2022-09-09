@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+    $childrenCount = $block->getData('children_count');
+    $wrapClass = $block->getData('wrap_html_class') ? : '';
+    $wrapId = $block->getData('wrap_html_id') ? : '';
+    $childClass = $block->getData('child_html_class') ? : 'item';
+    $inner = '';
+    if ($childrenCount) {
+        $inner .= '<div class="inner">';
+        for ($i = 1; $i <= $childrenCount; $i++) {
+            $inner .= "<div class=\"item-{$i} {$childClass}\"></div>";
+        }
+        $inner .= '</div>';
+    }
+    $inner .= $block->getChildHtml();
+?>
+<div<?= $wrapClass ? ' class="'. $wrapClass .'"' : '' ?><?= $wrapId ? ' id="'. $wrapId .'"': '' ?>><?= $inner ?></div>

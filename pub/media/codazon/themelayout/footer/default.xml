@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-02</identifier>
+  <title>Footer Style 02</title>
+  <variables>
+    <footer_background>#353535</footer_background>
+    <footer_background_file></footer_background_file>
+    <footer_background_image_option>0 0 no-repeat fixed</footer_background_image_option>
+    <footer_background_normal>#ffffff</footer_background_normal>
+    <footer_border>#ffffff</footer_border>
+    <footer_bottom_background></footer_bottom_background>
+    <footer_font>14px</footer_font>
+    <footer_hover_text>#a07653</footer_hover_text>
+    <footer_text>#ffffff</footer_text>
+    <footer_text_normal>#303030</footer_text_normal>
+    <footer_title_font>14px</footer_title_font>
+    <footer_title_text>#ffffff</footer_title_text>
+    <footer_top_background>transparent</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceBlock name="footer_links" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="copyright" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="report.bugs" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="form.subscribe" remove="true" /&gt;&#xD;
+    &lt;move element="theme-layout-footer" destination="footer-container" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields/>
+  <parent></parent>
+  <content>&lt;div class="footer-style-02"&gt;&#xD;
+&lt;div class="container"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;div class="row"&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-1"&gt;Infomation&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-1" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}privacy-policy-cookie-restriction-mode/"&gt;Privacy and Cookie Policy&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}about-us"&gt;About Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}search/term/popular/"&gt;Search Terms&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}catalogsearch/advanced/"&gt;Advanced Search&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}sales/guest/form/"&gt;Orders and Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="{{config path="web/unsecure/base_url"}}contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-2"&gt;Customer Suport&lt;/p&gt;&#xD;
+&lt;ul id="footer-content-2" class="footer-link showhide hover-link01"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Help &amp;amp; FAQs&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="{{config path="web/unsecure/base_url"}}contact/"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Returns&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;Order History&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;a href="#"&gt;Sample Links&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="footer-box"&gt;&#xD;
+&lt;p class="h5" data-cdz-toggle="#footer-content-3"&gt;Contact Us&lt;/p&gt;&#xD;
+&lt;div id="footer-content-3" class="showhide"&gt;&#xD;
+&lt;ul class="footer-link"&gt;&#xD;
+&lt;li&gt;&lt;span&gt;Montergade 19 1140&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;span&gt;Copenhagen, Denmark&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;li class="last"&gt;&lt;span&gt;+45 878-xx-xx&lt;/span&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;div class="footer-social hover-iconsocial"&gt;&#xD;
+&lt;p class="social"&gt;&lt;a class="spin circle" href="#"&gt;&lt;span class="fa fa-facebook"&gt;&lt;span&gt;facebook&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&#xD;
+&lt;a href="#"&gt;&lt;span class="fa fa-twitter"&gt;&lt;span&gt;twitter&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; &#xD;
+&lt;a href="#"&gt;&lt;span class="fa fa-pinterest-p"&gt;&lt;span&gt;pinterest&lt;/span&gt;&lt;/span&gt;&lt;/a&gt; &#xD;
+&lt;a href="#"&gt;&lt;span class="fa fa-google-plus"&gt;&lt;span&gt;google plus&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&#xD;
+&lt;a href="#"&gt;&lt;span class="fa fa-rss"&gt;&lt;span&gt;rss&lt;/span&gt;&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="col-sm-6"&gt;&#xD;
+&lt;div class="newsletter footer-box"&gt;&#xD;
+&lt;p class="newsletter-title h5" data-cdz-toggle="#footer-content-4"&gt;Subscribe Us&lt;/p&gt;&#xD;
+&lt;div id="footer-content-4" class="showhide"&gt;&#xD;
+&lt;div class="newsletter-content"&gt;{{block class="Magento\Newsletter\Block\Subscribe" name="cdz.newsletter" template="subscribe.phtml"}}&lt;/div&gt;&#xD;
+&lt;div class="footer-payment"&gt;&lt;img class="img-responsive" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment" /&gt;&lt;/div&gt;&#xD;
+&lt;div class="footer-address"&gt;&#xD;
+&lt;p&gt;&amp;copy; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

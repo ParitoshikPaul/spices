@@ -1,0 +1,134 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>header-style-29</identifier>
+  <title>Header Style 29</title>
+  <variables>
+    <header_background>#ffffff</header_background>
+    <header_background_file></header_background_file>
+    <header_background_image_option>0 0</header_background_image_option>
+    <header_border>#e1e1e1</header_border>
+    <header_cart_background>#046791</header_cart_background>
+    <header_cart_border></header_cart_border>
+    <header_cart_icon>#ffffff</header_cart_icon>
+    <header_cart_quality_background>#f96668</header_cart_quality_background>
+    <header_cart_text>#ffffff</header_cart_text>
+    <header_drop_background>#ffffff</header_drop_background>
+    <header_drop_border_color>#dbdbdb</header_drop_border_color>
+    <header_drop_hover_text>#046791</header_drop_hover_text>
+    <header_drop_text>#282828</header_drop_text>
+    <header_hover_text>#046791</header_hover_text>
+    <header_mobile_background>#ffffff</header_mobile_background>
+    <header_mobile_icon>#282828</header_mobile_icon>
+    <header_mobile_search_border>#ffffff</header_mobile_search_border>
+    <header_mobile_search_input_background>#ffffff</header_mobile_search_input_background>
+    <header_mobile_search_input_border>#000000</header_mobile_search_input_border>
+    <header_mobile_search_input_text>#282828</header_mobile_search_input_text>
+    <header_mobile_search_text>#ffffff</header_mobile_search_text>
+    <header_mobile_sidebar_background></header_mobile_sidebar_background>
+    <header_mobile_sidebar_border></header_mobile_sidebar_border>
+    <header_mobile_sidebar_color></header_mobile_sidebar_color>
+    <header_search_background>#ffffff</header_search_background>
+    <header_search_button_background>#ffffff</header_search_button_background>
+    <header_search_button_text>#282828</header_search_button_text>
+    <header_search_text>#282828</header_search_text>
+    <header_shadow></header_shadow>
+    <header_text>#282828</header_text>
+    <header_text_cart>#999999</header_text_cart>
+    <header_top_background>#046791</header_top_background>
+    <header_top_text>#ffffff</header_top_text>
+    <menu_background>#ffffff</menu_background>
+    <menu_border>#000000</menu_border>
+    <menu_content_background>#ffffff</menu_content_background>
+    <menu_content_border>#dfdfdf</menu_content_border>
+    <menu_content_color>#121212</menu_content_color>
+    <menu_drop_background>#ffffff</menu_drop_background>
+    <menu_drop_border>#e1e1e1</menu_drop_border>
+    <menu_drop_font>400 12px/1.35 Open Sans, Helvetica Neue, Verdana, Arial, sans-serif</menu_drop_font>
+    <menu_drop_hover_text>#046791</menu_drop_hover_text>
+    <menu_drop_shadow>0 3px 3px #e1e1e1</menu_drop_shadow>
+    <menu_drop_text>#999999</menu_drop_text>
+    <menu_drop_text_title>#282828</menu_drop_text_title>
+    <menu_font>600 14px/1.35 Open Sans, Helvetica Neue, Verdana, Arial, sans-serif</menu_font>
+    <menu_hover_background>#046791</menu_hover_background>
+    <menu_hover_text>#ffffff</menu_hover_text>
+    <menu_text>#111111</menu_text>
+    <menu_title_background>#ffffff</menu_title_background>
+    <menu_title_border>#dfdfdf</menu_title_border>
+    <menu_title_color>#353535</menu_title_color>
+    <vermenu_background>#fafafa</vermenu_background>
+    <vermenu_border>#ebebeb</vermenu_border>
+    <vermenu_font>500 12px/1.35 Rajdhani, Helvetica Neue, Verdana, Arial, sans-serif</vermenu_font>
+    <vermenu_hover_background>#e6c1a3</vermenu_hover_background>
+    <vermenu_hover_text>#555555</vermenu_hover_text>
+    <vermenu_text>#444444</vermenu_text>
+  </variables>
+  <layout_xml>&lt;body&gt;&#xD;
+    &lt;referenceContainer name="header.container" htmlClass="page-header header-style-29" /&gt;&#xD;
+    &lt;referenceContainer name="header-container-inner"&gt;&#xD;
+		&lt;container name="header-ads-top" before="-"&gt;&#xD;
+			&lt;block name="header-extra-text-1" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/header-content.phtml"&gt;&#xD;
+				&lt;action method="setData"&gt;&#xD;
+					&lt;argument name="name" xsi:type="string"&gt;content_type&lt;/argument&gt;&#xD;
+					&lt;argument name="value" xsi:type="string"&gt;content_1&lt;/argument&gt;&#xD;
+				&lt;/action&gt;&#xD;
+			&lt;/block&gt;&#xD;
+		&lt;/container&gt;&#xD;
+        &lt;container name="header-top" htmlId="header-top" htmlTag="div" htmlClass="header-panel-top container" /&gt;&#xD;
+        &lt;container name="header-bottom" htmlId="header-bottom" after="-" htmlTag="div" htmlClass="header-panel-bottom" /&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceContainer name="header.panel"&gt;&#xD;
+        &lt;container name="header-panel-row" htmlTag="div" htmlClass="header-panel-row row" after="skip_to_content"&gt;&#xD;
+            &lt;container name="header-panel-left" htmlTag="div" htmlClass="col-sm-9 header-panel-left hidden-xs" /&gt;&#xD;
+            &lt;container name="header-panel-middle" htmlTag="div" htmlClass="col-sm-6 header-panel-middle text-center" /&gt;&#xD;
+            &lt;container name="header-panel-right" htmlTag="div" htmlClass="col-sm-9 header-panel-right"&gt;&#xD;
+            &lt;/container&gt;&#xD;
+			&lt;container name="header-panel-search" htmlTag="div" htmlId="header-search-wrap" htmlClass="col-sm-24 header-search-wrap" /&gt;&#xD;
+        &lt;/container&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;move element="header.panel" destination="header-top" /&gt;&#xD;
+    &#xD;
+    &lt;move element="mobi-cart-placeholder" destination="header-panel-right" /&gt;&#xD;
+    &lt;move element="top.search" destination="header-panel-search"  after="-"/&gt;&#xD;
+    &lt;move element="minicart" destination="header-panel-right" before="-" /&gt;&#xD;
+    &lt;move element="logo" destination="header-panel-middle" /&gt;&#xD;
+    &lt;move element="top.links.features" destination="header-panel-right" before="links.features.search" /&gt;&#xD;
+    &#xD;
+    &#xD;
+    &lt;referenceContainer name="header-panel-left"&gt;&#xD;
+        &lt;block class="Magento\Store\Block\Switcher" name="footer-switch-language" template="Magento_Store::switch/languages-style-02.phtml" /&gt;&#xD;
+        &lt;block class="Magento\Directory\Block\Currency" name="footer-switch-currency" template="Magento_Directory::currency-style-02.phtml" /&gt;&#xD;
+		&lt;block name="header-extra-text-2" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/header-content.phtml"&gt;&#xD;
+			&lt;action method="setData"&gt;&#xD;
+				&lt;argument name="name" xsi:type="string"&gt;content_type&lt;/argument&gt;&#xD;
+				&lt;argument name="value" xsi:type="string"&gt;content_2&lt;/argument&gt;&#xD;
+			&lt;/action&gt;&#xD;
+		&lt;/block&gt;&#xD;
+    &lt;/referenceContainer&gt;&#xD;
+    &lt;referenceBlock name="header-panel-right"&gt;&#xD;
+		&lt;block class="Magento\Framework\View\Element\Template" name="links.features.search" template="Magento_Search::search-trigger.phtml"  before="-"&gt;&#xD;
+            &lt;arguments&gt;&#xD;
+                &lt;argument name="html_class" xsi:type="string"&gt;search-link&lt;/argument&gt;&#xD;
+            &lt;/arguments&gt;&#xD;
+        &lt;/block&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &lt;referenceBlock name="header-contact-link" remove="true" /&gt;&#xD;
+    &lt;referenceBlock name="top.links"&gt;&#xD;
+        &lt;action method="setData"&gt;&#xD;
+            &lt;argument name="name" xsi:type="string"&gt;css_class&lt;/argument&gt;&#xD;
+            &lt;argument name="value" xsi:type="string"&gt;header links visible-xs&lt;/argument&gt;&#xD;
+        &lt;/action&gt;&#xD;
+    &lt;/referenceBlock&gt;&#xD;
+    &lt;move element="catalog.topnav" destination="header-bottom" before="-" /&gt;&#xD;
+&#xD;
+    &lt;move element="store-menu-placeholder" destination="store.menu" /&gt;&#xD;
+&lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e8f11aa</version>
+    <custom_variables></custom_variables>
+    <custom_less_code></custom_less_code>
+    <custom_css_code></custom_css_code>
+  </custom_fields>
+  <parent/>
+  <content>{"content_1":"&lt;div class=\"header-ads-wrapper\"&gt;\r\n&lt;div class=\"container\"&gt;\r\n&lt;div class=\"header-top-ads text-center\"&gt;&lt;span&gt;Orders over $49 get free shipping. Buy 2 Get 1 Free.&lt;\/span&gt;&lt;\/div&gt;\r\n&lt;\/div&gt;\r\n&lt;\/div&gt;","content_2":"&lt;div class=\"hot-line-wrapper\"&gt;&lt;span class=\"msg-text\"&gt;Call us now: &lt;\/span&gt; &lt;a class=\"telephone\" href=\"tel:123455688719\"&gt;(123) 458 xxxx&lt;\/a&gt;&lt;\/div&gt;"}</content>
+</config>

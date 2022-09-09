@@ -1,0 +1,36 @@
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<div data-bind="attr: {class: 'position-relative'}" style="margin-bottom: 10px;">
+    <input type="text" data-bind="
+        attr: {
+            name: inputName,
+            class: 'swatch_value admin__control-text',
+            style: 'float: left; margin-right: 10px; width: 150px'
+        },
+        value: value
+    "/>
+    <div class="swatches-visual-col" data-bind="attr: {style: 'float: left; padding: 8px 7px; margin-top: -4px; margin-right: 30px;'}">
+        <div data-bind="attr: {class: 'swatch_window ' + elementName}"></div>
+        <div class="swatch_sub-menu_container">
+            <div class="swatch_row">
+                <div data-bind="
+                     attr: {
+                        class: 'swatch_row_name btn_choose_file_upload swatch_choose_file_option_' + elementName,
+                        'data-class': 'swatch_choose_file_option_' + elementName
+                     }
+                     ">
+                    <p translate="'Upload a file'"></p>
+                </div>
+            </div>
+            <div class="swatch_row">
+                <div class="swatch_row_name btn_remove_swatch">
+                    <p translate="'Clear'"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

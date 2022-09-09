@@ -1,0 +1,74 @@
+<?php
+/**
+ * Webkul Software.
+ *
+ * @category  Webkul
+ * @package   Webkul_Marketplace
+ * @author    Webkul
+ * @copyright Copyright (c) Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+?>
+<?php
+$helper = $this->helper(\Webkul\Marketplace\Helper\Data::class);
+$helperOrders = $this->helper(\Webkul\Marketplace\Helper\Orders::class);
+$partner=$block->getProfileDetail();
+if ($partner['shop_url']) {
+    if ($helper->getActiveColorPicker()) {?>
+        <style>
+            .page-main{
+                background-image:none;
+                background-color:<?= $block->escapeHtml($partner['background_width']);?>;
+            }
+        </style>
+        <?php
+    }
+    $_productCollection=$block->_getProductCollection();
+    $bannerpic = $partner->getBannerPic()!=''?$partner->getBannerPic():"banner-image.png";
+    $bannerpic = $helper->getMediaUrl().'avatar/'.$bannerpic;
+
+    $logo = $partner->getLogoPic()!=''?$partner->getLogoPic():"noimage.png";
+    $logo = $helper->getMediaUrl().'avatar/'.$logo;
+
+    $shopUrl = $block->escapeHtml($partner['shop_url']);
+    $shoptitle = $block->escapeHtml($partner->getShopTitle());
+    if (!$shoptitle) {
+        $shoptitle = $shopUrl;
+    }
+    $sellerId = $partner->getSellerId();
+    $locsearch = $block->escapeHtml($partner['company_locality']);
+    ?>
+    
+    <div class="wk_mp_design">
+        <?= $block->getChildHtml("marketplace_seller_top_block")?>
+        <div class="wk-mp-collection-container">
+            <div class="wk-mp-collection-left">
+                <?= $block->getChildHtml('marketplace_sellercollectionleft')?>
+                <script>
+                require(['jquery'], function($) {
+                    if ($('.block.filter .checkbox-container.rating').length) {
+                        $('.block.filter .checkbox-container.rating').parents('.filter-options-item').first().remove();
+                    }
+                });
+                </script>
+            </div>
+            <div class="wk-mp-collection-right">
+                <div class="block block-account">
+                    <div class="block-title wk-mp-float-left">
+                        <strong><span><h4><?= $block->escapeHtml(__("SELLER'S COLLECTION")) ?></h4></span></strong>
+                    </div>
+                    <?php if ($helper->isMpSellerProductSearchModuleInstalled()) {
+                        echo $block->getChildHtml('mp_seller_product_search');
+                    } ?>
+                </div>
+                <div class="page-products page-with-filter fieldset wk-mp-fieldset" <?php if ($_productCollection->count()) { echo 'style="padding: 0;"';}?>>
+                <?php
+                $themeHelper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+                $template = 'Magento_Catalog::'.$themeHelper->getConfig('pages/category_view/design/template');
+                ?>
+                <?= $this->setTemplate($template)->toHtml() ?>
+                </div>
+            </div>
+        </div>
+    </div>
+<?php }  ?>

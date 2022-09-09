@@ -1,0 +1,27 @@
+<?php
+/**
+* Copyright © 2020 Codazon. All rights reserved.
+* See COPYING.txt for license details.
+*/
+?>
+<?php
+$layout = $this->getLayout();
+$helper = $this->helper(\Codazon\GoogleAmpManager\Helper\Data::class);
+if ($temp = $layout->getBlock('reviews.tab')) {
+    $temp->setTemplate('Codazon_GoogleAmpManager::amp/product/view/review.phtml');
+}
+if ($temp = $layout->getBlock('product.review.form')) {
+    $temp->setTemplate('Codazon_GoogleAmpManager::amp/product/view/review-form.phtml');
+}
+if ($temp = $layout->getBlock('product.info.review')) {
+    $temp->setTemplate('Codazon_GoogleAmpManager::amp/product/view/review-info.phtml');
+}
+?>
+<?= $this->getBlockHtml('product.info.media.image') ?>
+<?= $layout->renderElement('product.info.price') ?>
+<?= $this->getBlockHtml('product.price.tier') ?>
+<?= $layout->renderElement('amp_product.info.main') ?>
+<?= $this->getBlockHtml('product.info') ?>
+<?= $this->getBlockHtml('amp-product.info.details') ?>
+<?= $helper->filterTags($this->getBlockHtml('catalog.product.related')) ?>
+<?= $helper->filterTags($this->getBlockHtml('product.info.upsell')) ?>

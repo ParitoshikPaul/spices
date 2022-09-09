@@ -1,0 +1,75 @@
+/* Handbag */
+/*Title*/
+.cdz-block-title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 35px;
+    .h1 {
+    	font-weight: 400;
+    	letter-spacing: 2px
+    }
+    .b-title{
+        padding-bottom: 30px;
+        position: relative;
+        &:before {
+            position: absolute;
+            content: '\e970';
+            font-family: 'CodazonFont';
+            font-size: 16px;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: @main_text_normal;
+        }
+        > span {
+            &:before, &:after {
+                content: '';
+                position: absolute;
+                width: 50px;
+                height: 0;
+                bottom: 16px;
+                border-bottom: 1px solid @main_text_normal;
+            }
+            &:before {
+                left: ~'calc(50% + 16px)';
+            }
+            &:after {
+                right: ~'calc(50% + 16px)';
+            }
+        }
+    }
+}
+
+.wrapper-adv-style-06 .item-title {
+    font-size: 13px;
+    @media @tablet_strict{
+        font-size: 11px;
+    }
+}
+.block.related .products-grid .product-item .product-item-top, .block.upsell .products-grid .product-item .product-item-top, .block.crosssell .products-grid .product-item .product-item-top {
+    padding: 0;
+}
+
+
+/*Category*/
+.sidebar .block:not(.account-nav){
+	.block-style04();	
+}
+
+.toolbar{
+	.toolbar-option2();
+}
+/*category - product list*/
+.list.products-list{
+	.item.product-item{
+		.toolbar-option2(0px);
+	}
+}
+
+/*My account*/
+.account-nav{
+	.content{
+		.toolbar-option2(0px);
+		padding: 0;
+	}
+}

@@ -1,0 +1,56 @@
+<?php
+/**
+ * Copyright © 2022 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class);
+if (((bool)$helper->getConfig('mobile/general/floating_shopby')) && (!(bool)$helper->getConfig('mobile/general/display_full_search'))) : ?>
+<script>
+require(['jquery', 'js/theme-widgets'], function($) {
+    var prepareFloatingbar = function() {
+        var $w = $(window), prepare = function() {
+            var $filter = $('#layered-filter-block');
+            if ($filter.length && !$filter.hasClass('att-scrbar')) {
+                $filter.addClass('att-scrbar');
+                $('#ft-floating-bar').remove();
+                var $wrap = $('<div id="ft-floating-bar" class="cdz-flbar-wrap">').appendTo('body'), $flbar = $('<div class="cdz-flbar">').appendTo($wrap),
+                $shopBy = $('> .block-title > [data-role=title]', $filter).first(), threshold = $shopBy.offset().top + 100, count = parseInt($shopBy.parent().attr('data-count'));
+                $sortBy = $('.toolbar-sorter #sorter').first();
+                $ftToggle = $('<button class="fl-btn">').html('<span><?= __("Shop by") ?></span>').on('click', function() {
+                    $shopBy.trigger('click');
+                }).appendTo($('<div class="shop-by fl-col">').appendTo($flbar));
+                if (count) {
+                    $ftToggle.append('<span class="count">'+count+'</span>');
+                }
+                if ($sortBy.length) {
+                    var $sortWrap = $('<div class="sorter fl-col"><span class="sortby-lb"><?= __("Sort by") ?></span></div>').appendTo($flbar),
+                    $sortAct = $('.toolbar-sorter .sorter-action').first();
+                    $sortBy2 = $sortBy.clone().removeAttr('id').appendTo($sortWrap).on('change', function() {
+                        var val = $(this).val(); $sortBy.val(val).trigger('change');
+                    }), $dir2 = $('<a>').addClass($sortAct.attr('class')).appendTo($sortWrap).on('click', function(e) {
+                        e.preventDefault(); $sortAct.click();
+                    });
+                }
+                if(<?= (int)$helper->getConfig('themelayoutpro/header/enable_sticky_menu') ?>) {
+                    $flbar.addClass('under-sticky');
+                    var $header = $('.page-header .sticky-menu').first(), addTop = function() {
+                        if ((window.innerWidth < 768) && $header.hasClass('active')) {
+                            $flbar.css('padding-top', $header.outerHeight() + 7);
+                            $w.off('changeHeaderState.stickyFilter');
+                        }
+                    }
+                    $w.on('changeHeaderState.stickyFilter', addTop);
+                    addTop();
+                };
+                $.codazon.stickyMenu({threshold: threshold, enableSticky: true, anchor: $shopBy}, $flbar);
+            }
+        }
+        if (window.innerWidth < 768)  prepare(); else $w.one('cdz_mobile', function(){setTimeout(prepare, 300);});
+    }
+    prepareFloatingbar();
+    $('body').on('contentUpdated', prepareFloatingbar);
+});
+</script>
+<?php endif ?>

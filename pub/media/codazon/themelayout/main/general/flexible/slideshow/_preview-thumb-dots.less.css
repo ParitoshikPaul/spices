@@ -1,0 +1,82 @@
+.cdz-slideshow {
+    .preview-dots {
+        @media @tablet_vertical {
+            .owl-dots {
+                bottom: 20px;
+                .owl-dot {
+                    > span {
+                        display: none;
+                    }
+                    width: 40px;
+                    height: 40px;
+                    padding: 0;
+                    border-radius: 50%;
+                    border: 2px solid @btn_primary_text;
+                    position: relative;
+                    margin: 0 5px;
+                    background-size: auto 100% !important;
+                    background-position: center center !important;
+                    background-repeat: no-repeat !important;
+                    overflow: visible;
+                    box-shadow: 0px 0px 0px 0px rgba(255,255,255,.5);
+                    transition: all ease 500ms;
+                    transform: scale(1);
+                    opacity: 1;
+                    &.active {
+                        border: 3px solid @btn_primary_background;
+                    }
+                }
+                .dot-img-tt {
+                    position: absolute;
+                    opacity: 0;
+                    width: 200px;
+                    left: ~'calc(50% - 100px)';
+                    bottom: 50px;
+                    padding: 3px;
+                    background: #fff;
+                    transition: all ease 500ms;
+                    visibility: hidden;
+                    box-shadow: 0px 1px 3px #ccc;
+                    transform: translateY(20px);
+                    &:before {
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        content: '';
+                        border: 7px solid transparent;
+                        border-top-color: #fff;
+                        bottom: -14px;
+                        left: ~'calc(50% - 7px)';
+                    }
+                }
+                .owl-dot:hover {
+                    box-shadow: 0px 0px 6px 4px rgba(255,255,255,.5);
+                    .dot-img-tt {
+                        opacity: 1;
+                        visibility: visible;
+                        transform: translateY(0px);
+                    }
+                }
+                .tt-title {
+                    color: #fff;
+                    background: #000;
+                    font-size: 12px;
+                    padding: 3px 7px;
+                    display: block;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    width: 100%;
+                    overflow: hidden;
+                }
+            }
+        }
+        @media @phone {
+            .owl-dot {
+                background-image: none !important;
+                .dot-img-tt {
+                    display: none;
+                }
+            }
+        }
+    }
+}

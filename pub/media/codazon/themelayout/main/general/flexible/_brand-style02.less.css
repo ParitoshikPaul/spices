@@ -1,0 +1,9 @@
+.brand-style02{  
+    .shop-by-brand-slider{
+        .slider-arrow-style-05();/*wraper product*/
+        .owl-dots-style-01();
+    }
+	.cdz-block-content{
+		background: @main_box_background;
+	}
+}

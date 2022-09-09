@@ -1,0 +1,17 @@
+<?php
+/**
+ * Copyright © 2020 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$html = '';
+$childBlocks = explode(',', $this->getData('child_blocks'));
+foreach ($childBlocks as $childBlockName) {
+    $childHtml = $this->getBlockHtml($childBlockName);
+    if ($childHtml) {
+        $html .= $childHtml;
+    }
+}
+echo $html;
+?>

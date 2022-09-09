@@ -1,0 +1,115 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Account\AuthorizationLink $block */
+$dataPostParam = '';
+$styleClass = 'authorization-style-01';
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$displayStyle = $this->getData('display_style')?:($helper->getAccountPanelStyle()?:'dropdown');
+?>
+<!-- authorization style 01 -->
+<?php if ($displayStyle == 'sidebar') : ?>
+    <?php $direction = $this->getData('direction')?:'right'; ?>
+    <?php if ($block->isLoggedIn()) : ?>
+    <?php
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+    $customer = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Customer\Model\Session')->getCustomer();
+    $greeting = $helper->getConfig('themelayoutpro/header/customer_greeting_format');
+    $greeting = $greeting ? str_replace(['{{firstname}}', '{{fullname}}'], ['<span data-customerinfo="firstname"></span>', '<span data-customerinfo="fullname"></span>'], $greeting) : __('Hello %1','<span data-customerinfo="firstname"></span>');
+    ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="account-wrapper">
+            <a href="javascript:;" class="account-trigger cdz-top-link" data-sidebartrigger='{"side": "<?= $direction ?>"}'>
+                <span class="text-underlink"><?= $greeting ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+        </div>
+    </li>
+    <?php else : ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="account-wrapper">
+            <a href="javascript:;" class="account-trigger cdz-top-link" data-sidebartrigger='{"side": "<?= $direction ?>"}'>
+                <span class="text-underlink"><?= __('Hello, sign in'); ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+        </div>
+    </li>
+    <?php endif ?>
+<?php elseif ($displayStyle == 'popup') : ?>
+    <?php if ($block->isLoggedIn()) : ?>
+    <?php
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+    $customer = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Customer\Model\Session')->getCustomer();
+    $greeting = $helper->getConfig('themelayoutpro/header/customer_greeting_format');
+    $greeting = $greeting ? str_replace(['{{firstname}}', '{{fullname}}'], ['<span data-customerinfo="firstname"></span>', '<span data-customerinfo="fullname"></span>'], $greeting) : __('Hello %1','<span data-customerinfo="firstname"></span>');
+    ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="account-wrapper">
+            <a href="javascript:;" class="account-trigger cdz-top-link" data-cdzpopuptrigger="account-popup">
+                <span class="text-underlink"><?= $greeting ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+        </div>
+    </li>
+    <?php else : ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="account-wrapper">
+            <a href="javascript:;" class="account-trigger cdz-top-link" data-cdzpopuptrigger="account-popup">
+                <span class="text-underlink"><?= __('Hello, sign in'); ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+        </div>
+    </li>
+    <?php endif ?>
+    <div style="display:none">
+        <div class="md-dialog-container account-popup" data-cdzpopup id="account-popup">
+            <div class="md-dialog-inner">
+                <?= $block->getBlockHtml('utilities.content'); ?>
+                <?= $block->getChildHtml(); ?>
+            </div>
+        </div>
+    </div>
+<?php else : /* dropdown */ ?>
+    <?php if ($block->isLoggedIn()) : ?>
+    <?php
+    $dataPostParam = sprintf(" data-post='%s'", $block->getPostParams());
+    $customer = \Magento\Framework\App\ObjectManager::getInstance()->create('Magento\Customer\Model\Session')->getCustomer();
+    $greeting = $helper->getConfig('themelayoutpro/header/customer_greeting_format');
+    $greeting = $greeting ? str_replace(['{{firstname}}', '{{fullname}}'], ['<span data-customerinfo="firstname"></span>', '<span data-customerinfo="fullname"></span>'], $greeting) : __('Hello %1','<span data-customerinfo="firstname"></span>');
+    ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="cdz-dropdown account-wrapper" data-role="cdz-dropdown">
+            <a href="javascript:void(0)" class="account-trigger cdz-dd-trigger cdz-top-link" data-role="cdz-dd-trigger">
+                <span class="text-underlink"><?= $greeting ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+            <div class="cdz-dd-content" data-role="cdz-dd-content">
+                <div class="cdz-dd-content-inner nice-scroll">
+                    <?= $block->getBlockHtml('utilities.content'); ?>
+                    <?= $block->getChildHtml(); ?>
+                </div>
+            </div>
+        </div>
+    </li>
+    <?php else : ?>
+    <li class="authorization-link <?= $styleClass ?>">
+        <div class="cdz-dropdown account-wrapper" data-role="cdz-dropdown">
+            <a href="javascript:void(0)" class="account-trigger cdz-dd-trigger cdz-top-link" data-role="cdz-dd-trigger">
+                <span class="text-underlink"><?= __('Hello, sign in'); ?></span>
+                <span class="text-uppercase"><?= __('Your account'); ?></span>
+            </a>
+            <div class="cdz-dd-content" data-role="cdz-dd-content">
+                <div class="cdz-dd-content-inner nice-scroll">
+                    <?= $block->getBlockHtml('utilities.content'); ?>
+                    <?= $block->getChildHtml(); ?>
+                </div>
+            </div>
+        </div>
+    </li>
+    <?php endif ?>
+<?php endif ?>

@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$enableSizeChart =  $helper->getConfig('pages/product_view/display_size_chart');
+?>
+<?php if ($enableSizeChart) : ?>
+<?php
+$type = $helper->getConfig('pages/product_view/size_chart_type');
+$product = $this->getProduct();
+$storeId = $product->getStoreId();
+?>
+    <?php
+        $title = $helper->getConfig('pages/product_view/size_chart_label');
+        $displaySizeChartAsPageLink = $helper->getConfig('pages/product_view/display_size_chart_as_page_link');
+    ?>
+    <?php if ($type == 'cms_page') : ?>
+        <?php $sizeChartLink = $this->getUrl($helper->getConfig('pages/product_view/size_chart_link')); ?>
+        <div class="size-guide-wrap">
+            <a class="size-guide-link" href="<?= $sizeChartLink ?>"><?= $title ?></a>
+        </div>
+    <?php else : ?>
+        <?php
+        $content = false; 
+        if ($type == 'cms_block') {
+            $sizeChartPopup = $helper->getConfig('pages/product_view/size_chart_block');
+            $cmsBlock = $helper->getObject(\Magento\Cms\Model\Block::class)->setStoreId($storeId)->load($sizeChartPopup, 'identifier');
+            if ($cmsBlock->getId()) {
+                $content = $cmsBlock->getContent();
+            }
+        } elseif ($type == 'product_attribute') {
+            $code = $helper->getConfig('pages/product_view/size_chart_attribute');            
+            if ($code) {
+                $attribute = $product->getResource()->getAttribute($code);
+                if ($attribute->getId()) {
+                    $title = $title ? $title : $attribute->getData('store_label');
+                    $content = $product->load($code)->getData($code);
+                }
+            }
+        } elseif ($type == 'product_attribute_set') {
+            $mapping = $helper->getConfig('pages/product_view/size_chart_attribute_set_mapping');
+            if ($mapping) {
+                $lines = explode("\n", $mapping);
+                foreach ($lines as $line) {
+                    $line = explode(":", $line);
+                    
+                    
+                    if (count($line) == 2) {
+                        $attrSet = $helper->getObject(\Magento\Eav\Api\AttributeSetRepositoryInterface::class)
+                            ->get($product->getAttributeSetId());
+                        if ($attrSet) {                            
+                            $attrSetName = trim($attrSet->getAttributeSetName());
+                            $lineSetName = trim($line[0]);
+                            $lineBlock = trim($line[1]);
+                            if ($attrSetName == $lineSetName) {
+                                $cmsBlock = $helper->getObject(\Magento\Cms\Model\Block::class)
+                                    ->setStoreId($storeId)
+                                    ->load($lineBlock, 'identifier');
+                                if ($cmsBlock->getId()) {
+                                    $content = $cmsBlock->getContent();
+                                    $title = $title ? $title : $cmsBlock->getData('title');
+                                }
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ?>
+        <?php if ($content) : ?>
+        <div class="size-guide-wrap">
+            <a class="size-guide-link" href="javascript:void(0);" data-cdzpopuptrigger='product-view-side-guide'><?= $title ?></a>
+        </div>
+        <div style="display:none">
+            <div class="md-dialog-container size-guide-popup" data-cdzpopup id="product-view-side-guide">
+                <div class="md-dialog-inner">
+                     <?= $helper->htmlFilter($content); ?>
+                </div>
+            </div>
+        </div>
+        <?php endif ?>
+    <?php endif ?>
+<?php endif ?>

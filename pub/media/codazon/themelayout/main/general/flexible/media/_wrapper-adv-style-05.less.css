@@ -1,0 +1,37 @@
+/*Block Category - Supermaret*/
+/*New trending*/
+.wrapper-adv-style-05 {
+	.owl-nav [class*='owl-']{
+		&.owl-prev{
+			right: -18px;
+		}
+		&.owl-next{
+			right: -30px;
+		}
+	}
+	.item{		
+		border: 1px solid @main_box_border;
+		.abs-boxshadow(@main_box_shadow);
+		background-color: @main_box_background;
+		.abs-borderradius(@main_box_radius);
+		img{
+			.abs-borderradius(@main_box_radius @main_box_radius 0 0);
+		}
+	}
+	.item-title{
+		display: block;
+		text-align: center;
+		padding: 10px;
+		font: @f_h5;
+		font-weight: 600;
+		background: #f0f2f7;
+		text-transform: uppercase;
+		.abs-borderradius(0 0 @main_box_radius @main_box_radius );		
+		.abs-transition();
+	}
+	.item:hover .item-title{
+		bottom: 4px;
+		.abs-allstyle( @btn_primary_text, @btn_primary_background );
+	}
+}
+

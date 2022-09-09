@@ -1,0 +1,64 @@
+/* ============================================ *
+ * Codazon_Header-Sticky
+ * ============================================ */
+.page-header .sticky-menu.active{
+	.abs-boxshadow(0 0 5px #bdbdbd);
+	width: 100%;
+	max-width: 100% !important;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 880;
+	margin: 0 auto;
+	padding: 0;
+	position: fixed !important;
+	background-color: @menu_background;
+    @media @tablet_vertical {
+        animation: fadeInDown normal running forwards 1 0.7s 0s ease-out;
+        /* animation-direction: normal;
+        animation-play-state: running;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-duration: 0.7s;
+        animation-delay: 0s;
+        animation-timing-function: ease-out; */
+    }
+	.header.panel{
+		margin: 0;
+        .abs-borderradius(0);
+		@media @tablet_vertical{
+            padding-top: 5px;
+            padding-bottom: 5px;
+		}
+		.header-panel-bottom{
+			margin: 0;
+		}
+	}
+	
+	.cdz-dropdown .cdz-dd-content{
+		top:100%;
+	}
+	.cdz-vertical-menu .groupmenu {
+		margin-bottom: 0;
+	}
+}
+@media @tablet_vertical{
+	.page-header .sticky-menu.active{
+		.header-panel-bottom{
+			padding: 0 250px 0 0;
+			border: 0;
+		}
+		.logo{
+			display: none;
+		}
+	}
+}
+@media @phone{
+	.page-header .sticky-menu.active{
+		padding: 0 10px;
+		background-color: @header_mobile_background;
+		color: @header_mobile_icon;
+		background: @header_mobile_background url(@header_background_file) @header_background_image_option;
+		min-height: @mobile_sticky_min_height;
+	}	
+}

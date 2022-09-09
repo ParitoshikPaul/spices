@@ -1,0 +1,121 @@
+.post-list-style07{
+	.cdz-block-title{
+		margin-bottom: 20px;
+		.b-title{
+			font: @f_h1;
+		}
+	}
+	.post-item{
+		position: relative;
+		overflow: hidden;
+		&:hover{
+			.post-category {
+				transform: translateY(0);
+			}
+			.post-top{
+				transform:translateY(-50px);
+			}
+			.post-bottom {
+				transform:translateY(-50px);
+			}
+		}
+	}
+	.post-top{
+		transform:translateY(0);
+		.abs-transition();
+	}
+	.post-bottom {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;	    
+	    background: rgba(0, 0, 0, 0.5);
+	    color: @main_text_normal2;
+	    text-align: center;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	    transform:translateY(0);
+	    .abs-transition();
+	}
+	.post-title{
+		width: 70%;
+		margin-bottom: 20px;
+		.post-item-link{
+			font: @f_h1;
+			color: @main_text_normal2;
+			text-transform: capitalize;			
+			font-weight: 500;
+			text-decoration: none;
+			&:hover{
+				.abs-opacity(0.7);
+			}
+			@media @phone{
+				font-size: 142%
+			}
+		}
+	}
+	.post-footer {
+	    position: absolute;
+	    bottom: 20px;
+	    display: flex;
+	    justify-content: center;
+	    width: 100%;
+	    @media @phonedown{
+	    	display:block;
+	    	width: 100%;
+		    text-align: center;
+		    left: 0;
+	    }
+	}
+	.post-author{
+		font: @f_note;
+		margin: 0 15px 0 10px;
+		&:before{
+			.abs-iconfont2('\e999', 13px);
+			margin-right: 8px;
+			.rtl-layout &{
+				margin-right: 0;
+				margin-left: 8px;
+			}
+		}
+	}
+	.post-date{
+		margin: 0 5px;
+		font: @f_note;
+		&:before{
+			.abs-iconfont('\f133', 12px);
+			margin-right: 8px;
+			.rtl-layout &{
+				margin-right: 0;
+				margin-left: 8px;
+			}
+		}
+	}
+	.post-desc{
+		font: @f_h5;
+		font-family: 'Playfair Display', serif;		
+		width: 80%;
+		margin-bottom: 25px;
+		@media @phone{
+			font-size: 86%
+		}
+	}
+	.post-category {
+	    position: absolute;
+	    width: 100%;
+	    height: auto;	    
+	    background: @main_text_normal2;
+	    padding:10px;	    
+	    z-index: 2;
+	    transform: translateY(0);	    	   
+	    text-transform: uppercase;
+	    font: @f_h2;
+	    min-height: 50px;
+	    text-decoration: none;
+	    .abs-link(@main_productname_text, @main_hover_text );
+		.abs-transition();	    
+	}
+}

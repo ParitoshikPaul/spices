@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="head.additional">
+        <block name="styles_bulding" class="Codazon\ThemeLayoutPro\Block\Header" template="Codazon_ThemeLayoutPro::layout/style-building.phtml" before="-" />
+    </referenceBlock>
+    <body>
+        <block class="Magento\Framework\View\Element\Template" name="cdz-login-form-additional" template="Magento_Customer::mini-form/form-additional.phtml"  />
+        <referenceBlock name="before.body.end">
+            <block name="theme-layout-config" class="Magento\Framework\View\Element\Template" template="Codazon_ThemeLayoutPro::layout/config.phtml" after="-" />
+			<block class="Magento\Framework\View\Element\Template" name="category.search" template="Codazon_ThemeLayoutPro::widget/category-search.phtml">
+				<block class="Codazon\ThemeLayoutPro\Block\SearchByCategory" name="category.search.list" />
+			</block>
+        </referenceBlock>
+        <block name="theme-layout-footer" class="Codazon\ThemeLayoutPro\Block\Footer" template="Codazon_ThemeLayoutPro::layout/footer-content.phtml" />
+    </body>
+</page>

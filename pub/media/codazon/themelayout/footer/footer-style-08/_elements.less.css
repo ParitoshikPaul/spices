@@ -1,0 +1,254 @@
+.page-footer{
+	color: @footer_text;
+	font-size: @footer_font;
+	background:@footer_background url(@footer_background_file) @footer_background_image_option;
+	a{
+		.abs-link(@footer_text, @footer_hover_text);
+	}
+	.footer.content{
+		border: 0;
+		padding-top: 30px;
+		padding-bottom: 0;
+		margin-top: 0;
+		background-color: @footer_top_background;
+		padding-left:0;
+		padding-right: 0;
+		.block{
+			float: none;
+		}
+	}
+	.footer-bottom{
+		background: @footer_bottom_background;
+		padding: 30px 0;
+    	text-align: left;
+    	.rtl-layout &{
+    		text-align: right
+    	}
+	}
+	.newsletter{
+		overflow: hidden;
+		.des{
+			font-weight: 600;
+			color:@footer_text;
+		}
+	}
+	.block.newsletter{
+		width: 100%;
+		margin-bottom: 20px;
+		.field .control:before{
+			color: @footer_text;
+			display: none
+		}
+		input{
+			color: @footer_text;
+			background: transparent;
+			border:1px solid @footer_border;
+			.abs-placeholder(@footer_text);			
+			.rtl-layout &{
+				padding-right:35px;
+			}			
+		}
+		.actions{
+			width: auto;
+			display: inline-block;
+		}
+		.action.subscribe{
+			padding: 0;			
+			border: 0;
+			padding: 5px 20px;
+			background: transparent;
+			height: 40px;
+			border:1px solid #000000;
+			font-weight: 600;	
+			.abs-borderradius(0);		
+			.abs-transition();
+			.abs-style(@footer_background, @footer_border, @footer_text);
+			span{
+				text-transform: uppercase;
+			}
+			&:hover{
+				.abs-style(@footer_text, @footer_border, @footer_background);
+			}
+		}
+		.form.subscribe{
+			display: flex;
+    		width: 100%;
+    		.newsletter{
+    			flex-basis: 100%;
+    			.rtl-layout &{
+    				margin-left:5px;
+    			}
+    		}
+		}
+	}
+	.newsletter-title{
+		font-size: @footer_title_font;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+		color:@footer_title_text;
+	}
+	.footer-payment{
+		display: flex;
+		vertical-align: top;
+		margin-bottom: 30px;
+		margin-left: auto;
+		align-items: center;
+		.rtl-layout &{
+			margin-right:auto;
+			margin-left:0;
+		}
+		img{
+			margin-left:20px;
+			.rtl-layout &{
+				margin-left:0;
+				margin-right:20px;
+			}
+		}
+	}
+	.footer-social{
+		margin-bottom: 25px;
+		position: relative;
+		.social{
+			background: @footer_background;
+			z-index: 1;
+		    display: inline-block;
+		    position: relative;
+		    padding: 0 30px 0 10px;	
+		}
+		&:after{
+			width:100%;
+			height: 1px;
+			border-bottom:1px solid @footer_border;
+			content: '';
+			top:50%;
+			left: 0;
+			position: absolute;
+		}
+		a{
+			margin: 5px 15px;
+			display: inline-block;
+			vertical-align: top;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			.abs-borderradius(100%);
+			.abs-transition();
+			color: @footer_text;
+			.fa,
+			.fas,
+			.fab{
+				font-size: 0;				
+				&:before{
+					font-size:30px;
+					line-height: 35px;
+				}
+				span{
+					.abs-hidetext();
+					display: none;
+				}
+			}
+			
+			&:active,
+			&:focus,
+			&:visited{
+				color:@footer_text;
+			}
+			&:hover{
+				background: transparent;
+				color: @footer_hover_text;
+				.abs-transform(~'translateY(-5px)');
+			}
+		}
+	}
+	.footer-box{
+		.h5{
+			text-transform: uppercase;
+			font-weight: 600;
+			color: @footer_title_text;
+		}
+	}
+	.footer-content-bottom {
+	    display: flex;
+	}
+	.footer-content-middle {
+	    margin-bottom: 30px;
+	}
+	.bottom-links {
+	    padding: 0;
+	    list-style: none;
+	    margin: 0;
+	    display: inline-block;
+	    li{
+	    	display: inline-block;
+	    	margin: 0 15px 0 0;
+	    	.rtl-layout &{
+	    		margin: 0 0 0 15px;
+	    	}
+	    	a{.abs-transition();}
+	    }
+	}
+	.hover-iconsocial a{
+		.abs-drawcircle(1px, @footer_background);
+	}
+	.hover-link01 a{
+		.hover-link01(@footer_hover_text);
+	}
+}
+@media @phone{
+	.page-footer{
+		padding-bottom: 50px;
+		.footer.content{
+			padding-top:0;
+		}
+		.footer-social a{
+			width: 20px;
+			margin: 5px 10px;
+		}
+		.newsletter-title{
+			font-size: 20px
+		}		
+		.block.newsletter {
+			width: 100%;
+			.form.subscribe .newsletter{
+				flex-basis: 100%;
+				input{
+					padding-left:15px;
+				}
+			}
+			.subscribe.action{
+				.btn_subscribe_mobile();
+				padding: 5px;
+			}
+		}
+		.footer-content-bottom {
+		    display: block;
+		}
+		.footer-payment{
+			margin: 10px 0 30px;
+			font-size: 0;
+			justify-content: center;
+			img{
+				margin-top:5px;
+				margin-left:0;
+			}
+		}
+		.footer-content-bottom{
+			flex-direction: column;
+		}
+		.footer-bottom{
+			padding: 20px 0 10px;
+		}
+		.bottom-links{
+			text-align:center;
+			li{
+				margin-bottom:8px;
+			}
+		}
+	}
+}
+.rtl-layout &{
+	.cdz-block .cdz-block-title{
+		text-align: right
+	}
+}

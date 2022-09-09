@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<config>
+  <identifier>footer-style-03</identifier>
+  <title>Footer Style 03</title>
+  <variables>
+    <footer_background>#ffffff</footer_background>
+    <footer_background_file></footer_background_file>
+    <footer_background_image_option>0 0 no-repeat fixed</footer_background_image_option>
+    <footer_background_normal>#3242a8</footer_background_normal>
+    <footer_border>#ffffff</footer_border>
+    <footer_bottom_background>#5c6ac3</footer_bottom_background>
+    <footer_font>13px</footer_font>
+    <footer_hover_text>#fc7070</footer_hover_text>
+    <footer_text>#ffffff</footer_text>
+    <footer_text_normal></footer_text_normal>
+    <footer_title_font></footer_title_font>
+    <footer_title_text>#ffffff</footer_title_text>
+    <footer_top_background>#5c6ac3</footer_top_background>
+  </variables>
+  <layout_xml>&lt;body&gt; &lt;referenceBlock name="footer_links" remove="true" /&gt; &lt;referenceBlock name="copyright" remove="true" /&gt; &lt;referenceBlock name="report.bugs" remove="true" /&gt; &lt;referenceBlock name="form.subscribe" remove="true" /&gt; &lt;move element="theme-layout-footer" destination="footer-container" /&gt; &lt;/body&gt;</layout_xml>
+  <custom_variables/>
+  <custom_fields>
+    <version>62a1a8e9788ea</version>
+  </custom_fields>
+  <parent></parent>
+  <content>&lt;div class="footer-style-03 text-center"&gt;&#xD;
+&lt;div class="footer content"&gt;&#xD;
+&lt;div class="footer-content-top"&gt;&#xD;
+&lt;ul class="footer-list-item hover-link02"&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="label-hover"&gt;Help&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="label-hover"&gt;Track Order&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="label-hover"&gt;Privacy policy&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="label-hover"&gt;Terms of service&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;li&gt;&lt;a href="#"&gt;&lt;span class="label-hover"&gt; Terms of service&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;&#xD;
+&lt;/ul&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;div class="footer-content-bottom"&gt;&#xD;
+&lt;div class="footer-payment"&gt;&lt;img class="img-responsive" src="{{media url="wysiwyg/codazon/footer-payment.png"}}" alt="Accept Payment" /&gt;&lt;/div&gt;&#xD;
+&lt;div class="footer-address"&gt;&#xD;
+&lt;p&gt;&amp;copy; 2018 Codazon Ltd. Trademarks and brands&lt;/p&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;&#xD;
+&lt;/div&gt;</content>
+</config>

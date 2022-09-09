@@ -1,0 +1,111 @@
+.post-list-style10{	
+	position: relative;
+	.item-group{
+		background: @main_box_background;
+		height: 100%;		
+		overflow: hidden;
+        backface-visibility: hidden;
+	}
+	.post-top{
+		position: relative;
+	}
+	.post-top .post-img{
+		overflow: hidden;
+		img{
+			.abs-transition();
+		}
+		&:hover img{
+			.abs-transform(~'scale(1.1, 1.1) rotate(2deg)');
+		}
+	}
+
+	.post-bottom{
+		padding: 20px 0 0;	
+	}
+	.post-category{
+		text-transform: uppercase;
+		font-weight: 500;
+		margin-bottom: 5px;
+		display: inline-block;
+		vertical-align: top;
+		float:left;
+		padding: 4px 10px 2px;
+		margin-right: 10px;
+		position: absolute;
+		top: 3px;
+		left: 3px;
+		border:1px solid;
+		.abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+		.rtl-layout &{
+			left: auto;
+			right: 10px;
+			margin-right: 0
+		}
+		&:hover{
+			.abs-style(@btn_primary_background, @btn_primary_border, @btn_primary_text);
+		}
+	}
+	.post-title{
+		margin-bottom: 10px;
+		clear: both;		
+		.post-item-link{
+			font: @f_h5;
+			letter-spacing: 1px;
+			.abs-link(@main_productname_text, @main_hover_text);
+		}
+	}
+	.post-desc{
+		color: @main_text_normal;
+		font-size: 13px;
+	    margin-top: 10px;
+	    margin-bottom: 10px;
+	    letter-spacing: 1px;
+	}
+	.post-date{
+		color: @main_text_normal;
+		font: @f_note;
+		margin-left: auto;
+		text-transform: uppercase;
+		.rtl-layout &{
+			margin-right: auto;
+    		margin-left: 0;
+		}
+	}
+	.post-author{
+		color: @main_text_normal;
+		font: @f_note;
+		text-transform: uppercase;			
+	}
+	.post-footer{
+	    overflow: hidden; 
+	    display: flex;
+    	align-items: center;
+    	margin-bottom: 20px;
+	}
+}
+@media @phone{
+	.post-list-style10{
+		margin-bottom: 0;
+		.post-title{
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			.post-item-link{
+				font:@fm_h3;
+			}
+		}
+		.post-author,
+	    .post-date{
+	    	font-size: 11px;
+	    }		
+	}
+}
+@media @tablet_strict{
+	.post-list-style10 {
+		.post-title{
+			white-space: nowrap;
+	    	overflow: hidden;
+	    	text-overflow: ellipsis;
+	    }
+	}
+}

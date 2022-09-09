@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php if ($items = $this->getMenuTree()) :
+$typeClasses = [
+    'cdz-horizontal-menu',
+    'cdz-vertical-menu',
+    'cdz-toggle-menu',
+    'cdz-vertical-menu cdz-scroll-menu'
+];
+$menu = $this->getMenuObject();
+$type = ($this->getData('menu_type') !== null) ? (int)$this->getData('menu_type') : (int)$menu->getData('type');
+$typeClass = $typeClasses[$type];
+$styles = json_decode($menu->getData('style'));
+$block->setTemplate('menu-item.phtml');
+$dropdownStyle = (isset($styles->dropdown_style)&&($styles->dropdown_style == 'full_width')) ? ($type == 1) ? 'dropdown-fullheight' : 'dropdown-fullwidth':'';
+$uniqId = uniqid("menu-{$menu->getId()}-");
+$options = [
+    'dropdownEffect'    => $styles->dropdown_animation,
+    'type'              => $type,
+    'useAjaxMenu'       => (int)$block->getData('use_ajax_menu'),
+    'menu'              => $this->getMenu(),
+    'ajaxUrl'           => $this->getUrl('megamenu/index/ajax'),
+    'tabletLinkText'    => __('%1Go to%2', '<span class="link-prefix">','</span> <span class="link-text">%1</span>'),
+    'pagingMenu'        => (int)$block->getData('paging_menu')
+];
+if ($type === 3) {
+    $options['extraCss'] = [
+        'megamenu-css-scroll-menu' => $block->getViewFileUrl('Codazon_MegaMenu::css/scroll-menu.css')
+    ];
+}
+$dataMenu = json_encode(['megamenu' => $options], JSON_HEX_TAG);
+$this->setData('need_filter',false);
+?>
+<div class="cdz-menu no-loaded <?php echo $typeClass ?> <?php echo $dropdownStyle ?> <?php echo $styles->css_class ?> <?php echo 'cdz-'.$styles->dropdown_animation ?>" id="<?php echo $uniqId ?>" data-mage-init='<?php echo $dataMenu ?>'><ul class="groupmenu"><?php echo $this->getMenuHtml($items); ?></ul></div>
+<?php endif ?>

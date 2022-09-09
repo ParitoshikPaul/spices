@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © 2018 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<?php
+$buttonTitle = $this->stripTags(__('Buy Now'));
+$_product = $block->getProduct();
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+?>
+<?php if ($helper->getConfig('pages/product_view/display_buy_now_button')) : ?>
+<button type="submit"
+        data-mage-init='{"themewidgets": {"codazon.buyNow": {}}}'
+        data-action="buynow"
+        title="<?php echo $buttonTitle ?>"
+        class="action primary buy-now"
+        id="product-buy-now-button">
+    <span><?php echo $buttonTitle ?></span>
+</button>
+<?php endif ?>

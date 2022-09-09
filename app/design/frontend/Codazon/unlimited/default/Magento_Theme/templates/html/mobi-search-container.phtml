@@ -1,0 +1,23 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$displayFullSearch = $this->helper(\Codazon\ThemeLayoutPro\Helper\Data::class)->getConfig('mobile/general/display_full_search');
+?>
+<?php if ($displayFullSearch) : ?>
+<div id="mobi_header-search" class="mobi-search-wrap display-full visible-xs"></div>
+<script>
+(function() {
+    let header = document.getElementsByTagName('header');
+    header[0].classList.add('display-full-search');
+    require(['jquery'], function($) {
+        $('.full-box-trigger:first').on('click', function(e) {
+            $('#search').focus();
+        });
+    });
+})();
+</script>
+<?php endif ?>

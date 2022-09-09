@@ -1,0 +1,134 @@
+.page-footer{
+	color: @footer_text;
+	font-size: @footer_font;
+	background:@footer_background url(@footer_background_file) @footer_background_image_option;
+	a{
+		.abs-link(@footer_text, @footer_hover_text);
+	}
+	.footer.content{
+		border: 0;
+		padding-top: 30px;
+		padding-bottom: 30px;
+		margin-top: 0;
+		.cms-index-index &{
+			background-color: @footer_top_background;
+		}
+		
+		.block{
+			float: none;
+		}
+	}
+	.newsletter{
+		overflow: hidden;
+	}
+	.block.newsletter{
+		width: calc(~'100% + 40px');
+		margin-bottom: 20px;
+		.field .control:before{
+			color: @footer_text;
+		}
+		input{
+			color: @footer_text;
+			background: transparent;
+			.abs-placeholder(@footer_text);			
+			.rtl-layout &{
+				padding-right:35px;
+			}			
+		}
+		.action.subscribe{
+			padding: 0;
+			width: 38px;
+			height: 38px;
+			line-height: 38px;
+			border: 0;
+			transform: translateX(-32px);
+			.abs-transition();
+			background: transparent;
+			color: @footer_text;
+			.rtl-layout &{
+				transform: translateX(32px);
+			}
+			&:after{
+				.abs-iconfont('\f178', 16px);
+				line-height: 38px;
+				.rtl-layout &{
+					content: '\f177';
+				}
+			}
+			span{
+				display: none;
+			}
+			&:hover{
+				transform: translateX(-40px);
+				color: @footer_text;
+				.rtl-layout &{
+					transform: translateX(40px);
+					
+				}
+			}
+		}
+	}
+	.newsletter-title{
+		font-size: @footer_title_font;
+		font-weight: 600;
+	}
+	.footer-payment{
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 30px;
+	}
+	.footer-social{
+		margin-bottom: 15px;
+		a{
+			margin: 5px;
+			display: inline-block;
+			vertical-align: top;
+			width: 35px;
+			height: 35px;
+			line-height: 35px;
+			text-align: center;
+			.abs-borderradius(100%);
+			.abs-transition();
+			color: @footer_text;
+			.fa,
+			.fas,
+			.fab{
+				font-size: 16px;
+				line-height: 35px;
+				span{
+					.abs-hidetext();
+				}
+			}
+			&:active,
+			&:focus,
+			&:visited{
+				color:@footer_text;
+			}
+			&:hover{
+				background: transparent;
+				color: @footer_text;
+				.abs-transform(~'translateY(-5px)');
+			}
+		}
+	}
+	.footer-box{
+		.h5{
+			text-transform: uppercase;
+			font-weight: 600;
+			color: @footer_title_text;
+		}
+	}
+}
+@media @phone{
+	.page-footer{
+		padding-bottom: 50px;
+	}
+}
+.page-footer{
+	.hover-iconsocial a{
+		.abs-drawcircle(1px, @footer_text);
+	}
+	.hover-link01 a{
+		.hover-link01(@footer_hover_text);
+	}
+}

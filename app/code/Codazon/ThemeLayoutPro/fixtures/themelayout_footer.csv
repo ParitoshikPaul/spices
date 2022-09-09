@@ -1,0 +1,3066 @@
+identifier,title,is_active,layout_xml,variables,custom_variables,parent,custom_fields,content
+footer-style-01,"Footer Style 01",1,"<body>
+<referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+<move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#5d666f~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#414b56~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#6772e5~~~,~~~footer_text~~~:~~~#414b56~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~22px~~~,~~~footer_title_text~~~:~~~#414b56~~~,~~~footer_top_background~~~:~~~#F6F7F9~~~}",,,"{~~~version~~~:~~~62a1a8e96e2bb~~~,~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~}","<div class=~~~footer-style-01 text-center~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-xs-24 col-sm-12 col-sm-push-6~~~>
+<div class=~~~newsletter~~~>
+<p class=~~~newsletter-title~~~>SUBSCRIBE US</p>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~>
+<a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>facebook</span></span></a>
+<a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>twitter</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>pinterest</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>google plus</span></span></a>
+<a href=~~~#~~~><span class=~~~fa fa-rss~~~><span>rss</span></span></a></p>
+</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~footer-address~~~>
+<p>&copy; 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>"
+footer-style-02,"Footer Style 02",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#353535~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#414b56~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#a07653~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#303030~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,,"{~~~version~~~:~~~62a1a8e973408~~~,~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~}","<div class=~~~footer-style-02~~~>
+    <div class=~~~container~~~>
+        <div class=~~~footer content~~~>
+            <div class=~~~footer-content-top~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-sm-6~~~>
+                        <div class=~~~footer-box~~~>
+                            <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+                            <ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+                                <li><a href=~~~{{store direct_url=~~~privacy-policy-cookie-restriction-mode~~~}}~~~>Privacy and Cookie Policy</a></li>
+                                <li><a href=~~~{{store direct_url=~~~about-us~~~}}~~~>About Us</a></li>
+                                <li><a href=~~~{{store direct_url=~~~~~~}}~~~>Search Terms</a></li>
+                                <li><a href=~~~{{store url=~~~catalogsearch/advanced~~~}}~~~>Advanced Search</a></li>
+                                <li><a href=~~~#~~~>Orders and Returns</a></li>
+                                <li class=~~~last~~~><a href=~~~{{store url=~~~contact~~~}}~~~>Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-6~~~>
+                        <div class=~~~footer-box~~~>
+                            <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+                            <ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+                                <li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+                                <li><a href=~~~{{store direct_url=~~~~~~}}~~~>Contact Us</a></li>
+                                <li><a href=~~~#~~~>Returns</a></li>
+                                <li><a href=~~~#~~~>Order History</a></li>
+                                <li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-6~~~>
+                        <div class=~~~footer-box~~~>
+                            <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Contact Us</p>
+                            <div id=~~~footer-content-3~~~ class=~~~showhide~~~>
+                                <ul class=~~~footer-link~~~>
+                                    <li>Montergade 19 1140</li>
+                                    <li>Copenhagen, Denmark</li>
+                                    <li class=~~~last~~~>+45 878-xx-xx</li>
+                                </ul>
+                                <div class=~~~footer-social hover-iconsocial~~~>
+                                    <p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-6~~~>
+                        <div class=~~~newsletter footer-box~~~>
+                            <p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Subscribe Us</p>
+                            <div id=~~~footer-content-4~~~ class=~~~showhide~~~>
+                                <div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+                                <div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+                                <div class=~~~footer-address~~~>
+                                    <p>© 2018 Codazon Ltd. Trademarks and brands</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+footer-style-03,"Footer Style 03",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#3242a8~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#5c6ac3~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#fc7070~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~~~~,~~~footer_title_font~~~:~~~~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#5c6ac3~~~}",,,{~~~version~~~:~~~62a1a8e9788ea~~~},"<div class=~~~footer-style-03 text-center~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<ul class=~~~footer-list-item hover-link02~~~>
+<li><a href=~~~#~~~><span class=~~~label-hover~~~>Help</span></a></li>
+<li><a href=~~~#~~~><span class=~~~label-hover~~~>Track Order</span></a></li>
+<li><a href=~~~#~~~><span class=~~~label-hover~~~>Privacy policy</span></a></li>
+<li><a href=~~~#~~~><span class=~~~label-hover~~~>Terms of service</span></a></li>
+<li><a href=~~~#~~~><span class=~~~label-hover~~~> Terms of service</span></a></li>
+</ul>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+<div class=~~~footer-address~~~>
+<p>&copy; 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>"
+footer-style-04,"Footer Style 04",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#5c6ac3~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#fc7070~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#5c6ac3~~~}",,,{~~~version~~~:~~~62a1a8e97cee5~~~},"<div class=~~~footer-style-04~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}privacy-policy-cookie-restriction-mode/~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}about-us~~~>About Us</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}search/term/popular/~~~>Search Terms</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}catalogsearch/advanced/~~~>Advanced Search</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}sales/guest/form/~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}contact/~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Shop</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Technology</a></li>
+<li><a href=~~~#~~~>Fashion</a></li>
+<li><a href=~~~#~~~>Sport</a></li>
+<li><a href=~~~#~~~>Home &amp; Garden</a></li>
+<li><a href=~~~#~~~>Jewellery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Toys</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Suport</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}contact/~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Extras</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Brands</a></li>
+<li><a href=~~~#~~~>Gift Vouchers</a></li>
+<li><a href=~~~#~~~>Affiliates</a></li>
+<li><a href=~~~#~~~>Delivery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Specials</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Subscribe Us</p>
+<div id=~~~footer-content-5~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-address~~~>
+<p>&copy; 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-8 text-center~~~>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>facebook</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>twitter</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>pinterest</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>google plus</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~><span>rss</span></span></a></p>
+</div>
+</div>
+<div class=~~~col-sm-8 text-right~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-05,"Footer Style 05",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#353535~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#353535~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#a07653~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,,{~~~version~~~:~~~62a1a8e9824e9~~~},"<div class=~~~footer-style-05~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6 footer-box-1~~~>
+<div class=~~~footer-logo~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer_logo.jpg~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>facebook</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>twitter</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>pinterest</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>google plus</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~><span>rss</span></span></a></p>
+</div>
+<div class=~~~footer-address~~~>
+<p>&copy; 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Shop</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='technology.html'}}~~~>Technology</a></li>
+<li><a href=~~~{{store url='accessories.html'}}~~~>Accessories</a></li>
+<li><a href=~~~{{store url='sport.html'}}~~~>Sport</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='home-garden.html'}}~~~>Home &amp; Garden</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Contact Us</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><span>Montergade 19 1140</span></li>
+<li><span>Copenhagen, Denmark</span></li>
+<li class=~~~last~~~><span>+45 878-xx-xx</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Subscribe Us</p>
+<div id=~~~footer-content-5~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-06,"Footer Style 06",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~~~~,~~~footer_border~~~:~~~#b1b1b1~~~,~~~footer_bottom_background~~~:~~~#ffffff~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#5c6ac3~~~,~~~footer_text~~~:~~~#b1b1b1~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#515356~~~,~~~footer_top_background~~~:~~~#5c6ac3~~~}",,,{~~~version~~~:~~~62a1a8e98741a~~~},"<div class=~~~footer-style-06~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row newsletter~~~>
+<div class=~~~col-sm-18~~~>
+<p class=~~~newsletter-title~~~>SUBSCRIBE TO OUR NEWSLETTER TEXT</p>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}privacy-policy-cookie-restriction-mode/~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}about-us~~~>About Us</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}search/term/popular/~~~>Search Terms</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}catalogsearch/advanced/~~~>Advanced Search</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}sales/guest/form/~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}contact/~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Quick Links</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>My Account</a></li>
+<li><a href=~~~#~~~>Checkout</a></li>
+<li><a href=~~~#~~~>Shopping Cart</a></li>
+<li><a href=~~~#~~~>Register</a></li>
+<li><a href=~~~#~~~>Blog</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Login</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Shop</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Technology</a></li>
+<li><a href=~~~#~~~>Fashion</a></li>
+<li><a href=~~~#~~~>Sport</a></li>
+<li><a href=~~~#~~~>Home &amp; Garden</a></li>
+<li><a href=~~~#~~~>Jewellery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Toys</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Customer Suport</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}contact/~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Extras</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Brands</a></li>
+<li><a href=~~~#~~~>Gift Vouchers</a></li>
+<li><a href=~~~#~~~>Affiliates</a></li>
+<li><a href=~~~#~~~>Delivery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Specials</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-6~~~>About US</p>
+<div id=~~~footer-content-6~~~ class=~~~footer-link~~~>
+<p>Although, today we&rsquo;re even more excited to release our Wireframe Kit.</p>
+<ul class=~~~showhide~~~>
+<li><span>Montergade 19 1140</span></li>
+<li><span>Copenhagen, Denmark</span></li>
+<li><span>+45 878-xx-xx</span></li>
+<li class=~~~last~~~>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>facebook</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>twitter</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>pinterest</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>google plus</span></span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~><span>rss</span></span></a></p>
+</div>
+</li>
+</ul>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~ /></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-07,"Footer Style 07",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+    <block class=~~~Magento\Store\Block\Switcher~~~ name=~~~footer-switch-language~~~ template=~~~Magento_Store::switch/languages-style-02.phtml~~~ />
+    <block class=~~~Magento\Directory\Block\Currency~~~ name=~~~footer-switch-currency~~~ template=~~~Magento_Directory::currency-style-02.phtml~~~ />
+</body>","{~~~footer_background~~~:~~~#414b56~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#5d666f~~~,~~~footer_border~~~:~~~#5d666f~~~,~~~footer_bottom_background~~~:~~~#414b56~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#a8aeba~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~12px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#414b56~~~}",,,"{~~~version~~~:~~~62a1a8e98c645~~~,~~~auto_detect_files~~~:[~~~_instagram.less.css~~~],~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-07~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>{{block name=~~~footer-top~~~ class=~~~Magento\Framework\View\Element\Template~~~ template=~~~Magento_Theme::html/footer-top.phtml~~~ child_blocks=~~~footer-switch-language,footer-switch-currency~~~}}
+<div class=~~~footer-content-middle~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-7~~~>
+<div class=~~~col-sm-22~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About us</p>
+<p id=~~~footer-content-1~~~>Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+<div class=~~~newsletter-block~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Subscribe us</p>
+<div id=~~~footer-content-2~~~ class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-17~~~>
+<div class=~~~col-sm-7~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>orders &amp; returns</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Order Status</a></li>
+<li><a href=~~~#~~~>Shipping, Delivery &amp; Store Pickup</a></li>
+<li><a href=~~~#~~~>Return &amp; Exchange Promise</a></li>
+<li><a href=~~~#~~~>Price Match Guarantee</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Pay with Points</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-7~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Support and services</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Customer Service</a></li>
+<li><a href=~~~#~~~>Protection Plans</a></li>
+<li><a href=~~~#~~~>Schedule a Service</a></li>
+<li><a href=~~~#~~~>Trade-In Program</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Product Recalls</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-10~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Instagram</p>
+<div id=~~~footer-content-5~~~>
+<div class=~~~instagram-wrapper~~~>
+<div class=~~~photo-items items~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\Instagramphotos~~~ custom_template=~~~widget/instagramphotos/grid-style-02.phtml~~~ show_slider=~~~0~~~ total_rows=~~~1~~~ max_items=~~~8~~~ items_1900=~~~6~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>Prices and offers are subject to change. © 2018 YourSite . All rights reserved. YOUR SITE</div>
+</div>
+<div class=~~~col-sm-12 text-right~~~>
+<div class=~~~footer-app-store~~~><a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer-img-02.jpg&quot;}}~~~ alt=~~~~~~></a><a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer-img-01.jpg&quot;}}~~~ alt=~~~~~~></a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-08,"Footer Style 08",1,"<body>
+<referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+<move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#5d666f~~~,~~~footer_border~~~:~~~#000000~~~,~~~footer_bottom_background~~~:~~~#e1e1e1~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#009688~~~,~~~footer_text~~~:~~~#000000~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~30px~~~,~~~footer_title_text~~~:~~~#282828~~~,~~~footer_top_background~~~:~~~#ffffff~~~}",,,"{~~~version~~~:~~~62a1a8e9925aa~~~,~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~}","<div class=~~~footer-style-08 text-center~~~>
+    <div class=~~~footer content~~~>
+        <div class=~~~footer-content-top~~~>
+            <div class=~~~footer-social~~~>
+                <p class=~~~social~~~>
+                    <a href=~~~#~~~>
+                        <span class=~~~fa fa-facebook~~~>
+                            <!-- facebook-->
+                        </span>
+                    </a>
+                    <a href=~~~#~~~>
+                        <span class=~~~fa fa-twitter~~~>
+                            <!-- twitter -->
+                        </span>
+                    </a>
+                    <a href=~~~#~~~>
+                        <span class=~~~fa fa-pinterest-p~~~>
+                            <!-- pinterest -->
+                        </span>
+                    </a>
+                    <a href=~~~#~~~>
+                        <span class=~~~fa fa-instagram~~~>
+                            <!-- instagram -->
+                        </span>
+                    </a>
+                    <a href=~~~#~~~>
+                        <span class=~~~fa fa-snapchat-ghost~~~>
+                            <!-- snapchat -->
+                        </span>
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class=~~~container~~~>
+            <div class=~~~footer-content-middle~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-xs-24 col-sm-16 col-sm-push-4 col-md-12 col-md-push-6~~~>
+                        <div class=~~~newsletter~~~>
+                            <p class=~~~newsletter-title~~~>subscribe to our Newsletter</p>
+                            <div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+                            <p class=~~~des text-uppercase~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3. T&amp;C's apply</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=~~~footer-content-bottom~~~>
+                <div class=~~~footer-address~~~>
+                    <p>© 2018 Codazon Ltd. Trademarks and brands</p>
+                </div>
+                <div class=~~~footer-payment~~~>Payment methods <img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+            </div>
+        </div>
+    </div>
+    <div class=~~~footer-bottom~~~>
+        <div class=~~~container~~~>
+            <ul class=~~~bottom-links~~~>
+                <li><a href=~~~#~~~>Shopping guide</a></li>
+                <li><a href=~~~#~~~>Company</a></li>
+                <li><a href=~~~#~~~>About us </a></li>
+                <li><a href=~~~#~~~>Policies</a></li>
+                <li><a href=~~~#~~~>Services Stores</a></li>
+                <li><a href=~~~#~~~>Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+</div>"
+footer-style-09,"Footer Style 09",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+
+ <block class=~~~Magento\Store\Block\Switcher~~~ name=~~~footer-switch-language~~~ template=~~~Magento_Store::switch/languages-style-02.phtml~~~ />
+    <block class=~~~Magento\Directory\Block\Currency~~~ name=~~~footer-switch-currency~~~ template=~~~Magento_Directory::currency-style-02.phtml~~~ />
+</body>","{~~~footer_background~~~:~~~#000000~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#5d666f~~~,~~~footer_border~~~:~~~#5d666f~~~,~~~footer_bottom_background~~~:~~~#000000~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#a8aeba~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~12px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#000000~~~}",,footer-style-07,"{~~~version~~~:~~~62a1a8e997b02~~~,~~~auto_detect_files~~~:[~~~_instagram.less.css~~~],~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-09~~~>
+<div class=~~~container-fluid~~~>
+<div class=~~~footer content~~~>{{block name=~~~footer-top~~~ class=~~~Magento\Framework\View\Element\Template~~~ template=~~~Magento_Theme::html/footer-top.phtml~~~ child_blocks=~~~footer-switch-language,footer-switch-currency~~~}}
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box box-info~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About us</p>
+<p id=~~~footer-content-1~~~>Looking cautiously round, to ascertain that they were not overheard, the two hags cowered nearer to the fire, and chuckled heartily.</p>
+<div class=~~~newsletter-block~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Subscribe us</p>
+<div id=~~~footer-content-2~~~ class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>orders &amp; returns</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Order Status</a></li>
+<li><a href=~~~#~~~>Shipping, Delivery &amp; Store Pickup</a></li>
+<li><a href=~~~#~~~>Return &amp; Exchange Promise</a></li>
+<li><a href=~~~#~~~>Price Match Guarantee</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Pay with Points</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-5~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Support and services</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Customer Service</a></li>
+<li><a href=~~~#~~~>Protection Plans</a></li>
+<li><a href=~~~#~~~>Schedule a Service</a></li>
+<li><a href=~~~#~~~>Trade-In Program</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Product Recalls</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-7~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5 padding-title~~~ data-cdz-toggle=~~~#footer-content-5~~~>Instagram</p>
+<div id=~~~footer-content-5~~~>
+<div class=~~~instagram-wrapper~~~>
+<div class=~~~photo-items items~~~>{{widget type=~~~Codazon\ThemeLayoutPro\Block\Widget\Instagramphotos~~~ custom_template=~~~widget/instagramphotos/grid-style-02.phtml~~~ access_token=~~~3893338542.38fb276.e8dbfaac57214bf69c0439027ee39d85~~~ use_user_id=~~~1~~~ user_id=~~~7292707175~~~ show_slider=~~~0~~~ max_items=~~~8~~~ total_rows=~~~1~~~ items_1900=~~~6~~~ items_1600=~~~5~~~ items_1420=~~~5~~~ items_1280=~~~5~~~ items_980=~~~4~~~ items_768=~~~3~~~ items_480=~~~3~~~ items_320=~~~2~~~ items_0=~~~2~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>Prices and offers are subject to change. © 2018 YourSite . All rights reserved. YOUR SITE</p>
+</div>
+</div>
+<div class=~~~col-sm-12 text-right~~~>
+<div class=~~~footer-app-store~~~><a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer-img-02.jpg&quot;}}~~~ alt=~~~Codazon_alt~~~> </a> <a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer-img-01.jpg&quot;}}~~~ alt=~~~Codazon_alt~~~> </a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-10,"Footer Style 10",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#f5f3ea~~~,~~~footer_bottom_background~~~:~~~#f2f8fd~~~,~~~footer_font~~~:~~~12px~~~,~~~footer_hover_text~~~:~~~#7fba00~~~,~~~footer_text~~~:~~~#b1b1b1~~~,~~~footer_text_normal~~~:~~~#000000~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#000000~~~,~~~footer_top_background~~~:~~~#ffffff~~~}",,,"{~~~version~~~:~~~62a1a8e99ddd0~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-02.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-10~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style02 row~~~>
+<div class=~~~col-sm-18 col-xs-24~~~>
+<div class=~~~row~~~>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></p>
+<p>100% Secured</p>
+<p>Payment</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></p>
+<p>Customer Service</p>
+<p>Mail &amp; Telephone</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-exchange fa~~~>&nbsp;</span></p>
+<p>14 Days to Change</p>
+<p>Your Mind</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-thumbs-o-up fa~~~>&nbsp;</span></p>
+<p>Highest Quality</p>
+<p>Guarantee</p>
+</div>
+</div>
+</div>
+<div class=~~~item last col-sm-6 col-xs-24~~~>
+<p><a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer/app01.png&quot;}}~~~ alt=~~~cdz-alt~~~></a></p>
+<p><a href=~~~#~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer/app02.png&quot;}}~~~ alt=~~~cdz-alt~~~></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-14~~~>
+<div class=~~~newsletter-content~~~><span class=~~~title~~~>Be the first to save!</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+<div class=~~~col-sm-10~~~>
+<div class=~~~footer-social hover-iconsocial~~~><span class=~~~title~~~>Stay Connected</span>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>Although, today we’re even more excited to release our Wireframe Kit.
+<div class=~~~footer-text~~~>Montergade 19 1140 Copenhagen, Denmark +45 878-xx-xx</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Feedback</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Store Pickup</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Product Care Plans</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>In the spotlight</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Grocery &amp; Gourmet</a></li>
+<li><a href=~~~#~~~>Beverages</a></li>
+<li><a href=~~~#~~~>Breakfast &amp; Cereal</a></li>
+<li><a href=~~~#~~~>Meals</a></li>
+<li><a href=~~~#~~~>Condiments</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Canned Goods</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=&quot;wysiwyg/codazon/footer-payment.png&quot;}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-11,"Footer Style 11",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#353535~~~,~~~footer_background_file~~~:~~~\/f\/o\/footer-bg.jpg~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#414b56~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#131210~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,footer-style-02,"{~~~version~~~:~~~62a1a8e9a38a2~~~,~~~custom_variables~~~:~~~@service-banner-text-01:  #000000;\r\n@service-banner-hover-text-01: #727171;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-01.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-11~~~>
+<div class=~~~container-fluid before-main-footer~~~ style=~~~background-color: #f6f7f9;~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style01 row~~~>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-truck~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Free Shipping</strong></a>
+<p>On every order, every day!</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-lock~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Secure Payment</strong></a>
+<p>We value your security</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-money~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Money Back Guarantee</strong></a>
+<p>30 days money back guarantee</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-phone~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>24/7 Customer Service</strong></a>
+<p>Support number (0123) 123 456</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~container-fluid footer-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Contact Us</p>
+<div id=~~~footer-content-3~~~ class=~~~showhide~~~>
+<ul class=~~~footer-link~~~>
+<li>Montergade 19 1140</li>
+<li>Copenhagen, Denmark</li>
+<li class=~~~last~~~>+45 878-xx-xx</li>
+</ul>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Subscribe Us</p>
+<div id=~~~footer-content-4~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-12,"Footer Style 12",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#009688~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~transparent~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#a8aeba~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,footer-style-05,{~~~version~~~:~~~62a1a8e9a942e~~~},"<div class=~~~footer-style-12~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6 footer-box-1~~~>
+<div class=~~~footer-logo~~~><img src=~~~{{media url=&quot;wysiwyg/codazon/footer_logo_white.png&quot;}}~~~ alt=~~~Unlimited Theme~~~></div>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~>
+<a href=~~~#~~~><span class=~~~fa fa-facebook~~~><span>facebook</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-twitter~~~><span>twitter</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~><span>pinterest</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-google-plus~~~><span>google plus</span></span></a> 
+<a href=~~~#~~~><span class=~~~fa fa-rss~~~><span>rss</span></span></a>
+</p>
+</div>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Shop</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='technology.html'}}~~~>Technology</a></li>
+<li><a href=~~~{{store url='accessories.html'}}~~~>Accessories</a></li>
+<li><a href=~~~{{store url='sport.html'}}~~~>Sport</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='home-garden.html'}}~~~>Home &amp; Garden</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Contact Us</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li>Montergade 19 1140</li>
+<li>Copenhagen, Denmark</li>
+<li class=~~~last~~~>+45 878-xx-xx</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Subscribe Us</p>
+<div id=~~~footer-content-5~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=&quot;wysiwyg/codazon/footer-payment.png&quot;}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-13,"Footer Style 13",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#d7ebf4~~~,~~~footer_bottom_background~~~:~~~#f2f8fd~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#83c8e9~~~,~~~footer_text~~~:~~~#b1b1b1~~~,~~~footer_text_normal~~~:~~~#282828~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#282828~~~,~~~footer_top_background~~~:~~~#83c8e9~~~}",,,{~~~version~~~:~~~62a1a8e9ae9b4~~~},"<div class=~~~footer-style-13~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~row newsletter~~~>
+<div class=~~~col-sm-16~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-social hover-iconsocial f-right~~~>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a><a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-7~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-6~~~>About US</p>
+<div id=~~~footer-content-6~~~ class=~~~footer-link~~~>
+<p>Although, today we’re even more excited to release our Wireframe Kit.</p>
+<ul class=~~~showhide~~~>
+<li>Montergade 19 1140</li>
+<li>Copenhagen, Denmark</li>
+<li>+45 878-xx-xx</li>
+<li class=~~~last~~~></li>
+</ul>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-17~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>About Us</a></li>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Search Terms</a></li>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Quick Links</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>My Account</a></li>
+<li><a href=~~~#~~~>Checkout</a></li>
+<li><a href=~~~#~~~>Shopping Cart</a></li>
+<li><a href=~~~#~~~>Register</a></li>
+<li><a href=~~~#~~~>Blog</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Login</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Shop</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Technology</a></li>
+<li><a href=~~~#~~~>Fashion</a></li>
+<li><a href=~~~#~~~>Sport</a></li>
+<li><a href=~~~#~~~>Home &amp; Garden</a></li>
+<li><a href=~~~#~~~>Jewellery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Toys</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Customer Suport</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{config path=&quot;web/unsecure/base_url&quot;}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~>
+<div class=~~~f-right~~~><img class=~~~img-responsive~~~ src=~~~{{media url=&quot;wysiwyg/codazon/footer-payment.png&quot;}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-14,"Footer Style 14",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#2cc067~~~,~~~footer_border~~~:~~~#cccccc~~~,~~~footer_bottom_background~~~:~~~#dfece5~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#06943f~~~,~~~footer_text~~~:~~~#6e7370~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#282828~~~,~~~footer_top_background~~~:~~~#06943f~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #06943f;\r\n@service-banner-title: #fff;\r\n@service-banner-hover-title: #2cc067;\r\n@service-banner-text: #fff;\r\n@service-banner-hover-text: #2cc067;\r\n@service-banner-icon: #06943f;\r\n@service-banner-hover-icon: #2cc067;\r\n@service-banner-icon-border: #2cc067;\r\n@service-banner-hover-icon-border: #2cc067;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8e9b41df~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-03.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-14~~~>
+    <div class=~~~main-footer~~~>
+        <div class=~~~footer-content-top~~~>
+            <div class=~~~container~~~>
+                <div class=~~~service-banner-style03~~~>
+                    <div class=~~~row~~~>
+                        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+                            <div class=~~~item-icon~~~><span class=~~~fa-tags fa~~~>&nbsp;</span></div>
+                            <div class=~~~item-text~~~>
+                                <p class=~~~item-title~~~>850+ brands</p>
+                                <p class=~~~item-sub-title~~~>Highest Quality</p>
+                            </div>
+                        </div>
+                        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+                            <div class=~~~item-icon~~~><span class=~~~fa-plane fa~~~>&nbsp;</span></div>
+                            <div class=~~~item-text~~~>
+                                <p class=~~~item-title~~~>Free Shipping</p>
+                                <p class=~~~item-sub-title~~~>Delivery within 2 days</p>
+                            </div>
+                        </div>
+                        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+                            <div class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></div>
+                            <div class=~~~item-text~~~>
+                                <p class=~~~item-title~~~>Customer Service</p>
+                                <p class=~~~item-sub-title~~~>Mail &amp; Telephone</p>
+                            </div>
+                        </div>
+                        <div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+                            <div class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></div>
+                            <div class=~~~item-text~~~>
+                                <p class=~~~item-title~~~>100% Secured Payment</p>
+                                <p class=~~~item-sub-title~~~>We value your security</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-middle~~~>
+            <div class=~~~container~~~>
+                <div class=~~~footer content~~~>
+                    <div class=~~~row middle-top~~~>
+                        <div class=~~~col-sm-14~~~>
+                            <div class=~~~newsletter-content~~~><span class=~~~title~~~>Be the first to save!</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+                        </div>
+                        <div class=~~~col-sm-10~~~>
+                            <div class=~~~footer-social hover-iconsocial~~~>
+                                <span class=~~~title~~~>Stay Connected</span>
+                                <p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=~~~row middle-bottom~~~>
+                        <div class=~~~col-sm-6~~~>
+                            <div class=~~~footer-box~~~>
+                                <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+                                <div id=~~~footer-content-1~~~ class=~~~showhide~~~>
+                                    Although, today we’re even more excited to release our Wireframe Kit.
+                                    <div class=~~~footer-text~~~>Montergade 19 1140 Copenhagen, Denmark +45 878-xx-xx</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=~~~col-sm-18~~~>
+                            <div class=~~~row~~~>
+                                <div class=~~~col-sm-6~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+                                        <ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+                                            <li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+                                            <li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+                                            <li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+                                            <li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+                                            <li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=~~~col-sm-6~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+                                        <ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~#~~~>Returns Policy</a></li>
+                                            <li><a href=~~~#~~~>Product Recalls</a></li>
+                                            <li><a href=~~~#~~~>Int’l Customers</a></li>
+                                            <li><a href=~~~#~~~>Tax Exempt Program</a></li>
+                                            <li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+                                            <li><a href=~~~#~~~>Feedback</a></li>
+                                            <li class=~~~last~~~><a href=~~~#~~~>Store Pickup</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=~~~col-sm-6~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+                                        <ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+                                            <li><a href=~~~#~~~>Corporate</a></li>
+                                            <li><a href=~~~#~~~>Suppliers</a></li>
+                                            <li><a href=~~~#~~~>Careers</a></li>
+                                            <li><a href=~~~#~~~>The Digital Museum</a></li>
+                                            <li class=~~~last~~~><a href=~~~#~~~>Product Care Plans</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=~~~col-sm-6~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>In the spotlight</p>
+                                        <ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~#~~~>Grocery &amp; Gourmet</a></li>
+                                            <li><a href=~~~#~~~>Beverages</a></li>
+                                            <li><a href=~~~#~~~>Breakfast &amp; Cereal</a></li>
+                                            <li><a href=~~~#~~~>Meals</a></li>
+                                            <li><a href=~~~#~~~>Condiments</a></li>
+                                            <li class=~~~last~~~><a href=~~~#~~~>Canned Goods</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-bottom~~~>
+            <div class=~~~container~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-address~~~>
+                            <p>© 2018 Codazon Ltd. Trademarks and brands</p>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+footer-style-15,"Footer Style 15",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#080808~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#000000~~~,~~~footer_border~~~:~~~#494948~~~,~~~footer_bottom_background~~~:~~~#000000~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#ffcc00~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~16px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#cf111a~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #cf111a;\r\n@service-banner-title: #fff;\r\n@service-banner-hover-title: #f20030;\r\n@service-banner-text: #fff;\r\n@service-banner-hover-text: #f20030;\r\n@service-banner-icon: #cf111a;\r\n@service-banner-icon-border: #cf111a;\r\n@service-banner-hover-icon: #f20030;\r\n@service-banner-hover-icon-border: #f20030;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8e9b9c26~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-04.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-15~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style04~~~>
+<div class=~~~row~~~>
+<div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+<div class=~~~item-icon~~~><span class=~~~fa-tags fa~~~>&nbsp;</span></div>
+<div class=~~~item-text~~~>
+<p class=~~~item-title~~~>100+ brands</p>
+<p class=~~~item-sub-title~~~>Highest Quality</p>
+</div>
+</div>
+<div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+<div class=~~~item-icon~~~><span class=~~~fa-plane fa~~~>&nbsp;</span></div>
+<div class=~~~item-text~~~>
+<p class=~~~item-title~~~>Free Shipping</p>
+<p class=~~~item-sub-title~~~>Delivery within 2 days</p>
+</div>
+</div>
+<div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+<div class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></div>
+<div class=~~~item-text~~~>
+<p class=~~~item-title~~~>Customer Service</p>
+<p class=~~~item-sub-title~~~>Mail &amp; Telephone</p>
+</div>
+</div>
+<div class=~~~item col-md-6 col-sm-12 col-xs-12~~~>
+<div class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></div>
+<div class=~~~item-text~~~>
+<p class=~~~item-title~~~>100% Secured Payment</p>
+<p class=~~~item-sub-title~~~>We value your security</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-10 col-left~~~>
+<div class=~~~footer-logo~~~><a href=~~~{{store url=~~~~~~}}~~~> <img class=~~~footer-logo-img  cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/main-content-13/logo.png~~~}}~~~ alt=~~~Logo~~~> </a></div>
+</div>
+<div class=~~~col-sm-14 col-right~~~>
+<div class=~~~newsletter-content~~~><span class=~~~title~~~>Subscribe Us Now</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>
+<div class=~~~footer-text space-md~~~>Although, today we’re even more excited to release our Wireframe Kit. Montergade 19 1140 Copenhagen, Denmark +45 878-xx-xx</div>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>In the spotlight</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Grocery &amp; Gourmet</a></li>
+<li><a href=~~~#~~~>Beverages</a></li>
+<li><a href=~~~#~~~>Breakfast &amp; Cereal</a></li>
+<li><a href=~~~#~~~>Meals</a></li>
+<li><a href=~~~#~~~>Condiments</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-16,"Footer Style 16",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#f5f3ea~~~,~~~footer_bottom_background~~~:~~~#189eff~~~,~~~footer_font~~~:~~~12px~~~,~~~footer_hover_text~~~:~~~#1d71aa~~~,~~~footer_text~~~:~~~#b1b1b1~~~,~~~footer_text_normal~~~:~~~#000000~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#000000~~~,~~~footer_top_background~~~:~~~#ffffff~~~}",,footer-style-10,"{~~~version~~~:~~~62a1a8e9bf97f~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-02.less.css~~~],~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~.page-footer .footer-address {\r\n\tcolor: #ffffff;\r\n}~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-16~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style02 row~~~>
+<div class=~~~col-sm-18 col-xs-24~~~>
+<div class=~~~row~~~>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></p>
+<p>100% Secured</p>
+<p>Payment</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></p>
+<p>Customer Service</p>
+<p>Mail &amp; Telephone</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-exchange fa~~~>&nbsp;</span></p>
+<p>14 Days to Change</p>
+<p>Your Mind</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-thumbs-o-up fa~~~>&nbsp;</span></p>
+<p>Highest Quality</p>
+<p>Guarantee</p>
+</div>
+</div>
+</div>
+<div class=~~~item last col-sm-6 col-xs-24~~~>
+<p><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer/app01.png~~~}}~~~ alt=~~~cdz-alt~~~></a></p>
+<p><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer/app02.png~~~}}~~~ alt=~~~cdz-alt~~~></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-14~~~>
+<div class=~~~newsletter-content~~~><span class=~~~title~~~>Be the first to save!</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+<div class=~~~col-sm-10~~~>
+<div class=~~~footer-social hover-iconsocial~~~><span class=~~~title~~~>Stay Connected</span>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>Although, today we’re even more excited to release our Wireframe Kit.
+<div class=~~~footer-text~~~>Montergade 19 1140 Copenhagen, Denmark +45 878-xx-xx</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Feedback</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Store Pickup</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Product Care Plans</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>In the spotlight</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Grocery &amp; Gourmet</a></li>
+<li><a href=~~~#~~~>Beverages</a></li>
+<li><a href=~~~#~~~>Breakfast &amp; Cereal</a></li>
+<li><a href=~~~#~~~>Meals</a></li>
+<li><a href=~~~#~~~>Condiments</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Canned Goods</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-17,"Footer Style 17",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#f53867~~~,~~~footer_background_file~~~:null,~~~footer_background_image_option~~~:null,~~~footer_background_normal~~~:~~~#000000~~~,~~~footer_border~~~:~~~#f5f5f5~~~,~~~footer_bottom_background~~~:~~~#f53867~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#000000~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~16px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#e43560~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #cf111a;\r\n@service-banner-title: #000000;\r\n@service-banner-hover-title: #f53867;\r\n@service-banner-text: #999999;\r\n@service-banner-hover-text: #f53867;\r\n@service-banner-icon: #f53867;\r\n@service-banner-icon-border: #f53867;\r\n@service-banner-hover-icon: #f53867;\r\n@service-banner-hover-icon-border: #f53867;~~~,~~~custom_less_code~~~:null,~~~custom_css_code~~~:null,~~~version~~~:~~~62a1a8e9c5717~~~,~~~auto_detect_files~~~:[]}","<div class=~~~footer-style-17~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-6 col-left~~~>
+<div class=~~~footer-logo~~~><a href=~~~{{store url=~~~~~~}}~~~> <img class=~~~footer-logo-img  cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer_logo_white.png~~~}}~~~ alt=~~~Logo~~~> </a></div>
+</div>
+<div class=~~~col-sm-9 col-center~~~><span class=~~~fa fa-envelope-open fa-5x~~~>&nbsp;</span>
+<div class=~~~newsletter-title~~~ style=~~~display: inline-block;~~~><span class=~~~title link-block~~~>Subscribe Us</span><span class=~~~desc link-block~~~>Join The Community To Be Updates Firstly?</span></div>
+</div>
+<div class=~~~col-sm-9 col-right~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>
+<div class=~~~footer-text space-base~~~>Although, today we’re even more excited to release our Wireframe Kit.</div>
+<div class=~~~footer-text space-base~~~>Address : Cosmetics Store, United States</div>
+<div class=~~~footer-text space-base~~~>Call us: 1234567890</div>
+<div class=~~~footer-text space-base~~~>Email us: support@company.com</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Payment Method</p>
+<div id=~~~footer-content-5~~~ class=~~~footer-link showhide~~~>
+<div class=~~~footer-payment space-md~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<p class=~~~h5~~~>Follow Us</p>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-address text-center~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-18,"Footer Style 18",1,"<body>
+<referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+<referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+<move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#f8f8f8~~~,~~~footer_background_file~~~:null,~~~footer_background_image_option~~~:null,~~~footer_background_normal~~~:~~~#5d666f~~~,~~~footer_border~~~:~~~#000000~~~,~~~footer_bottom_background~~~:~~~#e1e1e1~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#fb840e~~~,~~~footer_text~~~:~~~#000000~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~30px~~~,~~~footer_title_text~~~:~~~#282828~~~,~~~footer_top_background~~~:~~~#f8f8f8~~~}",,footer-style-08,"{~~~version~~~:~~~62a1a8e9cac57~~~,~~~custom_variables~~~:null,~~~custom_less_code~~~:null,~~~custom_css_code~~~:null}","<div class=~~~footer-style-18 text-center~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~footer-social~~~>
+<p class=~~~social~~~><a href=~~~#~~~> <span class=~~~fa fa-facebook~~~> <!-- facebook--> </span> </a> <a href=~~~#~~~> <span class=~~~fa fa-twitter~~~> <!-- twitter --> </span> </a> <a href=~~~#~~~> <span class=~~~fa fa-pinterest-p~~~> <!-- pinterest --> </span> </a> <a href=~~~#~~~> <span class=~~~fa fa-instagram~~~> <!-- instagram --> </span> </a> <a href=~~~#~~~> <span class=~~~fa fa-snapchat-ghost~~~> <!-- snapchat --> </span> </a></p>
+</div>
+</div>
+<div class=~~~container~~~>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~row~~~>
+<div class=~~~col-xs-24 col-sm-16 col-sm-push-4 col-md-12 col-md-push-6~~~>
+<div class=~~~newsletter~~~>
+<p class=~~~newsletter-title~~~>subscribe to our Newsletter</p>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<p class=~~~des text-uppercase~~~>1 UK only; 2. Offar expiras 23:59(GMT) 10/02/16; 3. T&amp;C's apply</p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+<div class=~~~footer-payment~~~>Payment methods <img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+<div class=~~~footer-bottom~~~>
+<div class=~~~container~~~>
+<ul class=~~~bottom-links~~~>
+<li><a href=~~~#~~~>Shopping guide</a></li>
+<li><a href=~~~#~~~>Company</a></li>
+<li><a href=~~~#~~~>About us </a></li>
+<li><a href=~~~#~~~>Policies</a></li>
+<li><a href=~~~#~~~>Services Stores</a></li>
+<li><a href=~~~#~~~>Contact us</a></li>
+</ul>
+</div>
+</div>
+</div>"
+footer-style-19,"Footer Style 19",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#000000~~~,~~~footer_background_file~~~:null,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#282828~~~,~~~footer_bottom_background~~~:~~~#000000~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#bcbcbc~~~,~~~footer_text_normal~~~:~~~#303030~~~,~~~footer_title_font~~~:~~~16px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#000000~~~}",,,"{~~~version~~~:~~~62a1a8e9d00ff~~~,~~~custom_variables~~~:null,~~~custom_less_code~~~:null,~~~custom_css_code~~~:null}","<div class=~~~footer-style-19~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top text-center~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-logo~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer_logo_white.png~~~}}~~~></div>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store direct_url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store direct_url=''}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~#~~~>Orders and Returns</a></li>
+<li><a href=~~~#~~~>Our Sitemap</a></li>
+<li><a href=~~~#~~~>Latest News</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{store direct_url=~~~~~~}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Terms &amp; Conditions</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>OUR STORES</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Las Vegas</a></li>
+<li><a href=~~~#~~~>New York</a></li>
+<li><a href=~~~#~~~>London SF</a></li>
+<li><a href=~~~#~~~>Chicago</a></li>
+<li><a href=~~~#~~~>Cockfosters BP</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Los Angeles</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>FOOTER MENU</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Instagram profile</a></li>
+<li><a href=~~~#~~~>New Collection</a></li>
+<li><a href=~~~#~~~>Woman Dress</a></li>
+<li><a href=~~~#~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Privacy Policy</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Latest News</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>About Us</p>
+<div id=~~~footer-content-5~~~ class=~~~showhide space-base~~~>
+<ul class=~~~footer-link~~~>
+<li>Montergade 19, Copenhagen, Denmark</li>
+<li class=~~~last~~~>+45 878-xx-xx</li>
+</ul>
+</div>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-6~~~>Subscribe Us</p>
+<div id=~~~footer-content-6~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom text-center~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-20,"Footer Style 20",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#000000~~~,~~~footer_background_file~~~:null,~~~footer_background_image_option~~~:~~~0 0 no-repeat fixed~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#282828~~~,~~~footer_bottom_background~~~:~~~#000000~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#bcbcbc~~~,~~~footer_text_normal~~~:~~~#303030~~~,~~~footer_title_font~~~:~~~16px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#000000~~~}",,,"{~~~version~~~:~~~62a1a8e9d4ff4~~~,~~~custom_variables~~~:null,~~~custom_less_code~~~:null,~~~custom_css_code~~~:null}","<div class=~~~footer-style-20~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>About Us</p>
+<div id=~~~footer-content-5~~~ class=~~~showhide space-base~~~>
+<ul class=~~~footer-link~~~>
+<li>Montergade 19, Copenhagen, Denmark</li>
+<li class=~~~last~~~>+45 878-xx-xx</li>
+</ul>
+</div>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-6~~~>Subscribe Us</p>
+<div id=~~~footer-content-6~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store direct_url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store direct_url=''}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~#~~~>Orders and Returns</a></li>
+<li><a href=~~~#~~~>Our Sitemap</a></li>
+<li><a href=~~~#~~~>Latest News</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{store direct_url=~~~~~~}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Terms &amp; Conditions</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>OUR STORES</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Las Vegas</a></li>
+<li><a href=~~~#~~~>New York</a></li>
+<li><a href=~~~#~~~>London SF</a></li>
+<li><a href=~~~#~~~>Chicago</a></li>
+<li><a href=~~~#~~~>Cockfosters BP</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Los Angeles</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-4~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>FOOTER MENU</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Instagram profile</a></li>
+<li><a href=~~~#~~~>New Collection</a></li>
+<li><a href=~~~#~~~>Woman Dress</a></li>
+<li><a href=~~~#~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Privacy Policy</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Latest News</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom text-center~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-21,"Footer Style 21",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#2b2b2b~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#000000~~~,~~~footer_border~~~:~~~#434343~~~,~~~footer_bottom_background~~~:~~~#2b2b2b~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#e8a86e~~~,~~~footer_text~~~:~~~#8a8a8a~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~20px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#434343~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #cf111a;\r\n@service-banner-title: #000000;\r\n@service-banner-hover-title: #f53867;\r\n@service-banner-text: #999999;\r\n@service-banner-hover-text: #f53867;\r\n@service-banner-icon: #f53867;\r\n@service-banner-icon-border: #f53867;\r\n@service-banner-hover-icon: #f53867;\r\n@service-banner-hover-icon-border: #f53867;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8e9da308~~~}","<div class=~~~footer-style-21~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-6 col-left~~~>
+<div class=~~~footer-logo~~~><a href=~~~{{store url=~~~~~~}}~~~> <img class=~~~footer-logo-img  cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer_logo_white.png~~~}}~~~ alt=~~~Logo~~~> </a></div>
+</div>
+<div class=~~~col-sm-9 col-center~~~><span class=~~~fa fa-envelope-open fa-5x~~~>&nbsp;</span>
+<div class=~~~newsletter-title~~~ style=~~~display: inline-block;~~~><span class=~~~title link-block~~~>Subscribe Us</span><span class=~~~desc link-block~~~>Join The Community To Be Updates Firstly?</span></div>
+</div>
+<div class=~~~col-sm-9 col-right~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>
+<div class=~~~footer-text space-base~~~>Although, today we’re even more excited to release our Wireframe Kit.</div>
+<div class=~~~footer-text space-base~~~>Address : Cosmetics Store, United States</div>
+<div class=~~~footer-text space-base~~~>Call us: 1234567890</div>
+<div class=~~~footer-text space-base~~~>Email us: support@company.com</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Payment Method</p>
+<div id=~~~footer-content-5~~~ class=~~~footer-link showhide~~~>
+<div class=~~~footer-payment space-md~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<p class=~~~h5~~~>Follow Us</p>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-address text-center~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-22,"Footer Style 22",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#e2e2e2~~~,~~~footer_bottom_background~~~:~~~#222222~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#ed3f46~~~,~~~footer_text~~~:~~~#b1b1b1~~~,~~~footer_text_normal~~~:~~~#cccccc~~~,~~~footer_title_font~~~:~~~15px~~~,~~~footer_title_text~~~:~~~#222222~~~,~~~footer_top_background~~~:~~~#ffffff~~~}",,footer-style-10,"{~~~version~~~:~~~62a1a8e9df5f4~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-02.less.css~~~],~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~.page-footer .footer-address {\r\n\tcolor: #ffffff;\r\n}~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-22~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style02 row~~~>
+<div class=~~~col-sm-18 col-xs-24~~~>
+<div class=~~~row~~~>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></p>
+<h4>100% Secured</h4>
+<p>Payment</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></p>
+<h4>Customer Service</h4>
+<p>Mail &amp; Telephone</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-exchange fa~~~>&nbsp;</span></p>
+<h4>14 Days to Change</h4>
+<p>Your Mind</p>
+</div>
+<div class=~~~item col-sm-6 col-xs-12~~~>
+<p class=~~~item-icon~~~><span class=~~~fa-thumbs-o-up fa~~~>&nbsp;</span></p>
+<h4>Highest Quality</h4>
+<p>Guarantee</p>
+</div>
+</div>
+</div>
+<div class=~~~item last col-sm-6 col-xs-24~~~>
+<p><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer/app01.png~~~}}~~~ alt=~~~cdz-alt~~~></a></p>
+<p><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer/app02.png~~~}}~~~ alt=~~~cdz-alt~~~></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-14~~~>
+<div class=~~~newsletter-content~~~><span class=~~~title~~~>Be the first to save!</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+<div class=~~~col-sm-10~~~>
+<div class=~~~footer-social hover-iconsocial~~~><span class=~~~title~~~>Stay Connected</span>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>Although, today we’re even more excited to release our Wireframe Kit.
+<div class=~~~footer-text~~~>Montergade 19 1140 Copenhagen, Denmark</div>
+<div class=~~~footer-text~~~><a href=~~~tel:+1 48781080773~~~>+1 48781080773</a></div>
+<div class=~~~footer-text~~~>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Feedback</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Store Pickup</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Product Care Plans</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>In the spotlight</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Grocery &amp; Gourmet</a></li>
+<li><a href=~~~#~~~>Beverages</a></li>
+<li><a href=~~~#~~~>Breakfast &amp; Cereal</a></li>
+<li><a href=~~~#~~~>Meals</a></li>
+<li><a href=~~~#~~~>Condiments</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Canned Goods</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~middle-bottom02~~~>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Electronics:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>TV Televisions</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Air Conditioners</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Washing Machines</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Audio &amp; Theaters</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Office Electronics</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>Headphones &amp; Speakers</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Sport &amp; Outdoor:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Exercise &amp; Fitness</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Outdoor Recreation</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Cycling Equipment</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Hunting &amp; Fishing</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Airsoft &amp; Paintball</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>Sports Medicine</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Baby &amp; Kids:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Kids' Electronics</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Girls' Fashion</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Boys' Fashion</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Babies' Fashion</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Building Toys</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>LEGO</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Healthy &amp; Beauty:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Makeup Set</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Tools &amp; Accessories</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Tanning and Suncare</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Personal Care</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Mens' Fragrance</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>Womens' Fragrance</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Fashion:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Shoes</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Watches</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Men's clothing</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Women's clothing</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Hats &amp; Bags</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>Accessories</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~nav-footer~~~>
+<p class=~~~nav-footer-title~~~>Home, Furniture &amp; Garden:</p>
+<div class=~~~nav-footer-content~~~>
+<ul class=~~~items nav-links hover-link01~~~>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Cookware</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Decoration</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Furniture</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Garden Tools</a></li>
+<li class=~~~nav-link~~~><a href=~~~#~~~>Garden Equipments</a></li>
+<li class=~~~nav-link last~~~><a href=~~~#~~~>Powers And Hand Tools</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-23,"Footer Style 23",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#1c1c1e~~~,~~~footer_background_file~~~:~~~\/b\/k\/bkg-footer1.png~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat~~~,~~~footer_background_normal~~~:~~~#ffb700~~~,~~~footer_border~~~:~~~#bdbdbd~~~,~~~footer_bottom_background~~~:~~~#101010~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#ffb700~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~#ffb700~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #ffb700;\r\n@service-banner-title: #000000;\r\n@service-banner-hover-title: #000000;\r\n@service-banner-text: #000000;\r\n@service-banner-hover-text: #000000;\r\n@service-banner-icon: #000000;\r\n@service-banner-hover-icon: #000000;\r\n@service-banner-icon-border: #ffb700;\r\n@service-banner-hover-icon-border: #ffb700;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8e9e539c~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-01.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-23~~~>
+<div class=~~~container-fluid footer-top~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style01 row~~~>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-truck~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Free Shipping</strong></a>
+<p>On every order, every day!</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-lock~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Secure Payment</strong></a>
+<p>We value your security</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-money~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Money Back Guarantee</strong></a>
+<p>30 days money back guarantee</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-refresh~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Easy return</strong></a>
+<p>30 days return</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~container-fluid footer-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box-1~~~>
+<div class=~~~footer-logo~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer_logo_white.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<ul class=~~~footer-link~~~>
+<li>Montergade 19 1140</li>
+<li>Copenhagen, Denmark</li>
+</ul>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-5~~~>Need help? / Quick contacts</p>
+<ul id=~~~footer-content-5~~~ class=~~~footer-link showhide hover-link01~~~>
+<li class=~~~phone~~~><span class=~~~fa fa-phone~~~>&nbsp;</span>0123 456 789</li>
+<li>Monday - Friday: 9:00 - 20:00</li>
+<li style=~~~margin-bottom: 20px;~~~>Saturday: 10:00 - 15:00</li>
+</ul>
+</div>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Subscribe Us</p>
+<div id=~~~footer-content-4~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~container-fluid footer-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-24,"Footer Style 24",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#353535~~~,~~~footer_background_file~~~:~~~\/b\/g\/bg-footer_1.jpg~~~,~~~footer_background_image_option~~~:~~~center center no-repeat~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#ffffff~~~,~~~footer_bottom_background~~~:~~~#414b56~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffffff~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#131210~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,footer-style-11,"{~~~version~~~:~~~62a1a8e9eacb0~~~,~~~custom_variables~~~:~~~@service-banner-text-01:  #000000;\r\n@service-banner-hover-text-01: #727171;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-01.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-11~~~>
+<div class=~~~container-fluid before-main-footer~~~ style=~~~background-color: #f6f7f9;~~~>
+<div class=~~~container~~~>
+<div class=~~~service-banner-style01 row~~~>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-truck~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Free Shipping</strong></a>
+<p>On every order, every day!</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-lock~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Secure Payment</strong></a>
+<p>We value your security</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-money~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>Money Back Guarantee</strong></a>
+<p>30 days money back guarantee</p>
+</div>
+</div>
+<div class=~~~item col-xs-12 col-sm-6~~~>
+<div class=~~~item-icon fa fa-phone~~~>&nbsp;</div>
+<div class=~~~item-content~~~><a href=~~~#~~~><strong>24/7 Customer Service</strong></a>
+<p>Support number (0123) 123 456</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~container-fluid footer-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+<li><a href=~~~#~~~>Returns</a></li>
+<li><a href=~~~#~~~>Order History</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Contact Us</p>
+<div id=~~~footer-content-3~~~ class=~~~showhide~~~>
+<ul class=~~~footer-link~~~>
+<li>Montergade 19 1140</li>
+<li>Copenhagen, Denmark</li>
+<li class=~~~last~~~>+45 878-xx-xx</li>
+</ul>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~newsletter footer-box~~~>
+<p class=~~~newsletter-title h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Subscribe Us</p>
+<div id=~~~footer-content-4~~~ class=~~~showhide~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<div class=~~~footer-address~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-25,"Footer Style 25",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#f6f7f9~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~center bottom no-repeat~~~,~~~footer_background_normal~~~:~~~#eaeaea~~~,~~~footer_border~~~:~~~#f5f3ea~~~,~~~footer_bottom_background~~~:~~~#eaeaea~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#ffb21e~~~,~~~footer_text~~~:~~~#121212~~~,~~~footer_text_normal~~~:~~~#a7a7a7~~~,~~~footer_title_font~~~:~~~16px~~~,~~~footer_title_text~~~:~~~#000000~~~,~~~footer_top_background~~~:~~~#eaeaea~~~}",,,"{~~~version~~~:~~~62a1a8e9f0b3e~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-06.less.css~~~,~~~_pe-icon-7-stroke.less.css~~~],~~~custom_variables~~~:~~~@service-style06-background: #125430;\r\n@service-style06-icon-background: #fc0;\r\n@service-style06-icon-text: #fff;\r\n@service-style06-text: #fff;\r\n@service-style06-icon-hover-background: #fc0;\r\n@service-style06-icon-hover-text: #121212;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-25 container-fluid~~~>
+    <div class=~~~main-footer~~~>
+        <div class=~~~service-banner-style06~~~>
+            <div class=~~~container~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~item col-sm-6 col-xs-12~~~>
+                        <p class=~~~item-icon~~~><span class=~~~fa-lock fa~~~>&nbsp;</span></p>
+                        <div class=~~~service-desc~~~>
+                            <p class=~~~service-subtitle~~~>100% Secured</p>
+                            <p>Payment</p>
+                        </div>
+                    </div>
+                    <div class=~~~item col-sm-6 col-xs-12~~~>
+                        <p class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></p>
+                        <div class=~~~service-desc~~~>
+                            <p class=~~~service-subtitle~~~>Customer Service</p>
+                            <p>Mail &amp; Telephone</p>
+                        </div>
+                    </div>
+                    <div class=~~~item col-sm-6 col-xs-12~~~>
+                        <p class=~~~item-icon~~~><span class=~~~fa-exchange fa~~~>&nbsp;</span></p>
+                        <div class=~~~service-desc~~~>
+                            <p class=~~~service-subtitle~~~>14 Days to Change</p>
+                            <p>Your Mind</p>
+                        </div>
+                    </div>
+                    <div class=~~~item col-sm-6 col-xs-12~~~>
+                        <p class=~~~item-icon~~~><span class=~~~fa-thumbs-o-up fa~~~>&nbsp;</span></p>
+                        <div class=~~~service-desc~~~>
+                            <p class=~~~service-subtitle~~~>Highest Quality</p>
+                            <p>Guarantee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-middle~~~>
+            <div class=~~~container~~~>
+                <div class=~~~footer content~~~>
+                    <div class=~~~row middle-top~~~>
+                        <div class=~~~col-sm-6~~~>
+                            <div class=~~~footer-box-1~~~>
+                                <div class=~~~footer-logo~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer_logo.jpg~~~}}~~~ alt=~~~Accept Payment~~~></div>
+                                <ul class=~~~footer-link~~~>
+                                    <li class=~~~f-address~~~><span class=~~~pe-7s-map-marker~~~>&nbsp;</span>Montergade 19 1140, Copenhagen, Denmark</li>
+                                    <li class=~~~f-phone~~~><span class=~~~pe-7s-call~~~>&nbsp;</span><a href=~~~tel:+1123 456 xxx~~~>+123 456 xxx</a></li>
+                                    <li class=~~~f-email~~~><span class=~~~pe-7s-mail-open~~~>&nbsp;</span>codazon@gmail.com</li>
+                                    <li class=~~~f-time~~~><span class=~~~pe-7s-timer~~~>&nbsp;</span>Week 7 days from 7:00 to 20:00</li>
+                                </ul>
+                                <div class=~~~footer-social~~~>
+                                    <p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=~~~col-sm-6~~~>
+                            <div class=~~~footer-box~~~>
+                                <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+                                <ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+                                    <li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+                                    <li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+                                    <li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+                                    <li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+                                    <li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+                                    <li><a href=~~~{{store url='blog'}}~~~>Lastest New</a></li>
+                                    <li><a href=~~~{{store url='contact'}}~~~>Out Sitemap</a></li>
+                                    <li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=~~~col-sm-6~~~>
+                            <div class=~~~footer-box~~~>
+                                <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Suport</p>
+                                <ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+                                    <li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+                                    <li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+                                    <li><a href=~~~#~~~>Instagram profile</a></li>
+                                    <li><a href=~~~#~~~>Returns</a></li>
+                                    <li><a href=~~~#~~~>Privacy Policy</a></li>
+                                    <li><a href=~~~#~~~>Terms &amp; Conditions</a></li>
+                                    <li><a href=~~~#~~~>Order History</a></li>
+                                    <li class=~~~last~~~><a href=~~~#~~~>Sample Links</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class=~~~col-sm-6~~~>
+                            <div class=~~~footer-box bg-box~~~>
+                                <div class=~~~footer-app~~~>
+                                    <p class=~~~app-title h5~~~>Download App</p>
+                                    <div class=~~~footer-app-store~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer-img-02.jpg~~~}}~~~ alt=~~~Codazon_alt~~~> </a> <a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer-img-01.jpg~~~}}~~~ alt=~~~Codazon_alt~~~> </a></div>
+                                </div>
+                                <div class=~~~newsletter~~~>
+                                    <p class=~~~newsletter-title h5~~~>Subscribe Us</p>
+                                    <div>
+                                        <div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=~~~ middle-bottom nav-footer-content text-center~~~>
+                        <ul class=~~~items nav-links hover-link01~~~>
+                            <li class=~~~nav-link~~~><a href=~~~#~~~>Search</a> <a href=~~~#~~~>Blog</a> <a href=~~~#~~~>Products</a> <a href=~~~#~~~>Faq</a> <a href=~~~#~~~>Lookbook</a> <a href=~~~#~~~>Portfolio</a> <a href=~~~#~~~>Categories</a></li>
+                            <li class=~~~nav-link~~~><a href=~~~#~~~>Contact</a> <a href=~~~#~~~>About Us</a> <a href=~~~#~~~>Wishlist</a> <a href=~~~#~~~>Login</a> <a href=~~~#~~~>Create Account</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-bottom~~~>
+            <div class=~~~container~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-address~~~>
+                            <p>© 2021 Codazon Ltd. Trademarks and brands</p>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+footer-style-26,"Footer Style 26",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#FFFFFF~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#000000~~~,~~~footer_border~~~:~~~#eeeeee~~~,~~~footer_bottom_background~~~:~~~#f5f5f5~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#e2a661~~~,~~~footer_text~~~:~~~#666666~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~18px~~~,~~~footer_title_text~~~:~~~#111111~~~,~~~footer_top_background~~~:~~~#222222~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-background: #cf111a;\r\n@service-banner-title: #000000;\r\n@service-banner-hover-title: #f53867;\r\n@service-banner-text: #999999;\r\n@service-banner-hover-text: #f53867;\r\n@service-banner-icon: #f53867;\r\n@service-banner-icon-border: #f53867;\r\n@service-banner-hover-icon: #f53867;\r\n@service-banner-hover-icon-border: #f53867;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8ea04dd9~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-01.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-26~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row footer-top-inner~~~>
+<div class=~~~col-sm-24 col-md-12 col-center~~~><span class=~~~fa fa-envelope-open fa-5x~~~>&nbsp;</span>
+<div class=~~~newsletter-title~~~ style=~~~display: inline-block;~~~><span class=~~~title link-block~~~>Subscribe Us &amp; get up to 30% OFF</span><span class=~~~desc link-block~~~>Join The Community To Be Updates Firstly?</span></div>
+</div>
+<div class=~~~col-sm-24 col-md-12 col-right~~~>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~middle-top~~~>
+<div class=~~~service-banner-style01 row~~~>
+<div class=~~~item col-sm-8~~~>
+<div class=~~~item-icon fa fa-truck~~~>&nbsp;</div>
+<div class=~~~item-content~~~>Free Shipping over $100</div>
+</div>
+<div class=~~~item col-sm-8~~~>
+<div class=~~~item-icon fa fa-lock~~~>&nbsp;</div>
+<div class=~~~item-content~~~>All payment secured and trusted</div>
+</div>
+<div class=~~~item col-sm-8~~~>
+<div class=~~~item-icon fa fa-money~~~>&nbsp;</div>
+<div class=~~~item-content~~~>25 days money back guarantee</div>
+</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+<div id=~~~footer-content-1~~~ class=~~~showhide~~~>
+<div class=~~~footer-text space-base~~~>Although, today we’re even more excited to release our Wireframe Kit.</div>
+<div class=~~~footer-text space-base~~~>Address : Cosmetics Store, United States</div>
+<div class=~~~footer-text space-base~~~>Call us: 1234567890</div>
+<div class=~~~footer-text space-base~~~>Email us: support@company.com</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Codazon.com</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Customer Service</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Returns Policy</a></li>
+<li><a href=~~~#~~~>Product Recalls</a></li>
+<li><a href=~~~#~~~>Int’l Customers</a></li>
+<li><a href=~~~#~~~>Tax Exempt Program</a></li>
+<li><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+<li><a href=~~~#~~~>Careers</a></li>
+<li><a href=~~~#~~~>The Digital Museum</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-address text-center~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-27,"Footer Style 27",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#ffffff~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~center bottom no-repeat~~~,~~~footer_background_normal~~~:~~~#f4f4f4~~~,~~~footer_border~~~:~~~#e7e7e7~~~,~~~footer_bottom_background~~~:~~~#ffffff~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#60c5ba~~~,~~~footer_text~~~:~~~#a8a8a8~~~,~~~footer_text_normal~~~:~~~#bcbcbc~~~,~~~footer_title_font~~~:~~~15px~~~,~~~footer_title_text~~~:~~~#000000~~~,~~~footer_top_background~~~:~~~#ffffff~~~}",,,"{~~~version~~~:~~~62a1a8ea0a6fa~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-06.less.css~~~],~~~custom_variables~~~:~~~@service-style06-background: #ffffff;\r\n@service-style06-icon-background: #f4f4f4;\r\n@service-style06-icon-text: #777;\r\n@service-style06-text: #777;\r\n@service-style06-icon-hover-background: #60c5ba;\r\n@service-style06-icon-hover-text: #ffffff;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-27~~~>
+    <div class=~~~main-footer~~~>
+        <div class=~~~container~~~>
+            <div class=~~~service-banner-style06~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-sm-24 col-xs-24~~~>
+                        <div class=~~~row~~~>
+                            <div class=~~~item col-md-8 col-sm-24~~~>
+                                <p class=~~~item-icon~~~><span class=~~~fa fa-credit-card~~~>&nbsp;</span></p>
+                                <div class=~~~service-desc~~~>
+                                    <p class=~~~service-subtitle~~~>SECURED PAYMENT</p>
+                                    <p class=~~~service-title h5~~~>100% Secured</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class=~~~item col-md-8 col-sm-24~~~>
+                                <p class=~~~item-icon~~~><span class=~~~fa-phone fa~~~>&nbsp;</span></p>
+                                <div class=~~~service-desc~~~>
+                                    <p class=~~~service-subtitle~~~>CUSTOMER SUPPORT</p>
+                                    <p class=~~~service-title h5~~~>Mail &amp; Telephone</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                            <div class=~~~item col-md-8 col-sm-24~~~>
+                                <p class=~~~item-icon~~~><span class=~~~fa-exchange fa~~~>&nbsp;</span></p>
+                                <div class=~~~service-desc~~~>
+                                    <p class=~~~service-subtitle~~~>RETURNS</p>
+                                    <p class=~~~service-title h5~~~>Easy &amp; Free</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-middle~~~>
+            <div class=~~~container~~~>
+                <div class=~~~footer content~~~>
+                    <div class=~~~row middle-top~~~>
+                        <div class=~~~col-md-6 col-sm-12~~~>
+                            <div class=~~~footer-box-1~~~>
+                                <ul class=~~~footer-link~~~>
+                                    <li class=~~~f-address~~~><span class=~~~fa fa-2x fa-map-marker~~~>&nbsp;</span>Address 1: 69645 Owen Points, South Janelle, Bilzen 97502</li>
+                                    <li class=~~~f-address~~~><span class=~~~fa fa-2x fa-map-marker~~~>&nbsp;</span>Address 2: 533 Legros Spur, Port Oswaldtown, Bilzen 89625</li>
+                                    <li class=~~~f-email~~~>
+                                        <span class=~~~text-uppercase~~~>Email: </span>
+                                        <p>codazon@gmail.com</p>
+                                    </li>
+                                    <li class=~~~f-time~~~>
+                                        <span class=~~~text-uppercase~~~>Working Days / Hours: </span>
+                                        <p>Mon - Sat / 9:00 - 18:00</p>
+                                    </li>
+                                    <li class=~~~f-phone~~~><a href=~~~tel:+1123 456 xxx~~~>(123) 456 xxxx</a></li>
+                                </ul>
+                                <div class=~~~footer-social space-mobile~~~>
+                                    <p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=~~~col-md-18 col-sm-12~~~>
+                            <div class=~~~row~~~>
+                                <div class=~~~col-sm-24~~~>
+                                    <div class=~~~newsletter-wrapper footer-box~~~>
+                                        <p class=~~~newsletter-title h5~~~>Subscribe Us</p>
+                                        <div class=~~~newsletter-content row flex-grid~~~>
+                                            <div class=~~~newsletter-content-left col-md-12 col-sm-24~~~>
+                                                <p class=~~~newsletter-desc~~~>Get all the latest information on Events, Sales and Offers. Sign up for newsletter today.</p>
+                                            </div>
+                                            <div class=~~~newsletter-content-left newsletter-desc col-md-12 col-sm-24~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=~~~col-md-8 col-sm-24~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>About shop</p>
+                                        <ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li>Finding everything lifestyle related – fashion, beauty, home decor and more.</li>
+                                            <li>Want to stay in touch?</li>
+                                            <li class=~~~last~~~>No problem – our page also features useful links to social media pages, as well as online shop.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=~~~col-md-8 col-sm-24~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+                                        <ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy Policy</a></li>
+                                            <li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+                                            <li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+                                            <li><a href=~~~{{store url='sales/guest/form'}}~~~>Returns</a></li>
+                                            <li class=~~~last~~~><a href=~~~{{store url='contact'}}~~~>Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class=~~~col-md-8 col-sm-24~~~>
+                                    <div class=~~~footer-box~~~>
+                                        <p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Customer Service</p>
+                                        <ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+                                            <li><a href=~~~#~~~>Help &amp; FAQs</a></li>
+                                            <li><a href=~~~#~~~>Returns</a></li>
+                                            <li><a href=~~~#~~~>Privacy Policy</a></li>
+                                            <li><a href=~~~#~~~>Terms &amp; Conditions</a></li>
+                                            <li><a href=~~~#~~~>Order History</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=~~~footer-content-bottom~~~>
+            <div class=~~~container~~~>
+                <div class=~~~row~~~>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-address~~~>
+                            <p>© 2021 Codazon Ltd. Trademarks and brands</p>
+                        </div>
+                    </div>
+                    <div class=~~~col-sm-12~~~>
+                        <div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>"
+footer-style-28,"Footer Style 28",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~transparent~~~,~~~footer_background_file~~~:~~~\/b\/g\/bg-footer_2.jpg~~~,~~~footer_background_image_option~~~:~~~center bottom no-repeat~~~,~~~footer_background_normal~~~:~~~#ffffff~~~,~~~footer_border~~~:~~~#3a3a3a~~~,~~~footer_bottom_background~~~:~~~transparent~~~,~~~footer_font~~~:~~~14px~~~,~~~footer_hover_text~~~:~~~#c26431~~~,~~~footer_text~~~:~~~#ffffff~~~,~~~footer_text_normal~~~:~~~#121212~~~,~~~footer_title_font~~~:~~~18px~~~,~~~footer_title_text~~~:~~~#ffffff~~~,~~~footer_top_background~~~:~~~transparent~~~}",,,"{~~~version~~~:~~~62a1a8ea100da~~~,~~~auto_detect_files~~~:[~~~_pe-icon-7-stroke.less.css~~~],~~~custom_variables~~~:~~~@service-style06-background: #125430;\r\n@service-style06-icon-background: #fc0;\r\n@service-style06-icon-text: #fff;\r\n@service-style06-text: #fff;\r\n@service-style06-icon-hover-background: #fc0;\r\n@service-style06-icon-hover-text: #121212;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~flexible_less~~~:[]}","<div class=~~~footer-style-28~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-middle text-center~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~row middle-top~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~ footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Contact</p>
+<div class=~~~footer-content-1~~~>
+<ul class=~~~footer-link~~~>
+<li class=~~~f-address~~~><span class=~~~pe-7s-map-marker~~~>&nbsp;</span>Montergade 19 1140, Copenhagen, Denmark</li>
+<li class=~~~f-phone~~~><span class=~~~pe-7s-call~~~>&nbsp;</span><a href=~~~tel:+1123 456 xxx~~~>+123 456 xxx</a></li>
+<li class=~~~f-email~~~><span class=~~~pe-7s-mail-open~~~>&nbsp;</span>codazon@gmail.com</li>
+<li class=~~~f-time~~~><span class=~~~pe-7s-timer~~~>&nbsp;</span>Week 7 days from 7:00 to 20:00</li>
+</ul>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box footer-box-line~~~>
+<div class=~~~footer-logo~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer_logo_white.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+</div>
+</div>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box bg-box~~~>
+<div class=~~~newsletter~~~>
+<p class=~~~newsletter-title h5~~~>Subscribe Us</p>
+<div>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+<div class=~~~footer-app~~~>
+<p class=~~~app-title h5~~~>Download App</p>
+<div class=~~~footer-app-store~~~><a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer-img-02.jpg~~~}}~~~ alt=~~~Codazon_alt~~~> </a> <a href=~~~#~~~><img src=~~~{{media url=~~~wysiwyg/codazon/footer-img-01.jpg~~~}}~~~ alt=~~~Codazon_alt~~~> </a></div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~ middle-bottom nav-footer-content text-center~~~>
+<div class=~~~footer-social~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a> <a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2021 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-29,"Footer Style 29",1,"<body>
+    <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ />
+    <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ />
+    <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ />
+</body>","{~~~footer_background~~~:~~~#FFFFFF~~~,~~~footer_background_file~~~:~~~\/b\/k\/bkg-newsletter_1.jpg~~~,~~~footer_background_image_option~~~:~~~0 0 no-repeat~~~,~~~footer_background_normal~~~:~~~#0c648c~~~,~~~footer_border~~~:~~~#e7eaf0~~~,~~~footer_bottom_background~~~:~~~#ffffff~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#1282cc~~~,~~~footer_text~~~:~~~#0c648c~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~14px~~~,~~~footer_title_text~~~:~~~#023247~~~,~~~footer_top_background~~~:~~~#0c648c~~~}",,,"{~~~custom_variables~~~:~~~@service-banner-text-01: #0c648c;~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~,~~~version~~~:~~~62a1a8ea17ece~~~,~~~auto_detect_files~~~:[~~~service\/_service-block-01.less.css~~~],~~~flexible_less~~~:[]}","<div class=~~~footer-style-29~~~>
+<div class=~~~main-footer~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-top-inner col-sm-16 col-md-10~~~>
+<div class=~~~newsletter-title~~~><span class=~~~title link-block~~~>Subscribe Us &amp; Get 20% Off</span><span class=~~~desc link-block~~~>Sign up to receive the latest news and promotions</span></div>
+<div class=~~~newsletter-content~~~>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~footer content~~~>
+<div class=~~~middle-top~~~>
+<div class=~~~service-banner-style01 row~~~>
+<div class=~~~item col-sm-6~~~>
+<div class=~~~item-icon fa fa-truck~~~>&nbsp;</div>
+<div class=~~~item-content~~~>
+<p><strong>Free Shipping</strong></p>
+<p>On every order, every day!</p>
+</div>
+</div>
+<div class=~~~item col-sm-6~~~>
+<div class=~~~item-icon fa fa-lock~~~>&nbsp;</div>
+<div class=~~~item-content~~~>
+<p><strong>Secure Payment</strong></p>
+<p>We value your security</p>
+</div>
+</div>
+<div class=~~~item col-sm-6~~~>
+<div class=~~~item-icon fa fa-money~~~>&nbsp;</div>
+<div class=~~~item-content~~~>
+<p><strong>Money Back Guarantee</strong></p>
+<p>30 days money back guarantee</p>
+</div>
+</div>
+<div class=~~~item col-sm-6~~~>
+<div class=~~~item-icon fa fa-phone~~~>&nbsp;</div>
+<div class=~~~item-content~~~>
+<p><strong>24/7 Customer Service</strong></p>
+<p>Dedicated 24/7 support</p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~row middle-bottom~~~>
+<div class=~~~col-sm-8~~~>
+<div class=~~~footer-box contact-info~~~>
+<div id=~~~footer-content-1~~~>
+<div class=~~~footer-about-us space-base~~~>
+<p><strong>INFINIT HEATHY CARE</strong> are available around-the-clock in the event of a health emergency. Have peace of mind as life changes.</p>
+<p>Established since 1992. Global insurance experts. Affordable flexible plans.</p>
+</div>
+<div class=~~~footer-text address space-base~~~><span class=~~~fa fa-map-marker~~~>&nbsp;</span>Address: 156x North Main St, Washington, IL 61571, United States</div>
+<div class=~~~footer-text email space-base~~~><span class=~~~fa fa-envelope~~~>&nbsp;</span>Email: support@company.com</div>
+<div class=~~~footer-text phone space-base~~~><span class=~~~fa fa-phone~~~>&nbsp;</span>Number 1: (123) 456 78xx <br>Number 2: (354) 194 48xx</div>
+<div class=~~~footer-social hover-iconsocial~~~>
+<p class=~~~social~~~><a href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-square~~~>pinterest</span></a><a href=~~~#~~~><span class=~~~fa fa-linkedin~~~>linkedin</span></a> <a href=~~~#~~~><span class=~~~fa fa-youtube-play~~~>youtube-play</span></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-push-1 col-sm-10~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Top Categories</p>
+<div id=~~~footer-content-2~~~ class=~~~row footer-link showhide hover-link01~~~>
+<div class=~~~col-sm-12~~~>
+<ul class=~~~footer-link~~~>
+<li><a href=~~~#~~~>Family Tests</a></li>
+<li><a href=~~~#~~~>Feminine Care</a></li>
+<li><a href=~~~#~~~>Menopause</a></li>
+<li><a href=~~~#~~~>Menstrual Pain</a></li>
+<li><a href=~~~#~~~>Prenatal Vitamins</a></li>
+<li><a href=~~~#~~~>Infection Treatments</a></li>
+<li><a href=~~~#~~~>Blood Glucose</a></li>
+<li><a href=~~~#~~~>Insulin Injectors</a></li>
+</ul>
+</div>
+<div class=~~~col-sm-12~~~>
+<ul class=~~~footer-link~~~>
+<li><a href=~~~#~~~>Alternative Medicine</a></li>
+<li><a href=~~~#~~~>Diabetes Care</a></li>
+<li><a href=~~~#~~~>Ear Care</a></li>
+<li><a href=~~~#~~~>Eye Health</a></li>
+<li><a href=~~~#~~~>Feminine Care</a></li>
+<li><a href=~~~#~~~>First Aid</a></li>
+<li><a href=~~~#~~~>Foot Health</a></li>
+<li><a href=~~~#~~~>Women's Health</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-push-1 col-sm-5~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-4~~~>Get to know us</p>
+<ul id=~~~footer-content-4~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='privacy-policy-cookie-restriction-mode'}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{store url='about-us'}}~~~>About Us</a></li>
+<li><a href=~~~{{store url='search/term/popular'}}~~~>Search Terms</a></li>
+<li><a href=~~~{{store url='catalogsearch/advanced'}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{store url='sales/guest/form'}}~~~>Orders and Returns</a></li>
+<li><a href=~~~#~~~>Corporate</a></li>
+<li><a href=~~~#~~~>Suppliers</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom text-center~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-24~~~>
+<ul class=~~~bottom-links~~~>
+<li><a href=~~~#~~~>Shopping guide</a></li>
+<li><a href=~~~#~~~>Company</a></li>
+<li><a href=~~~#~~~>About us </a></li>
+<li><a href=~~~#~~~>Policies</a></li>
+<li><a href=~~~#~~~>Services Stores</a></li>
+<li><a href=~~~#~~~>Contact us</a></li>
+</ul>
+</div>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-payment~~~><img class=~~~img-responsive cdz-lazy~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+<div class=~~~col-sm-24~~~>
+<div class=~~~footer-address text-center~~~>
+<p>© 2018 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"
+footer-style-30,"Footer Style 30",1,"<body> <referenceBlock name=~~~footer_links~~~ remove=~~~true~~~ /> <referenceBlock name=~~~copyright~~~ remove=~~~true~~~ /> <referenceBlock name=~~~report.bugs~~~ remove=~~~true~~~ /> <referenceBlock name=~~~form.subscribe~~~ remove=~~~true~~~ /> <move element=~~~theme-layout-footer~~~ destination=~~~footer-container~~~ /> </body>","{~~~footer_background~~~:~~~#fcf4eb~~~,~~~footer_background_file~~~:~~~~~~,~~~footer_background_image_option~~~:~~~~~~,~~~footer_background_normal~~~:~~~#c20f3a~~~,~~~footer_border~~~:~~~#a1052a~~~,~~~footer_bottom_background~~~:~~~#ffffff~~~,~~~footer_font~~~:~~~13px~~~,~~~footer_hover_text~~~:~~~#ed174a~~~,~~~footer_text~~~:~~~#121212~~~,~~~footer_text_normal~~~:~~~#ffffff~~~,~~~footer_title_font~~~:~~~18px~~~,~~~footer_title_text~~~:~~~#282828~~~,~~~footer_top_background~~~:~~~#ed174a~~~}",,,"{~~~version~~~:~~~62a1a8ea1d890~~~,~~~custom_variables~~~:~~~~~~,~~~custom_less_code~~~:~~~~~~,~~~custom_css_code~~~:~~~~~~}","<div class=~~~footer-style-30~~~>
+<div class=~~~footer content~~~>
+<div class=~~~footer-content-top~~~>
+<div class=~~~container~~~>
+<div class=~~~row newsletter~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-social~~~>
+<p class=~~~social~~~><a class=~~~spin circle~~~ href=~~~#~~~><span class=~~~fa fa-facebook~~~>facebook</span></a> <a href=~~~#~~~><span class=~~~fa fa-twitter~~~>twitter</span></a> <a href=~~~#~~~><span class=~~~fa fa-pinterest-p~~~>pinterest</span></a> <a href=~~~#~~~><span class=~~~fa fa-google-plus~~~>google plus</span></a><a href=~~~#~~~><span class=~~~fa fa-rss~~~>rss</span></a></p>
+</div>
+</div>
+<div class=~~~col-sm-18~~~>
+<div class=~~~newsletter-content~~~><span class=~~~newsletter-title~~~>Be the first to save!</span>{{block class=~~~Magento\Newsletter\Block\Subscribe~~~ name=~~~cdz.newsletter~~~ template=~~~subscribe.phtml~~~}}</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-middle~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box contact-info~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-6~~~>About US</p>
+<div id=~~~footer-content-6~~~ class=~~~footer-link~~~>
+<p><strong>Food Market</strong> may mean. Marketplace, a public market with vendor stalls or spaces; A retail store selling food such as a.</p>
+<div class=~~~footer-text address space-base~~~><span class=~~~fa fa-map-marker~~~>&nbsp;</span>Address: 156x North Main St, Washington, IL 61571, United States</div>
+<div class=~~~footer-text email space-base~~~><span class=~~~fa fa-envelope~~~>&nbsp;</span>Email: support@company.com</div>
+<div class=~~~footer-text phone space-base~~~><span class=~~~fa fa-phone~~~>&nbsp;</span>Number 1: (123) 456 78xx <br>Number 2: (354) 194 48xx</div>
+</div>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-1~~~>Infomation</p>
+<ul id=~~~footer-content-1~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>Privacy and Cookie Policy</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>About Us</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>Search Terms</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>Advanced Search</a></li>
+<li><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>Orders and Returns</a></li>
+<li class=~~~last~~~><a href=~~~{{config path=~~~web/unsecure/base_url~~~}}~~~>Contact Us</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-2~~~>Quick Links</p>
+<ul id=~~~footer-content-2~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>My Account</a></li>
+<li><a href=~~~#~~~>Checkout</a></li>
+<li><a href=~~~#~~~>Shopping Cart</a></li>
+<li><a href=~~~#~~~>Register</a></li>
+<li><a href=~~~#~~~>Blog</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Login</a></li>
+</ul>
+</div>
+</div>
+<div class=~~~col-sm-6~~~>
+<div class=~~~footer-box~~~>
+<p class=~~~h5~~~ data-cdz-toggle=~~~#footer-content-3~~~>Shop</p>
+<ul id=~~~footer-content-3~~~ class=~~~footer-link showhide hover-link01~~~>
+<li><a href=~~~#~~~>Technology</a></li>
+<li><a href=~~~#~~~>Fashion</a></li>
+<li><a href=~~~#~~~>Sport</a></li>
+<li><a href=~~~#~~~>Home &amp; Garden</a></li>
+<li><a href=~~~#~~~>Jewellery</a></li>
+<li class=~~~last~~~><a href=~~~#~~~>Toys</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class=~~~footer-content-bottom~~~>
+<div class=~~~container~~~>
+<div class=~~~row~~~>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-address~~~>
+<p>© 2022 Codazon Ltd. Trademarks and brands</p>
+</div>
+</div>
+<div class=~~~col-sm-12~~~>
+<div class=~~~footer-payment~~~>
+<div class=~~~f-right~~~><img class=~~~img-responsive~~~ src=~~~{{media url=~~~wysiwyg/codazon/footer-payment.png~~~}}~~~ alt=~~~Accept Payment~~~></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>"

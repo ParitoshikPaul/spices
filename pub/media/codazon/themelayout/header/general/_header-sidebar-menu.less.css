@@ -1,0 +1,87 @@
+.cdz-menu {
+    &.cdz-toggle-menu {
+        .dropdown-toggle {
+            &:before {
+                .abs-iconfont2('\e9b4', 14px);
+                width: 40px;
+                height: 40px;
+                line-height: 40px;
+                .rtl-layout & {
+                    content: '\e9b4';
+                }
+            }
+            .rtl-layout & {
+                right: auto;
+                left: 0;
+                &:before {
+                    margin-top: 0 !important
+                }
+            }
+        }
+        .item.level-top {
+            margin-bottom: 0;
+            >.menu-link {
+                text-transform: uppercase;
+                border-bottom: 1px solid @menu_drop_border;
+                .abs-link(@menu_drop_text, @menu_drop_hover_text);
+            }
+        }
+        .item.level-top>.dropdown-toggle:before {
+            margin-top: 0;
+        }
+        li.item.open>.dropdown-toggle:before, li.item .cdz-tab-link.active+.dropdown-toggle:before {
+            content: '\e9b3';
+            -moz-transform: rotate(0);
+            -o-transform: rotate(0);
+            transform: rotate(0);
+            .rtl-layout & {
+                content: '\e9b3';
+            }
+        }
+        .item.level-top>.groupmenu-drop {
+            border: 0;
+            padding-left: 20px;
+            padding-right: 0;
+            .rtl-layout & {
+                padding-left: 0;
+                padding-right: 20px;
+            }
+        }
+        .groupmenu-drop li.item.parent .groupmenu-drop {
+            padding-top: 0;
+            .rtl-layout & {
+                padding-left: 0;
+                padding-right: 20px;
+            }
+        }
+        .groupmenu-drop {
+            li.item {
+                padding-top: 0;
+                padding-bottom: 0;
+                a {
+                    text-transform: uppercase;
+                    padding: 10px 0;
+                    .abs-link(@menu_drop_text, @menu_drop_hover_text);
+                }
+            }
+        }
+    }
+}
+.cdz-sidebar {
+    display: none;
+}
+.cdz-panel-open-right, .cdz-panel-open-left {
+    .cdz-sidebar {
+        display: inline;
+    }
+}
+/*acount scrollbar*/
+
+.utilies-section {
+    max-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.utilies-section {
+    //.abs-scroll-style();
+}

@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © 2017 Codazon, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+$slider = $block->getData('slider_data');
+$slideItems = json_decode($slider->getData('items'), true);
+?>
+
+<?php if (count($slideItems)): ?>
+<?php
+$wrapClass = $slider->getData('class');
+$itemClass = $slider->getData('item_class');
+$settings = $slider->getData('settings');
+$title = $slider->getData('title');
+$desc = $slider->getData('desc');
+$item = new \Magento\Framework\DataObject();
+$widget = ['themewidgets' => [
+    'codazon.slider' => ['sliderConfig' => json_decode($settings)]
+]];
+?>
+<div class="cdz-slider <?= $wrapClass ?>">
+    <?php if ($title) : ?>
+    <div class="cdz-block-title">
+        <p class="b-title h2"><span><?= $title ?></span></p>
+        <?php if ($desc) : ?>
+        <p class="title-desc"><span><?= $desc ?></span></p>
+        <?php endif ?>
+    </div>
+    <?php endif ?>
+    <div class="cdz-block-content">
+        <div class="items owl-carousel" data-mage-init='<?= json_encode($widget) ?>'>
+        <?php foreach ($slideItems as $itemData) : ?>
+            <?php $item->setData($itemData); ?>
+            <div class="<?= $itemClass ?> item">
+                <a class="item-image" href="<?= $item->getData('link') ?>"><img alt="<?= $block->escapeHtml($item->getData('title')) ?>" class="img-responsive owl-lazy" data-src="<?= $item->getData('image') ?>" /></a>
+                <?php if ($item->getData('title')) : ?>
+                <a class="item-title" href="<?= $item->getData('link') ?>"><span><?= $item->getData('title') ?></span></a>
+                <?php endif ?>
+                <?php if ($item->getData('content')) : ?>
+                <div class="item-content"><?= $item->getData('content') ?></div>
+                <?php endif ?>
+            </div>
+        <?php endforeach ?>
+        </div>
+    </div>
+</div>
+<?php endif ?>

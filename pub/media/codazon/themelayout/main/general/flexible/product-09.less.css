@@ -1,0 +1,210 @@
+/*Fashion Style*/
+
+.product-list-style-09 {
+    .abs-product-hover-img();
+    /*hover*/
+    .item-group .product-item:last-child {
+        margin-bottom: 0;
+        .product-item-info {
+            margin-bottom: 0;
+        }
+    }
+    .button-top-wrap {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10px;
+        z-index: 2;
+        text-align: center;
+        >a {
+            margin-bottom: 7px;
+        }
+    }
+    .products.list.items .action.towishlist {
+        &:before {
+            font-size: 40px;
+            color: #000000;
+            .abs-opacity(0.5);
+        }
+        &:hover {
+            &:before {
+                .abs-opacity(1);
+            }
+        }
+    }
+    .tocompare {
+        &:before {
+            .abs-iconfont('\f074', 15px);
+            color: #000000;
+            .abs-opacity(0.5);
+        }
+        &:hover {
+            &:before {
+                .abs-opacity(1);
+            }
+        }
+        span {
+            display: none
+        }
+    }
+    .cdz-product-labels {
+        right: 0;
+        left: auto;
+    }
+    .product-item-top {
+        position: relative;
+        text-align: center;
+    }
+    .cdz-product-labels {
+        top: 10px;
+        right: 0;
+        left: auto;
+        .rtl-layout & {
+            right: auto;
+            left: 0;
+        }
+        .prolabels-style03();
+    }
+    .qs-button {
+        position: absolute;
+        z-index: 2;
+        width: 50px;
+        height: 50px;
+        line-height: 45px;
+        font-size: 20px;
+        overflow: hidden;
+        border: 0;
+        .abs-calc-top(~'((100% - 50px) / 2)');
+        .abs-calc-left(~'((100% - 50px) / 2)');
+        .abs-style(@btn_quickshop_text, @btn_quickshop_border, rgba(255, 255, 255, 0.5));
+        .btniconhover-style();
+    }
+    .product-hovered-section {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        z-index: 1;
+        padding: 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        .abs-opacity(0);
+        .product-details {
+            display: none
+        }
+    }
+    .tocart.primary {
+        width: ~'calc(100% - 20px)';
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        border-radius: 0;
+        padding: 12px 30px;
+        .abs-style(@btn_icon_text, @btn_icon_border, rgba(255, 255, 255, 0.7));
+        .btniconhover-style();
+    }
+    .product-box .right-box {
+        display: flex;
+        align-items: center;
+    }
+    .product-item-link, .product.name {
+        .abs-transition();
+        a {
+            text-decoration: none;
+            &:hover, &:active {
+                color: @main_hover_text;
+            }
+        }
+    }
+    .price-box .old-price {
+        margin: 0 10px;
+    }
+    .product-reviews-summary {
+        margin-left: auto;
+        .rtl-layout & {
+            margin-left: 0;
+            margin-right: auto;
+            direction: ltr;
+        }
+        .rating-summary {
+            padding: 0;
+            .rating-result {
+                &:before {
+                    font-size: 12px;
+                }
+                >span:before {
+                    font-size: 12px;
+                    color: @main_productname_text
+                }
+            }
+        }
+        .reviews-actions {
+            .view {
+                font-size: 12px;
+                font-weight: 700;
+                display: none;
+                span {
+                    font-size: 0
+                }
+                &:before {
+                    content: "("
+                }
+                &:after {
+                    content: ")";
+                    margin-left: -3px;
+                }
+            }
+            a:visited {
+                color: @main_hover_text;
+            }
+        }
+    }
+    .product-item:hover {
+        .product-hovered-section {
+            .abs-opacity(1);
+        }
+    }
+    &.products-grid div[class^="swatch-opt-"]>div {
+        text-align: left;
+    }
+    @media @tablet_vertical {
+        .price-box .special-price {
+            float: left;
+        }
+    }
+    @media @phone {
+        .product-item {
+            padding: 0 0 15px;
+        }
+        .price-box .old-price {
+            margin: 0 5px;
+        }
+        .item-group .product-item:last-child .product-item-info {
+            margin-bottom: 0;
+        }
+        .product-item-details {
+            display: none
+        }
+        .product-hovered-section {
+            position: static;
+            opacity: 1;
+            background: transparent;
+        }
+        .product-hovered-section .product-details {
+            display: block;
+        }
+        .product-reviews-summary {
+            margin-bottom: 5px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .tocart.primary {
+            width: auto;
+            position: static;
+            padding: 5px 20px;
+            font-weight: 700;
+            font-size: 10px;
+            .abs-borderradius(@btn_radius);
+            .abs-style(@btn_mobile_icon_text, @btn_mobile_icon_border, @btn_mobile_icon_background);
+        }
+    }
+}

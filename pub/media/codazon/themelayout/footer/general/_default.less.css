@@ -1,0 +1,8 @@
+.page-footer{
+    .block.newsletter, .block.newsletter .field.newsletter{
+        max-width: none;
+    }
+}
+.checkout-index-index .page-footer {
+    margin-bottom: 0;
+}

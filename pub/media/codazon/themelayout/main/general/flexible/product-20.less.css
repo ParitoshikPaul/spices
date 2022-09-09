@@ -1,0 +1,192 @@
+/*Kids & Baby Store*/
+.img-label .product-list-style-20 {
+	.cdz-product-labels .label-item.new,
+	.cdz-product-labels .label-item.sale{
+		width: 40px;
+		height: 40px;
+		font-size: 0;
+	}
+	.cdz-product-labels .label-item.sale{
+		.abs-cssbg(transparent, "codazon/themelayout/images/sale.png", ~"0 0", no-repeat);
+	}
+	.cdz-product-labels .label-item.new{
+		.abs-cssbg(transparent, "codazon/themelayout/images/new.png", ~"0 0", no-repeat);
+	}
+}
+.product-list-style-20{
+	.slider-arrow-style-11(); /*wrapper-product*/
+	.abs-product-hover-img(); /*hover*/
+	.owl-loaded .owl-stage{
+		padding: 0;
+	}
+	.products{
+		.tab-content &{
+			margin-top: 0;
+		}
+	}
+	.owl-carousel.owl-drag .owl-item{
+		&:after{
+			width: 2px;
+			height: 100%;
+			background: @main_box_border;
+			position: absolute;
+			top: 0;
+			left: -11px;
+			content: '';
+			.rtl-layout &{
+				right: -11px;
+				left: auto;
+			}
+		}
+	}
+	.items.product-items{
+		> .item.product-item{
+				border: 2px solid @main_box_border;
+				.abs-borderradius(@main_box_radius);
+				background-color: @main_box_background;
+		}
+	}
+	.product-item{
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.cdz-block-content{
+		border: 2px solid @main_box_border;
+		.abs-borderradius(@main_box_radius);
+		background: @main_box_background;
+		text-align: center;
+	}
+	.product-item-info{
+		padding: 10px;
+	}
+	.product-item-top{
+		position: relative;
+		.button-hover-wrap{
+			position: absolute;
+			display: flex;
+			z-index: 1;
+			.abs-transition();
+		}
+		.action.primary{
+			font-size: 0;
+			width: 40px;
+			height: 40px;
+			padding: 0;
+			margin:0 5px;
+			.abs-borderradius(@btn_radius);
+			.abs-style(@btn_icon_text, @btn_icon_border, @btn_icon_background);
+			border-bottom: 3px solid darken(@btn_icon_border, 10%);
+			span:before{
+				.abs-iconfont('\f291', 14px);
+			}
+			&:hover{
+				.abs-style(@btn_icon_hover_text, @btn_icon_hover_border, @btn_icon_hover_background);
+				border-color: darken(@btn_icon_hover_border, 10%);
+			}
+		}
+		.qs-button{
+			width: 40px;
+			height: 40px;
+			margin:0 5px;
+			.abs-borderradius(@btn_radius);
+			border-bottom: 3px solid darken(@btn_quickshop_border, 10%);
+			&:hover{
+				border-color: darken(@btn_icon_hover_border, 10%);
+				.abs-boxshadow(none);
+			}
+		}
+		.action.tocompare{
+			font-size: 0;
+			width: 40px;
+			height: 40px;
+			margin:0 5px;
+			padding: 0;
+			line-height: 40px;
+			display: block;
+			.abs-borderradius(@btn_radius);
+			border: 1px solid;
+			.abs-style(@btn_icon_text, @btn_icon_border, @btn_icon_background);
+			border-bottom: 3px solid darken(@btn_icon_border, 10%);
+			&:before{
+				.abs-iconfont('\f0ec', 14px);
+			}
+			&:hover{
+				.abs-style(@btn_icon_hover_text, @btn_icon_hover_border, @btn_icon_hover_background);
+				border-color: darken(@btn_icon_hover_border, 10%);
+			}
+		}
+	}
+	.cdz-product-labels{
+		top: 10px;
+		left: 10px;
+		.rtl-layout &{
+			left: auto;
+			right: 10px;
+		}
+	}
+
+	.products.list.items .action.towishlist{
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 1;
+		.rtl-layout &{
+			right: auto;
+			left: 10px;
+		}
+		&:before{
+			.abs-iconfont('\f004', 14px);
+			color: @main_box_border;
+			min-width: 18px;
+		}
+		&:hover{
+			&:before{
+				color: @main_hover_text;
+			}
+		}
+		
+	}
+	.product-item .old-price {
+		margin: 0 5px;
+	}
+	.product-item .price-box{
+		display: inline-block;
+	}
+}
+@media @tablet_vertical{
+	.product-list-style-20{
+		.product-item{
+			&:hover{
+				.button-hover-wrap{
+					.abs-opacity(1);
+				}
+			}
+		}
+		.product-item-top{
+			.button-hover-wrap{
+				top: 50%;
+				.abs-calc-left(~'(100% - 150px)/2');
+				.abs-opacity(0);
+			}
+		}
+	}
+}
+@media @phone{
+	.product-list-style-20{
+		.product-item-top{
+			position: static;
+		}
+		.product-item-info{
+			padding-bottom: 40px;
+		}
+		.product-item-top{
+			.button-hover-wrap{
+				bottom: 20px;
+				.abs-calc-left(~'(100% - 100px)/2');
+			}
+			.action.tocompare{
+				line-height: 37px
+			}
+		}
+	}
+}

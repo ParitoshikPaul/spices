@@ -1,0 +1,49 @@
+.banner-style16 {
+    .cdz-banner {
+        text-align: center;
+        position: relative;
+        * {
+            .abs-transition(all 0.4s ease-in);
+        }
+        .cdz-banner-text {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+			padding:20px;
+			.item-content{
+				padding:40px;
+				max-width:450px;
+				background:@main_box_background;
+			}
+            .btn.primary {
+                border: 1px solid;
+                text-decoration: none;
+                padding: 10px 30px;
+				display:inline-block;
+				.abs-borderradius(@btn_radius);
+                .abs-style(@btn_normal_text, @btn_normal_border, @btn_normal_background);
+                &:hover {
+                    .abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+                }
+            }
+        }
+    }
+}
+@media @phone {
+	.banner-style16 {
+		.cdz-banner .cdz-banner-text {
+			position: static;
+			.item-content{
+				padding:20px;
+			}
+		}
+	}
+}

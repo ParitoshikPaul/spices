@@ -1,0 +1,145 @@
+.post-list-style04{	
+	background: @main_box_background;
+	.abs-borderradius(@main_box_radius);
+	.abs-boxshadow(@main_box_shadow);	
+	.cdz-block-title{
+		margin-bottom: 0;
+		border-bottom: 1px solid @main_border;		
+		.b-title{
+			color:@main_productname_text;			
+		}
+	}
+	.owl-carousel{
+		margin-bottom: 0 !important;
+		margin-top: 0 !important;
+	}
+	.owl-loaded .owl-stage{
+		padding: 0;
+	}
+	.item-group{
+		height: 100%;
+	}
+	.post-item{
+		padding: 25px;
+    	border-right: 1px solid @main_border;
+		height: 100%;
+	}
+	.post-img {
+    	border-radius: 5px;
+	}
+	.post-item-link {
+	    font: @f_h4;
+	    color: @main_productname_text;;
+	    font-weight: 600;
+	    text-transform: capitalize;
+	    margin: 5px 0 0;
+    	display: block;
+
+	}
+	.post-category {
+	    font: @f_note;
+	    text-transform: uppercase;
+	    text-decoration: underline;
+	    margin-bottom: 10px;
+    	display: block;
+    	.abs-link(@main_text, @main_hover_text);
+	}
+	.post-date{
+		display: inline-block;
+		margin-right:10px;
+		font: @f_note;
+		color:@main_text;
+		&:before{
+			.abs-iconfont('\f274', 12px);
+			margin-right: 8px;
+		}
+		.rtl-layout &{
+			margin-right: 0;
+			margin-left: 10px;
+			&:before{
+				margin-left: 8px;
+				margin-right: 0
+			}
+		}
+	}
+	.post-author{
+		display: inline-block;
+		font: @f_note;
+		color:@main_text;
+		&:before{
+			.abs-iconfont('\f2c0', 13px);
+			margin-right: 8px;
+			.rtl-layout &{
+				margin-left: 8px;
+				margin-right: 0
+			}
+		}
+	}	
+}
+[class*='post-list-style']{
+	&.post-list-style04{
+		.slider-arrow-style-01();
+		.owl-nav{
+			display: block;
+			[class*='owl-']{
+				top: -53px;			
+				&.owl-next{
+					right:10px;
+				}
+				&.owl-prev{
+					right:48px;
+				}
+				@media (max-width:767px){
+					top:-48px
+				}
+			}
+			.rtl-layout &{
+				[class*='owl-']{		
+					&.owl-next{
+						left:10px;
+					}
+					&.owl-prev{
+						left: 48px;
+					}
+				}
+			}
+		}
+	}
+}
+@media @tablet_vertical{
+	.post-list-style04{
+		.cdz-block-title {
+			padding: 20px;
+			.b-title{
+				font: @f_h1;
+				text-transform:uppercase;	
+			}	
+		}
+	}
+}
+@media @phone{
+	.post-list-style04{
+		margin-bottom: 0;
+		.cdz-block-title {
+			padding: 10px;
+		}
+		.post-item-link {font-size: 14px;}
+		.post-item{border-right:0;}
+		.owl-nav {
+			top: -38px;
+		}
+		.post-item{
+			padding: 10px;
+		}
+		.owl-dots{
+			position:absolute;
+			bottom: 2px;
+			text-align: center;
+			width: 100%;
+			display: block;
+		}
+		.owl-carousel.owl-loaded{
+			padding-bottom: 20px;
+		}
+	}
+}

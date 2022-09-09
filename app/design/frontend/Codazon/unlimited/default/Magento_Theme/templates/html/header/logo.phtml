@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header\Logo $block
+ */
+?>
+<?php
+$helper = $this->helper('Codazon\ThemeLayoutPro\Helper\Data');
+$smallLogo = $helper->getConfig('themelayoutpro/header/small_logo');
+$smallLogo = $smallLogo?$helper->getMediaUrl('small_logo/' . $smallLogo):$block->getLogoSrc();
+?>
+
+<?php $storeName = $block->getThemeName() ? $block->getThemeName() : $block->getLogoAlt();?>
+<span data-action="toggle-nav" class="action nav-toggle"><span><?= /* @escapeNotVerified */ __('Toggle Nav') ?></span></span>
+<a class="logo" href="<?= $block->getUrl('') ?>" title="<?= /* @escapeNotVerified */ $storeName ?>">
+    <img class="main-logo hidden-xs" src="<?= /* @escapeNotVerified */ $block->getLogoSrc() ?>"
+         alt="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+         <?php //$block->getLogoWidth() ? 'width="' . $block->getLogoWidth() . '"' : '' ?>
+         <?php //$block->getLogoHeight() ? 'height="' . $block->getLogoHeight() . '"' : '' ?>
+    />
+    <img class="small-logo visible-xs" src="<?= /* @escapeNotVerified */ $smallLogo ?>"
+         alt="<?= /* @escapeNotVerified */ $block->getLogoAlt() ?>"
+    />
+</a>

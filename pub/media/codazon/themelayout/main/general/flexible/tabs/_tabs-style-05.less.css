@@ -1,0 +1,89 @@
+/*Sport*/
+.tabs-style-05 {
+    .box-cate-link {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin-bottom: 25px;
+        .item {
+            display: inline-block;
+            margin: 0 10px;
+            border: 2px solid @main_border;
+            text-transform: uppercase;
+            color: @btn_normal_text;
+            .abs-borderradius(@btn_radius);
+            a {
+                font-size: 14px;
+                padding: 7px 20px;
+                display: block
+            }
+            &.active {
+                .abs-style(@btn_primary_text, @btn_primary_border, @btn_primary_background);
+                a {
+                    color: @btn_primary_text
+                }
+            }
+            &:hover {
+                &:not(.active) {
+                    .abs-style(@btn_primary_text, @btn_primary_border, transparent);
+                    a {
+                        color: @btn_primary_border
+                    }
+                }
+            }
+        }
+    }
+    @media @phone{
+        .cdz-block-content{
+            text-align: center;
+        }
+        .mobile-toggle {
+            display: inline-block !important;
+            border: 2px solid;
+            padding: 6px 20px 6px;
+            font-size: 13px;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: 10px auto 15px;
+            .abs-borderradius(30px);
+            .abs-style(@btn_normal_text, @btn_normal_border, transparent);
+            &:before {
+                .abs-iconfont("\f107", 17px);
+                float: right;
+                margin-left: 10px;
+                z-index: 1;
+                position: relative;
+                line-height: 1;
+                .rtl-layout & {
+                    float: left;
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+            &:hover {
+                .abs-style(@btn_normal_text, @btn_normal_border, @btn_normal_border);
+            }
+            &.open:before {
+                .abs-transform(rotate(-180deg));
+            }
+        }
+        ul.box-cate-link {
+            position: absolute;
+            background: #ffffff;
+            z-index: 5;
+            width: 200px;
+            text-align: left;
+            border: 1px solid @main_border;
+            .abs-calc-left(~'(100% - 200px)/2');
+            li.item {
+                display: block;
+                width: 100%;
+                border: 0;
+                margin: 0;
+                text-transform: capitalize;
+                padding: 5px 10px;
+                .abs-borderradius(0);
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+/*Luxury*/
+.service-banner-style05{
+	padding: 20px 0;
+	.item-icon{
+		margin-bottom:15px;
+		font-size: 45px;
+		.abs-transition();
+	}
+	.item{
+		display: flex;
+		align-items: center;	
+		justify-content: center;
+		flex-direction: column;
+		color: @service-banner-text-05;	
+		&:hover{
+			cursor:pointer;
+			.item-icon{
+				.abs-scale(1.2);
+			}
+		}
+	}
+	.item-content{
+		letter-spacing: 1px;
+		color: @service-banner-text-05;	
+	}
+    @media @phone {
+        .item{
+            margin-bottom: 10px;
+        }
+        .item-icon {
+            margin-bottom: 5px;
+        }
+    }
+}

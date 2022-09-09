@@ -1,0 +1,63 @@
+.banner-style15 {
+    position: relative;
+    .item-content {
+        position: absolute;
+        color: inherit;
+		.item-content-box{
+			background: rgba(250,250,250,.6);
+			backdrop-filter: blur(3px);
+			padding: 20px 40px;
+		}
+        &.item-top-left{
+            top: 20px;
+			left:0;
+        }
+        &.item-top-right{
+            top: 20px;
+			right:0;
+        }
+        &.item-bottom-left{
+            bottom: 20px;
+			left:0;
+        }
+        &.item-bottom-right{
+            bottom: 20px;
+			right:0;
+        }
+        &.item-middle-right{
+            top: 50%;
+			transform: translate(0,-50%);
+			right:0;
+        }
+        &.item-middle-left{
+            top: 50%;
+			transform: translate(0,-50%);
+			left:0;
+        }
+    }
+    .bc-desc {
+        font-size: 130%;
+        color: #000000;
+    }
+    .bc-title {
+        font-size: 230%;
+        font-weight: 500;
+        color: #000000;
+    }
+    @media @general_tablet {
+        .bc-title {
+            font-size: 20px;
+        }
+        .bc-desc, .bc-btn{
+            font-size: 13px;
+        }
+    }
+    @media @phone {
+        .bc-title {
+            font-size: 20px;
+        }
+        .bc-desc, .bc-btn{
+            font-size: 13px;
+        }
+    }
+}

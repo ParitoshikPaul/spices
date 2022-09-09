@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2018 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
+	<widget id="codazon_flexibleblock" class="Codazon\ThemeLayoutPro\Block\Widget\FlexibleBlock" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/flexibleblock.png" ttl="86400">
+		<label translate="true">Codazon Flexible Block</label>
+		<description translate="true">Get Flexible Block from Page Builder</description>
+		<parameters>
+			<parameter name="block_identifier" xsi:type="select" visible="true" required="true" sort_order="10" source_model="Codazon\ThemeLayoutPro\Model\Config\Source\MainContents">
+            	<label translate="true">Select Main Content</label>
+                <description translate="true"><![CDATA[Go to menu Codazon > Flexible Theme > Main Content to see main content list.]]></description>
+            </parameter>
+            <parameter name="enable_full_width" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="20">
+                <label translate="true">Enable full width page</label>
+                <description translate="true"><![CDATA[If set yes, you can use full width page (left and right margins are only added by using container element of page builder).]]></description>
+            </parameter>
+		</parameters>
+	</widget>
+    <widget id="codazon_instagramphotos" class="Codazon\ThemeLayoutPro\Block\Widget\Instagramphotos" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/instagramphotos.png" ttl="86400">
+		<label translate="true">Codazon Instagram Recent Photos</label>
+		<description translate="true"><![CDATA[Get Photos List From Your Instagram.]]></description>
+		<parameters>
+			<parameter name="token" xsi:type="text" required="false" visible="true" sort_order="10">
+			 	<label translate="true">Access Token</label>
+				<description translate="true"><![CDATA[<a target="_blank" href='https://www.youtube.com/watch?v=jbiXmm5GrqM'>How to get Instagram access token</a>. If you don't want to use access token, you can <span style="color:red"><br />go to menu <strong>Codazon > Flexible Theme > Settings</strong>. Select your using theme and click button <strong>Config</strong>. From the settings panel, go to section <strong>Social Network > Instagram</strong> to configure instgram data.</span>]]></description>
+			</parameter>
+            <!-- <parameter name="use_user_id" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="20">
+                <label translate="true">Get Instagram images by user id instead of access token</label>
+                <description translate="true"><![CDATA[If you cannot get access token, you can use "User Id" to fetch Instagram images. Please go to <a target="_blank" href='https://codeofaninja.com/tools/find-instagram-user-id'>https://codeofaninja.com/tools/find-instagram-user-id</a> to get user id.]]></description>
+            </parameter> -->
+            <!-- <parameter name="user_id" xsi:type="text" required="false" visible="true" sort_order="21">
+			 	<label translate="true">User Id</label>
+                <description translate="true"><![CDATA[You can use "User Id" to fetch Instagram images. Please go to <a target="_blank" href='https://commentpicker.com/instagram-user-id.php'>https://commentpicker.com/instagram-user-id.php</a> to get user id.]]></description>
+			</parameter> -->
+			<parameter name="custom_template" xsi:type="text" required="false" visible="true">
+				<label translate="true">Template</label>
+				<description translate="true"><![CDATA[Leave blank to use default template.]]></description>
+			</parameter>
+            <parameter name="show_slider" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="90">
+                <label translate="true">Show As Slider</label>
+            </parameter>
+            <parameter name="slider_dots" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="91">
+                <label translate="true">Show Slider Dots</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="slider_nav" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="92">
+                <label translate="true">Show Slider Arrows</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="slider_loop" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="93">
+                <label translate="true">Loop</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+            </parameter>
+            <parameter name="total_rows" xsi:type="text" visible="true" sort_order="95">
+            	<label translate="true">Total Rows</label>
+                <description translate="true"><![CDATA[Used for some templates, not for all.]]></description>
+                <value>1</value>
+            </parameter>
+            <parameter name="max_items" xsi:type="text" visible="true" sort_order="95">
+            	<label translate="true">Max Items</label>
+                <description translate="true"><![CDATA[Used for some templates, not for all.]]></description>
+                <value>12</value>
+            </parameter>
+            <parameter name="slider_margin" xsi:type="text" visible="true" sort_order="95">
+            	<label translate="true">Slide Margin</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+                <value>6</value>
+            </parameter>
+            <parameter name="stage_padding" xsi:type="text" visible="true" sort_order="96">
+            	<label translate="true">Stage Padding</label>
+                <depends>
+                    <parameter name="show_slider" value="1" />
+                </depends>
+                <value>6</value>
+            </parameter>
+            <parameter name="items_1900" xsi:type="text" visible="true" sort_order="100">
+            	<label translate="true">Desktop 1900 view</label>
+                <description translate="true"><![CDATA[Window width ≥ 1900. Default: 6.]]></description>
+                <value>6</value>
+            </parameter>
+            <parameter name="items_1600" xsi:type="text" visible="true" sort_order="110">
+            	<label translate="true">Desktop 1600 view</label>
+                <description translate="true"><![CDATA[1600 ≤ Window width < 1900. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1420" xsi:type="text" visible="true" sort_order="120">
+            	<label translate="true">Desktop 1420 view</label>
+                <description translate="true"><![CDATA[1420 ≤ Window width < 1600. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1280" xsi:type="text" visible="true" sort_order="130">
+            	<label translate="true">Desktop 1280 view</label>
+                <description translate="true"><![CDATA[1280 ≤  Window width < 1420. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_980" xsi:type="text" visible="true" sort_order="140">
+            	<label translate="true">Desktop Small View</label>
+                <description translate="true"><![CDATA[980 ≤  Window width < 1280. Default: 3.]]></description>
+                <value>4</value>
+            </parameter>
+            <parameter name="items_768" xsi:type="text" visible="true" sort_order="150">
+            	<label translate="true">Tablet Lanscape View</label>
+                <description translate="true"><![CDATA[768 ≤ Window width < 980. Default: 3.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_480" xsi:type="text" visible="true" sort_order="160">
+            	<label translate="true">Tablet Portrait View</label>
+                <description translate="true"><![CDATA[480 ≤ Window width < 768. Default: 3.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_320" xsi:type="text" visible="true" sort_order="170">
+            	<label translate="true">Mobile Lanscape View</label>
+                <description translate="true"><![CDATA[320 ≤ Window width < 480. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+            <parameter name="items_0" xsi:type="text" visible="true" sort_order="180">
+            	<label translate="true">Mobile Portrait View</label>
+                <description translate="true"><![CDATA[Window width < 320. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+		</parameters>
+	</widget>
+    <widget id="codazon_facebookfeeds" class="Codazon\ThemeLayoutPro\Block\Widget\FacebookFeeds" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/facebookfeeds.png" ttl="86400">
+		<label translate="true">Codazon Facebook Feeds</label>
+		<description translate="true">Get Facebook Feeds Iframe</description>
+		<parameters>
+			<parameter name="page_url" xsi:type="text" visible="true" sort_order="10">
+            	<label translate="true">Page URL</label>
+                <description translate="true"><![CDATA[Your Facebook page url. Ex: https://www.facebook.com/facebook]]></description>
+                <value>https://www.facebook.com/facebook</value>
+            </parameter>
+            <parameter name="hide_cover" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="20">
+                <label translate="true">Hide Cover</label>
+            </parameter>
+            <parameter name="show_facepile" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="30">
+                <label translate="true">Show Facepile</label>
+            </parameter>
+		</parameters>
+	</widget>
+    <widget id="codazon_twitterfeeds" class="Codazon\ThemeLayoutPro\Block\Widget\TwitterFeeds" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/twitterfeeds.png" ttl="86400">
+		<label translate="true">Codazon Twitterfeed Feeds</label>
+		<description translate="true">Get Twitterfeed Recent Tweets</description>
+		<parameters>
+			<parameter name="user_name" xsi:type="text" visible="true" sort_order="10">
+            	<label translate="true">User name</label>
+                <description translate="true"><![CDATA[Your Twitter user name. Ex: twitter]]></description>
+                <value>twitter</value>
+            </parameter>
+            <parameter name="limit" xsi:type="text" visible="true" sort_order="10">
+            	<label translate="true">Tweets count</label>
+                <value>4</value>
+            </parameter>
+            <parameter name="custom_template" xsi:type="text" visible="true" sort_order="10">
+            	<label translate="true">Template</label>
+                <description translate="true"><![CDATA[Default is "widget/twitterfeeds.phtml". Leave empty to use default.]]></description>
+            </parameter>
+            <parameter name="date_format" xsi:type="text" visible="true" sort_order="10">
+            	<label translate="true">Date Format</label>
+                <description translate="true"><![CDATA[Default is "D m, Y"]]></description>
+                <value>D m, Y</value>
+            </parameter>
+		</parameters>
+	</widget>
+    <widget id="blog_posts_list" class="Codazon\ThemeLayoutPro\Block\Widget\BlogPostList" is_email_compatible="true"
+            placeholder_image="Codazon_ThemeLayoutPro::images/blog_list.png" ttl="86400">
+        <label translate="true">Magefan Blog Posts List</label>
+        <description translate="true">List of Blog Posts</description>
+        <parameters>
+            <!--parameter name="title" xsi:type="text" required="false" visible="true">
+                <label translate="true">Title</label>
+            </parameter-->
+			<parameter name="categories" source_model="Magefan\Blog\Model\Config\Source\Category" xsi:type="multiselect" required="false" visible="true">
+				<label translate="true">Categories</label>
+			</parameter>
+			<parameter name="order_by" xsi:type="select" required="true" visible="true">
+                <label translate="true">Order by</label>
+                <options>
+                    <option name="title" value="title" selected="true">
+                        <label translate="true">Name</label>
+                    </option>
+                    <option name="post_id" value="post_id">
+                        <label translate="true">ID</label>
+                    </option>
+					<option name="publish_time" value="publish_time">
+                        <label translate="true">Publish Time</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="order" xsi:type="select" required="true" visible="true">
+                <label translate="true">Order</label>
+                <options>
+                    <option name="asc" value="asc" selected="true">
+                        <label translate="true">ASC</label>
+                    </option>
+                    <option name="desc" value="desc">
+                        <label translate="true">DESC</label>
+                    </option>
+                </options>
+            </parameter>
+			<parameter name="post_count" xsi:type="text" required="true" visible="true">
+				<label translate="true">Post Count</label>
+			</parameter>
+			<parameter name="show_in_front" source_model="Codazon\ThemeLayoutPro\Model\Config\Source\BlogPostListDisplay" xsi:type="multiselect" required="false" visible="true">
+				<label translate="true">Show in Frontend</label>
+			</parameter>
+			<parameter name="desc_length" xsi:type="text" required="false" visible="true">
+                <label translate="true">Description Length</label>
+            </parameter>
+			<parameter name="date_format" xsi:type="text" required="true" visible="true">
+                <label translate="true">Date Format</label>
+                <value>Y-m-d H:i:s</value>
+            </parameter>
+			<parameter name="thumb_width" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Width</label>
+                <value>150</value>
+            </parameter>
+            <parameter name="thumb_height" xsi:type="text" required="true" visible="true">
+                <label translate="true">Thumbnail Height</label>
+                <value>150</value>
+            </parameter>
+			<parameter name="post_template" xsi:type="select" required="true" visible="true">
+                <label translate="true">Template</label>
+                <options>
+                    <option name="default" value="post/widget/grid.phtml" selected="true">
+                        <label translate="true">Post Grid Template</label>
+                    </option>
+                    <option name="item1" value="custom">
+                        <label translate="true">Custom Template</label>
+                    </option>
+                </options>
+            </parameter>
+            <parameter name="custom_template" xsi:type="text" required="true" visible="true">
+                <label translate="true">Custom template</label>
+                <depends>
+                    <parameter name="post_template" value="custom" />
+                </depends>
+                <value></value>
+            </parameter>
+            <parameter name="total_rows" xsi:type="text" visible="true">
+            	<label translate="true">Total rows</label>
+                <description translate="true"><![CDATA[Only used for some template.]]></description>
+                <value>1</value>
+            </parameter>
+            <parameter name="total_cols" xsi:type="text" visible="true">
+            	<label translate="true">Total columns</label>
+                <description translate="true"><![CDATA[Only used for some template.]]></description>
+                <value>4</value>
+            </parameter>
+            <parameter name="show_slider" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
+                <label translate="true">Show As Slider</label>
+            </parameter>
+            <parameter name="slider_dots" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="91">
+                <label translate="true">Show Slider Dots</label>
+            </parameter>
+            <parameter name="slider_nav" xsi:type="select" visible="true"
+                       source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="92">
+                <label translate="true">Show Slider Arrows</label>
+            </parameter>
+            <parameter name="slider_margin" xsi:type="text" visible="true" sort_order="95">
+            	<label translate="true">Slide Margin</label>
+                <value>10</value>
+            </parameter>
+            <parameter name="items_1900" xsi:type="text" visible="true" sort_order="100">
+            	<label translate="true">Desktop 1900 view</label>
+                <description translate="true"><![CDATA[Window width ≥ 1900. Default: 6.]]></description>
+                <value>6</value>
+            </parameter>
+            <parameter name="items_1600" xsi:type="text" visible="true" sort_order="110">
+            	<label translate="true">Desktop 1600 view</label>
+                <description translate="true"><![CDATA[1600 ≤ Window width < 1900. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1420" xsi:type="text" visible="true" sort_order="120">
+            	<label translate="true">Desktop 1420 view</label>
+                <description translate="true"><![CDATA[1420 ≤ Window width < 1600. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_1280" xsi:type="text" visible="true" sort_order="130">
+            	<label translate="true">Desktop 1280 view</label>
+                <description translate="true"><![CDATA[1280 ≤  Window width < 1420. Default: 5.]]></description>
+                <value>5</value>
+            </parameter>
+            <parameter name="items_980" xsi:type="text" visible="true" sort_order="140">
+            	<label translate="true">Desktop Small View</label>
+                <description translate="true"><![CDATA[980 ≤  Window width < 1280. Default: 3.]]></description>
+                <value>4</value>
+            </parameter>
+            <parameter name="items_768" xsi:type="text" visible="true" sort_order="150">
+            	<label translate="true">Tablet Lanscape View</label>
+                <description translate="true"><![CDATA[768 ≤ Window width < 980. Default: 3.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_480" xsi:type="text" visible="true" sort_order="160">
+            	<label translate="true">Tablet Portrait View</label>
+                <description translate="true"><![CDATA[480 ≤ Window width < 768. Default: 2.]]></description>
+                <value>3</value>
+            </parameter>
+            <parameter name="items_320" xsi:type="text" visible="true" sort_order="170">
+            	<label translate="true">Mobile Lanscape View</label>
+                <description translate="true"><![CDATA[320 ≤ Window width < 480. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+            <parameter name="items_0" xsi:type="text" visible="true" sort_order="180">
+            	<label translate="true">Mobile Portrait View</label>
+                <description translate="true"><![CDATA[Window width < 320. Default: 2.]]></description>
+                <value>2</value>
+            </parameter>
+		</parameters>
+        <containers>
+            <container name="content">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.top">
+                <template name="grid" value="default" />
+            </container>
+            <container name="content.bottom">
+                <template name="grid" value="default" />
+            </container>
+        </containers>
+    </widget>
+    <widget id="codazon_advanced_search_box" class="Codazon\ThemeLayoutPro\Block\Widget\AdvancedSearchBox" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/advanced_search_box.png" ttl="86400">
+		<label translate="true">Codazon Advanced Search Box</label>
+		<description translate="true">Display advanced search box with defined attributes</description>
+		<parameters>
+            <parameter name="title" xsi:type="text" visible="true" sort_order="10">
+                <label translate="true">Title</label>
+                <value>Advanced Search</value>
+            </parameter>
+            <parameter name="title_icon" xsi:type="text" visible="true" sort_order="20">
+                <label translate="true">Title icon class</label>
+                <value>fa-search</value>
+            </parameter>
+            <parameter name="attribute_codes" xsi:type="text" visible="true" sort_order="30">
+            	<label translate="true">Displayed attribute codes</label>
+                <description translate="true"><![CDATA[Separate attribute codes by comma (,). E.g.: <strong>size,color,manufacturer</strong>. Please make sure that the codes you use need to be set "Yes" for "Visible in Advanced Search" field (Go to menu Stores > Attributes > Product). Leave empty to get all usable attributes with default sort order.]]></description>
+            </parameter>
+            <parameter name="use_multi_select" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="40">
+                <label translate="true">Enable multi-select box</label>
+            </parameter>
+            <parameter name="container_class" xsi:type="text" visible="true" sort_order="50">
+                <label translate="true">Form Wrap HTML class</label>
+                <description translate="true"><![CDATA[Default: <strong>avsb-style-01</strong>.]]></description>
+                <value>avsb-style-01</value>
+            </parameter>
+            <parameter name="fieldset_class" xsi:type="text" visible="true" sort_order="60">
+                <label translate="true">Fieldset HTML class</label>
+                <value>row flex-grid</value>
+            </parameter>
+            <parameter name="item_class" xsi:type="text" visible="true" sort_order="70">
+                <label translate="true">Item HTML class</label>
+                <value>col-sm-6 col-xs-24</value>
+            </parameter>
+            <parameter name="action_label" xsi:type="text" visible="true" sort_order="80">
+                <label translate="true">Submit Button Label</label>
+                <value>Search</value>
+            </parameter>
+            <parameter name="display_view_more" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="90">
+                <label translate="true">Display View more link</label>
+            </parameter>
+		</parameters>
+	</widget>
+    <widget id="codazon_countdown_timer" class="Codazon\ThemeLayoutPro\Block\Widget\CountdownTimer" is_email_compatible="true" placeholder_image="Codazon_ThemeLayoutPro::images/countdown_timer.png" ttl="86400">
+		<label translate="true">Codazon Countdown Timer</label>
+		<description translate="true">Display coundown timer with custom values</description>
+		<parameters>
+            <parameter name="start_date" xsi:type="text" visible="true" sort_order="10">
+                <label translate="true">Start Date</label>
+                <description translate="true"><![CDATA[Format: <strong>mm/dd/yyyy hh:mm:ss tt</strong> Default: <strong>06/22/2014 1:52:16 PM</strong>.]]></description>
+            </parameter>
+            <parameter name="end_date" xsi:type="text" visible="true" sort_order="20" required="true">
+                <label translate="true">End Date</label>
+                <description translate="true"><![CDATA[Format: <strong>mm/dd/yyyy hh:mm:ss tt</strong> Default: <strong>06/22/2014 1:52:16 PM</strong>.]]></description>
+            </parameter>
+            <parameter name="day_label" xsi:type="text" visible="true" sort_order="30">
+                <label translate="true">Day label</label>
+                <description translate="true"><![CDATA[Leave empty to use default.]]></description>
+                <value>Day</value>
+            </parameter>
+            <parameter name="hour_label" xsi:type="text" visible="true" sort_order="40">
+                <label translate="true">Hour label</label>
+                <description translate="true"><![CDATA[Leave empty to use default.]]></description>
+                <value>Hour</value>
+            </parameter>
+            <parameter name="min_label" xsi:type="text" visible="true" sort_order="50">
+                <label translate="true">Minute label</label>
+                <description translate="true"><![CDATA[Leave empty to use default.]]></description>
+                <value>Min</value>
+            </parameter>
+            <parameter name="sec_label" xsi:type="text" visible="true" sort_order="60">
+                <label translate="true">Second label</label>
+                <description translate="true"><![CDATA[Leave empty to use default.]]></description>
+                <value>Sec</value>
+            </parameter>
+            <parameter name="expired_message" xsi:type="text" visible="true" sort_order="70">
+                <label translate="true">Expired Message</label>
+                <description translate="true"><![CDATA[The message is displayed when the deal has expired. Leave empty to not show it.]]></description>
+                <value>The deal has now expired</value>
+            </parameter>
+            <parameter name="hide_when_expired" xsi:type="select" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno" sort_order="80">
+                <label translate="true">Auto hide the timer</label>
+                <description translate="true">Auto hide the timer when the deal has expired.</description>
+            </parameter>
+            <parameter name="parent_selector" xsi:type="text" visible="true" sort_order="80">
+                <label translate="true">HTML selector (class/id) of parent block</label>
+                <description translate="true"><![CDATA[If you choose to hide the timer when the deal has expired. You can also hide the block containing the timer by adding the HTML class (e.g.: <strong>.js-deal-container</strong>) or HTML id (e.g.: <strong>#my-deal-block</strong>) to this field.]]></description>
+            </parameter>
+            <parameter name="details_url" xsi:type="text" visible="true" sort_order="90">
+                <label translate="true">Details URL</label>
+                <description translate="true"><![CDATA[Not required. You can use relative URL (E.g.: <strong>[base_url]jewellery/necklaces.html</strong>) or absolute URL (E.g.: <strong>https://mywebsite.com/jewellery/necklaces.html</strong>).]]></description>
+            </parameter>
+		</parameters>
+	</widget>
+</widgets>

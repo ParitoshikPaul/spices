@@ -1,0 +1,40 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+
+$store = \Magento\Framework\App\ObjectManager::getInstance()
+->get('Magento\Store\Model\StoreManagerInterface')->getStore();
+$languageHtml = trim($this->getLayout()->createBlock('Magento\Store\Block\Switcher', 'header_language')->setTemplate('switch/languages.phtml')->setData('id_modifier', 'header-language')->toHtml());
+$currencyHtml = trim($this->getLayout()->createBlock('Magento\Directory\Block\Currency', 'header_currency')->setTemplate('currency.phtml')->setData('id_modifier', 'header-currency')->toHtml());
+?>
+<?php if ($languageHtml || $currencyHtml) : ?>
+<li class="store-language-currency">
+    <div class="account-wrapper cdz-dropdown"  data-role="cdz-dropdown">
+        <a href="javascript:;" class="account-trigger cdz-dd-trigger" data-role="cdz-dd-trigger">
+            <span class="text-underlink"><?= __('Language') ?></span>
+            <span class="text-uppercase">
+                <span class="language"><?= $store->getName() ?></span>
+                <span class="currency"><?= $store->getCurrentCurrencyCode() ?></span>
+            </span>
+        </a>
+        <div class="cdz-dd-content wl-drop-menu" data-role="cdz-dd-content">
+            <div class="cdz-dd-content-inner">
+                <div class="acount-menu">
+                    <ul class="account-menu-items items">
+                        <?php if ($languageHtml) : ?>
+                        <li class="language-link"><?= $languageHtml; ?></li>
+                        <?php endif ?>
+                        <?php if ($currencyHtml) : ?>
+                        <li class="currency-link"><?= $currencyHtml; ?></li>
+                        <?php endif ?>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</li>
+<?php endif ?>

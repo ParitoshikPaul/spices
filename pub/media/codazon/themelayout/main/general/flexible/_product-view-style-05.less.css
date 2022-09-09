@@ -1,0 +1,216 @@
+:root{
+    --dir-left: left;
+    --dir-right: right;
+    .rtl-layout & {
+        --dir-left: right;
+        --dir-right: left;
+    }
+}
+.pdv-l05 {
+    --pdv-btn-w: ~'calc(50% - 10px)';
+    .product-info-main .product-addto-links .action {
+        font-weight: 400;
+    }
+    .product-static-text {
+        margin: 10px 0 20px;
+    }
+    .product-info-main {
+        .box-tocart {
+            .actions {
+                button, .primary.tocart {
+                    padding: 10px 15px;
+                    font-size: 130%;
+                    margin: 5px 0;
+                    width: var(--pdv-btn-w);
+                }
+                button.buy-now {
+                    background: @btn_default_background;
+                    border-color: @btn_default_border;
+                    color: @btn_default_text;
+                }
+            }
+        }
+        .size-guide-wrap {
+            position: relative;
+            inset: auto;
+            margin-top: 20px;
+            &:before {
+                content: "";
+                width: 30px;
+                height: 15px;
+                display: inline-block;
+                background: url("codazon/themelayout/images/ruler.jpg") no-repeat;
+                vertical-align: middle;
+                margin-inline-end: 10px;
+            }
+        }
+        .price-box .price-wrapper .price {
+            font-weight: 500;
+        }
+    }
+    .column.main .block.related .block-title {
+        margin-bottom: 10px;
+    }
+}
+@media @tablet_vertical {
+    .pdif-sticky-wrap {
+        display: flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        position: relative;
+    }
+    .pdif-sticky-col {
+        .product.media {
+            position: sticky;
+            top: 70px;
+        }
+    }
+    .pdv-l05 {
+        .product-info-wrap {
+            > .product-left {
+                width: 45%;
+                padding-inline-end: 80px;
+            }
+            > .product-right {
+                width: 55%;
+            }
+            .product-info-main {
+                width: 100%;
+            }
+        }
+        .main-inner .gallery-container {
+            box-shadow: 0px 3px 14px 0px fade(darken(@main_box_border, 10%), 80%);
+            padding: 20px;
+            border: 1px solid @main_box_border;
+            background: @main_box_background;
+        }
+        .product-main-top {
+            /*************** Price ***************/
+            .product-info-price { //Wrapper
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                position: relative;
+            }
+            .product-info-stock-sku {
+                width: ~'calc(40% - 10px)';
+                .stock {
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+            }
+            .product-reviews-summary {
+                width: ~'calc(60% - 10px)';
+                text-align: end;
+                .rating-summary {
+                    display: inline-block;
+                }
+                .reviews-actions {
+                    display: inline-block;
+                }
+            }
+            .price-box.price-final_price {
+                width: 100%;
+                clear: both;
+                margin-top: 20px;
+            }
+            .prices-tier {
+                background: transparent;
+                border: 2px dotted fade(#000,20%);
+                border-radius: 11px;
+                margin: 20px 0 0;
+                display: inline-block;
+                padding: 15px 30px;
+                > li.item {
+                    margin-bottom: 7px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        .product-info-main {
+            /*************** Add to cart box ***************/
+            .cdz-social-listing li a {
+                width: 25px;
+                height: 25px;
+                font-size: 20px;
+            }
+            .action.primary.customize {
+                margin-top: 20px;
+                border-radius: @btn_radius;
+            }
+            .box-tocart {
+                margin-bottom: 0px;
+                .actions {
+                    button:nth-child(odd) {
+                        float: var(--dir-left);
+                    }
+                    button:nth-child(even) {
+                        float: var(--dir-right);
+                    }
+                }
+            }
+            /*************** Short description ***************/
+            .product.attribute.overview {
+                padding: 20px;
+                background: darken(@main_box_background, 5%);
+                > strong.type {
+                    font-size: 120%;
+                    letter-spacing: 0.4rem;
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 16px;
+                    font-weight: 500;
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                    text-decoration-color: fade(@main_title_text, 60%);
+                }
+            }
+        }
+    }
+}
+@media (min-width: 1200px) {
+    .pdv-l05 {
+        .product-main-top {
+            .price-box.price-final_price {
+                width: 70%;
+            }
+            .size-guide-wrap {
+                width: 30%;
+                text-align: end;
+            }
+        }
+    }
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+    .pdv-l05 {
+        #product-review-container .new-review {
+            position: relative;
+            display: inline-block;
+            margin: 10px 0;
+        }
+    }
+}
+@media @general_tablet {
+    .pdv-l05 {
+        --pdv-btn-w: 100%;
+        .product-info-wrap {
+            > .product-left {
+                padding-inline-end: 0px;
+            }
+            > .product-right {
+                padding-inline-start: 40px;
+            }
+        }
+    }
+}
+@media @phone {
+    .pdv-l05 {
+        --pdv-btn-w: 100%;
+    }
+}
+
+@import (less)'../_product-view-detailed-02.less.css';
+@import (less)'../_base-small-list.less.css';

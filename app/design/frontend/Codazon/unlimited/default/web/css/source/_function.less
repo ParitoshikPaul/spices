@@ -1,0 +1,223 @@
+
+//Codazon Theme Extends=======================================
+//
+//  Link text
+//  ---------------------------------------------
+.abs-link(@_link-color, @_link-hover-color){
+	color: @_link-color;
+	&:hover{
+		color: @_link-hover-color;
+	}
+}
+
+.abs-borderradius(@_value){
+	-webkit-border-radius: @_value;
+	-moz-border-radius: @_value;
+	border-radius: @_value;
+}
+
+.abs-boxshadow(@_value){
+	 box-shadow: @_value;
+    -moz-box-shadow: @_value;
+    -webkit-box-shadow: @_value;
+    -o-box-shadow: @_value;
+    -ms-box-shadow: @_value;
+}
+.abs-transition(@_value: all 500ms ease){
+	-moz-transition: @_value;
+	  -webkit-transition: @_value;
+	  -o-transition: @_value;
+	  transition: @_value;
+	  -moz-backface-visibility: hidden;
+	  -webkit-backface-visibility: hidden;
+	  backface-visibility: hidden;
+}
+.abs-transform(@_value: initial){
+	-moz-transform: @_value;
+	  -webkit-transform: @_value;
+	  -o-transform: @_value;
+	  transform: @_value;
+}
+.abs-iconfont(@_font, @_font-size){
+	display: inline-block;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;	
+	content:@_font;
+	font-size:@_font-size;
+}
+.abs-iconfont2(@_font, @_font-size){
+	.abs-iconfont(@_font, @_font-size);
+	font-family: 'CodazonUnlimited';
+    speak: none;
+}
+.abs-hidetext(){
+    font-size:0; 
+ 	display: block;
+	text-indent: -99999px;
+	overflow: hidden;
+	vertical-align: middle;
+	text-align: left;
+}
+.abs-opacity(@_opacity) {
+	-webkit-opacity: @_opacity;
+	-moz-opacity: @_opacity;
+	opacity: @_opacity; 
+}
+.abs-scale (@_factor) {
+	-webkit-transform: scale(@_factor);
+	-moz-transform: 	 scale(@_factor);
+	-ms-transform: 		 scale(@_factor);
+	-o-transform: 		 scale(@_factor);
+}
+
+.abs-colorfont( @_color, @_font){
+	color: @_color;
+	font: @_font;
+}
+.abs-style( @_color, @_border, @_background){
+	color: @_color;
+	border-color: @_border;
+	background: @_background;
+}
+
+.abs-allstyle( @_color, @_background){
+	color: @_color;
+	background: @_background;
+}
+.abs-allstyle( @_color, @_background, @_font){
+	color: @_color;
+	background: @_background;
+	font: @_font;
+}
+.abs-allstyle( @_color, @_border, @_background, @_font){
+	color: @_color;
+	border-color: @_border;
+	background: @_background;
+	font: @_font;
+}
+
+.abs-csscf( @_color, @_font){
+	color: @_color;
+	font: @_font;
+}
+
+.abs-csscbf( @_color, @_background, @_font){
+	.abs-csscf( @_color, @_font);
+	background-color: @_background;
+	
+}
+
+
+.abs-cssbg(@_bkgcolor, @_bkgurl, @_bkgposition: ~"0 0", @_bkgrepeat: no-repeat){
+	background-color:@_bkgcolor;
+	background-image:url("@{_bkgurl}");
+	background-position:@_bkgposition;
+	background-repeat:@_bkgrepeat;
+}
+
+//.abs-stylebg(@_bkgcolor, @_bkgurl, @_bkgname, @_bkgposition: 0 0, @_bkgrepeat: no-repeat){
+	//background-color:@_bkgcolor;
+	//background-image:url("@{_bkgurl}@{_bkgname}");
+	//background-position:@_bkgposition;
+	//background-repeat:@_bkgrepeat;
+//}
+
+.abs-icon(@_width, @_height, @_animal, @_bkg-position){
+	width:@_width;
+	height:@_height;
+	background-image: url('../images/@{_animal}.png');
+	background-position:@_bkg-position;
+	background-repeat:no-repeat;
+}
+
+// Show Product Item
+.abs-showproduct(@_item: 4){
+	.product-items{
+		//&:not(.isotope),
+		&:not(.owl-carousel){
+			margin-left: -@layout-indent__width;
+			margin-right:-@layout-indent__width;
+			overflow:hidden;
+			> .product-item {
+				width: (100% / @_item);
+				padding-left:@layout-indent__width;
+				padding-right:@layout-indent__width;
+				.product-item-info{
+					width:100%;
+					height:100%;
+				}
+			}
+		}
+	}
+}
+.abs-showprocate(@_namescreen, @_item : 6, @_i: 1) when (@_i <= @_item){
+	.@{_namescreen}_@{_i}{
+		.product-items:not(.owl-carousel){
+			margin-left: -@layout-indent__width;
+			margin-right:-@layout-indent__width;
+			/*display: -webkit-flex;
+			-webkit-flex-wrap: wrap;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: stretch;*/
+			> .product-item{
+				width:  (100% / @_i);
+				padding-left:@layout-indent__width;
+				padding-right:@layout-indent__width;
+				&:nth-child(@{_i}n + 1){
+					clear:both;
+				}
+			}
+		}
+	}
+	.abs-showprocate(@_namescreen, @_item : 6, (@_i + 1));
+}
+
+/// placeholder
+.abs-placeholder(@_color: @main_text){
+	::-webkit-input-placeholder {
+	   color: @_color;
+	}
+
+	:-moz-placeholder { /* Firefox 18- */
+	   color: @_color;  
+	}
+
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: @_color;  
+	}
+
+	:-ms-input-placeholder {  
+	   color: @_color;  
+	}
+}
+
+///calc function
+.abs-calc-width(@value){	
+	width: ~'-moz-calc('@value ~')';	
+	width: ~'-webkit-calc('@value ~')';	
+	width: ~'-o-calc('@value ~')';	
+	width: ~'calc('@value ~')';
+}
+.abs-calc-right(@value){	
+	right: ~'-moz-calc('@value ~')';	
+	right: ~'-webkit-calc('@value ~')';	
+	right: ~'-o-calc('@value ~')';	
+	right: ~'calc('@value ~')';
+}
+.abs-calc-left(@value){	
+	left: ~'-moz-calc('@value ~')';	
+	left: ~'-webkit-calc('@value ~')';	
+	left: ~'-o-calc('@value ~')';	
+	left: ~'calc('@value ~')';
+}
+.abs-calc-top(@value){	
+	top: ~'-moz-calc('@value ~')';	
+	top: ~'-webkit-calc('@value ~')';	
+	top: ~'-o-calc('@value ~')';	
+	top: ~'calc('@value ~')';
+}

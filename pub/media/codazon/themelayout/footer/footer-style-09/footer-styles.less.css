@@ -1,0 +1,6 @@
+@import (optional,less)'../_default_variables.less.css';
+@import (less)'_variables.less.css';
+@import (less)'../_general.less.css';
+@import (optional,less)'../general/flexible/_instagram.less.css';
+@import (less)'../footer-style-07/_elements.less.css';
+@import (less)'_elements.less.css';

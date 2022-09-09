@@ -1,0 +1,79 @@
+.tabs-style-14 {
+    @min_title_height: 48px;
+    @max_title_width: 40%;
+    .ic-title:not(.cdz-flash-icon) {
+        font-size: 20px;
+        margin: 0 8px 0 0;
+        vertical-align: middle;
+        .rtl-layout & {
+             margin: 0 0 0 8px;
+        }
+    }
+    @media @tablet_vertical {
+        position: relative;
+        .title-desc {
+            display: none;
+        }
+        .cdz-block-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: @main_block_title_background;
+            color: @main_block_title_text;
+            padding: 0 25px;
+            text-transform: uppercase;
+            font-size: 125%;
+            margin: 0;
+            height: @min_title_height;
+            display: flex;
+            align-items: center;
+            max-width: @max_title_width;
+            .rtl-layout & {
+                left: auto;
+                right: 0;
+            }
+            .b-title.h2 {
+                color: inherit;
+                font-size: inherit;
+                padding: 0;
+                width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+        .box-cate-link {
+            padding: 0 0 0 @max_title_width;
+            text-align: end;
+            border-top: 2px solid @main_block_title_background;
+            background: @main_tab_background;
+            min-height: @min_title_height;
+            margin-bottom: 30px;
+            .rtl-layout & {
+                padding: 0 @max_title_width 0 0;
+            }
+            .item {
+                display: inline-block;
+                margin-bottom: 0;
+            }
+            .tab-title {
+                display: inline-block;
+                padding: 10px 14px;
+                font-size: 120%;
+                color: @main_tab_text;
+                font-weight: 700;
+            }
+            .item.active {
+                .tab-title {
+                    color: @main_block_title_background;
+                }
+            }
+        }
+        &.block-title-white {
+            .box-cate-link {
+                background: #fff;
+            }
+        }
+    }
+    .mobile-tabs-style-01();
+}

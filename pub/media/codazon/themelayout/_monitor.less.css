@@ -1,0 +1,50 @@
+/*break points*/
+@screen-xs-min: 480px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+@screen-xs-max: (@screen-sm-min - 1);/*767px*/
+@screen-sm-max: (@screen-md-min - 1);/*991px*/
+@screen-md-max: (@screen-lg-min - 1);/*1199px*/
+
+/*Codazon Custom Theme*/
+@screen1400: 1400px;
+@screen1300: 1300px;
+@screen-laptop: 1024px;
+
+
+@screen-tablet-min: 768px;
+@screen-tablet-max: 1024px;
+@screen-ipadpro-min: 1024px;
+@screen-ipadpro-max: 1366px;
+@screen-desktop-min: (@screen-tablet-max + 1);  /* 1025px */
+@screen-mobile-max: (@screen-tablet-min - 1);   /* 767px */
+
+@import (optional,less) '_custom-monitor.less.css';
+
+@general_tablet:         ~"only screen and (min-width: @{screen-tablet-min}) and (max-width: @{screen-tablet-max})";    /* 768px -  1024px */
+@ipad_ipad_pro:          ~"only screen and (min-width: @{screen-tablet-min}) and (max-width: @{screen-ipadpro-max})";   /* 768px -  1366px */
+@general_tablet_down:    ~"only screen and (max-width: @{screen-tablet-max})";              /* 0 -  1024px */
+@general_tablet_up:      ~"only screen and (min-width: @{screen-desktop-min})";         /* 1025px - ? */
+@ipad_horizontal_up:     ~"only screen and (min-width: @{screen-tablet-max})";         /* 1024px - ? */
+@not_general_tablet:    ~"(min-width: @{screen-desktop-min}),(max-width: @{screen-mobile-max})";    /* (0 - 767px) and (1025px - ?)  */    
+
+@phonedown: 			~"only screen and (max-width: @{screen-xs-min})"; /*max-width: 480px*/
+@phone:             	~"only screen and (max-width: @{screen-xs-max})"; /*max-width: 767px*/
+@phone_device:          ~"only screen and (max-device-width: @{screen-xs-max})"; /*max-width: 767px*/
+
+@tablet_vertical:       ~"only screen and (min-width: @{screen-sm-min})"; /*min-width: 768px*/
+@tablet_horizontal:	    ~"only screen and (min-width: @{screen-md-min})"; /*min-width: 992*/
+@tablet_vertical_down:  ~"only screen and (max-width: @{screen-sm-max})"; /*max-width: 991*/
+@tablet_strict:     	~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-md-max})"; 
+						/* min-width:768px max-width:1199px */
+@tablet-strict_small:   ~"only screen and (min-width: @{screen-sm-min}) and (max-width: @{screen-sm-max})"; 
+						/* min-width:768 max-width:991px */
+@tablet-strict_large: 	~"only screen and (min-width: @{screen-md-min}) and (max-width: @{screen-md-max})";
+						/* min-width:992px max-width:1199px */
+
+@desktop:           	~"only screen and (min-width: @{screen-lg-min})"; /*min-width: 1200px*/
+@desktop_down:			~"only screen and (max-width: @{screen-md-max})"; /*max-width: 1199px*/
+
+@touch_device:          ~"(max-device-width: 1366px)"; /* Ipad pro screen width */

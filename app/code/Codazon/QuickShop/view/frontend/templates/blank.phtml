@@ -1,0 +1,11 @@
+<?php
+/**
+ * Copyright © 2018 Codazon. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div class="<?php echo $this->getConfig()->getElementAttribute('body', 'class') ?>">
+<?php /* @escapeNotVerified */ //echo $layoutContent ?>
+<?php echo $this->getLayout()->getBlock('quickshop_root')->toHtml() ?>
+</div>

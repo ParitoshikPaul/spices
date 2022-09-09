@@ -1,0 +1,34 @@
+/*Fashion -- bottom*/
+
+.banner-style03 {
+    .cdz-banner-text {
+        padding: 40px 13%;
+        height: 100%;
+        @media @tablet_vertical_down {
+            padding: 30px 10px;
+        }
+        @media @phone {
+            padding: 30px 20px;
+        }
+        .h2 {
+            font: @f_h1;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+        .desc {
+            margin-bottom: 4rem;
+            font: @f_h5;
+        }
+        .actions .primary {
+            .abs-style(@btn_default_text, @btn_default_border, @btn_default_background);
+            border-radius: 0;
+            padding: 10px 70px;
+            &:hover {
+                .abs-style(@btn_default_background, @btn_default_border, @btn_default_text);
+            }
+        }
+    }
+    .cdz-banner {
+        overflow: hidden;
+    }
+}

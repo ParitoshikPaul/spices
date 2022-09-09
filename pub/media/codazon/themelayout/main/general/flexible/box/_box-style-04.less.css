@@ -1,0 +1,81 @@
+/* Block Title is a color bar */
+.box-style-04 {
+    .cdz-block-title {
+        background: @main_block_title_background;
+        color: @main_block_title_text;
+        padding: 12px 20px;
+        margin-bottom: 20px;
+        border-radius: 2px;
+        .b-title.h2 {
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 700;
+            color: inherit;
+            padding: 0;
+            text-transform: uppercase;
+            text-align: start;
+        }
+        .ic-title.fa{
+            font: inherit;
+            &:before {
+                font-family: FontAwesome;
+                font-size: 18px;
+                font-weight: normal;
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 8px 0 0;
+                .rtl-layout & {
+                    margin: 0 0 0 8px;
+                }
+            }
+        }
+    }
+    .owl-carousel .owl-nav {
+        position: absolute;
+        top: -56px;
+        right: 0;
+        left: auto;
+        display: block !important;
+        [class*='owl-'] {
+            position: relative;
+            display: inline-block;
+            left: auto !important;
+            right: auto !important;
+            transform: none !important;
+            visibility: visible;
+            opacity: 1;
+            margin: 0;
+            background: transparent !important;
+            opacity: 1 !important;
+            border: none;
+            width: auto;
+            height: 30px;
+            line-height: 30px;
+            padding: 0 6px;
+            &:before {
+                font-family: FontAwesome;
+                content: "\f0da";
+            }
+            &.disabled {
+                opacity: 0.8 !important;
+            }
+        }
+        .rtl-layout & {
+            left: 0;
+            right: auto;
+            [class*='owl-'] {
+                &:before {
+                    content: "\f0d9";
+                }
+            }
+        }
+        .owl-prev {
+            &:before {
+                content: "\f0d9";
+                .rtl-layout & {
+                    content: "\f0da";
+                }
+            }
+        }
+    }
+}
